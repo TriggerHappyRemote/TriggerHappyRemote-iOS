@@ -1,0 +1,1210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+    <dependencies>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="11">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+                <viewController title="First" id="2" customClass="SingleShotViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="16">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="y3l-Hl-bbe">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Single Shot" id="D01-XI-3pS"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oOt-Fr-rQD">
+                                <rect key="frame" x="0.0" y="46" width="321" height="367"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="fire-button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fireTownDown" destination="2" eventType="touchDown" id="OYU-Tj-Xvu"/>
+                                    <action selector="fireTownUp" destination="2" eventType="touchUpInside" id="8E0-Qg-c8P"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Press and hold for rapid fire or bulb " lineBreakMode="tailTruncation" minimumFontSize="10" id="ORc-pp-MJW">
+                                <rect key="frame" x="22" y="318" width="274" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Basic" image="first.png" id="7"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="546" y="-753"/>
+        </scene>
+        <scene sceneID="6BE-0K-4aR">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u82-9M-Omc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="EGY-9r-3i5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bulb" image="light_bulb copy.png" id="ODm-Xp-GTk"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="ebg-o5-tcA">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3" kind="relationship" relationship="rootViewController" id="Azf-Qc-Tmd"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="546" y="-93"/>
+        </scene>
+        <scene sceneID="UfC-WZ-tvi">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mil-Z9-OOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="iBd-jR-9ZK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Interval" image="camera.png" id="IA0-4h-zgq"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="ZUm-06-Uj2">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pca-UN-G0m" kind="relationship" relationship="rootViewController" id="OHQ-Ey-2gf"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="498" y="1670"/>
+        </scene>
+        <scene sceneID="13">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
+                <viewController title="Second" id="3" customClass="SecondViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="17">
+                        <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="intervalometerviewbackground2.png" id="hxq-ck-fJx">
+                                <rect key="frame" x="0.0" y="-47" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h8A-JA-U8f">
+                                <rect key="frame" x="20" y="294" width="280" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Start" backgroundImage="greenbutton.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZeA-iF-Fo2">
+                                <rect key="frame" x="24" y="54" width="276" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="shutterLength.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EyP-hA-iSM" kind="push" id="PjS-Ej-fHC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:02:01" lineBreakMode="tailTruncation" minimumFontSize="10" id="PDE-iV-eBZ">
+                                <rect key="frame" x="200" y="63" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bulb" id="t8P-rM-JgG"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1155" y="-655"/>
+        </scene>
+        <scene sceneID="uxu-il-y8T">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tds-ym-lbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="pca-UN-G0m" customClass="IntervalometerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3sq-bT-qmU">
+                        <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="intervalometerviewbackground2.png" id="T5h-Zk-8t5">
+                                <rect key="frame" x="0.0" y="-47" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="K4p-Tz-VkS">
+                                <rect key="frame" x="20" y="294" width="280" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Start" backgroundImage="greenbutton.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonPressed" destination="pca-UN-G0m" eventType="touchUpInside" id="t12-CU-z3h"/>
+                                    <segue destination="9op-cb-AWg" kind="push" id="bTn-SM-Axe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vF0-8A-LPN">
+                                <rect key="frame" x="22" y="142" width="276" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="shutterLength.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="i7k-T5-7fY" kind="push" id="2UV-C6-BKY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GsJ-yz-1og">
+                                <rect key="frame" x="22" y="202" width="276" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="hdrbutton.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ko8-Fk-2Km" kind="push" id="xL8-Oq-Yx6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pxP-ut-1K3">
+                                <rect key="frame" x="22" y="82" width="276" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="durationsetterbutton.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EyP-hA-iSM" kind="push" id="Oe5-rL-wtM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nbh-cG-KZH">
+                                <rect key="frame" x="22" y="22" width="276" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="intervalSetterButton.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Wlu-Y7-GgX" kind="push" id="D2d-4f-YJU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00:00" lineBreakMode="tailTruncation" minimumFontSize="10" id="4K9-S8-IzC">
+                                <rect key="frame" x="200" y="32" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00:00" lineBreakMode="tailTruncation" minimumFontSize="10" id="Yvo-zd-Wc3">
+                                <rect key="frame" x="200" y="152" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00:00" lineBreakMode="tailTruncation" minimumFontSize="10" id="aW1-2F-8cA">
+                                <rect key="frame" x="200" y="92" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3 shot" lineBreakMode="tailTruncation" minimumFontSize="10" id="GnC-Z7-fjX">
+                                <rect key="frame" x="219" y="212" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Interval" id="4FY-Xl-GT4"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="durationLabel" destination="aW1-2F-8cA" id="p58-HI-7Fe"/>
+                        <outlet property="durationSetButton" destination="vF0-8A-LPN" id="9TU-Yl-GDo"/>
+                        <outlet property="intervalLabel" destination="4K9-S8-IzC" id="Pn8-WE-7mG"/>
+                        <outlet property="intervalSetButton" destination="nbh-cG-KZH" id="zpD-4F-4ts"/>
+                        <outlet property="navigation" destination="4FY-Xl-GT4" id="9Al-5k-GCR"/>
+                        <outlet property="shutterLabel" destination="Yvo-zd-Wc3" id="HwN-kV-DTr"/>
+                        <outlet property="shutterSetButton" destination="pxP-ut-1K3" id="oiX-3J-ier"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1155" y="1792"/>
+        </scene>
+        <scene sceneID="wbO-Tw-3Va">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bLv-yA-bEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Wlu-Y7-GgX" customClass="IntervalViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u6n-Uw-OGG">
+                        <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" id="4W8-HC-KS0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Wlu-Y7-GgX" id="Fug-SU-hNq"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="hour" lineBreakMode="tailTruncation" minimumFontSize="10" id="cad-55-qBi">
+                                <rect key="frame" x="53" y="97" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="mins" lineBreakMode="tailTruncation" minimumFontSize="10" id="dAU-wP-25g">
+                                <rect key="frame" x="157" y="97" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="secs" lineBreakMode="tailTruncation" minimumFontSize="10" id="POq-Pk-NHf">
+                                <rect key="frame" x="245" y="97" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Interval" id="ynO-tB-ubY"/>
+                    <connections>
+                        <outlet property="hoursLabel" destination="cad-55-qBi" id="giF-sH-BRM"/>
+                        <outlet property="minsLabel" destination="dAU-wP-25g" id="j9r-88-ber"/>
+                        <outlet property="picker" destination="4W8-HC-KS0" id="5cV-wy-eXK"/>
+                        <outlet property="secsLabel" destination="POq-Pk-NHf" id="JSJ-7S-I6W"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1992" y="23"/>
+        </scene>
+        <scene sceneID="KJs-4J-Tev">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujw-gM-u0z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="i7k-T5-7fY" customClass="ShutterSpeedViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rdX-tp-OBr">
+                        <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="fRM-xO-fiz">
+                                <rect key="frame" x="57" y="43" width="207" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Auto"/>
+                                    <segment title="Bulb"/>
+                                </segments>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="toggleSegmentControl" destination="i7k-T5-7fY" eventType="valueChanged" id="9WY-FB-fXz"/>
+                                    <action selector="toggleSegmentControl" destination="EyP-hA-iSM" eventType="valueChanged" id="R2B-tg-6bX"/>
+                                </connections>
+                            </segmentedControl>
+                            <pickerView contentMode="scaleToFill" id="VFI-re-rPy">
+                                <rect key="frame" x="0.0" y="114" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <outlet property="delegate" destination="i7k-T5-7fY" id="wXv-WV-OXs"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="hour" lineBreakMode="tailTruncation" minimumFontSize="10" id="QSX-6t-Lv3">
+                                <rect key="frame" x="53" y="211" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="mins" lineBreakMode="tailTruncation" minimumFontSize="10" id="9hi-rM-QGu">
+                                <rect key="frame" x="157" y="211" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="secs" lineBreakMode="tailTruncation" minimumFontSize="10" id="oSj-hH-2Lu">
+                                <rect key="frame" x="245" y="211" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="If the camera is not set to bulb, use Auto" lineBreakMode="tailTruncation" minimumFontSize="10" id="XIi-HN-rJd">
+                                <rect key="frame" x="6" y="99" width="309" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shutter Speed" id="yqJ-iK-PAi"/>
+                    <connections>
+                        <outlet property="autoBulbSegment" destination="fRM-xO-fiz" id="H2w-Qw-VkL"/>
+                        <outlet property="hoursLabel" destination="QSX-6t-Lv3" id="VYh-Cp-aen"/>
+                        <outlet property="instructionLabel" destination="XIi-HN-rJd" id="Syb-cj-oix"/>
+                        <outlet property="minsLabel" destination="9hi-rM-QGu" id="YWO-nR-9GU"/>
+                        <outlet property="picker" destination="VFI-re-rPy" id="9JR-lb-DYO"/>
+                        <outlet property="secsLabel" destination="oSj-hH-2Lu" id="XX5-UW-Auy"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1998" y="1275"/>
+        </scene>
+        <scene sceneID="ehA-Zc-p6t">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BTv-hW-pvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ko8-Fk-2Km" customClass="HDRViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wgw-yy-oGE">
+                        <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hdrview2.png" id="JRi-b9-gnK">
+                                <rect key="frame" x="0.0" y="-40" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+" lineBreakMode="tailTruncation" minimumFontSize="10" id="uxI-WB-O8x">
+                                <rect key="frame" x="249" y="20" width="42" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=". ." lineBreakMode="tailTruncation" minimumFontSize="10" id="btx-6r-fLg">
+                                <rect key="frame" x="235" y="27" width="42" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-" lineBreakMode="tailTruncation" minimumFontSize="10" id="0wI-CP-OxU">
+                                <rect key="frame" x="20" y="20" width="42" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=". ." lineBreakMode="tailTruncation" minimumFontSize="10" id="PBP-CY-5MS">
+                                <rect key="frame" x="107" y="27" width="42" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=". ." lineBreakMode="tailTruncation" minimumFontSize="10" id="Qgf-H4-9NF">
+                                <rect key="frame" x="57" y="27" width="42" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2" lineBreakMode="tailTruncation" minimumFontSize="10" id="dBG-S5-XNf">
+                                <rect key="frame" x="266" y="27" width="42" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lightmetertick.png" id="kNy-U7-BGo">
+                                <rect key="frame" x="144" y="62" width="22" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1" lineBreakMode="tailTruncation" minimumFontSize="10" id="Xai-sa-M3o">
+                                <rect key="frame" x="211" y="27" width="42" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=". ." lineBreakMode="tailTruncation" minimumFontSize="10" id="Yq2-en-dd1">
+                                <rect key="frame" x="178" y="27" width="42" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lightmeter0.png" id="OsB-cj-Uyo">
+                                <rect key="frame" x="141" y="20" width="29" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2" lineBreakMode="tailTruncation" minimumFontSize="10" id="38q-nG-2dq">
+                                <rect key="frame" x="32" y="27" width="42" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1" lineBreakMode="tailTruncation" minimumFontSize="10" id="8dC-6y-4nj">
+                                <rect key="frame" x="85" y="27" width="42" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KnT-oH-1Gr">
+                                <rect key="frame" x="22" y="324" width="276" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="baseshutter.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="i7k-T5-7fY" kind="push" id="lJJ-O9-io9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IZz-ji-Uay">
+                                <rect key="frame" x="22" y="212" width="276" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="exposureInterval.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OLw-NM-Ry8" kind="push" id="XTv-3B-D4P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g6u-Cy-cGo">
+                                <rect key="frame" x="22" y="268" width="276" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="numberofshots.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NvC-Yx-taz" kind="push" id="hhy-wQ-Jpy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2/3 EV Interval" lineBreakMode="tailTruncation" minimumFontSize="10" id="tiz-mf-kSF">
+                                <rect key="frame" x="120" y="104" width="223" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7 Shot" lineBreakMode="tailTruncation" minimumFontSize="10" id="pVQ-0T-fqg">
+                                <rect key="frame" x="25" y="110" width="149" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2 Second Base Shutter" lineBreakMode="tailTruncation" minimumFontSize="10" id="r1Y-qf-3FZ">
+                                <rect key="frame" x="25" y="149" width="259" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IAj-t3-9V3"/>
+                    <connections>
+                        <outlet property="centerEVTick" destination="kNy-U7-BGo" id="O2A-Z0-Czo"/>
+                        <outlet property="exposureValueLabel" destination="tiz-mf-kSF" id="h4z-V2-MWQ"/>
+                        <outlet property="numberOfShotsLabel" destination="pVQ-0T-fqg" id="LIm-4w-4ss"/>
+                        <outlet property="shutterLengthLabel" destination="r1Y-qf-3FZ" id="Ker-7k-aNw"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1886" y="2068"/>
+        </scene>
+        <scene sceneID="Uof-H9-8be">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEi-jz-00Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="OLw-NM-Ry8" customClass="HDREVViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B4E-fl-Wz1">
+                        <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" id="3AA-o2-4yd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="OLw-NM-Ry8" id="r1D-hk-SKE"/>
+                                    <outlet property="delegate" destination="OLw-NM-Ry8" id="8r4-ng-eWs"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yvc-qf-Phk"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2441" y="1750"/>
+        </scene>
+        <scene sceneID="kkQ-Xf-WhD">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GCd-if-DdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="NvC-Yx-taz" customClass="HDRShotsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E1K-gI-PPG">
+                        <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" id="Rcd-46-eXj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="NvC-Yx-taz" id="ykt-6Y-hNA"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iFE-ML-IRH"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2436" y="2374"/>
+        </scene>
+        <scene sceneID="tWe-me-17u">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onY-jf-pnI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="9op-cb-AWg" customClass="IntervalometerCountDownViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Roj-EJ-zqr">
+                        <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="count-down-view-2.jpg" id="gD6-c9-NNf">
+                                <rect key="frame" x="0.0" y="-40" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" id="As9-jz-neU">
+                                <rect key="frame" x="9" y="361" width="302" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <size key="titleShadowOffset" width="7" height="17"/>
+                                <state key="normal" title="Stop" backgroundImage="redbutton.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopButtonPressed" destination="9op-cb-AWg" eventType="touchUpInside" id="iqH-jd-ifv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="01:44:22" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="60" id="ebY-60-nTD">
+                                <rect key="frame" x="31" y="27" width="261" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="94"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="[00:00:00]" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="20" id="5GS-WD-Pcc">
+                                <rect key="frame" x="57" y="172" width="253" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Unlimited Duration" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="20" id="RAx-YC-IVO">
+                                <rect key="frame" x="15" y="38" width="288" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="[01:00:01]" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="20" id="5Ex-j3-H6s">
+                                <rect key="frame" x="21" y="262" width="290" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="XDs-Ou-sdQ">
+                                <rect key="frame" x="13" y="228" width="287" height="9"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="dJO-DD-Jyn">
+                                <rect key="frame" x="13" y="320" width="292" height="9"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                        </subviews>
+                    </view>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="Item" id="Wwe-Qh-y8h"/>
+                    <navigationItem key="navigationItem" title="Interval" id="gkE-ck-Nnk">
+                        <barButtonItem key="backBarButtonItem" title="Stop" id="gfM-xJ-CuA"/>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="durationTime" destination="ebY-60-nTD" id="IWw-V2-0YK"/>
+                        <outlet property="imageView" destination="gD6-c9-NNf" id="flz-TU-Nbl"/>
+                        <outlet property="interval" destination="5GS-WD-Pcc" id="R12-me-ruQ"/>
+                        <outlet property="intervalProgress" destination="XDs-Ou-sdQ" id="4gz-na-rjw"/>
+                        <outlet property="navigation" destination="gkE-ck-Nnk" id="R7Z-Ja-ajy"/>
+                        <outlet property="shutterProgress" destination="dJO-DD-Jyn" id="G4A-Qp-BEt"/>
+                        <outlet property="shutterSpeed" destination="5Ex-j3-H6s" id="raX-kv-hTf"/>
+                        <outlet property="stopButton" destination="As9-jz-neU" id="j8X-VO-Krd"/>
+                        <outlet property="unlimitedDuration" destination="RAx-YC-IVO" id="8SK-qC-MRK"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1167" y="2407"/>
+        </scene>
+        <scene sceneID="eUL-1x-pW8">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qna-p0-JMU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="cJq-iJ-mpx" customClass="FaceDetectionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s5O-o3-EBv">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Video view controller" lineBreakMode="tailTruncation" minimumFontSize="10" id="Owr-6X-V5g">
+                                <rect key="frame" x="81" y="130" width="159" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1050" y="3066"/>
+        </scene>
+        <scene sceneID="EcE-qw-3pf">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aL1-64-SRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="EyP-hA-iSM" customClass="DurationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nlK-e3-hMn">
+                        <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="3as-MY-ISk">
+                                <rect key="frame" x="57" y="25" width="207" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Unlimited"/>
+                                    <segment title="Timed"/>
+                                </segments>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="toggleSegmentControl" destination="EyP-hA-iSM" eventType="valueChanged" id="gFf-HH-ZFf"/>
+                                </connections>
+                            </segmentedControl>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" id="VgS-Ve-fVt">
+                                <rect key="frame" x="0.0" y="88" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="345968774.07019901">
+                                    <!--2011-12-19 06:26:14 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="en_US"/>
+                                <timeZone key="timeZone" name="America/Los_Angeles">
+                                    <data key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</data>
+                                </timeZone>
+                                <connections>
+                                    <action selector="changeInDuration" destination="EyP-hA-iSM" eventType="valueChanged" id="OZQ-nS-EXf"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Duration" id="GdB-O6-eGj"/>
+                    <connections>
+                        <outlet property="duration" destination="3as-MY-ISk" id="1Yj-MX-2mu"/>
+                        <outlet property="durationPicker" destination="VgS-Ve-fVt" id="Krf-7G-eh0"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1992" y="643"/>
+        </scene>
+        <scene sceneID="ogy-A8-GEO">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1oJ-iK-cYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="NbV-lt-NH1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZdK-Nv-dVU">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="intervalometerviewbackground2.png" id="Mir-XH-Ysj">
+                                <rect key="frame" x="0.0" y="-47" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Apr-Zt-XwY">
+                                <rect key="frame" x="22" y="124" width="276" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Shutter Length: Unlimited                      >" image="shutterLength.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="i7k-T5-7fY" kind="push" id="Xrh-3K-HD3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xA2-71-X2p">
+                                <rect key="frame" x="22" y="54" width="276" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="countdownsetterbutton.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Wlu-Y7-GgX" kind="push" id="1Ty-lw-j17"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jYI-Es-DKn">
+                                <rect key="frame" x="20" y="294" width="280" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Start" backgroundImage="greenbutton.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cGk-E8-n8e" kind="push" id="Km9-t8-5wn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00:00" lineBreakMode="tailTruncation" minimumFontSize="10" id="tek-SU-os4">
+                                <rect key="frame" x="200" y="89" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00:00" lineBreakMode="tailTruncation" minimumFontSize="10" id="Mah-p0-gJ2">
+                                <rect key="frame" x="200" y="164" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Timer" id="xJh-m6-30Y"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1006" y="576"/>
+        </scene>
+        <scene sceneID="YyE-vF-IwO">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Lo-cV-Ayv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="QX8-2h-IU1" customClass="MoreViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TzV-4i-pr2">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yaB-sB-723">
+                                <rect key="frame" x="0.0" y="44" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" textLabel="oqX-PF-AVx" style="IBUITableViewCellStyleDefault" id="b5t-hp-83H">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Video Sensor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oqX-PF-AVx">
+                                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="cJq-iJ-mpx" kind="modal" modalTransitionStyle="flipHorizontal" id="z4n-MS-y9s"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" textLabel="ga2-yv-w2P" style="IBUITableViewCellStyleDefault" id="bS3-YS-LVh">
+                                        <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Accelerometer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ga2-yv-w2P">
+                                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="lI8-km-gBp" style="IBUITableViewCellStyleDefault" id="zRx-8n-jDn">
+                                        <rect key="frame" x="0.0" y="110" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Sound Sensor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lI8-km-gBp">
+                                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="cJq-iJ-mpx" kind="modal" id="Snu-cj-NxP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="QX8-2h-IU1" id="rou-7O-pym"/>
+                                    <outlet property="delegate" destination="QX8-2h-IU1" id="qga-vF-Q6g"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="Het-5f-g9K">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="More" id="Sgb-Dz-khz"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="More" image="dotdotdot.png" id="GMg-0V-Wus"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="437" y="2470"/>
+        </scene>
+        <scene sceneID="Um8-Ls-Lpu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Clg-8S-0sh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="BMg-ll-etb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Timer" image="clock.png" id="UDU-tg-qBY"/>
+                    <navigationItem key="navigationItem" id="r80-x7-cby"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="6b5-rj-ZvD">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NbV-lt-NH1" kind="relationship" relationship="rootViewController" id="qXa-wf-VZ5"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="561" y="800"/>
+        </scene>
+        <scene sceneID="15">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
+                <tabBarController id="4" customClass="MainTabBarController" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
+                        <segue destination="EGY-9r-3i5" kind="relationship" relationship="viewControllers" id="xHm-ca-tWr"/>
+                        <segue destination="BMg-ll-etb" kind="relationship" relationship="viewControllers" id="4Eb-Jz-rYt"/>
+                        <segue destination="iBd-jR-9ZK" kind="relationship" relationship="viewControllers" id="cJt-Yc-Vsw"/>
+                        <segue destination="QX8-2h-IU1" kind="relationship" relationship="viewControllers" id="a88-Mg-jm4"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="-1118" y="626"/>
+        </scene>
+        <scene sceneID="X0L-1P-z9q">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LvC-K6-WG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="cGk-E8-n8e" customClass="IntervalometerCountDownViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QYc-Mg-gf0">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SGK-nE-o7J">
+                                <rect key="frame" x="30" y="310" width="280" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopButtonPressed" destination="cGk-E8-n8e" eventType="touchUpInside" id="dJL-M8-trF"/>
+                                    <segue destination="NbV-lt-NH1" kind="push" id="8FV-V8-AaE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="17:55" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="60" id="koj-SA-6VU">
+                                <rect key="frame" x="39" y="113" width="242" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="with 5 second intervals" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="20" id="yDY-ad-Qvg">
+                                <rect key="frame" x="52" y="229" width="217" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Timer" id="QJ7-yX-toP">
+                        <barButtonItem key="backBarButtonItem" title="Stop" id="idM-KA-Flz"/>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1006" y="1177"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="baseshutter.png" width="549" height="83"/>
+        <image name="camera.png" width="30" height="30"/>
+        <image name="clock.png" width="30" height="30"/>
+        <image name="count-down-view-2.jpg" width="640" height="960"/>
+        <image name="countdownsetterbutton.png" width="549" height="83"/>
+        <image name="dotdotdot.png" width="30" height="30"/>
+        <image name="durationsetterbutton.png" width="549" height="83"/>
+        <image name="exposureInterval.png" width="549" height="83"/>
+        <image name="fire-button.png" width="340" height="367"/>
+        <image name="first.png" width="30" height="30"/>
+        <image name="greenbutton.png" width="599" height="104"/>
+        <image name="hdrbutton.png" width="549" height="83"/>
+        <image name="hdrview2.png" width="640" height="960"/>
+        <image name="intervalSetterButton.png" width="549" height="83"/>
+        <image name="intervalometerviewbackground2.png" width="640" height="960"/>
+        <image name="light_bulb copy.png" width="30" height="30"/>
+        <image name="lightmeter0.png" width="67" height="87"/>
+        <image name="lightmetertick.png" width="36" height="49"/>
+        <image name="numberofshots.png" width="549" height="83"/>
+        <image name="redbutton.png" width="556" height="90"/>
+        <image name="shutterLength.png" width="549" height="83"/>
+    </resources>
+    <classes>
+        <class className="DurationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DurationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="toggleSegmentControl"/>
+                <relationship kind="outlet" name="duration" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="durationPicker" candidateClass="UIDatePicker"/>
+            </relationships>
+        </class>
+        <class className="FaceDetectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FaceDetectionViewController.h"/>
+        </class>
+        <class className="HDREVViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HDREVViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="textFieldReturn:"/>
+                <relationship kind="action" name="toggleHalfThirds"/>
+                <relationship kind="outlet" name="exposureValues" candidateClass="NSMutableArray"/>
+                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="HDRShotsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HDRShotsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="textFieldReturn:"/>
+                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="HDRViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HDRViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="centerEVTick" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="exposureValueLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="neg1EVTick" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="numberOfShotsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pos1EVTick" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="shutterLengthLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="IntervalViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IntervalViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="textFieldReturn:"/>
+                <relationship kind="outlet" name="hoursLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="minsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="secsLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="IntervalometerCountDownViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IntervalometerCountDownViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="stopButtonPressed"/>
+                <relationship kind="action" name="testButtonPressed"/>
+                <relationship kind="outlet" name="durationTime" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="interval" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="intervalProgress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="navigation" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="shutterProgress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="shutterSpeed" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="stopButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="unlimitedDuration" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="IntervalometerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IntervalometerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="startButtonPressed"/>
+                <relationship kind="outlet" name="durationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="durationSetButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="intervalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="intervalSetButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="navigation" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="shutterLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="shutterSetButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="MainTabBarController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainTabBarController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bulb" candidateClass="UITabBarItem"/>
+                <relationship kind="outlet" name="interval" candidateClass="UITabBarItem"/>
+                <relationship kind="outlet" name="more" candidateClass="UITabBarItem"/>
+                <relationship kind="outlet" name="single" candidateClass="UITabBarItem"/>
+                <relationship kind="outlet" name="timer" candidateClass="UITabBarItem"/>
+            </relationships>
+        </class>
+        <class className="MoreViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MoreViewController.h"/>
+        </class>
+        <class className="NSMutableArray" superclassName="NSArray">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSMutableArray.h"/>
+        </class>
+        <class className="ShutterSpeedViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShutterSpeedViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="textFieldReturn:"/>
+                <relationship kind="action" name="toggleSegmentControl"/>
+                <relationship kind="outlet" name="autoBulbSegment" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="hoursLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="instructionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="minsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="secsLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SingleShotViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SingleShotViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="fireTownDown"/>
+                <relationship kind="action" name="fireTownUp"/>
+                <relationship kind="outlet" name="fireButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="useInfoMessage" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="z4n-MS-y9s"/>
+        <segue reference="qXa-wf-VZ5"/>
+        <segue reference="Oe5-rL-wtM"/>
+        <segue reference="D2d-4f-YJU"/>
+        <segue reference="lJJ-O9-io9"/>
+    </inferredMetricsTieBreakers>
+</document>

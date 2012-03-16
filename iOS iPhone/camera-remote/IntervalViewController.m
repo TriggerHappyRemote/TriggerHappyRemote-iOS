@@ -35,21 +35,21 @@ IntervalData *intervalData;
                         nil];
     
     
-    [picker selectRow:[intervalData getIntervalHours] inComponent:0 animated:false];
-    [picker selectRow:[intervalData getIntervalMinutes] inComponent:1 animated:false];
-    [picker selectRow:[intervalData getIntervalSeconds] inComponent:2 animated:false];
+    [picker selectRow:[intervalData interval].hours inComponent:0 animated:false];
+    [picker selectRow:[intervalData interval].minutes inComponent:1 animated:false];
+    [picker selectRow:[intervalData interval].seconds inComponent:2 animated:false];
     
-    if([intervalData getIntervalHours] == 1)
+    if([intervalData interval].hours == 1)
         hoursLabel.text = @"hour";
     else
         hoursLabel.text = @"hours";
 
-    if([intervalData getIntervalMinutes] == 1)
+    if([intervalData interval].minutes == 1)
         minsLabel.text = @"min";
     else
         minsLabel.text = @"mins";
     
-    if([intervalData getIntervalSeconds] == 1)
+    if([intervalData interval].seconds == 1)
         secsLabel.text = @"sec";
     else
         secsLabel.text = @"secs";
@@ -106,7 +106,7 @@ numberOfRowsInComponent:(NSInteger)component
         else
             hoursLabel.text = @"hours";
 
-        [intervalData setIntervalHours:row];
+        [[intervalData interval] setHours:row];
     }
     else if(component == 1) {
         if(row == 1)
@@ -114,20 +114,21 @@ numberOfRowsInComponent:(NSInteger)component
         else
             minsLabel.text = @"mins";
 
-        [intervalData setIntervalMinutes:row];
+        [[intervalData interval] setMinutes:row];
     }
     else {   
         if(row == 1)
             secsLabel.text = @"sec";
         else
             secsLabel.text = @"secs";
-        [intervalData setIntervalSeconds:row];
+        [[intervalData interval] setSeconds:row];
+
     }
     
-    if((component == 2 && row == 0 && [intervalData getIntervalMinutes] == 0 && [intervalData getIntervalHours] == 0) ||
-       ([intervalData getIntervalMinutes] == 0 && [intervalData getIntervalHours] == 0 && [intervalData getIntervalSeconds] == 0) ) {
+    if((component == 2 && row == 0 && [[intervalData interval] minutes] == 0 && [[intervalData interval] hours] == 0) ||
+       ([[intervalData interval] minutes] == 0 && [[intervalData interval] hours] == 0 && [[intervalData interval] seconds] == 0) ) {
         [picker selectRow:1 inComponent:2 animated:false];
-        [intervalData setIntervalSeconds:1];
+        [[intervalData interval] setSeconds:1];
     }
 }
 

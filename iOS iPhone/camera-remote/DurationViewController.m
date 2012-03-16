@@ -23,30 +23,30 @@ IntervalData *intervalData;
     
 	[durationPicker setDatePickerMode:UIDatePickerModeCountDownTimer];
     
-    if([intervalData isUnlimitedDuration]) {
+    if([intervalData unlimitedDuration]) {
         [duration setSelectedSegmentIndex:0];
-        [durationPicker setHidden:[intervalData isUnlimitedDuration]];
+        [durationPicker setHidden:[intervalData unlimitedDuration]];
 
     }
     else {
         [duration setSelectedSegmentIndex:1];
-        [durationPicker setHidden:[intervalData isUnlimitedDuration]];
+        [durationPicker setHidden:[intervalData unlimitedDuration]];
     }
 
-    [durationPicker setCountDownDuration:[intervalData getDuration]];
+    [durationPicker setCountDownDuration:[[intervalData duration] totalTimeInSeconds]];
 	
 }
 
 -(void) viewWillAppear:(BOOL)animated {
-    [durationPicker setHidden:[intervalData isUnlimitedDuration]];
-    [durationPicker setCountDownDuration:[intervalData getDuration]];
+    [durationPicker setHidden:[intervalData unlimitedDuration]];
+    [durationPicker setCountDownDuration:[[intervalData duration] totalTimeInSeconds]]; 
     [[[self navigationController] tabBarController] tabBar].hidden = YES;
 }
 
 -(IBAction) toggleSegmentControl {
     NSLog(@"Toggle duration segment control");
     
-    [durationPicker setHidden: !durationPicker.isHidden];
+    [durationPicker setHidden:!durationPicker.isHidden];
     [intervalData setUnlimitedDuration: durationPicker.isHidden];
     
     
@@ -55,7 +55,7 @@ IntervalData *intervalData;
 -(IBAction) changeInDuration {
     NSLog(@"Change in duration");
  	NSTimeInterval durationCountDown = [durationPicker countDownDuration];
-    [intervalData setDuration:durationCountDown];
+    [[intervalData duration] setTotalTimeInSeconds:durationCountDown];
    
 }
 

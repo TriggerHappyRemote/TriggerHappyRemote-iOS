@@ -9,8 +9,15 @@
 #import "IntervalometerModel.h"
 #import "IntervalData.h"
 #import "AppDelegate.h"
+#import "Time.h"
+
+@interface IntervalometerModel()
+@property (nonatomic, strong) Time * remainingTime;
+@end
 
 @implementation IntervalometerModel
+
+@synthesize remainingTime = _remainingTime;
 
 IntervalometerCountDownViewController *intervalometerCountDownViewController;
 
@@ -32,25 +39,29 @@ float shutterLengthMS;
 
 - (id) init {
     intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
+    _remainingTime = [Time new];    
     return self;
 }
 
 - (void) setIntervalometerCountdownViewControllerReference: (IntervalometerCountDownViewController *) _view {
     intervalometerCountDownViewController = _view;
+    
 }
 
 - (void) startIntervalometer {
     interruptIntervalMS = .025;
     millisecondInterval = (int)(1000 * interruptIntervalMS);
     
-    shutterLengthMS = [intervalData getShutterInSeconds] * 1000;
+    shutterLengthMS = [[intervalData shutterSpeed] totalTimeInSeconds] * 1000;
     
     currentShutterTimeMS = shutterLengthMS;
     
     
-    if(![intervalData isUnlimitedDuration]) {
-        currentCountDownTimeSeconds = (int)[intervalData getDuration];
-        currentCountDownTimeMS = [intervalData getIntervalInSeconds] * 1000;
+    if(![intervalData unlimitedDuration]) {
+        currentCountDownTimeSeconds = (int)[intervalData duration];
+        [self.remainingTime setTotalTimeInSeconds:[[intervalData duration] totalTimeInSeconds]];
+
+        currentCountDownTimeMS = [[intervalData shutterSpeed] totalTimeInSeconds] * 1000;
             
         durationTimer = [NSTimer scheduledTimerWithTimeInterval:1
                                                          target:self
@@ -68,54 +79,25 @@ float shutterLengthMS;
 }
 
 - (void) intervalometerDurationInterrupt {
-    
-    
     currentCountDownTimeSeconds--;
-    
-    NSLog(@"Current time in secs: %i", currentCountDownTimeSeconds);
-
-    int durationHours = currentCountDownTimeSeconds / 3600;
-    int durationMinutes = (currentCountDownTimeSeconds - durationHours * 3600) / 60; 
-    int durationSeconds = currentCountDownTimeSeconds - durationHours * 3600 - durationMinutes * 60;
-    
-    NSString *hoursString;
-    if(durationHours < 10) 
-        hoursString = [[NSString alloc]initWithFormat:@"0%i", durationHours];
-    else
-        hoursString = [[NSString alloc]initWithFormat:@"%i", durationHours];
-    NSString *minutesString;
-    if(durationMinutes < 10) 
-        minutesString = [[NSString alloc]initWithFormat:@"0%i", durationMinutes];
-    else
-        minutesString = [[NSString alloc]initWithFormat:@"%i", durationMinutes];
-    NSString *secondsString;
-    if(durationSeconds < 10) 
-        secondsString = [[NSString alloc]initWithFormat:@"0%i", durationSeconds];
-    else
-        secondsString = [[NSString alloc]initWithFormat:@"%i", durationSeconds];
-    
-    
-    
-    NSString *parsedTime = [[NSString alloc]initWithFormat:@"%@:%@:%@", hoursString, minutesString, secondsString];
-    
-    NSLog(@"Parsed time: %@", parsedTime);
+    [self.remainingTime decrementSecond];
     
     if(currentCountDownTimeSeconds <= 0) {
         [self stopIntervalometer];
     }
     else {
-        [intervalometerCountDownViewController notifyOfInterrupt:parsedTime];
+        [intervalometerCountDownViewController notifyOfInterrupt:[self.remainingTime toStringDownToSeconds]];
     }
 }
 
 - (void) intervalometerSubInterrupt {
     currentCountDownTimeMS -= millisecondInterval;
     if(currentCountDownTimeMS <= 0) {
-        currentCountDownTimeMS = 1000 * [intervalData getIntervalInSeconds];
+        currentCountDownTimeMS = 1000 * [[intervalData shutterSpeed] totalTimeInSeconds];
         [self intervalometerIntervalInterrupt];
     }
     
-    float progress = 1.0f - (currentCountDownTimeMS / ([intervalData getIntervalInSeconds] * 1000));
+    float progress = 1.0f - (currentCountDownTimeMS / ([[intervalData shutterSpeed] totalTimeInSeconds] * 1000));
     [intervalometerCountDownViewController notifyOfInterruptToUpdateIntervalProgress:progress];
 }
 
@@ -159,7 +141,7 @@ float shutterLengthMS;
 }
 
 - (void) getNotification {
-    currentCountDownTimeSeconds = (int)[intervalData getDuration];
+    currentCountDownTimeSeconds = (int)[intervalData duration];
     [self intervalometerDurationInterrupt];
 }
 

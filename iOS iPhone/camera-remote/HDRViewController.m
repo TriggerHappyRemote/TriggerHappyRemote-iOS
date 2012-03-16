@@ -27,10 +27,8 @@ IntervalData *intervalData;
     numberOfShotsLabel.text = [[NSString alloc] initWithFormat:@"%d Shot", [intervalData getNumberOfShots]];
     
     [intervalData setAutoShutter:false];
-    int shutterSeconds = [intervalData getShutterInSeconds];
+    int shutterSeconds = [[intervalData shutterSpeed] seconds];
     shutterLengthLabel.text = [[NSString alloc] initWithFormat:@"%d Second Base Shutter", shutterSeconds];
-    NSLog(@"sec %f", [intervalData getShutterInSeconds]);
-
     
     
     NSString * ev;

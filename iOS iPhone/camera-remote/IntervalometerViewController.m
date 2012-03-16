@@ -38,11 +38,13 @@ IntervalData *intervalData;
 
 - (void) setButtonTitles {
 
-    intervalLabel.text = [intervalData getIntervalStringParsed];
+    NSLog(@"set button titles");
     
-    shutterLabel.text = [intervalData getShutterStringParsed];
+    intervalLabel.text = [[intervalData interval] toStringDownToSeconds];
     
-    durationLabel.text = [intervalData getDurationStringParsedForCountDown];
+    shutterLabel.text = [[intervalData shutterSpeed] toStringDownToSeconds];
+    
+    durationLabel.text = [[intervalData duration] toStringDownToSeconds];
     //set 'setter button' titles
     /*
     [shutterSetButton setTitle:@"Shutter Speed: Auto **" forState:0];

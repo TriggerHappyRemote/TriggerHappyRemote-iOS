@@ -22,7 +22,7 @@ IntervalData *intervalData;
     
     
     
-    if([intervalData isAutoShutter]) {
+    if([intervalData autoShutter]) {
         [autoBulbSegment setSelectedSegmentIndex:0];
         [picker setHidden:true];
         [hoursLabel setHidden:true];
@@ -71,21 +71,21 @@ IntervalData *intervalData;
                         @"10", @"11", @"12",
                         nil];
     
-    [picker selectRow:[intervalData getShutterHours] inComponent:0 animated:false];
-    [picker selectRow:[intervalData getShutterMinutes] inComponent:1 animated:false];
-    [picker selectRow:[intervalData getShutterSeconds] inComponent:2 animated:false];
+    [picker selectRow:[[intervalData shutterSpeed] hours] inComponent:0 animated:false];
+    [picker selectRow:[[intervalData shutterSpeed] minutes] inComponent:1 animated:false];
+    [picker selectRow:[[intervalData shutterSpeed] seconds] inComponent:2 animated:false];
     
-    if([intervalData getShutterHours] == 1)
+    if([[intervalData shutterSpeed] hours] == 1)
         hoursLabel.text = @"hour";
     else
         hoursLabel.text = @"hours";
     
-    if([intervalData getShutterMinutes] == 1)
+    if([[intervalData shutterSpeed] minutes] == 1)
         minsLabel.text = @"min";
     else
         minsLabel.text = @"mins";
     
-    if([intervalData getShutterSeconds] == 1)
+    if([[intervalData shutterSpeed] seconds] == 1)
         secsLabel.text = @"sec";
     else
         secsLabel.text = @"secs";
@@ -155,7 +155,7 @@ numberOfRowsInComponent:(NSInteger)component
         else
             hoursLabel.text = @"hours";
         
-        [intervalData setShutterHours:row];
+        [[intervalData interval] setHours:row];
     }
     else if(component == 1) {
         if(row == 1)
@@ -163,22 +163,21 @@ numberOfRowsInComponent:(NSInteger)component
         else
             minsLabel.text = @"mins";
         
-        [intervalData setShutterMinutes:row];
+        [[intervalData interval] setMinutes:row];
     }
     else {   
         if(row == 1)
             secsLabel.text = @"sec";
         else
             secsLabel.text = @"secs";
-        [intervalData setShutterSeconds:row];
+        [[intervalData interval] setSeconds:row];
+        
     }
     
-    
-    // so you cannot set to 0 h 0 m 0 s --> defaults to 0 0 1
-    if((component == 2 && row == 0 && [intervalData getShutterMinutes] == 0 && [intervalData getShutterHours] == 0) ||
-       ([intervalData getShutterMinutes] == 0 && [intervalData getShutterHours] == 0 && [intervalData getShutterSeconds] == 0) ) {
+    if((component == 2 && row == 0 && [[intervalData interval] minutes] == 0 && [[intervalData interval] hours] == 0) ||
+       ([[intervalData interval] minutes] == 0 && [[intervalData interval] hours] == 0 && [[intervalData interval] seconds] == 0) ) {
         [picker selectRow:1 inComponent:2 animated:false];
-        [intervalData setShutterSeconds:1];
+        [[intervalData interval] setSeconds:1];
     }
 }
 

@@ -73,6 +73,7 @@
 		0ACA047614DB7B39003CE2CD /* logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA047514DB7B39003CE2CD /* logo1.png */; };
 		0AE2734F14BB85550013A44B /* DurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2734E14BB85550013A44B /* DurationViewController.m */; };
 		0AE2735514BBA8B50013A44B /* IntervalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2735414BBA8B50013A44B /* IntervalData.m */; };
+		0AF84D491512B5AF0017C350 /* Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF84D481512B5AF0017C350 /* Time.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +174,8 @@
 		0AE2734E14BB85550013A44B /* DurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DurationViewController.m; sourceTree = "<group>"; };
 		0AE2735314BBA8B50013A44B /* IntervalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalData.h; sourceTree = "<group>"; };
 		0AE2735414BBA8B50013A44B /* IntervalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalData.m; sourceTree = "<group>"; };
+		0AF84D471512B5AF0017C350 /* Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Time.h; sourceTree = "<group>"; };
+		0AF84D481512B5AF0017C350 /* Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Time.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +287,7 @@
 		0A47D342149F046A008D728A /* camera-remote */ = {
 			isa = PBXGroup;
 			children = (
+				0AF84D451512B5600017C350 /* Common */,
 				0A654B3714DBCFBE003B2126 /* images */,
 				0A1CA96C14C52499000E6CE5 /* Model */,
 				0A1CA96E14C524A5000E6CE5 /* ViewController */,
@@ -402,6 +406,15 @@
 				0AC811A614F624D50040D7B4 /* HDREVViewController.m */,
 			);
 			name = hdr;
+			sourceTree = "<group>";
+		};
+		0AF84D451512B5600017C350 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0AF84D471512B5AF0017C350 /* Time.h */,
+				0AF84D481512B5AF0017C350 /* Time.m */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -566,6 +579,7 @@
 				0A6260FD14F5EABD00494D42 /* HDRShotsViewController.m in Sources */,
 				0AC811A414F6230E0040D7B4 /* HDRViewController.m in Sources */,
 				0AC811A714F624D50040D7B4 /* HDREVViewController.m in Sources */,
+				0AF84D491512B5AF0017C350 /* Time.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,41 +16,36 @@
     NSLog(@"Hours overloaded");
     
     // Hours 0-12
-    
-    
     self.hoursValues = [[NSMutableArray alloc] initWithCapacity:24];
     for(int i = 0; i < 12; i++) {
         [self.hoursValues addObject:[NSString stringWithFormat:@"%i", i]];
     }
-    
 }
 
 -(void) initializeInstructionLabel {
     self.instructionLabel.text = @"Interval off";
 }
 
--(void) loadDefaultTime {
-    
-}
-
 -(void) changeHour: (int) hour {
-    [[self.intervalData interval] setHours:hour];
+    [[[self.intervalData interval] time] setHours:hour];
 }
 
 -(void) changeMinute: (int) minute {
-    [[self.intervalData interval] setMinutes:minute];
+    [[[self.intervalData interval] time] setMinutes:minute];
 
 }
 
 -(void) changeSecond: (int) second {
-    [[self.intervalData interval] setSeconds:second];
+    [[[self.intervalData interval] time] setSeconds:second];
 }
 
 -(Time *) time {
-    return [self.intervalData interval];
+    return [[self.intervalData interval] time];
 }
 
-
+-(void) registerSegmentChangeToModel {
+    [[self.intervalData interval] setIntervalEnabled:[self.segment selectedSegmentIndex] == 0];
+}
 
 
 

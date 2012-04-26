@@ -68,6 +68,8 @@
 
 -(void) setPickerVisibility;
 
+-(void) registerSegmentChangeToModel;
+
 
 
 @end  

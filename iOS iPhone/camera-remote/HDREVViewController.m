@@ -59,18 +59,18 @@ const int evValuesThirds[evValuesThirdsSize] = {1,2,3,4,5,6,9,12};
 -(IBAction) toggleHalfThirds {
     
     //not used now
-    if([intervalData isThirdStop])
+    /*if([intervalData isThirdStop])
         NSLog(@"Third");
     else
         NSLog(@"Half");
 
-    [intervalData toggleThirdStop];
+   // [intervalData toggleThirdStop];
     if([intervalData isThirdStop])
         [self loadThirds];
     else
         [self loadHalfs];
     [picker reloadAllComponents];
-    
+    */
     
 }
 
@@ -117,7 +117,7 @@ numberOfRowsInComponent:(NSInteger)component
       inComponent:(NSInteger)component
 {
     NSLog(@"selected: row %i comp %i", row, component );
-    [intervalData setEV:evValuesThirds[row]];
+    //[intervalData setEV:evValuesThirds[row]];
     
 }
 

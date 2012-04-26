@@ -24,11 +24,15 @@
 @synthesize intervalData = _intervalData;
 @synthesize instructionLabelVisible;
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewWillAppear:(BOOL)animated {
     
     _intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
         
+    
+    [self setPickerVisibility];
+    
+    [[[self navigationController] tabBarController] tabBar].hidden = YES;
+    
     [self initializeInstructionLabel];
     [self loadHoursArray];
     [self loadMinutesArray];
@@ -89,24 +93,13 @@
     [self.picker selectRow:[[self time] hours] inComponent:0 animated:false];
     [self.picker selectRow:[[self time] minutes] inComponent:1 animated:false];
     [self.picker selectRow:[[self time] seconds] inComponent:2 animated:false];
-    
-    [self.picker selectRow:6 inComponent:0 animated:false];
-    [self.picker selectRow:7 inComponent:1 animated:false];
-    [self.picker selectRow:8 inComponent:2 animated:false];
+
 }
 
 
--(void) changeHour: (int) hour {
-    
-}
-
--(void) changeMinute: (int) minute {
-    
-}
-
--(void) changeSecond: (int) second {
-    
-}
+-(void) changeHour: (int) hour {}
+-(void) changeMinute: (int) minute {}
+-(void) changeSecond: (int) second {}
 
 -(Time *) time {
     // return a dummy time for this super interface
@@ -115,11 +108,6 @@
     [t setMinutes:6];
     [t setSeconds:6];
     return t;
-}
-
-
--(void) viewWillAppear:(BOOL)animated {
-    [[[self navigationController] tabBarController] tabBar].hidden = YES;
 }
 
 // ---------------------------------------------------------------------
@@ -168,9 +156,6 @@ numberOfRowsInComponent:(NSInteger)component {
             hoursLabel.text = @"hour";
         else
             hoursLabel.text = @"hours";
-        
-        
-        
         [self changeHour:row];
     }
     else if(component == 1) {
@@ -180,9 +165,6 @@ numberOfRowsInComponent:(NSInteger)component {
             minsLabel.text = @"mins";
         
         [self changeMinute:row];
-
-        
-        //[[intervalData interval] setMinutes:row];
     }
     else {   
         if(row == 1)
@@ -191,10 +173,6 @@ numberOfRowsInComponent:(NSInteger)component {
             secsLabel.text = @"secs";
         
         [self changeSecond:row];
-
-        
-        //[[intervalData interval] setSeconds:row];
-        
     }
     
     Time * currentTime = [self time];
@@ -217,7 +195,8 @@ numberOfRowsInComponent:(NSInteger)component {
 -(IBAction)segmentDidChange {
     NSLog(@"selected segment: %i", [self.segment selectedSegmentIndex]);
     [self setPickerVisibility];
-    
+    [self registerSegmentChangeToModel];
+
 }
 
 -(void) setPickerVisibility {
@@ -232,8 +211,9 @@ numberOfRowsInComponent:(NSInteger)component {
     }
 }
 
--(IBAction)textFieldReturn:(id)sender
-{
+-(void) registerSegmentChangeToModel {}
+
+-(IBAction)textFieldReturn:(id)sender {
     [sender resignFirstResponder];
 }
 

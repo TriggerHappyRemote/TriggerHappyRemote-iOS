@@ -66,7 +66,6 @@ numberOfRowsInComponent:(NSInteger)component
     NSLog(@"selected: row %i comp %i", row, component );
     
     
-    [intervalData setNumberOfShots:evValues[row]];
 }
 
 -(IBAction)textFieldReturn:(id)sender

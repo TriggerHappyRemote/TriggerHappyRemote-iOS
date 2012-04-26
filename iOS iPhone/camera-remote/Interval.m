@@ -15,6 +15,7 @@
 
 -(id) init {
     _time = [Time new];
+    self.intervalEnabled = true;
     return self;
 }
 

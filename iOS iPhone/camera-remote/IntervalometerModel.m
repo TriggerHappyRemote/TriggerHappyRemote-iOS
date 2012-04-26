@@ -57,7 +57,7 @@ float shutterLengthMS;
     currentShutterTimeMS = shutterLengthMS;
     
     
-    if(![intervalData unlimitedDuration]) {
+    if(![[intervalData duration] unlimitedDuration]) {
         currentCountDownTimeSeconds = (int)[intervalData duration];
         [self.remainingTime setTotalTimeInSeconds:[[[intervalData duration] time] totalTimeInSeconds]];
 

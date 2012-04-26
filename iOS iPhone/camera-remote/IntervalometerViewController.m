@@ -1,50 +1,99 @@
 //
 //  IntervalometerViewController.m
-//  camera-remote
+//  Trigger Happy V1.0
 //
 //  Created by Kevin Harrington on 12/19/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Trigger Happy, LLC. All rights reserved.
 //
 
 #import "IntervalometerViewController.h"
 #import "AppDelegate.h"
 
 
-@implementation IntervalometerViewController
+@interface IntervalometerViewController()
+-(void)loadButtons;
+-(void) setButtonTitles;
+@end
+
+@implementation IntervalometerViewController 
 
 @synthesize navigation;
 
-@synthesize shutterSetButton, intervalSetButton, durationSetButton, shutterLabel, intervalLabel, durationLabel;
+@synthesize shutterSetButton, intervalSetButton, durationSetButton, hdrSetButton, brampingSetButton;
+
+@synthesize shutterLabel, intervalLabel, durationLabel, settings;
 
 IntervalData *intervalData;
 
 -(void) viewWillAppear:(BOOL)animated {
     NSLog(@"View will appear ivc");
     
-    [[[self navigationController] tabBarController] tabBar].hidden = NO;
-    [navigation setHidesBackButton:true];
-    [self setButtonTitles];
-    [self.navigationController setNavigationBarHidden:NO animated:false];    
-
-}
-
--(void) viewDidLoad {
-    [navigation setHidesBackButton:true];
     
     AppDelegate * d = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     intervalData = [d getIntervalData];
-    [d setIntervalVC:self];
+    
+    // TODO: remove, idk what this does
+    //[d setIntervalVC:self];
+    
+    [[[self navigationController] tabBarController] tabBar].hidden = NO;
+    [navigation setHidesBackButton:true];
+    [self loadButtons];
+    [self.navigationController setNavigationBarHidden:NO animated:false]; 
+    [self.settings setSelectedSegmentIndex:[intervalData mode]];
+}
+
+-(void) viewDidLoad {
+//    [navigation setHidesBackButton:true];
+//    
+//    AppDelegate * d = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//    intervalData = [d getIntervalData];
+//    [d setIntervalVC:self];
+}
+
+-(void) loadButtons {
+    
+    switch ([intervalData mode]) {
+        case (HDR):
+            [shutterSetButton setHidden:true];
+            [brampingSetButton setHidden:true];
+            [hdrSetButton setHidden:false];
+            break;
+        case (BRAMP):
+            [shutterSetButton setHidden:true];
+            [brampingSetButton setHidden:false];
+            [hdrSetButton setHidden:true];
+            break;
+        default:
+            [shutterSetButton setHidden:false];
+            [brampingSetButton setHidden:true];
+            [hdrSetButton setHidden:true];
+            break;
+        
+    }
+    
+    [self setButtonTitles];
+
 }
 
 - (void) setButtonTitles {
 
     NSLog(@"set button titles");
     
-    intervalLabel.text = [[intervalData interval] toStringDownToSeconds];
+    if([[intervalData interval] intervalEnabled]) {
+        intervalLabel.text = [[[intervalData interval] time] toStringDownToSeconds];
+    }
+    else {
+        intervalLabel.text = @"Off"; 
+    }
     
     shutterLabel.text = [[intervalData shutterSpeed] toStringDownToSeconds];
     
-    durationLabel.text = [[intervalData duration] toStringDownToSeconds];
+    if([[intervalData duration] unlimitedDuration]) {
+        durationLabel.text = @"Unlimited";
+    }
+    else {
+        durationLabel.text = [[[intervalData duration] time] toStringDownToMinutes];
+    }
     //set 'setter button' titles
     /*
     [shutterSetButton setTitle:@"Shutter Speed: Auto **" forState:0];
@@ -75,5 +124,15 @@ IntervalData *intervalData;
     
     
 }
+
+-(IBAction) segmentSettingsChanged {
+    NSLog(@"setting changed %i", settings.selectedSegmentIndex); 
+    
+    // remember: Standard = 0, hdr = 1, bramping = 2
+    [intervalData setMode:settings.selectedSegmentIndex];
+    [self loadButtons];
+    
+}
+
 
 @end

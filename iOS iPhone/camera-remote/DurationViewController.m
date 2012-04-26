@@ -11,52 +11,48 @@
 
 @implementation DurationViewController
 
-@synthesize durationPicker, duration;
+@synthesize durationPicker;
+
+@synthesize duration;
 
 bool unlimited;
 
 IntervalData *intervalData;
 
--(void) viewDidLoad {
+-(void) viewWillAppear:(BOOL)animated {
     intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
 
-    
 	[durationPicker setDatePickerMode:UIDatePickerModeCountDownTimer];
     
-    if([intervalData unlimitedDuration]) {
+    if([[intervalData duration] unlimitedDuration]) {
         [duration setSelectedSegmentIndex:0];
-        [durationPicker setHidden:[intervalData unlimitedDuration]];
+        [durationPicker setHidden:true];
 
     }
     else {
         [duration setSelectedSegmentIndex:1];
-        [durationPicker setHidden:[intervalData unlimitedDuration]];
+        [durationPicker setHidden:false];
     }
 
-    [durationPicker setCountDownDuration:[[intervalData duration] totalTimeInSeconds]];
+    [durationPicker setCountDownDuration:[[[intervalData duration] time]totalTimeInSeconds]];
 	
 }
 
--(void) viewWillAppear:(BOOL)animated {
-    [durationPicker setHidden:[intervalData unlimitedDuration]];
-    [durationPicker setCountDownDuration:[[intervalData duration] totalTimeInSeconds]]; 
-    [[[self navigationController] tabBarController] tabBar].hidden = YES;
-}
-
 -(IBAction) toggleSegmentControl {
-    NSLog(@"Toggle duration segment control");
+    NSLog(@"Toggle duration segment control %i", [self.duration selectedSegmentIndex]);
     
-    [durationPicker setHidden:!durationPicker.isHidden];
-    [intervalData setUnlimitedDuration: durationPicker.isHidden];
+    [durationPicker setHidden:[self.duration selectedSegmentIndex] == 0];
+    [[intervalData duration] 
+     setUnlimitedDuration:[self.duration selectedSegmentIndex] == 0];
     
     
 }
 
 -(IBAction) changeInDuration {
-    NSLog(@"Change in duration");
+    
  	NSTimeInterval durationCountDown = [durationPicker countDownDuration];
-    [[intervalData duration] setTotalTimeInSeconds:durationCountDown];
-   
+    [[[intervalData duration] time] setTotalTimeInSeconds:durationCountDown];
+    NSLog(@"Change in duration: %@", [[[intervalData duration] time] toStringDownToSeconds] );
 }
 
 

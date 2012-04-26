@@ -23,7 +23,7 @@ IntervalData *intervalData;
     intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
 
     [[[self navigationController] tabBarController] tabBar].hidden = YES;
-
+/*
     numberOfShotsLabel.text = [[NSString alloc] initWithFormat:@"%d Shot", [intervalData getNumberOfShots]];
     
     [intervalData setAutoShutter:false];
@@ -47,7 +47,7 @@ IntervalData *intervalData;
     
     
     [self.view drawRect:CGRectMake(20, 30, 20, 30)];
-    
+    */
 
     
     

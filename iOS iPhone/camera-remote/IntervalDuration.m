@@ -1,13 +1,21 @@
 //
-//  Duration.m
-//  camera-remote
+//  IntervalDuration.m
+//  Trigger Happy, V1.0
 //
 //  Created by Kevin Harrington on 4/26/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 
-#import "Duration.h"
+#import "IntervalDuration.h"
 
-@implementation Duration
+@implementation IntervalDuration
+
+@synthesize time = _time;
+@synthesize unlimitedDuration = _unlimitedDuration;
+
+-(id) init {
+    _time = [Time new];
+    return self;
+}
 
 @end

@@ -15,7 +15,7 @@
 @property (nonatomic) int minutes;
 @property (nonatomic) int seconds;
 
-- (void) setTime:hours:(int)_hours minutes:(int)_minutes seconds:(int)_seconds;
+//- (void) setTime: hours:(int)_hours minutes:(int)_minutes seconds:(int)_seconds;
 
 /**
  * @return NSString is format on @"hh:mm"

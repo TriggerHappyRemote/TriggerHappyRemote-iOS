@@ -45,7 +45,7 @@ IntervalometerModel *intervalometerModel;
     
     [[[self navigationController] tabBarController] tabBar].hidden = YES;
         
-    if([intervalData unlimitedDuration]) {
+    if([[intervalData duration] unlimitedDuration]) {
         [unlimitedDuration setHidden:false];
         [durationTime setHidden:true];
         unlimitedDuration.text = @"Unlimited Duration";
@@ -59,7 +59,7 @@ IntervalometerModel *intervalometerModel;
     //[[[self navigationController] tabBarController] tabBar].hidden = YES;
     
     interval.textAlignment = UITextAlignmentRight;
-    interval.text =  [[intervalData interval] toStringDownToSeconds];
+    interval.text =  [[[intervalData interval] time] toStringDownToSeconds];
     
     shutterSpeed.textAlignment = UITextAlignmentRight;
     shutterSpeed.text = [[intervalData shutterSpeed] toStringDownToSeconds];

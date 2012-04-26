@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0A044CBC14C10E5F00A60C3C /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A044CBB14C10E5F00A60C3C /* MainTabBarController.m */; };
+		0A0CEF06153FD28F00A467DC /* HDR.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0CEF05153FD28F00A467DC /* HDR.m */; };
+		0A0CEF0A153FD30200A467DC /* Interval.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0CEF09153FD30200A467DC /* Interval.m */; };
 		0A1CA97114C53507000E6CE5 /* IntervalometerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1CA97014C53507000E6CE5 /* IntervalometerModel.m */; };
 		0A1CA97414C54B31000E6CE5 /* IntervalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1CA97314C54B31000E6CE5 /* IntervalViewController.m */; };
-		0A1CA97814C54DFC000E6CE5 /* BulbModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1CA97714C54DFC000E6CE5 /* BulbModel.m */; };
 		0A1CA97B14C55084000E6CE5 /* SingleShotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1CA97A14C55083000E6CE5 /* SingleShotViewController.m */; };
 		0A245AA914CC8DE500EEDBA9 /* ShutterSpeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A245AA814CC8DE500EEDBA9 /* ShutterSpeedViewController.m */; };
-		0A245AAD14CC973000EEDBA9 /* i5CustomFlipOverStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A245AAC14CC973000EEDBA9 /* i5CustomFlipOverStoryboardSegue.m */; };
 		0A394D5714DF649F00044BC4 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A394D5614DF649F00044BC4 /* MoreViewController.m */; };
 		0A394D5B14DF69EB00044BC4 /* FaceDetectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A394D5A14DF69EB00044BC4 /* FaceDetectionViewController.m */; };
 		0A47D33D149F046A008D728A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47D33C149F046A008D728A /* UIKit.framework */; };
@@ -34,6 +34,8 @@
 		0A47D37C149F0584008D728A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A47D34E149F046B008D728A /* MainStoryboard.storyboard */; };
 		0A47D380149FC170008D728A /* IntervalometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47D37F149FC170008D728A /* IntervalometerViewController.m */; };
 		0A47D38C14A05835008D728A /* IntervalometerCountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47D38B14A05834008D728A /* IntervalometerCountDownViewController.m */; };
+		0A49F04215466CA6006EC13D /* ITimeSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A49F04115466CA6006EC13D /* ITimeSelectorViewController.m */; };
+		0A49F04515466D72006EC13D /* IntervalSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A49F04415466D72006EC13D /* IntervalSelectorViewController.m */; };
 		0A6260ED14F48BAA00494D42 /* hdrbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A6260EC14F48BAA00494D42 /* hdrbutton.png */; };
 		0A6260F514F5E21E00494D42 /* hdrview.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A6260EF14F5E21E00494D42 /* hdrview.png */; };
 		0A6260F614F5E21E00494D42 /* sidearrowsmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A6260F014F5E21E00494D42 /* sidearrowsmall.png */; };
@@ -71,6 +73,8 @@
 		0AC811A714F624D50040D7B4 /* HDREVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC811A614F624D50040D7B4 /* HDREVViewController.m */; };
 		0ACA047314DB6DAA003CE2CD /* logo-S.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA047214DB6DAA003CE2CD /* logo-S.png */; };
 		0ACA047614DB7B39003CE2CD /* logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA047514DB7B39003CE2CD /* logo1.png */; };
+		0AE197BB1549FDCF00714F55 /* bulb-ramping-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE197BA1549FDCF00714F55 /* bulb-ramping-button.png */; };
+		0AE197BE154A034200714F55 /* IntervalDuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE197BD154A034200714F55 /* IntervalDuration.m */; };
 		0AE2734F14BB85550013A44B /* DurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2734E14BB85550013A44B /* DurationViewController.m */; };
 		0AE2735514BBA8B50013A44B /* IntervalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2735414BBA8B50013A44B /* IntervalData.m */; };
 		0AF84D491512B5AF0017C350 /* Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF84D481512B5AF0017C350 /* Time.m */; };
@@ -89,18 +93,18 @@
 /* Begin PBXFileReference section */
 		0A044CBA14C10E5F00A60C3C /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		0A044CBB14C10E5F00A60C3C /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		0A0CEF04153FD28F00A467DC /* HDR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDR.h; sourceTree = "<group>"; };
+		0A0CEF05153FD28F00A467DC /* HDR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDR.m; sourceTree = "<group>"; };
+		0A0CEF08153FD30200A467DC /* Interval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interval.h; sourceTree = "<group>"; };
+		0A0CEF09153FD30200A467DC /* Interval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Interval.m; sourceTree = "<group>"; };
 		0A1CA96F14C53507000E6CE5 /* IntervalometerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalometerModel.h; sourceTree = "<group>"; };
 		0A1CA97014C53507000E6CE5 /* IntervalometerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalometerModel.m; sourceTree = "<group>"; };
 		0A1CA97214C54B31000E6CE5 /* IntervalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalViewController.h; sourceTree = "<group>"; };
 		0A1CA97314C54B31000E6CE5 /* IntervalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalViewController.m; sourceTree = "<group>"; };
-		0A1CA97614C54DFC000E6CE5 /* BulbModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulbModel.h; sourceTree = "<group>"; };
-		0A1CA97714C54DFC000E6CE5 /* BulbModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulbModel.m; sourceTree = "<group>"; };
 		0A1CA97914C55083000E6CE5 /* SingleShotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleShotViewController.h; sourceTree = "<group>"; };
 		0A1CA97A14C55083000E6CE5 /* SingleShotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleShotViewController.m; sourceTree = "<group>"; };
 		0A245AA714CC8DE500EEDBA9 /* ShutterSpeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShutterSpeedViewController.h; sourceTree = "<group>"; };
 		0A245AA814CC8DE500EEDBA9 /* ShutterSpeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShutterSpeedViewController.m; sourceTree = "<group>"; };
-		0A245AAB14CC973000EEDBA9 /* i5CustomFlipOverStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = i5CustomFlipOverStoryboardSegue.h; sourceTree = "<group>"; };
-		0A245AAC14CC973000EEDBA9 /* i5CustomFlipOverStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = i5CustomFlipOverStoryboardSegue.m; sourceTree = "<group>"; };
 		0A394D5514DF649F00044BC4 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		0A394D5614DF649F00044BC4 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		0A394D5914DF69EB00044BC4 /* FaceDetectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetectionViewController.h; sourceTree = "<group>"; };
@@ -130,6 +134,10 @@
 		0A47D37F149FC170008D728A /* IntervalometerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalometerViewController.m; sourceTree = "<group>"; };
 		0A47D38A14A05834008D728A /* IntervalometerCountDownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalometerCountDownViewController.h; sourceTree = "<group>"; };
 		0A47D38B14A05834008D728A /* IntervalometerCountDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalometerCountDownViewController.m; sourceTree = "<group>"; };
+		0A49F03E15466BD1006EC13D /* ITimeSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITimeSelectorViewController.h; sourceTree = "<group>"; };
+		0A49F04115466CA6006EC13D /* ITimeSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITimeSelectorViewController.m; sourceTree = "<group>"; };
+		0A49F04315466D72006EC13D /* IntervalSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalSelectorViewController.h; sourceTree = "<group>"; };
+		0A49F04415466D72006EC13D /* IntervalSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalSelectorViewController.m; sourceTree = "<group>"; };
 		0A6260EC14F48BAA00494D42 /* hdrbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hdrbutton.png; path = images/hdrbutton.png; sourceTree = SOURCE_ROOT; };
 		0A6260EF14F5E21E00494D42 /* hdrview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hdrview.png; path = images/hdrview.png; sourceTree = SOURCE_ROOT; };
 		0A6260F014F5E21E00494D42 /* sidearrowsmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sidearrowsmall.png; path = images/sidearrowsmall.png; sourceTree = SOURCE_ROOT; };
@@ -170,6 +178,9 @@
 		0AC811A614F624D50040D7B4 /* HDREVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDREVViewController.m; sourceTree = "<group>"; };
 		0ACA047214DB6DAA003CE2CD /* logo-S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-S.png"; sourceTree = "<group>"; };
 		0ACA047514DB7B39003CE2CD /* logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo1.png; sourceTree = "<group>"; };
+		0AE197BA1549FDCF00714F55 /* bulb-ramping-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bulb-ramping-button.png"; path = "images/bulb-ramping-button.png"; sourceTree = SOURCE_ROOT; };
+		0AE197BC154A034200714F55 /* IntervalDuration.h */ = {isa = PBXFileReference; fileEncoding = 4; path = IntervalDuration.h; sourceTree = "<group>"; };
+		0AE197BD154A034200714F55 /* IntervalDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalDuration.m; sourceTree = "<group>"; };
 		0AE2734D14BB85550013A44B /* DurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DurationViewController.h; sourceTree = "<group>"; };
 		0AE2734E14BB85550013A44B /* DurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DurationViewController.m; sourceTree = "<group>"; };
 		0AE2735314BBA8B50013A44B /* IntervalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalData.h; sourceTree = "<group>"; };
@@ -209,8 +220,12 @@
 				0AE2735414BBA8B50013A44B /* IntervalData.m */,
 				0A1CA96F14C53507000E6CE5 /* IntervalometerModel.h */,
 				0A1CA97014C53507000E6CE5 /* IntervalometerModel.m */,
-				0A1CA97614C54DFC000E6CE5 /* BulbModel.h */,
-				0A1CA97714C54DFC000E6CE5 /* BulbModel.m */,
+				0A0CEF04153FD28F00A467DC /* HDR.h */,
+				0A0CEF05153FD28F00A467DC /* HDR.m */,
+				0A0CEF08153FD30200A467DC /* Interval.h */,
+				0A0CEF09153FD30200A467DC /* Interval.m */,
+				0AE197BC154A034200714F55 /* IntervalDuration.h */,
+				0AE197BD154A034200714F55 /* IntervalDuration.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -230,8 +245,6 @@
 				0A47D34E149F046B008D728A /* MainStoryboard.storyboard */,
 				0A1CA97914C55083000E6CE5 /* SingleShotViewController.h */,
 				0A1CA97A14C55083000E6CE5 /* SingleShotViewController.m */,
-				0A245AAB14CC973000EEDBA9 /* i5CustomFlipOverStoryboardSegue.h */,
-				0A245AAC14CC973000EEDBA9 /* i5CustomFlipOverStoryboardSegue.m */,
 				0A394D5514DF649F00044BC4 /* MoreViewController.h */,
 				0A394D5614DF649F00044BC4 /* MoreViewController.m */,
 				0A394D5914DF69EB00044BC4 /* FaceDetectionViewController.h */,
@@ -243,6 +256,10 @@
 		0A1CA97514C54B45000E6CE5 /* Picker ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A49F03E15466BD1006EC13D /* ITimeSelectorViewController.h */,
+				0A49F04115466CA6006EC13D /* ITimeSelectorViewController.m */,
+				0A49F04315466D72006EC13D /* IntervalSelectorViewController.h */,
+				0A49F04415466D72006EC13D /* IntervalSelectorViewController.m */,
 				0AC811A114F622ED0040D7B4 /* hdr */,
 				0AE2734D14BB85550013A44B /* DurationViewController.h */,
 				0AE2734E14BB85550013A44B /* DurationViewController.m */,
@@ -257,7 +274,7 @@
 		0A47D32D149F046A008D728A = {
 			isa = PBXGroup;
 			children = (
-				0A47D342149F046A008D728A /* camera-remote */,
+				0A47D342149F046A008D728A /* Trigger Happy */,
 				0A47D36B149F046B008D728A /* camera-remoteTests */,
 				0A47D33B149F046A008D728A /* Frameworks */,
 				0A47D339149F046A008D728A /* Products */,
@@ -284,15 +301,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0A47D342149F046A008D728A /* camera-remote */ = {
+		0A47D342149F046A008D728A /* Trigger Happy */ = {
 			isa = PBXGroup;
 			children = (
 				0AF84D451512B5600017C350 /* Common */,
-				0A654B3714DBCFBE003B2126 /* images */,
+				0A654B3714DBCFBE003B2126 /* Images */,
 				0A1CA96C14C52499000E6CE5 /* Model */,
 				0A1CA96E14C524A5000E6CE5 /* ViewController */,
 				0A47D343149F046A008D728A /* Supporting Files */,
 			);
+			name = "Trigger Happy";
 			path = "camera-remote";
 			sourceTree = "<group>";
 		};
@@ -326,14 +344,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0A654B3714DBCFBE003B2126 /* images */ = {
+		0A654B3714DBCFBE003B2126 /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				0A654B4514DBE57F003B2126 /* buttons */,
 				0A654B3A14DBCFE6003B2126 /* views */,
 				0A654B3914DBCFD2003B2126 /* app store logos */,
 			);
-			name = images;
+			name = Images;
 			sourceTree = "<group>";
 		};
 		0A654B3914DBCFD2003B2126 /* app store logos */ = {
@@ -362,6 +380,7 @@
 		0A654B4514DBE57F003B2126 /* buttons */ = {
 			isa = PBXGroup;
 			children = (
+				0AE197BA1549FDCF00714F55 /* bulb-ramping-button.png */,
 				0A875FF214DCFCF20005FBE0 /* light_bulb copy.png */,
 				0A654B4114DBE536003B2126 /* stopbutton.png */,
 				0A875FF414DCFD880005FBE0 /* clock.png */,
@@ -527,6 +546,7 @@
 				0AC8119D14F61F200040D7B4 /* exposureInterval.png in Resources */,
 				0AC8119E14F61F200040D7B4 /* baseshutterlength.png in Resources */,
 				0AC8119F14F61F200040D7B4 /* baseshutter.png in Resources */,
+				0AE197BB1549FDCF00714F55 /* bulb-ramping-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,16 +590,19 @@
 				0A044CBC14C10E5F00A60C3C /* MainTabBarController.m in Sources */,
 				0A1CA97114C53507000E6CE5 /* IntervalometerModel.m in Sources */,
 				0A1CA97414C54B31000E6CE5 /* IntervalViewController.m in Sources */,
-				0A1CA97814C54DFC000E6CE5 /* BulbModel.m in Sources */,
 				0A1CA97B14C55084000E6CE5 /* SingleShotViewController.m in Sources */,
 				0A245AA914CC8DE500EEDBA9 /* ShutterSpeedViewController.m in Sources */,
-				0A245AAD14CC973000EEDBA9 /* i5CustomFlipOverStoryboardSegue.m in Sources */,
 				0A394D5714DF649F00044BC4 /* MoreViewController.m in Sources */,
 				0A394D5B14DF69EB00044BC4 /* FaceDetectionViewController.m in Sources */,
 				0A6260FD14F5EABD00494D42 /* HDRShotsViewController.m in Sources */,
 				0AC811A414F6230E0040D7B4 /* HDRViewController.m in Sources */,
 				0AC811A714F624D50040D7B4 /* HDREVViewController.m in Sources */,
 				0AF84D491512B5AF0017C350 /* Time.m in Sources */,
+				0A0CEF06153FD28F00A467DC /* HDR.m in Sources */,
+				0A0CEF0A153FD30200A467DC /* Interval.m in Sources */,
+				0A49F04215466CA6006EC13D /* ITimeSelectorViewController.m in Sources */,
+				0A49F04515466D72006EC13D /* IntervalSelectorViewController.m in Sources */,
+				0AE197BE154A034200714F55 /* IntervalDuration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

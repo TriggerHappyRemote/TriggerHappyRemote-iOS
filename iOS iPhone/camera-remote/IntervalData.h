@@ -1,62 +1,35 @@
 //
 //  IntervalData.h
-//  camera-remote
+//  Trigger Happy, LLC
 //
 //  Created by Kevin Harrington on 1/9/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "IntervalometerCountDownViewController.h"
 #import "Time.h"
+#import "IntervalDuration.h"
+#import "Interval.h"
 
 @interface IntervalData : NSObject
 
-
-// ---------------------------------------------------------
-// Interval
-// ---------------------------------------------------------
-
-
-
-// ---------------------------------------------------------
-// Duration
-// ---------------------------------------------------------
+// Corresponds exactly with UISegmentControl settings in IntervalometerViewController
+typedef enum  {
+    STANDARD = 0,
+    HDR = 1,
+    BRAMP = 2
+} IntervalometerMode;
+@property (nonatomic) IntervalometerMode mode;
 
 
 
-// ---------------------------------------------------------
+@property (nonatomic, strong) IntervalDuration* duration;
+@property (nonatomic, strong) Interval* interval;
 
-// --------------------------------------------------------
-// HDR
 
-- (bool) isThirdStop;
 
-- (void) toggleThirdStop;
-
-- (void) setNumberOfShots : (int) _numberOfShots;
-
-- (int) getNumberOfShots;
-
-- (void) setEV : (int) _EV;
-
-- (int) getEV;
-
-@property (nonatomic, strong) Time* duration;
-@property (nonatomic, strong) Time* interval;
 @property (nonatomic, strong) Time* shutterSpeed;
-
-
-
-@property (nonatomic) bool unlimitedDuration;
-@property (nonatomic) bool autoShutter;
-@property (nonatomic) bool isThirdStop;
-
-@property (nonatomic) int numberOfShots;
-
-// base 3
-@property (nonatomic) int exposureValue;
-
 
 
 @end

@@ -12,27 +12,19 @@
 
 @synthesize interval = _interval;
 @synthesize duration = _duration;
-@synthesize shutterSpeed = _shutterSpeed;
+@synthesize shutter = _shutter;
 
-@synthesize mode = _mode;
 
 
 - (id)init {
-    _mode = STANDARD;
     
-    //TODO: empcomass in own class
-    _shutterSpeed = [Time new];
-
+    _shutter = [Shutter new];
     _interval = [Interval new];
     _duration = [IntervalDuration new];
     
-    
     [[self.duration time] setTotalTimeInSeconds:3600];
     [[self.interval time] setTotalTimeInSeconds:3];
-    
-    //self.shutterSpeed.totalTimeInSeconds = .01;
-    //self.shutterSpeed.totalTimeInSeconds = 2;
-    
+    [[self.shutter startLength] setTotalTimeInSeconds:1];
 
     return self;
 }

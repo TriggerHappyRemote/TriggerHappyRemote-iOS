@@ -10,18 +10,6 @@
 
 @implementation IntervalSelectorViewController 
 
-
-// TODO: remove when done testing inheritance
--(void) loadHoursArray {
-    NSLog(@"Hours overloaded");
-    
-    // Hours 0-12
-    self.hoursValues = [[NSMutableArray alloc] initWithCapacity:24];
-    for(int i = 0; i < 12; i++) {
-        [self.hoursValues addObject:[NSString stringWithFormat:@"%i", i]];
-    }
-}
-
 -(void) initializeInstructionLabel {
     self.instructionLabel.text = @"Interval off";
 }
@@ -46,6 +34,16 @@
 -(void) registerSegmentChangeToModel {
     [[self.intervalData interval] setIntervalEnabled:[self.segment selectedSegmentIndex] == 0];
 }
+
+-(int) getSegmentIndex { 
+    if([[self.intervalData interval] intervalEnabled]) {
+        return 0; // on
+    }
+    else {
+        return 1; // off
+    }
+}
+
 
 
 

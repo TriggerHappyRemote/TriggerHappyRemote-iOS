@@ -30,7 +30,6 @@
 
 @property (strong, nonatomic) IntervalData *intervalData;
 @property (strong, nonatomic) IntervalometerModel *intervalometerModel;
-@property (strong, nonatomic) IntervalometerViewController *intervalVC;
 
 
 @end

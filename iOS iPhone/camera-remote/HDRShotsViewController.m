@@ -16,65 +16,56 @@
 
 IntervalData *intervalData;
 
-const int evValuesSize = 5;
-const int evValues[evValuesSize] = {1,3,5,7,9};
+const int shotsSize = 7;
+const int shotsOptions[shotsSize] = {3,5,7,9,11,13,15};
 
-
-- (void)viewDidLoad {
+- (void)viewWillAppear:(BOOL)animated {
     [super viewDidLoad];
     intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
         
   
-    [picker selectRow:2 inComponent:0 animated:false];
-    
-
-}
-
-- (void) viewDidAppear:(BOOL)animated {
-    
     [[[self navigationController] tabBarController] tabBar].hidden = YES;
+
+    // Mapping works like this:
+    //     {3,5,7,9,11,13,15} -> {1,2,3,4,5,6,7} by noShots / 2 - 1 w/ integer math
+    int selected = [[[intervalData shutter] hdr] numberOfShots] / 2  - 1;
+    [picker selectRow:selected inComponent:0 animated:false];
+    
+
 }
 
-#pragma mark -
-#pragma mark PickerView DataSource
+- (void) viewDidLoad {
+    [picker selectRow:3 inComponent:0 animated:false];
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }
 
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView
-numberOfRowsInComponent:(NSInteger)component
-{
-    return evValuesSize;
+numberOfRowsInComponent:(NSInteger)component {
+    return shotsSize;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView
-             titleForRow:(NSInteger)row
-            forComponent:(NSInteger)component
-{
+             titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     
-    return [[NSString alloc] initWithFormat:@"%d", evValues[row]];
+    return [[NSString alloc] initWithFormat:@"%d", shotsOptions[row]];
 } 
 
-#pragma mark -
-#pragma mark PickerView Delegate
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
-      inComponent:(NSInteger)component
-{
-    NSLog(@"selected: row %i comp %i", row, component );
-    
-    
+      inComponent:(NSInteger)component {
+    NSLog(@"selected: row %i comp %i", row, component ); 
+    [[[intervalData shutter] hdr] setNumberOfShots:shotsOptions[row]];
 }
 
--(IBAction)textFieldReturn:(id)sender
-{
+-(IBAction)textFieldReturn:(id)sender {
     [sender resignFirstResponder];
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload {
     [super viewDidUnload];
     self.picker = nil;
 }

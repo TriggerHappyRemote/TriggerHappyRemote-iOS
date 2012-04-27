@@ -11,7 +11,7 @@
 
 @implementation AppDelegate
 
-@synthesize intervalData, intervalometerModel, intervalVC;
+@synthesize intervalData, intervalometerModel;
 
 @synthesize window = _window;
 

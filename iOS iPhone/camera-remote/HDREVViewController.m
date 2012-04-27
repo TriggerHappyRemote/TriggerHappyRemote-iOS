@@ -1,5 +1,5 @@
 //
-//  HDRViewController.m
+//  HDREVViewController.m
 //  camera-remote
 //
 //  Created by Kevin Harrington on 2/22/12.
@@ -12,112 +12,69 @@
 
 @implementation HDREVViewController
 
-@synthesize picker, exposureValues;
+@synthesize picker;
 
 
 IntervalData *intervalData;
 
 
 //base 3
-const int evValuesThirdsSize = 8;
-const int evValuesThirds[evValuesThirdsSize] = {1,2,3,4,5,6,9,12};
+// due to Apple's fail, we can map anything
+const int evValuesThirdsSize = 10;
+const double evModelValues[evValuesThirdsSize] = {.333,.666,1,2,3,4,5,6,7,8 };
 
 
-- (void)viewDidLoad {
+NSString * evValuesThirds[evValuesThirdsSize] = {@"1/3",@"2/3",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8"};
+
+- (void)viewWillAppear:(BOOL)animated {
     [super viewDidLoad];
     intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
-    
-    
-    
-    
-    
-    self.exposureValues = [[NSMutableArray alloc] initWithCapacity:12];
-    
-    
-//    if([intervalData isThirdStop])
-//        [self loadThirds];
-//    else
-//        [self loadHalfs];
-    
-    [self loadThirds];
-    
    
-    
-    [picker selectRow:2 inComponent:0 animated:false];
-    
-    
-}
+    if([[[intervalData shutter] hdr] evInterval] == .333) {
+        [picker selectRow:0 inComponent:0 animated:false];
 
-- (void) loadThirds {
-    self.exposureValues = [[NSMutableArray alloc] initWithObjects:
-                           @"1/3", @"2/3", @"1", @"4/3",
-                           @"5/3", @"2", @"3",
-                           @"4",
-                           nil];   
-}
+    }
+    else if([[[intervalData shutter] hdr] evInterval] == .333) {
+        [picker selectRow:1 inComponent:0 animated:false];
 
--(IBAction) toggleHalfThirds {
-    
-    //not used now
-    /*if([intervalData isThirdStop])
-        NSLog(@"Third");
-    else
-        NSLog(@"Half");
+    }
+    else {
+        NSLog(@"Setting -- %i", (int)[[[intervalData shutter] hdr] evInterval]);
+        [picker selectRow:(int)[[[intervalData shutter] hdr] evInterval] inComponent:0 animated:false];
 
-   // [intervalData toggleThirdStop];
-    if([intervalData isThirdStop])
-        [self loadThirds];
-    else
-        [self loadHalfs];
-    [picker reloadAllComponents];
-    */
-    
-}
-
-- (void) viewDidAppear:(BOOL)animated {
-    
+    }
     [[[self navigationController] tabBarController] tabBar].hidden = YES;
+
+    
 }
 
-#pragma mark -
-#pragma mark PickerView DataSource
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }
 
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView
-numberOfRowsInComponent:(NSInteger)component
-{
+numberOfRowsInComponent:(NSInteger)component {
     return evValuesThirdsSize;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView
              titleForRow:(NSInteger)row
-            forComponent:(NSInteger)component
-{
+            forComponent:(NSInteger)component {
+
     
-    
-    NSString * ev;
-    if(evValuesThirds[row] % 3 == 0) {
-        ev = [[NSString alloc] initWithFormat:@"%d",evValuesThirds[row]/3];
-    }
-    else {
-        ev = [[NSString alloc] initWithFormat:@"%d/3",evValuesThirds[row]];
-    }
-    
-    return ev;
+    return evValuesThirds[row];
 } 
 
-#pragma mark -
-#pragma mark PickerView Delegate
+
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
       inComponent:(NSInteger)component
 {
     NSLog(@"selected: row %i comp %i", row, component );
-    //[intervalData setEV:evValuesThirds[row]];
+    NSLog(@"setting %f", evModelValues[row]);
+
+    [[[intervalData shutter] hdr] setEvInterval:evModelValues[row]];
     
 }
 

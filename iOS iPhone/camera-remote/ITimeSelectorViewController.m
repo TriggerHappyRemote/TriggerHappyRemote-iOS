@@ -27,7 +27,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     _intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
-        
+    
+    [self.segment setSelectedSegmentIndex:[self getSegmentIndex]];
     
     [self setPickerVisibility];
     
@@ -201,10 +202,12 @@ numberOfRowsInComponent:(NSInteger)component {
 
 -(void) setPickerVisibility {
     if([self.segment selectedSegmentIndex] == 0) {
+        NSLog(@"hidding picker");
         [self.picker setHidden:false];
         [self.instructionLabel setHidden:true];
     }
     else {
+        NSLog(@"showing picker");
         [self.picker setHidden:true];
         [self.instructionLabel setHidden:false];
 
@@ -212,6 +215,8 @@ numberOfRowsInComponent:(NSInteger)component {
 }
 
 -(void) registerSegmentChangeToModel {}
+
+-(int) getSegmentIndex { return 0;}
 
 -(IBAction)textFieldReturn:(id)sender {
     [sender resignFirstResponder];

@@ -62,7 +62,7 @@ IntervalometerModel *intervalometerModel;
     interval.text =  [[[intervalData interval] time] toStringDownToSeconds];
     
     shutterSpeed.textAlignment = UITextAlignmentRight;
-    shutterSpeed.text = [[intervalData shutterSpeed] toStringDownToSeconds];
+    shutterSpeed.text = [[[intervalData shutter] startLength] toStringDownToSeconds];
     
     [intervalometerModel startIntervalometer];
     

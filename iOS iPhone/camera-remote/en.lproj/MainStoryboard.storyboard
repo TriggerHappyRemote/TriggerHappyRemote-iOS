@@ -151,7 +151,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00:00" lineBreakMode="tailTruncation" minimumFontSize="10" id="Yvo-zd-Wc3">
-                                <rect key="frame" x="201" y="180" width="67" height="21"/>
+                                <rect key="frame" x="202" y="171" width="67" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -165,7 +165,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3 shot" lineBreakMode="tailTruncation" minimumFontSize="10" id="GnC-Z7-fjX">
-                                <rect key="frame" x="219" y="180" width="48" height="21"/>
+                                <rect key="frame" x="220" y="206" width="48" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -314,7 +314,7 @@
         <scene sceneID="KJs-4J-Tev">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujw-gM-u0z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="i7k-T5-7fY" customClass="ITimeSelectorViewController" sceneMemberID="viewController">
+                <viewController id="i7k-T5-7fY" customClass="ShutterSelectorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rdX-tp-OBr">
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -323,8 +323,8 @@
                                 <rect key="frame" x="57" y="43" width="207" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Auto"/>
                                     <segment title="Bulb"/>
+                                    <segment title="Auto"/>
                                 </segments>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
@@ -370,7 +370,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ITimeSelector" id="yqJ-iK-PAi"/>
+                    <navigationItem key="navigationItem" title="Shutter" id="yqJ-iK-PAi"/>
                     <connections>
                         <outlet property="hoursLabel" destination="QSX-6t-Lv3" id="VYh-Cp-aen"/>
                         <outlet property="instructionLabel" destination="XIi-HN-rJd" id="EyM-RX-6Wo"/>
@@ -501,7 +501,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="i7k-T5-7fY" kind="push" id="lJJ-O9-io9"/>
+                                    <segue destination="qaa-X4-zK1" kind="push" id="bvB-PD-jSP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IZz-ji-Uay">
@@ -588,7 +588,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Yvc-qf-Phk"/>
+                    <navigationItem key="navigationItem" title="EV Interval" id="Yvc-qf-Phk"/>
+                    <connections>
+                        <outlet property="picker" destination="3AA-o2-4yd" id="2dh-FN-Iy4"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2441" y="1750"/>
@@ -611,10 +614,81 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="iFE-ML-IRH"/>
+                    <navigationItem key="navigationItem" title="Number of Shots" id="iFE-ML-IRH"/>
+                    <connections>
+                        <outlet property="picker" destination="Rcd-46-eXj" id="jar-C9-ogV"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2436" y="2374"/>
+        </scene>
+        <scene sceneID="IIR-Q0-zVT">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJR-lD-zFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="qaa-X4-zK1" customClass="HDRShutterSelectorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jgb-lV-0kc">
+                        <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="zzK-zZ-d53">
+                                <rect key="frame" x="57" y="33" width="207" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Bulb"/>
+                                    <segment title="Auto"/>
+                                </segments>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="segmentDidChange" destination="qaa-X4-zK1" eventType="valueChanged" id="TTg-BU-Wbt"/>
+                                </connections>
+                            </segmentedControl>
+                            <pickerView contentMode="scaleToFill" id="7Lb-O0-bva">
+                                <rect key="frame" x="0.0" y="103" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qaa-X4-zK1" id="zjf-kl-v4J"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="hour" lineBreakMode="tailTruncation" minimumFontSize="10" id="VbH-T2-KfO">
+                                <rect key="frame" x="53" y="200" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="mins" lineBreakMode="tailTruncation" minimumFontSize="10" id="sm1-dK-WlX">
+                                <rect key="frame" x="157" y="200" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="secs" lineBreakMode="tailTruncation" minimumFontSize="10" id="etF-X2-cm9">
+                                <rect key="frame" x="245" y="200" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="If the camera is not set to bulb, use Auto" lineBreakMode="tailTruncation" minimumFontSize="10" id="DWu-7A-ien">
+                                <rect key="frame" x="6" y="88" width="309" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Base Shutter" id="3Qg-30-KLI"/>
+                    <connections>
+                        <outlet property="picker" destination="7Lb-O0-bva" id="EHq-sm-h5f"/>
+                        <outlet property="segment" destination="zzK-zZ-d53" id="fNt-XJ-muo"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2449" y="2935"/>
         </scene>
         <scene sceneID="tWe-me-17u">
             <objects>
@@ -955,8 +1029,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HDREVViewController.h"/>
             <relationships>
                 <relationship kind="action" name="textFieldReturn:"/>
-                <relationship kind="action" name="toggleHalfThirds"/>
-                <relationship kind="outlet" name="exposureValues" candidateClass="NSMutableArray"/>
                 <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
             </relationships>
         </class>
@@ -966,6 +1038,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="action" name="textFieldReturn:"/>
                 <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
             </relationships>
+        </class>
+        <class className="HDRShutterSelectorViewController" superclassName="ITimeSelectorViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HDRShutterSelectorViewController.h"/>
         </class>
         <class className="HDRViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HDRViewController.h"/>
@@ -1040,8 +1115,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <class className="MoreViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MoreViewController.h"/>
         </class>
-        <class className="NSMutableArray" superclassName="NSArray">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSMutableArray.h"/>
+        <class className="ShutterSelectorViewController" superclassName="ITimeSelectorViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShutterSelectorViewController.h"/>
         </class>
         <class className="SingleShotViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SingleShotViewController.h"/>
@@ -1060,6 +1135,5 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="z4n-MS-y9s"/>
-        <segue reference="2UV-C6-BKY"/>
     </inferredMetricsTieBreakers>
 </document>

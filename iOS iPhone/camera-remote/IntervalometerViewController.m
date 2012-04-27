@@ -39,7 +39,7 @@ IntervalData *intervalData;
     [navigation setHidesBackButton:true];
     [self loadButtons];
     [self.navigationController setNavigationBarHidden:NO animated:false]; 
-    [self.settings setSelectedSegmentIndex:[intervalData mode]];
+    [self.settings setSelectedSegmentIndex:[[intervalData shutter] mode]];
 }
 
 -(void) viewDidLoad {
@@ -52,21 +52,30 @@ IntervalData *intervalData;
 
 -(void) loadButtons {
     
-    switch ([intervalData mode]) {
-        case (HDR):
+    switch ([[intervalData shutter] mode]) {
+        case (HDR_MODE):
             [shutterSetButton setHidden:true];
             [brampingSetButton setHidden:true];
             [hdrSetButton setHidden:false];
+            
+            [shutterLabel setHidden:true];
+            
+
             break;
         case (BRAMP):
             [shutterSetButton setHidden:true];
             [brampingSetButton setHidden:false];
             [hdrSetButton setHidden:true];
+            
+            [shutterLabel setHidden:true];
+
             break;
         default:
             [shutterSetButton setHidden:false];
             [brampingSetButton setHidden:true];
             [hdrSetButton setHidden:true];
+            
+            [shutterLabel setHidden:false];
             break;
         
     }
@@ -86,7 +95,10 @@ IntervalData *intervalData;
         intervalLabel.text = @"Off"; 
     }
     
-    shutterLabel.text = [[intervalData shutterSpeed] toStringDownToSeconds];
+    if([[intervalData shutter] mode] == STANDARD) {
+        shutterLabel.text = [[intervalData shutter] getButtonData];
+    }
+    
     
     if([[intervalData duration] unlimitedDuration]) {
         durationLabel.text = @"Unlimited";
@@ -129,7 +141,7 @@ IntervalData *intervalData;
     NSLog(@"setting changed %i", settings.selectedSegmentIndex); 
     
     // remember: Standard = 0, hdr = 1, bramping = 2
-    [intervalData setMode:settings.selectedSegmentIndex];
+    [[intervalData shutter] setMode:settings.selectedSegmentIndex];
     [self loadButtons];
     
 }

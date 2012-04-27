@@ -23,6 +23,9 @@ IntervalData *intervalData;
     intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
 
     [[[self navigationController] tabBarController] tabBar].hidden = YES;
+    
+    numberOfShotsLabel.text = [[NSString alloc] initWithFormat:@"%i", [[[intervalData shutter] hdr] numberOfShots]];
+    
 /*
     numberOfShotsLabel.text = [[NSString alloc] initWithFormat:@"%d Shot", [intervalData getNumberOfShots]];
     

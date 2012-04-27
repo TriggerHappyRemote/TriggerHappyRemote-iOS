@@ -8,17 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HDRShotsViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
-{
+@interface HDRShotsViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
     UIPickerView       *picker;
 
 }
 
 @property (strong, nonatomic) IBOutlet UIPickerView *picker;
 
-
 -(IBAction)textFieldReturn:(id)sender;
-
 
 
 @end

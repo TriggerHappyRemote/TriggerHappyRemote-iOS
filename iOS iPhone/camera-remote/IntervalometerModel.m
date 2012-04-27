@@ -52,7 +52,7 @@ float shutterLengthMS;
     interruptIntervalMS = .025;
     millisecondInterval = (int)(1000 * interruptIntervalMS);
     
-    shutterLengthMS = [[intervalData shutterSpeed] totalTimeInSeconds] * 1000;
+    shutterLengthMS = [[[intervalData shutter] startLength] totalTimeInSeconds] * 1000;
     
     currentShutterTimeMS = shutterLengthMS;
     
@@ -61,7 +61,7 @@ float shutterLengthMS;
         currentCountDownTimeSeconds = (int)[intervalData duration];
         [self.remainingTime setTotalTimeInSeconds:[[[intervalData duration] time] totalTimeInSeconds]];
 
-        currentCountDownTimeMS = [[intervalData shutterSpeed] totalTimeInSeconds] * 1000;
+        currentCountDownTimeMS = [[[intervalData shutter] startLength] totalTimeInSeconds] * 1000;
             
         durationTimer = [NSTimer scheduledTimerWithTimeInterval:1
                                                          target:self
@@ -93,11 +93,11 @@ float shutterLengthMS;
 - (void) intervalometerSubInterrupt {
     currentCountDownTimeMS -= millisecondInterval;
     if(currentCountDownTimeMS <= 0) {
-        currentCountDownTimeMS = 1000 * [[intervalData shutterSpeed] totalTimeInSeconds];
+        currentCountDownTimeMS = 1000 * [[[intervalData shutter] startLength] totalTimeInSeconds];
         [self intervalometerIntervalInterrupt];
     }
     
-    float progress = 1.0f - (currentCountDownTimeMS / ([[intervalData shutterSpeed] totalTimeInSeconds] * 1000));
+    float progress = 1.0f - (currentCountDownTimeMS / ([[[intervalData shutter] startLength] totalTimeInSeconds] * 1000));
     [intervalometerCountDownViewController notifyOfInterruptToUpdateIntervalProgress:progress];
 }
 

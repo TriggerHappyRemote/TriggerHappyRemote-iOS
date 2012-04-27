@@ -70,6 +70,8 @@
 
 -(void) registerSegmentChangeToModel;
 
+-(int) getSegmentIndex;
+
 
 
 @end  

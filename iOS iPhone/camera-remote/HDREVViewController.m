@@ -40,7 +40,7 @@ NSString * evValuesThirds[evValuesThirdsSize] = {@"1/3",@"2/3",@"1",@"2",@"3",@"
     }
     else {
         NSLog(@"Setting -- %i", (int)[[[intervalData shutter] hdr] evInterval]);
-        [picker selectRow:(int)[[[intervalData shutter] hdr] evInterval] inComponent:0 animated:false];
+        [picker selectRow:(int)[[[intervalData shutter] hdr] evInterval] + 1 inComponent:0 animated:false];
 
     }
     [[[self navigationController] tabBarController] tabBar].hidden = YES;

@@ -21,5 +21,7 @@
 @property (nonatomic, strong) Time* baseShutterSpeed;
 @property (nonatomic) bool bulb;
 
+-(NSString*) getButtonData;
+
 
 @end

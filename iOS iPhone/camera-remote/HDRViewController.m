@@ -24,7 +24,20 @@ IntervalData *intervalData;
 
     [[[self navigationController] tabBarController] tabBar].hidden = YES;
     
-    numberOfShotsLabel.text = [[NSString alloc] initWithFormat:@"%i", [[[intervalData shutter] hdr] numberOfShots]];
+    numberOfShotsLabel.text = [[NSString alloc] initWithFormat:@"%i Shots", [[[intervalData shutter] hdr] numberOfShots]];
+    
+    double EVInterval = [[[intervalData shutter] hdr] evInterval];
+    
+    if(EVInterval == .333) {
+        exposureValueLabel.text = @"1/3 EV Interval";
+    }
+    else if(EVInterval == .666) {
+        exposureValueLabel.text = @"2/3 EV Interval";
+    }
+    else {
+        exposureValueLabel.text = [[NSString alloc] initWithFormat:@"%i EV Interval", (int)EVInterval];
+    }
+    shutterLengthLabel.text = [[NSString alloc] initWithFormat:@"%@ Shutter Length", [[[intervalData shutter] hdr] getButtonData]];
     
 /*
     numberOfShotsLabel.text = [[NSString alloc] initWithFormat:@"%d Shot", [intervalData getNumberOfShots]];

@@ -77,6 +77,8 @@
 		0AE197C4154B379900714F55 /* Shutter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE197C3154B379900714F55 /* Shutter.m */; };
 		0AE197C7154B39DF00714F55 /* Bramper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE197C6154B39DF00714F55 /* Bramper.m */; };
 		0AE197CB154B4B3300714F55 /* HDRShutterSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE197CA154B4B3200714F55 /* HDRShutterSelectorViewController.m */; };
+		0AE197DA154B61C900714F55 /* 100kHz_100ms.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AE197D9154B61C900714F55 /* 100kHz_100ms.wav */; };
+		0AE197E1154B693D00714F55 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE197E0154B693D00714F55 /* AudioToolbox.framework */; };
 		0AE2734F14BB85550013A44B /* DurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2734E14BB85550013A44B /* DurationViewController.m */; };
 		0AE2735514BBA8B50013A44B /* IntervalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2735414BBA8B50013A44B /* IntervalData.m */; };
 		0AF84D491512B5AF0017C350 /* Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF84D481512B5AF0017C350 /* Time.m */; };
@@ -185,8 +187,11 @@
 		0AE197C3154B379900714F55 /* Shutter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shutter.m; sourceTree = "<group>"; };
 		0AE197C5154B39DF00714F55 /* Bramper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bramper.h; sourceTree = "<group>"; };
 		0AE197C6154B39DF00714F55 /* Bramper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bramper.m; sourceTree = "<group>"; };
-		0AE197C9154B4B3200714F55 /* HDRShutterSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = HDRShutterSelectorViewController.h; sourceTree = "<group>"; };
+		0AE197C9154B4B3200714F55 /* HDRShutterSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRShutterSelectorViewController.h; sourceTree = "<group>"; };
 		0AE197CA154B4B3200714F55 /* HDRShutterSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRShutterSelectorViewController.m; sourceTree = "<group>"; };
+		0AE197D9154B61C900714F55 /* 100kHz_100ms.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 100kHz_100ms.wav; path = Sounds/100kHz_100ms.wav; sourceTree = "<group>"; };
+		0AE197DE154B68FE00714F55 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0AE197E0154B693D00714F55 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0AE2734D14BB85550013A44B /* DurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DurationViewController.h; sourceTree = "<group>"; };
 		0AE2734E14BB85550013A44B /* DurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DurationViewController.m; sourceTree = "<group>"; };
 		0AE2735314BBA8B50013A44B /* IntervalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalData.h; sourceTree = "<group>"; };
@@ -200,6 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE197E1154B693D00714F55 /* AudioToolbox.framework in Frameworks */,
 				0A47D33D149F046A008D728A /* UIKit.framework in Frameworks */,
 				0A47D33F149F046A008D728A /* Foundation.framework in Frameworks */,
 				0A47D341149F046A008D728A /* CoreGraphics.framework in Frameworks */,
@@ -281,6 +287,8 @@
 		0A47D32D149F046A008D728A = {
 			isa = PBXGroup;
 			children = (
+				0AE197E0154B693D00714F55 /* AudioToolbox.framework */,
+				0AE197DE154B68FE00714F55 /* AVFoundation.framework */,
 				0A47D342149F046A008D728A /* Trigger Happy */,
 				0A47D36B149F046B008D728A /* camera-remoteTests */,
 				0A47D33B149F046A008D728A /* Frameworks */,
@@ -311,6 +319,7 @@
 		0A47D342149F046A008D728A /* Trigger Happy */ = {
 			isa = PBXGroup;
 			children = (
+				0AE197D8154B615E00714F55 /* Sound Commands */,
 				0AE197C8154B429A00714F55 /* Storyboard */,
 				0AF84D451512B5600017C350 /* Common */,
 				0A654B3714DBCFBE003B2126 /* Images */,
@@ -445,6 +454,14 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
+		0AE197D8154B615E00714F55 /* Sound Commands */ = {
+			isa = PBXGroup;
+			children = (
+				0AE197D9154B61C900714F55 /* 100kHz_100ms.wav */,
+			);
+			name = "Sound Commands";
+			sourceTree = "<group>";
+		};
 		0AF84D451512B5600017C350 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -565,6 +582,7 @@
 				0AC8119E14F61F200040D7B4 /* baseshutterlength.png in Resources */,
 				0AC8119F14F61F200040D7B4 /* baseshutter.png in Resources */,
 				0AE197BB1549FDCF00714F55 /* bulb-ramping-button.png in Resources */,
+				0AE197DA154B61C900714F55 /* 100kHz_100ms.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

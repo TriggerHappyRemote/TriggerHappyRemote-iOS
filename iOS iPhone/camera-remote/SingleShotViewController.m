@@ -8,30 +8,49 @@
 
 #import "SingleShotViewController.h"
 #import "Time.h"
+#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
+
+
+
 
 @implementation SingleShotViewController
 
 @synthesize useInfoMessage, fireButton;
 
--(void) viewDidAppear:(BOOL)animated {
-    // just for testing
-    Time * t = [Time new];
+NSTimer * timer;
 
-    [t setHours:10];
-    NSLog(@"Hours: %i", [t hours] );
-    [t setMinutes:11];
-    NSLog(@"Minutes: %i", [t minutes] );
-    [t setSeconds:12];
-    NSLog(@"Seconds: %i", [t seconds] );
+-(void) viewDidAppear:(BOOL)animated {
+    
 
 }
 
 -(IBAction) fireTownDown {
-    NSLog(@"Fire touch down");
+    NSLog(@"Fire touch down");   
+    
+    timer = [NSTimer scheduledTimerWithTimeInterval:.1
+                                                     target:self
+                                                   selector:@selector(playAudio)
+                                                   userInfo:nil
+                                                    repeats:YES];
+    
+    [self playAudio];
 }
 
 -(IBAction) fireTownUp {
     NSLog(@"Fire touch up");
+    [timer invalidate];
+}
+
+- (void) playAudio {
+    NSLog(@"Playing audio??");
+	CFBundleRef mainBundle = CFBundleGetMainBundle();
+	CFURLRef soundFileRef;
+	soundFileRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"100kHz_100ms", CFSTR("wav"), NULL);
+	UInt32 soundID;
+    
+	AudioServicesCreateSystemSoundID(soundFileRef, &soundID);
+	AudioServicesPlaySystemSound(soundID);
 }
 
 @end

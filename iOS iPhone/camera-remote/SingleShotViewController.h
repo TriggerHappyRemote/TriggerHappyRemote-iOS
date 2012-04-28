@@ -6,16 +6,10 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+//#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@interface SingleShotViewController : UIViewController {
-    UILabel *useInfoMessage;
-    UIButton *fireButton;
-}
-
--(void) fireButtonPressedOnce;
-
--(void) fireButtonHeld;
+@interface SingleShotViewController : UIViewController
 
 -(IBAction) fireTownDown;
 
@@ -23,5 +17,7 @@
 
 @property (nonatomic, retain) IBOutlet UIButton * fireButton;
 @property (nonatomic, retain) IBOutlet UILabel * useInfoMessage;
+
+-(void) playAudio;
 
 @end

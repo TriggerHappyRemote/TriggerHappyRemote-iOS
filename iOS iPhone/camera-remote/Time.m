@@ -19,10 +19,12 @@
 @synthesize hours = _hours;
 @synthesize minutes = _minutes;
 @synthesize seconds = _seconds;
+@synthesize milliseconds = _milliseconds;
 
 
 -(id) init {
     NSLog(@"init");
+    _milliseconds = 0;
     return self;
 }
 
@@ -38,14 +40,10 @@
     _hours = (int)(self.totalTimeInSeconds / 3600);
     _minutes = (self.totalTimeInSeconds - self.hours * 3600) / 60; 
     _seconds = self.totalTimeInSeconds - self.hours * 3600 - self.minutes * 60;
+    _milliseconds = self.totalTimeInSeconds - (int)self.totalTimeInSeconds;
     NSLog(@"updated time %i h %i m %i s", _hours, _minutes, _seconds);
     NSLog(@"updated time %i h %i m %i s", self.hours, self.minutes, self.seconds);
 
-}
-
-- (void) setTime:hours:(int)__hours minutes:(int)__minutes seconds:(int)__seconds {
-    NSLog(@"Time changed");
-    self.totalTimeInSeconds = __hours * 3600 + __minutes * 60 + __seconds;
 }
 
 - (void) decrementSecond {

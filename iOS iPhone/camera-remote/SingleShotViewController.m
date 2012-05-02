@@ -9,48 +9,93 @@
 #import "SingleShotViewController.h"
 #import "Time.h"
 #import <AudioToolbox/AudioToolbox.h>
-#import <AVFoundation/AVFoundation.h>
 
-
+#import "AppDelegate.h"
+#import "IntervalData.h"
 
 
 @implementation SingleShotViewController
+@synthesize fireButtonLabel;
 
-@synthesize useInfoMessage, fireButton;
+@synthesize useInfoMessage, fireButton, pressHoldSegment;
 
-NSTimer * timer;
+AudioOutputController * audioOutput;
 
--(void) viewDidAppear:(BOOL)animated {
-    
+typedef enum  {
+    PRESS_UP = 0,
+    PRESS_DOWN = 1,
+    HOLD_UP = 2,
+    HOLD_DOWN = 3
+} ButtonState;
 
+ButtonState state;
+
+-(void) viewWillAppear:(BOOL)animated {
+    AppDelegate * d = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    audioOutput = [[d getIntervalData] audioOutput]; 
+
+    [self pressHoldDidChange];
 }
 
 -(IBAction) fireTownDown {
-    NSLog(@"Fire touch down");   
+    if(state == PRESS_UP) {
+        NSLog(@"press down");
+        state = PRESS_DOWN;
+        self.fireButtonLabel.text = @"";
+        [audioOutput fireButtonPressed];
+    }
+    else if(state == HOLD_UP) {
+        state = HOLD_DOWN;
+        //[fireButton setHighlighted:true];
+        NSLog(@"set hold down");
+        self.fireButtonLabel.text = @"Stop";        
+        [fireButton setHighlighted:false];
+        [audioOutput fireButtonPressed];
+    }
+    else if(state == HOLD_DOWN) {
+        NSLog(@"set hold up");
+        state = HOLD_UP;
+        [fireButton setHighlighted:false];
+        self.fireButtonLabel.text = @"Start";
+
+        [audioOutput fireButtonDepressed];
+    }
     
-    timer = [NSTimer scheduledTimerWithTimeInterval:.1
-                                                     target:self
-                                                   selector:@selector(playAudio)
-                                                   userInfo:nil
-                                                    repeats:YES];
-    
-    [self playAudio];
 }
 
 -(IBAction) fireTownUp {
-    NSLog(@"Fire touch up");
-    [timer invalidate];
+    if(state == PRESS_DOWN) {
+        NSLog(@"set press up");
+        [audioOutput fireButtonDepressed];
+        state = PRESS_UP;
+        self.fireButtonLabel.text = @"Fire!";
+    }
+   
 }
 
-- (void) playAudio {
-    NSLog(@"Playing audio??");
-	CFBundleRef mainBundle = CFBundleGetMainBundle();
-	CFURLRef soundFileRef;
-	soundFileRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"100kHz_100ms", CFSTR("wav"), NULL);
-	UInt32 soundID;
+-(IBAction) pressHoldDidChange {
+    NSLog(@"Value: %i", [self.pressHoldSegment selectedSegmentIndex] );
     
-	AudioServicesCreateSystemSoundID(soundFileRef, &soundID);
-	AudioServicesPlaySystemSound(soundID);
+    // press=0 | hold=1
+    if(state != PRESS_DOWN && state != PRESS_DOWN) {
+        if([self.pressHoldSegment selectedSegmentIndex] == 0 ) {
+            NSLog(@"PRESS UP");
+            state = PRESS_UP;
+            self.fireButtonLabel.text = @"Fire!";
+        }
+        else {
+            NSLog(@"HOLD UP");
+            state = HOLD_UP;
+            self.fireButtonLabel.text = @"Start";
+
+        }
+    }
 }
 
+
+
+- (void)viewDidUnload {
+    [self setFireButtonLabel:nil];
+    [super viewDidUnload];
+}
 @end

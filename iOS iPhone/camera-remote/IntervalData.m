@@ -13,7 +13,7 @@
 @synthesize interval = _interval;
 @synthesize duration = _duration;
 @synthesize shutter = _shutter;
-
+@synthesize audioOutput = _audioOutput;
 
 
 - (id)init {
@@ -21,6 +21,7 @@
     _shutter = [Shutter new];
     _interval = [Interval new];
     _duration = [IntervalDuration new];
+    _audioOutput = [AudioOutputController new];
     
     [[self.duration time] setTotalTimeInSeconds:3600];
     [[self.interval time] setTotalTimeInSeconds:3];

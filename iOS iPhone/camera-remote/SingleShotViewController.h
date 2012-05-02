@@ -9,15 +9,22 @@
 //#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
+#import "AudioOutputController.h"
+
+
 @interface SingleShotViewController : UIViewController
 
 -(IBAction) fireTownDown;
 
 -(IBAction) fireTownUp;
 
+-(IBAction) pressHoldDidChange;
+
 @property (nonatomic, retain) IBOutlet UIButton * fireButton;
 @property (nonatomic, retain) IBOutlet UILabel * useInfoMessage;
 
--(void) playAudio;
+@property (nonatomic, retain) IBOutlet UISegmentedControl * pressHoldSegment;
+
+@property (strong, nonatomic) IBOutlet UILabel *fireButtonLabel;
 
 @end

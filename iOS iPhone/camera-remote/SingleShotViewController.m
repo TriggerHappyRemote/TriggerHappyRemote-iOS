@@ -77,7 +77,7 @@ ButtonState state;
     NSLog(@"Value: %i", [self.pressHoldSegment selectedSegmentIndex] );
     
     // press=0 | hold=1
-    if(state != PRESS_DOWN && state != PRESS_DOWN) {
+    if(state != PRESS_DOWN && state != HOLD_DOWN) {
         if([self.pressHoldSegment selectedSegmentIndex] == 0 ) {
             NSLog(@"PRESS UP");
             state = PRESS_UP;
@@ -88,6 +88,14 @@ ButtonState state;
             state = HOLD_UP;
             self.fireButtonLabel.text = @"Start";
 
+        }
+    }
+    else {
+        if([self.pressHoldSegment selectedSegmentIndex] == 0 ) {
+            [pressHoldSegment setSelectedSegmentIndex:1];
+        }
+        else {
+            [pressHoldSegment setSelectedSegmentIndex:0];
         }
     }
 }

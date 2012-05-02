@@ -35,7 +35,6 @@ IntervalometerModel *intervalometerModel;
     [intervalProgress setProgress:0];
     [shutterProgress setProgress:0];
     
-    
     [self.navigationController setNavigationBarHidden:YES animated:false];    
     
     intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
@@ -53,11 +52,10 @@ IntervalometerModel *intervalometerModel;
     else {
         [unlimitedDuration setHidden:true];
         [durationTime setHidden:false];
-        [intervalometerModel getNotification];
+        durationTime.text = [[[intervalData duration] time] toStringDownToSeconds];
+        //[intervalometerModel getNotification];
     }
-    
-    //[[[self navigationController] tabBarController] tabBar].hidden = YES;
-    
+        
     interval.textAlignment = UITextAlignmentRight;
     interval.text =  [[[intervalData interval] time] toStringDownToSeconds];
     
@@ -81,7 +79,7 @@ IntervalometerModel *intervalometerModel;
 
 -(IBAction) stopButtonPressed {
     NSLog(@"Stop button pressed");
-    //self.hidesBottomBarWhenPushed = NO;
+    [intervalometerModel stopIntervalometer];
     [self.navigationController popViewControllerAnimated:YES];
     
 }

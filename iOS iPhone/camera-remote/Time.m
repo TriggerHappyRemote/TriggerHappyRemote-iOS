@@ -9,7 +9,8 @@
 #import "Time.h"
 
 @interface Time()
- -(void) timeComponentsChanged;
+-(void) timeComponentsChanged;
+-(void) updateTotalTimeInSeconds;
 @end
 
 
@@ -36,11 +37,21 @@
     
 }
 
+- (NSTimeInterval) totalTimeInSeconds {
+    NSLog(@"Getting total time in seconds ***** %i %i %i", _hours, _minutes, _seconds);
+    NSLog(@"Total seconds: %f", _totalTimeInSeconds );
+    return _totalTimeInSeconds;
+}
+
 -(void) timeComponentsChanged {
-    _hours = (int)(self.totalTimeInSeconds / 3600);
-    _minutes = (self.totalTimeInSeconds - self.hours * 3600) / 60; 
-    _seconds = self.totalTimeInSeconds - self.hours * 3600 - self.minutes * 60;
-    _milliseconds = self.totalTimeInSeconds - (int)self.totalTimeInSeconds;
+    
+    NSLog(@"total time in secs %f", _totalTimeInSeconds);
+    //NSLog(@"total time in secs %f", self.totalTimeInSeconds);
+
+    _hours = (int)(_totalTimeInSeconds / 3600);
+    _minutes = (_totalTimeInSeconds - self.hours * 3600) / 60; 
+    _seconds = _totalTimeInSeconds - self.hours * 3600 - self.minutes * 60;
+    _milliseconds = _totalTimeInSeconds - (int)_totalTimeInSeconds;
     NSLog(@"updated time %i h %i m %i s", _hours, _minutes, _seconds);
     NSLog(@"updated time %i h %i m %i s", self.hours, self.minutes, self.seconds);
 
@@ -68,7 +79,7 @@
 }
 
 - (NSString *) toStringDownToSeconds {
-    NSLog(@"STring conversions");
+    NSLog(@"STring conversions: seconds %i", self.seconds);
     NSString * seconds;
     if(self.seconds < 10) {
         seconds = [[NSString alloc]initWithFormat:@":0%i", self.seconds];
@@ -81,6 +92,36 @@
     NSLog(@"Returning this time %@", assembledTime);
 
     return assembledTime;
+}
+
+-(void) setHours:(int)hours {
+    _hours = hours; 
+    [self updateTotalTimeInSeconds];
+}
+
+-(void) setMinutes:(int)minutes {
+    _minutes = minutes;  
+    [self updateTotalTimeInSeconds];
+}
+
+-(void) setSeconds:(int)seconds {
+    _seconds = seconds;
+    NSLog(@"set seconds: %i", self.seconds);
+
+    NSLog(@"set seconds: %i", self.seconds);
+    [self updateTotalTimeInSeconds];
+
+    
+}
+
+-(void) setMilliseconds:(int)milliseconds {
+    _milliseconds = milliseconds;    
+    [self updateTotalTimeInSeconds];
+}
+
+-(void) updateTotalTimeInSeconds {
+    _totalTimeInSeconds = _hours * 3600 + _minutes * 60 + _seconds + _milliseconds / 1000;
+    NSLog(@"Total Time in Seconds: %f", _totalTimeInSeconds);
 }
 
 

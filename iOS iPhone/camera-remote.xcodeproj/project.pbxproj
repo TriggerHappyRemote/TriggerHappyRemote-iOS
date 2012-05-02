@@ -80,6 +80,7 @@
 		0AE197DA154B61C900714F55 /* 100kHz_100ms.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AE197D9154B61C900714F55 /* 100kHz_100ms.wav */; };
 		0AE197E1154B693D00714F55 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE197E0154B693D00714F55 /* AudioToolbox.framework */; };
 		0AE197E51550894700714F55 /* AudioOutputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE197E41550894700714F55 /* AudioOutputController.m */; };
+		0AE197ED1550B87C00714F55 /* fire-button-blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE197EC1550B87C00714F55 /* fire-button-blank.png */; };
 		0AE2734F14BB85550013A44B /* DurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2734E14BB85550013A44B /* DurationViewController.m */; };
 		0AE2735514BBA8B50013A44B /* IntervalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2735414BBA8B50013A44B /* IntervalData.m */; };
 		0AF84D491512B5AF0017C350 /* Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF84D481512B5AF0017C350 /* Time.m */; };
@@ -195,6 +196,7 @@
 		0AE197E0154B693D00714F55 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0AE197E31550894700714F55 /* AudioOutputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioOutputController.h; sourceTree = "<group>"; };
 		0AE197E41550894700714F55 /* AudioOutputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioOutputController.m; sourceTree = "<group>"; };
+		0AE197EC1550B87C00714F55 /* fire-button-blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fire-button-blank.png"; path = "images/fire-button-blank.png"; sourceTree = SOURCE_ROOT; };
 		0AE2734D14BB85550013A44B /* DurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DurationViewController.h; sourceTree = "<group>"; };
 		0AE2734E14BB85550013A44B /* DurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DurationViewController.m; sourceTree = "<group>"; };
 		0AE2735314BBA8B50013A44B /* IntervalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalData.h; sourceTree = "<group>"; };
@@ -401,6 +403,7 @@
 		0A654B4514DBE57F003B2126 /* buttons */ = {
 			isa = PBXGroup;
 			children = (
+				0AE197EC1550B87C00714F55 /* fire-button-blank.png */,
 				0AE197BA1549FDCF00714F55 /* bulb-ramping-button.png */,
 				0A875FF214DCFCF20005FBE0 /* light_bulb copy.png */,
 				0A654B4114DBE536003B2126 /* stopbutton.png */,
@@ -596,6 +599,7 @@
 				0AC8119F14F61F200040D7B4 /* baseshutter.png in Resources */,
 				0AE197BB1549FDCF00714F55 /* bulb-ramping-button.png in Resources */,
 				0AE197DA154B61C900714F55 /* 100kHz_100ms.wav in Resources */,
+				0AE197ED1550B87C00714F55 /* fire-button-blank.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

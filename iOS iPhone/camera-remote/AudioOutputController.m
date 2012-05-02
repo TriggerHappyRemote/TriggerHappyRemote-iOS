@@ -17,6 +17,11 @@
 //-(void) stopAudioStream;
 //@end
 
+@interface AudioOutputController() 
+-(void) playAudio;
+-(void) shutterIntervalInterrupt;
+@end
+
 @implementation AudioOutputController
 
 @synthesize outputSignalID = _outputSignalID;
@@ -59,8 +64,25 @@ NSTimer * shutterInterval;
 
 //pragma PublicMethods
 - (void) fireCamera: (Time *) time {
+    NSLog(@"Fire camera!");
     
+    [self playAudio];
+    shutterInterval = [NSTimer scheduledTimerWithTimeInterval:.1
+                                                       target:self
+                                                     selector:@selector(playAudio)
+                                                     userInfo:nil
+                                                      repeats:YES];
+    
+    totalShutterLength = [NSTimer scheduledTimerWithTimeInterval:[time totalTimeInSeconds]
+                                                          target:self
+                                                        selector:@selector(stopAudioStream)
+                                                        userInfo:nil
+                                                         repeats:NO];
+    
+
 }
+
+
 - (void) fireButtonPressed {
     NSLog(@"Fire button pressed******");
     [self startArbitraryAudioStream];

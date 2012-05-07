@@ -13,10 +13,20 @@
 @synthesize time = _time;
 @synthesize intervalEnabled = _intervalEnabled;
 
+@synthesize pickerMode;
+
 -(id) init {
     _time = [Time new];
     self.intervalEnabled = true;
+    self.pickerMode = SECONDS; 
     return self;
+}
+
+-(NSString*) getButtonData {
+    if(self.pickerMode == SECONDS) {
+        return [self.time toStringDownToSeconds];
+    }
+    return [self.time toStringDownToMilliseconds];
 }
 
 

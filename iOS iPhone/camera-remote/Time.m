@@ -94,6 +94,24 @@
     return assembledTime;
 }
 
+- (NSString *) toStringDownToMilliseconds {
+    NSLog(@"STring conversions: seconds %i", self.milliseconds);
+    NSString * milliseconds;
+    if(self.milliseconds < 10) {
+        milliseconds = [[NSString alloc]initWithFormat:@":0%i", self.milliseconds];
+    }
+    else {
+        milliseconds = [[NSString alloc]initWithFormat:@":%i", self.milliseconds];
+    }
+    
+    NSString * assembledTime = [[NSString alloc]initWithFormat:@"%@%@",[self toStringDownToSeconds], milliseconds];
+    NSLog(@"Returning this time %@", assembledTime);
+    
+    //  assembleTime hh:mm:ss:ms
+    return [assembledTime substringFromIndex:3];
+}
+
+
 -(void) setHours:(int)hours {
     _hours = hours; 
     [self updateTotalTimeInSeconds];
@@ -115,7 +133,7 @@
 }
 
 -(void) setMilliseconds:(int)milliseconds {
-    _milliseconds = milliseconds;    
+    _milliseconds = milliseconds;   
     [self updateTotalTimeInSeconds];
 }
 

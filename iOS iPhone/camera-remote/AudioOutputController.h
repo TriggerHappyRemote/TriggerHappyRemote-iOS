@@ -19,6 +19,8 @@
 
 - (void) fireButtonDepressed;
 
+// incase stop is hit in the middle of a shutter
+- (void) abortShutter;
 
 
 

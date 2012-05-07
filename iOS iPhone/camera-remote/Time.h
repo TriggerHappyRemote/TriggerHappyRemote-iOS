@@ -17,14 +17,19 @@
 @property (nonatomic) int milliseconds;
 
 /**
- * @return NSString is format on @"hh:mm"
+ * @return NSString is format of @"hh:mm"
  */
 - (NSString *) toStringDownToMinutes;
 
 /**
- * @return NSString is format on @"hh:mm:ss"
+ * @return NSString is format of @"hh:mm:ss"
  */
 - (NSString *) toStringDownToSeconds;
+
+/**
+ * @return NSString is format of @"mm:ss:ms"
+ */
+- (NSString *) toStringDownToMilliseconds;
 
 - (void) decrementSecond;
 

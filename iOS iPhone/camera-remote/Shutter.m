@@ -28,7 +28,7 @@
 
 -(NSString*) getButtonData {
     if(self.bulbMode) {
-        return [self.startLength toStringDownToSeconds];
+        return [self.startLength toStringDownToMilliseconds];
     }
     else {
         return [[NSString alloc] initWithFormat:@"Auto"];

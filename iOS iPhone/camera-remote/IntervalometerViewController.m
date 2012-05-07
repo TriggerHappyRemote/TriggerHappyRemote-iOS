@@ -89,7 +89,7 @@ IntervalData *intervalData;
     NSLog(@"set button titles");
     
     if([[intervalData interval] intervalEnabled]) {
-        intervalLabel.text = [[[intervalData interval] time] toStringDownToSeconds];
+        intervalLabel.text = [[intervalData interval] getButtonData];
     }
     else {
         intervalLabel.text = @"Off"; 

@@ -27,6 +27,12 @@
     [[[[self.intervalData shutter] hdr] baseShutterSpeed] setSeconds:second];
 }
 
+-(void) changeMillisecond: (int) millisecond {
+    [[[[self.intervalData shutter] hdr] baseShutterSpeed] setMilliseconds:millisecond];
+
+}
+
+
 -(Time *) time {
     return [[[self.intervalData shutter] hdr] baseShutterSpeed];
 }

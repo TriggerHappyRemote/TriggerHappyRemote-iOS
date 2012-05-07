@@ -179,7 +179,7 @@ float shutterLengthMS;
     durationTimer = nil;
     [intervalTimer invalidate];
     intervalTimer = nil;
-    
+    [audioOutput abortShutter];
     NSLog(@"notifyOfDurationEnd()");
     [intervalometerCountDownViewController notifyOfDurationEnd];
 }

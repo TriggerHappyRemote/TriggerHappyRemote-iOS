@@ -27,6 +27,10 @@
     [[[self.intervalData interval] time] setSeconds:second];
 }
 
+-(void) changeMillisecond:(int)millisecond {
+    [[[self.intervalData interval] time] setMilliseconds:millisecond];
+}
+
 -(Time *) time {
     return [[self.intervalData interval] time];
 }
@@ -42,6 +46,14 @@
     else {
         return 1; // off
     }
+}
+
+-(void) setPickerMode:(PickerMode)state {
+    [[self.intervalData interval] setPickerMode:state];
+}
+
+-(PickerMode)getPickerMode {
+    return [[self.intervalData interval] pickerMode];
 }
 
 

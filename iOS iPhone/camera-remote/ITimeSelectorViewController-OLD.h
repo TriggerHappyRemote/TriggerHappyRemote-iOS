@@ -1,5 +1,5 @@
 //
-//  ITimeSelectorViewController.h
+//  ITimeSelectorViewController-OLD.h
 //  Trigger Happy, V1.0
 //
 //  Created by Kevin Harrington on 4/23/12.
@@ -12,17 +12,17 @@
 #import "IntervalData.h"
 #import "Time.h"
 
-@interface ITimeSelectorViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
+@interface ITimeSelectorViewControllerOLD : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
 }
 
 @property (strong, nonatomic) IBOutlet UIPickerView *picker;
-@property (strong, nonatomic) IBOutlet UILabel *label_2;
-@property (strong, nonatomic) IBOutlet UILabel *label_1;
-@property (strong, nonatomic) IBOutlet UILabel *label_0;
+@property (strong, nonatomic) IBOutlet UILabel *secsLabel;
+@property (strong, nonatomic) IBOutlet UILabel *minsLabel;
+@property (strong, nonatomic) IBOutlet UILabel *hoursLabel;
 
-@property (strong, nonatomic) NSMutableArray *subSecondsValues;
-@property (strong, nonatomic) NSMutableArray *subSecondsValuesNumbers;
 @property (strong, nonatomic) NSMutableArray *secondsValues;
+@property (strong, nonatomic) NSMutableArray *secondsValuesNumbers;
+
 @property (strong, nonatomic) NSMutableArray *minutesValues;
 @property (strong, nonatomic) NSMutableArray *hoursValues;
 
@@ -35,10 +35,8 @@
 
 @property (nonatomic) bool instructionLabelVisible;
 
-@property (weak, nonatomic) IBOutlet UISegmentedControl *secondSubSecondSegment;
 
 -(IBAction)textFieldReturn:(id)sender;
-
 
 // TODO: make private
 -(void) loadDefaultTime;
@@ -56,9 +54,6 @@
 -(void) loadMinutesArray;
 
 -(void) loadSecondsArray;
-
--(void) loadSubSecondsArray;
-
 
 // Delegates that will be registered to a model source in the
 //  class inheriting this superclass
@@ -80,13 +75,6 @@
 -(void) registerSegmentChangeToModel;
 
 -(int) getSegmentIndex;
-
--(IBAction)secondSubSecondSegmentChange;
-
-// delegates to set and get picker state
--(void) setPickerMode: (PickerMode) state;
-
--(PickerMode) getPickerMode;
 
 
 

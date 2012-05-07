@@ -10,6 +10,8 @@
 
 @implementation ShutterSelectorViewController
 
+
+
 -(void) initializeInstructionLabel {
     self.instructionLabel.text = @"shutter selector - auto shutter";
 }
@@ -25,6 +27,10 @@
 
 -(void) changeSecond: (int) second {
     [[[self.intervalData shutter] startLength] setSeconds:second];
+}
+
+-(void) changeMillisecond:(int)millisecond {
+    [[[self.intervalData shutter] startLength] setMilliseconds:millisecond];
 }
 
 -(Time *) time {

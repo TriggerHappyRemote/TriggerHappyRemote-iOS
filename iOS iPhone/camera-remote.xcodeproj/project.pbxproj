@@ -32,7 +32,7 @@
 		0A47D37C149F0584008D728A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A47D34E149F046B008D728A /* MainStoryboard.storyboard */; };
 		0A47D380149FC170008D728A /* IntervalometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47D37F149FC170008D728A /* IntervalometerViewController.m */; };
 		0A47D38C14A05835008D728A /* IntervalometerCountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47D38B14A05834008D728A /* IntervalometerCountDownViewController.m */; };
-		0A49F04215466CA6006EC13D /* ITimeSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A49F04115466CA6006EC13D /* ITimeSelectorViewController.m */; };
+		0A49F04215466CA6006EC13D /* ITimeSelectorViewController-OLD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A49F04115466CA6006EC13D /* ITimeSelectorViewController-OLD.m */; };
 		0A49F04515466D72006EC13D /* IntervalSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A49F04415466D72006EC13D /* IntervalSelectorViewController.m */; };
 		0A6260ED14F48BAA00494D42 /* hdrbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A6260EC14F48BAA00494D42 /* hdrbutton.png */; };
 		0A6260F514F5E21E00494D42 /* hdrview.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A6260EF14F5E21E00494D42 /* hdrview.png */; };
@@ -62,6 +62,7 @@
 		0A875FF714DCFF0C0005FBE0 /* Camera_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A875FF614DCFF0C0005FBE0 /* Camera_icon.png */; };
 		0A875FF914DCFF8A0005FBE0 /* dotdotdot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A875FF814DCFF8A0005FBE0 /* dotdotdot.png */; };
 		0A875FFB14DD00290005FBE0 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A875FFA14DD00290005FBE0 /* camera.png */; };
+		0AA7F48C15586A1000FBF5FD /* ITimeSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7F48B15586A1000FBF5FD /* ITimeSelectorViewController.m */; };
 		0AC8119B14F61F200040D7B4 /* hdrview2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AC8119614F61F200040D7B4 /* hdrview2.png */; };
 		0AC8119C14F61F200040D7B4 /* numberofshots.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AC8119714F61F200040D7B4 /* numberofshots.png */; };
 		0AC8119D14F61F200040D7B4 /* exposureInterval.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AC8119814F61F200040D7B4 /* exposureInterval.png */; };
@@ -136,8 +137,8 @@
 		0A47D37F149FC170008D728A /* IntervalometerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalometerViewController.m; sourceTree = "<group>"; };
 		0A47D38A14A05834008D728A /* IntervalometerCountDownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalometerCountDownViewController.h; sourceTree = "<group>"; };
 		0A47D38B14A05834008D728A /* IntervalometerCountDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalometerCountDownViewController.m; sourceTree = "<group>"; };
-		0A49F03E15466BD1006EC13D /* ITimeSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITimeSelectorViewController.h; sourceTree = "<group>"; };
-		0A49F04115466CA6006EC13D /* ITimeSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITimeSelectorViewController.m; sourceTree = "<group>"; };
+		0A49F03E15466BD1006EC13D /* ITimeSelectorViewController-OLD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ITimeSelectorViewController-OLD.h"; sourceTree = "<group>"; };
+		0A49F04115466CA6006EC13D /* ITimeSelectorViewController-OLD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ITimeSelectorViewController-OLD.m"; sourceTree = "<group>"; };
 		0A49F04315466D72006EC13D /* IntervalSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalSelectorViewController.h; sourceTree = "<group>"; };
 		0A49F04415466D72006EC13D /* IntervalSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalSelectorViewController.m; sourceTree = "<group>"; };
 		0A6260EC14F48BAA00494D42 /* hdrbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hdrbutton.png; path = images/hdrbutton.png; sourceTree = SOURCE_ROOT; };
@@ -154,6 +155,7 @@
 		0A654B3F14DBE425003B2126 /* count-down-view-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "count-down-view-2.jpg"; sourceTree = "<group>"; };
 		0A654B4114DBE536003B2126 /* stopbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopbutton.png; sourceTree = "<group>"; };
 		0A654B4314DBE573003B2126 /* redbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redbutton.png; sourceTree = "<group>"; };
+		0A6FC0A515587B0D00AC01D1 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		0A875FDE14DC81AA0005FBE0 /* greenbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenbutton.png; path = images/greenbutton.png; sourceTree = SOURCE_ROOT; };
 		0A875FE014DC81C70005FBE0 /* durationsetterbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = durationsetterbutton.png; path = images/durationsetterbutton.png; sourceTree = SOURCE_ROOT; };
 		0A875FE114DC81C70005FBE0 /* intervalSetterButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intervalSetterButton.png; path = images/intervalSetterButton.png; sourceTree = SOURCE_ROOT; };
@@ -169,6 +171,8 @@
 		0A875FF614DCFF0C0005FBE0 /* Camera_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Camera_icon.png; path = images/Camera_icon.png; sourceTree = SOURCE_ROOT; };
 		0A875FF814DCFF8A0005FBE0 /* dotdotdot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dotdotdot.png; path = images/dotdotdot.png; sourceTree = SOURCE_ROOT; };
 		0A875FFA14DD00290005FBE0 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = images/camera.png; sourceTree = SOURCE_ROOT; };
+		0AA7F48A15586A1000FBF5FD /* ITimeSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITimeSelectorViewController.h; sourceTree = "<group>"; };
+		0AA7F48B15586A1000FBF5FD /* ITimeSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITimeSelectorViewController.m; sourceTree = "<group>"; };
 		0AC8119614F61F200040D7B4 /* hdrview2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hdrview2.png; path = images/hdrview2.png; sourceTree = SOURCE_ROOT; };
 		0AC8119714F61F200040D7B4 /* numberofshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = numberofshots.png; path = images/numberofshots.png; sourceTree = SOURCE_ROOT; };
 		0AC8119814F61F200040D7B4 /* exposureInterval.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = exposureInterval.png; path = images/exposureInterval.png; sourceTree = SOURCE_ROOT; };
@@ -276,8 +280,10 @@
 		0A1CA97514C54B45000E6CE5 /* Picker ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0A49F03E15466BD1006EC13D /* ITimeSelectorViewController.h */,
-				0A49F04115466CA6006EC13D /* ITimeSelectorViewController.m */,
+				0A49F03E15466BD1006EC13D /* ITimeSelectorViewController-OLD.h */,
+				0A49F04115466CA6006EC13D /* ITimeSelectorViewController-OLD.m */,
+				0AA7F48A15586A1000FBF5FD /* ITimeSelectorViewController.h */,
+				0AA7F48B15586A1000FBF5FD /* ITimeSelectorViewController.m */,
 				0A49F04315466D72006EC13D /* IntervalSelectorViewController.h */,
 				0A49F04415466D72006EC13D /* IntervalSelectorViewController.m */,
 				0AC811A114F622ED0040D7B4 /* hdr */,
@@ -483,6 +489,7 @@
 			children = (
 				0AF84D471512B5AF0017C350 /* Time.h */,
 				0AF84D481512B5AF0017C350 /* Time.m */,
+				0A6FC0A515587B0D00AC01D1 /* Constants.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -651,7 +658,7 @@
 				0AF84D491512B5AF0017C350 /* Time.m in Sources */,
 				0A0CEF06153FD28F00A467DC /* HDR.m in Sources */,
 				0A0CEF0A153FD30200A467DC /* Interval.m in Sources */,
-				0A49F04215466CA6006EC13D /* ITimeSelectorViewController.m in Sources */,
+				0A49F04215466CA6006EC13D /* ITimeSelectorViewController-OLD.m in Sources */,
 				0A49F04515466D72006EC13D /* IntervalSelectorViewController.m in Sources */,
 				0AE197BE154A034200714F55 /* IntervalDuration.m in Sources */,
 				0AE197C1154B365500714F55 /* ShutterSelectorViewController.m in Sources */,
@@ -659,6 +666,7 @@
 				0AE197C7154B39DF00714F55 /* Bramper.m in Sources */,
 				0AE197CB154B4B3300714F55 /* HDRShutterSelectorViewController.m in Sources */,
 				0AE197E51550894700714F55 /* AudioOutputController.m in Sources */,
+				0AA7F48C15586A1000FBF5FD /* ITimeSelectorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -92,4 +92,8 @@ NSTimer * shutterInterval;
     [self stopAudioStream];
 }
 
+- (void) abortShutter {
+    [self stopAudioStream];
+}
+
 @end

@@ -11,6 +11,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Time.h"
+#import "Constants.h"
 
 @interface Interval : NSObject
 
@@ -18,6 +19,8 @@
 @property (nonatomic, strong) Time* time;
 @property (nonatomic) bool intervalEnabled;
 
+@property (nonatomic) PickerMode pickerMode;
 
+-(NSString*) getButtonData;
 
 @end

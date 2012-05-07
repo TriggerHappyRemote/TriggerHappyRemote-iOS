@@ -106,24 +106,6 @@ IntervalData *intervalData;
     else {
         durationLabel.text = [[[intervalData duration] time] toStringDownToMinutes];
     }
-    //set 'setter button' titles
-    /*
-    [shutterSetButton setTitle:@"Shutter Speed: Auto **" forState:0];
-    [intervalSetButton setTitle:[[NSString alloc] initWithFormat:@"Interval: %i h %i m %i s", 
-                                 [intervalData getIntervalHours], [intervalData getIntervalMinutes], 
-                                 [intervalData getIntervalSeconds]] forState:0];
-    if(![intervalData isAutoShutter]) {
-        [shutterSetButton setTitle:[[NSString alloc] initWithFormat:@"Shutter: %i h %i m %i s",
-                                [intervalData getShutterHours], [intervalData getShutterMinutes], 
-                                [intervalData getShutterSeconds]] forState:0];
-    }
-    else {
-        [shutterSetButton setTitle:[[NSString alloc] initWithFormat:@"Shutter: Auto"] forState:0];
-    }
-
-
-    [durationSetButton setTitle:[intervalData getDurationStringParsed] forState:0];*/
-
 }
 
 -(IBAction) startButtonPressed {

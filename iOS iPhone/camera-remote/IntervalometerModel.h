@@ -31,7 +31,6 @@
 
 - (void) startShutter;
 
-- (void) stopShutter;
 
 - (void) shutterInterrupt;
 

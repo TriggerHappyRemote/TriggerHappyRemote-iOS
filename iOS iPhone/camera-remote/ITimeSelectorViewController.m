@@ -326,11 +326,13 @@ numberOfRowsInComponent:(NSInteger)component {
     if([self.segment selectedSegmentIndex] == 0) {
         NSLog(@"hidding picker");
         [self.picker setHidden:false];
+        [self.secondSubSecondSegment setHidden:false];
         [self.instructionLabel setHidden:true];
     }
     else {
         NSLog(@"showing picker");
         [self.picker setHidden:true];
+        [self.secondSubSecondSegment setHidden:true];
         [self.instructionLabel setHidden:false];
         
     }
@@ -346,7 +348,9 @@ numberOfRowsInComponent:(NSInteger)component {
 
 -(void) setPickerMode: (PickerMode) state {}
 
--(PickerMode) getPickerMode {}
+-(PickerMode) getPickerMode {
+    return SECONDS;
+}
 
 - (void)viewDidUnload {
     [self setSecondSubSecondSegment:nil];

@@ -10,6 +10,7 @@
 #import "Time.h"
 #import "HDR.h"
 #import "Bramper.h"
+#import "Constants.h"
 
 @interface Shutter : NSObject
 
@@ -31,6 +32,8 @@ typedef enum  {
 
 // Brapming:
 @property (nonatomic, strong) Bramper* bramper;
+
+@property (nonatomic) PickerMode pickerMode;
 
 
 -(NSString*) getButtonData;

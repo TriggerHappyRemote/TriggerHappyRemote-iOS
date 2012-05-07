@@ -60,26 +60,20 @@ float shutterLengthMS;
     currentShutterTimeMS = shutterLengthMS;
     
     
+    currentCountDownTimeMS = [[[intervalData interval] time] totalTimeInSeconds] * 1000;
     
     if(![[intervalData duration] unlimitedDuration]) {
         currentCountDownTimeSeconds = [[[intervalData duration] time] totalTimeInSeconds];
         [self.remainingTime setTotalTimeInSeconds:[[[intervalData duration] time] totalTimeInSeconds]];
 
-        currentCountDownTimeMS = [[[intervalData interval] time] totalTimeInSeconds] * 1000;
-                
-        NSLog(@"Start length: %f",[[[intervalData duration] time] totalTimeInSeconds] );
-            
         durationTimer = [NSTimer scheduledTimerWithTimeInterval:1
                                                          target:self
                                                        selector:@selector(intervalometerDurationInterrupt)
                                                        userInfo:nil
                                                         repeats:YES];
-         
     }
     
     // interval timer is constant
-    
-    
     intervalTimer = [NSTimer scheduledTimerWithTimeInterval:interruptIntervalMS
                                                      target:self
                                                    selector:@selector(intervalometerSubInterrupt)
@@ -137,7 +131,6 @@ float shutterLengthMS;
     float progress = 0;
     if(currentShutterTimeMS <= 0) {
         currentShutterTimeMS = shutterLengthMS;
-        [self stopShutter];
         [self clearShutterTimer];
     }
     else {
@@ -148,19 +141,7 @@ float shutterLengthMS;
 }
 
 - (void) startShutter {
-    // TODO: Fire camera
-    
-    
     [audioOutput fireCamera:[[intervalData shutter] startLength]];
-
-    
-    NSLog(@"start camera");
-}
-
-- (void) stopShutter {
-    // TODO: Stop camera
-    
-    NSLog(@"stop shutter");
 }
 
 - (void) getNotification {
@@ -180,7 +161,6 @@ float shutterLengthMS;
     [intervalTimer invalidate];
     intervalTimer = nil;
     [audioOutput abortShutter];
-    NSLog(@"notifyOfDurationEnd()");
     [intervalometerCountDownViewController notifyOfDurationEnd];
 }
 

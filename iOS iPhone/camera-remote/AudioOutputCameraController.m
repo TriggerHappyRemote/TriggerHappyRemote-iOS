@@ -6,23 +6,15 @@
 //  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 
-#import "AudioOutputController.h"
+#import "AudioOutputCameraController.h"
 #import <AudioToolbox/AudioToolbox.h>
 
-
-//@interface AudioOutputController() 
-//-(void) playAudio;
-//-(void) startAudioStream: (NSTimeInterval) seconds;
-//-(void) startArbitraryAudioStream;
-//-(void) stopAudioStream;
-//@end
-
-@interface AudioOutputController() 
+@interface AudioOutputCameraController() 
 -(void) playAudio;
 -(void) shutterIntervalInterrupt;
 @end
 
-@implementation AudioOutputController
+@implementation AudioOutputCameraController
 
 @synthesize outputSignalID = _outputSignalID;
 
@@ -38,23 +30,19 @@ NSTimer * shutterInterval;
     return self;
 }
 
-//pragma PrivateMethods
+#pragma PrivateMethods
 -(void) playAudio {
     NSLog(@"play audio");
     AudioServicesPlaySystemSound(self.outputSignalID);
 }
 
--(void) startAudioStream: (NSTimeInterval) seconds {
-        // TODO
-}
 -(void) startArbitraryAudioStream {
     [self playAudio];
     shutterInterval = [NSTimer scheduledTimerWithTimeInterval:.1
                                              target:self
                                            selector:@selector(playAudio)
                                            userInfo:nil
-                                            repeats:YES];
-
+                                                      repeats:YES];
 }
 
 -(void) stopAudioStream {
@@ -62,7 +50,7 @@ NSTimer * shutterInterval;
     [totalShutterLength invalidate];
 }
 
-//pragma PublicMethods
+#pragma PublicMethods
 - (void) fireCamera: (Time *) time {
     NSLog(@"Fire camera!");
     
@@ -78,21 +66,12 @@ NSTimer * shutterInterval;
                                                         selector:@selector(stopAudioStream)
                                                         userInfo:nil
                                                          repeats:NO];
-    
-
 }
 
-
 - (void) fireButtonPressed {
-    NSLog(@"Fire button pressed******");
     [self startArbitraryAudioStream];
 }
 - (void) fireButtonDepressed {
-    NSLog(@"Fire button depressed");
-    [self stopAudioStream];
-}
-
-- (void) abortShutter {
     [self stopAudioStream];
 }
 

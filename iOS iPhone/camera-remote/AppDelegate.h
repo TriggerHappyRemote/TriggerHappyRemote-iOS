@@ -8,19 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "IntervalData.h"
-#import "IntervalometerModel.h"
+#import "IIntervalometer.h"
 #import "IntervalometerViewController.h"
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
     IntervalData *intervalData;
-    IntervalometerModel *intervalometerModel;    
+    IIntervalometer *intervalometerModel;    
     IntervalometerViewController * intervalVC;
 }
 
 - (IntervalData*) getIntervalData;
 
-- (IntervalometerModel*) getIntervalometerModel;
+- (IIntervalometer*) getIntervalometerModel;
 
 -(void) setIntervalVC: (IntervalometerViewController *) vc;
 
@@ -29,7 +29,7 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) IntervalData *intervalData;
-@property (strong, nonatomic) IntervalometerModel *intervalometerModel;
+@property (strong, nonatomic) IIntervalometer *intervalometerModel;
 
 
 @end

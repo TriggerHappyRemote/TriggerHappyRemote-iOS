@@ -1,5 +1,5 @@
 //
-//  IntervalometerModel.h
+//  IIntervalometer.h
 //  camera-remote
 //
 //  Created by Kevin Harrington on 1/16/12.
@@ -9,30 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "IntervalometerCountDownViewController.h"
 
-@interface IntervalometerModel : NSObject {
-    
-}
+@interface IIntervalometer : NSObject
 
+// so the view can listen to this for updating gui
 - (void) setIntervalometerCountdownViewControllerReference: (IntervalometerCountDownViewController *) _view;
 
+// start the intervalometer
 - (void) startIntervalometer;
 
+// stop the intervalometer
 - (void) stopIntervalometer;
 
-- (void) intervalometerDurationInterrupt;
-
-- (void) intervalometerIntervalInterrupt;
-
+// method the view can call to reviece a call back updating the view
 - (void) getNotification;
-
-- (void) intervalometerSubInterrupt;
-
-- (void) clearShutterTimer;
-
-- (void) startShutter;
-
-
-- (void) shutterInterrupt;
-
 
 @end

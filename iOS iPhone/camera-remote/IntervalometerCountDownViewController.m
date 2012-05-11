@@ -13,7 +13,7 @@
 
 #import "AppDelegate.h"
 #import "IntervalData.h"
-#import "IntervalometerModel.h"
+#import "IIntervalometer.h"
 
 @implementation IntervalometerCountDownViewController
 
@@ -22,7 +22,7 @@ interval, stopButton, intervalProgress, shutterProgress, imageView;
 
 IntervalData *intervalData;
 
-IntervalometerModel *intervalometerModel;
+IIntervalometer *intervalometerModel;
 
 -(id)init {
     self.navigationController.navigationBarHidden = NO;

@@ -9,10 +9,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ITimeSelectorViewController.h"
+#import "IShutterSelectorViewController.h"
 
 
-@interface ShutterSelectorViewController : ITimeSelectorViewController
+@interface ShutterSelectorViewController : IShutterSelectorViewController
 
 
 @end

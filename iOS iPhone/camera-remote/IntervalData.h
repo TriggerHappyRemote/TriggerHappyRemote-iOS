@@ -12,7 +12,7 @@
 #import "IntervalDuration.h"
 #import "Interval.h"
 #import "Shutter.h"
-#import "AudioOutputController.h"
+#import "ICameraController.h"
 
 @interface IntervalData : NSObject
 
@@ -20,7 +20,8 @@
 @property (nonatomic, strong) Interval* interval;
 @property (nonatomic, strong) Shutter* shutter;
 
-@property (nonatomic, strong) AudioOutputController* audioOutput;
+@property (nonatomic, strong) ICameraController* cameraController;
 
+@property (nonatomic) CameraConrollerMode cameraContollerMode;
 
 @end

@@ -18,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {    
     intervalData = [IntervalData new];
-    intervalometerModel = [IntervalometerModel new];
+    intervalometerModel = [IIntervalometer new];
     return YES;
 }
 
@@ -26,7 +26,7 @@
     return intervalData;
 }
 
--(IntervalometerModel *) getIntervalometerModel {
+-(IIntervalometer *) getIntervalometerModel {
     return intervalometerModel;
 }
 

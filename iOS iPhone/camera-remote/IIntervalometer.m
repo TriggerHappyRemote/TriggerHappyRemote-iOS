@@ -1,21 +1,28 @@
 //
-//  IntervalometerModel.m
+//  IIntervalometer.m
 //  camera-remote
 //
 //  Created by Kevin Harrington on 1/16/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "IntervalometerModel.h"
+#import "IIntervalometer.h"
 #import "IntervalData.h"
 #import "AppDelegate.h"
 #import "Time.h"
+#import "ICameraController.h"
 
-@interface IntervalometerModel()
+@interface IIntervalometer()
     @property (nonatomic, strong) Time * remainingTime;
+    - (void) intervalometerDurationInterrupt;
+    - (void) intervalometerIntervalInterrupt;
+    - (void) intervalometerSubInterrupt;
+    - (void) startShutter;
+    - (void) shutterInterrupt;
+- (void) clearShutterTimer;
 @end
 
-@implementation IntervalometerModel
+@implementation IIntervalometer
 
 @synthesize remainingTime = _remainingTime;
 
@@ -26,7 +33,7 @@ NSTimer *intervalTimer;
 NSTimer *shutterTimer;
 
 IntervalData *intervalData;
-AudioOutputController * audioOutput;
+ICameraController * cameraController;
 
 int currentCountDownTimeSeconds;
 //miliseconds - up to 24 hours
@@ -39,7 +46,7 @@ float shutterLengthMS;
 
 - (id) init {
     intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
-    audioOutput = [intervalData audioOutput];
+    cameraController = [intervalData cameraController];
     _remainingTime = [Time new];    
     return self;
 }
@@ -141,7 +148,7 @@ float shutterLengthMS;
 }
 
 - (void) startShutter {
-    [audioOutput fireCamera:[[intervalData shutter] startLength]];
+    [cameraController fireCamera:[[intervalData shutter] startLength]];
 }
 
 - (void) getNotification {
@@ -160,7 +167,7 @@ float shutterLengthMS;
     durationTimer = nil;
     [intervalTimer invalidate];
     intervalTimer = nil;
-    [audioOutput abortShutter];
+    [cameraController fireButtonDepressed];
     [intervalometerCountDownViewController notifyOfDurationEnd];
 }
 

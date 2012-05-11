@@ -12,6 +12,7 @@
 
 #import "AppDelegate.h"
 #import "IntervalData.h"
+#import "ICameraController.h"
 
 
 @implementation SingleShotViewController
@@ -19,7 +20,7 @@
 
 @synthesize useInfoMessage, fireButton, pressHoldSegment;
 
-AudioOutputController * audioOutput;
+ICameraController * cameraController;
 
 typedef enum  {
     PRESS_UP = 0,
@@ -32,7 +33,7 @@ ButtonState state;
 
 -(void) viewWillAppear:(BOOL)animated {
     AppDelegate * d = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    audioOutput = [[d getIntervalData] audioOutput]; 
+    cameraController = [[d getIntervalData] cameraController]; 
 
     [self pressHoldDidChange];
 }
@@ -42,7 +43,7 @@ ButtonState state;
         NSLog(@"press down");
         state = PRESS_DOWN;
         self.fireButtonLabel.text = @"";
-        [audioOutput fireButtonPressed];
+        [cameraController fireButtonPressed];
     }
     else if(state == HOLD_UP) {
         state = HOLD_DOWN;
@@ -50,7 +51,7 @@ ButtonState state;
         NSLog(@"set hold down");
         self.fireButtonLabel.text = @"Stop";        
         [fireButton setHighlighted:false];
-        [audioOutput fireButtonPressed];
+        [cameraController fireButtonPressed];
     }
     else if(state == HOLD_DOWN) {
         NSLog(@"set hold up");
@@ -58,15 +59,14 @@ ButtonState state;
         [fireButton setHighlighted:false];
         self.fireButtonLabel.text = @"Start";
 
-        [audioOutput fireButtonDepressed];
+        [cameraController fireButtonDepressed];
     }
-    
 }
 
 -(IBAction) fireTownUp {
     if(state == PRESS_DOWN) {
         NSLog(@"set press up");
-        [audioOutput fireButtonDepressed];
+        [cameraController fireButtonDepressed];
         state = PRESS_UP;
         self.fireButtonLabel.text = @"Fire!";
     }

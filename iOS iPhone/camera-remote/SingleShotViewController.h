@@ -9,9 +9,6 @@
 //#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-#import "AudioOutputController.h"
-
-
 @interface SingleShotViewController : UIViewController
 
 -(IBAction) fireTownDown;

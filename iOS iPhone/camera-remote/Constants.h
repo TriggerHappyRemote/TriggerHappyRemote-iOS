@@ -10,3 +10,8 @@ typedef enum  {
     SECONDS = 0,
     SUBSECONDS = 1
 } PickerMode;
+
+typedef enum  {
+    BLUETOOTH_CAMAER_CONTOLLER = 0,
+    AUDIO_CAMERA_CONTOLLER = 1
+} CameraConrollerMode;

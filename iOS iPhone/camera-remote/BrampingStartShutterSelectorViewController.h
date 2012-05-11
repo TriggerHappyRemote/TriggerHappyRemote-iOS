@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IShutterSelectorViewController.h"
 
-@interface BrampingStartShutterSelectorViewController : NSObject
+@interface BrampingStartShutterSelectorViewController : IShutterSelectorViewController
 
 @end

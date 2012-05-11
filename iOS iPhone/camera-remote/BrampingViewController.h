@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BrampingViewController : NSObject
+@interface BrampingViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *endShutterDataLabel;
+@property (weak, nonatomic) IBOutlet UILabel *startShutterDataLabel;
 
 @end

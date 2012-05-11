@@ -10,4 +10,33 @@
 
 @implementation Bramper
 
+@synthesize endShutterLength = _endShutterLength;
+@synthesize startShutterLength = _startShutterLength;
+@synthesize pickerModeStop = _pickerModeStop;
+@synthesize pickerModeStart = _pickerModeStart;
+
+-(id) init {
+    
+    _endShutterLength = [Time new];
+    _startShutterLength = [Time new];
+    _pickerModeStart = SECONDS;
+    _pickerModeStop = SECONDS;
+    return self;
+}
+
+- (NSString *) getStartShutterLabelText {
+    if(self.pickerModeStart == SECONDS) {
+        return [self.startShutterLength toStringDownToSeconds];
+    }
+    return [self.startShutterLength toStringDownToMilliseconds];
+
+    
+}
+- (NSString *) getEndShutterLabelText {
+    if(self.pickerModeStop == SECONDS) {
+        return [self.endShutterLength toStringDownToSeconds];
+    }
+    return [self.endShutterLength toStringDownToMilliseconds];
+}
+
 @end

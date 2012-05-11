@@ -261,11 +261,11 @@
             </objects>
             <point key="canvasLocation" x="1155" y="1792"/>
         </scene>
-        <!--View Controller - Bulb Ramping-->
+        <!--Bramping View Controller - Bulb Ramping-->
         <scene sceneID="TZt-5P-FW0">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sn8-fB-nxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="UI7-Z4-Dkf" sceneMemberID="viewController">
+                <viewController id="UI7-Z4-Dkf" customClass="BrampingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dzs-Xx-0ac">
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -285,6 +285,13 @@
                                     <segue destination="jyS-tt-6x2" kind="push" id="niv-jg-klH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00:00" lineBreakMode="tailTruncation" minimumFontSize="10" id="NKu-dC-Teu">
+                                <rect key="frame" x="199" y="47" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qu7-Zi-dj7">
                                 <rect key="frame" x="20" y="96" width="276" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -300,19 +307,30 @@
                                     <segue destination="z09-fs-OVH" kind="push" id="laQ-ot-U0N"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00:00" lineBreakMode="tailTruncation" minimumFontSize="10" id="U6L-0h-xwL">
+                                <rect key="frame" x="199" y="106" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Bulb Ramping" id="yMz-WK-HDn"/>
+                    <connections>
+                        <outlet property="endShutterDataLabel" destination="U6L-0h-xwL" id="4Qh-Dk-8dq"/>
+                        <outlet property="startShutterDataLabel" destination="NKu-dC-Teu" id="W59-LR-Ldb"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1895" y="3511"/>
         </scene>
-        <!--View Controller - Start Shutter-->
+        <!--Bramping Start Shutter Selector View Controller - Start Shutter-->
         <scene sceneID="Zcp-0t-bfD">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzT-HI-Hvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="jyS-tt-6x2" sceneMemberID="viewController">
+                <viewController id="jyS-tt-6x2" customClass="BrampingStartShutterSelectorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F2F-ks-tPJ">
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -322,7 +340,8 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
-                                    <outlet property="delegate" destination="i7k-T5-7fY" id="uLf-4p-ggE"/>
+                                    <outlet property="dataSource" destination="jyS-tt-6x2" id="NcJ-s0-bZP"/>
+                                    <outlet property="delegate" destination="jyS-tt-6x2" id="yZe-nc-v84"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="hour" lineBreakMode="tailTruncation" minimumFontSize="10" id="il0-ct-QOP">
@@ -355,22 +374,29 @@
                                 </segments>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
-                                    <action selector="secondSubSecondSegmentChange" destination="i7k-T5-7fY" eventType="valueChanged" id="OeH-yB-o3a"/>
+                                    <action selector="secondSubSecondSegmentChange" destination="jyS-tt-6x2" eventType="valueChanged" id="g99-dB-9n3"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Start Shutter" id="Kmf-ka-PBF"/>
+                    <connections>
+                        <outlet property="label_0" destination="il0-ct-QOP" id="4tH-c6-iin"/>
+                        <outlet property="label_1" destination="dPa-Mc-T5d" id="k4Z-Dk-eOT"/>
+                        <outlet property="label_2" destination="glC-HU-ZQ3" id="es7-R8-3Zq"/>
+                        <outlet property="picker" destination="9xt-Ts-CzX" id="7dO-zG-wKY"/>
+                        <outlet property="secondSubSecondSegment" destination="a4R-KZ-LjF" id="pys-GD-HwY"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2396" y="3576"/>
         </scene>
-        <!--View Controller - End Shutter-->
+        <!--Bramping Stop Shutter Selector View Controller - End Shutter-->
         <scene sceneID="1ye-1r-StJ">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6l-Em-68a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="z09-fs-OVH" sceneMemberID="viewController">
+                <viewController id="z09-fs-OVH" customClass="BrampingStopShutterSelectorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e2x-PN-FXJ">
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -380,7 +406,8 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
-                                    <outlet property="delegate" destination="i7k-T5-7fY" id="rLk-WP-Rtt"/>
+                                    <outlet property="dataSource" destination="z09-fs-OVH" id="rdi-Ff-NUg"/>
+                                    <outlet property="delegate" destination="z09-fs-OVH" id="eMq-wh-chH"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="hour" lineBreakMode="tailTruncation" minimumFontSize="10" id="P5X-uU-4Vr">
@@ -413,13 +440,20 @@
                                 </segments>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
-                                    <action selector="secondSubSecondSegmentChange" destination="i7k-T5-7fY" eventType="valueChanged" id="X1n-R0-e5G"/>
+                                    <action selector="secondSubSecondSegmentChange" destination="z09-fs-OVH" eventType="valueChanged" id="7PC-e6-DWV"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="End Shutter" id="j3j-eG-dN5"/>
+                    <connections>
+                        <outlet property="label_0" destination="P5X-uU-4Vr" id="YGz-sE-glV"/>
+                        <outlet property="label_1" destination="P7V-iQ-JfZ" id="IgQ-Hv-Lxf"/>
+                        <outlet property="label_2" destination="1hy-Jk-Bke" id="ipE-FV-8R1"/>
+                        <outlet property="picker" destination="Ft7-D6-b0P" id="9gW-Op-0NT"/>
+                        <outlet property="secondSubSecondSegment" destination="mjy-F7-Vfl" id="zL3-lU-FIY"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2410" y="4164"/>
@@ -1269,6 +1303,19 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="startShutterButton.png" width="549" height="83"/>
     </resources>
     <classes>
+        <class className="BrampingStartShutterSelectorViewController" superclassName="IShutterSelectorViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrampingStartShutterSelectorViewController.h"/>
+        </class>
+        <class className="BrampingStopShutterSelectorViewController" superclassName="IShutterSelectorViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrampingStopShutterSelectorViewController.h"/>
+        </class>
+        <class className="BrampingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrampingViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="endShutterDataLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="startShutterDataLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="DurationViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DurationViewController.h"/>
             <relationships>

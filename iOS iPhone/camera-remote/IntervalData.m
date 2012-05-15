@@ -28,8 +28,10 @@
     _cameraController = [AudioOutputCameraController new];
     
     [[self.duration time] setTotalTimeInSeconds:3600];
-    [[self.interval time] setTotalTimeInSeconds:3];
-    [[self.shutter startLength] setTotalTimeInSeconds:1];
+    [[self.interval time] setTotalTimeInSeconds:6];
+    [[[self.shutter bramper] startShutterLength] setTotalTimeInSeconds:1];
+    [[[self.shutter bramper] endShutterLength] setTotalTimeInSeconds:5];
+    [[self.shutter startLength] setTotalTimeInSeconds:.5];
 
     return self;
 }

@@ -23,5 +23,6 @@
 
 -(NSString*) getButtonData;
 
+-(Time*) getMaxShutterLength;
 
 @end

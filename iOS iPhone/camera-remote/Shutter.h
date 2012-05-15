@@ -38,4 +38,6 @@ typedef enum  {
 
 -(NSString*) getButtonData;
 
+-(Time*) getMaxTime;
+
 @end

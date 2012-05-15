@@ -88,6 +88,10 @@
 
 -(PickerMode) getPickerMode;
 
+-(void) upperBoundsCheck:(NSInteger)row
+             inComponent:(NSInteger)component;
+-(void) lowerBoundsCheck:(NSInteger)row
+inComponent:(NSInteger)component;
 
 
 @end  

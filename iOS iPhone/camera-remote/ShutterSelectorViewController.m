@@ -10,8 +10,6 @@
 
 @implementation ShutterSelectorViewController
 
-
-
 -(void) initializeInstructionLabel {
     self.instructionLabel.text = @"shutter selector - auto shutter";
 }
@@ -50,13 +48,16 @@
     }
 }
 
--(void) setPickerMode:(PickerMode)state {
+-(void) setPickerMode:(PickerMode) state {
     [[self.intervalData shutter] setPickerMode:state];
+    
 }
 
 -(PickerMode)getPickerMode {
     return [[self.intervalData shutter] pickerMode];
 }
+
+
 
 
 

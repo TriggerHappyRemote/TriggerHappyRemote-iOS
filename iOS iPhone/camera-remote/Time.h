@@ -15,6 +15,7 @@
 @property (nonatomic) int minutes;
 @property (nonatomic) int seconds;
 @property (nonatomic) int milliseconds;
+@property (nonatomic) bool unlimited;
 
 /**
  * @return NSString is format of @"hh:mm"
@@ -33,7 +34,6 @@
 
 - (void) decrementSecond;
 
-
-
+-(id) initUnlimited;
 
 @end 

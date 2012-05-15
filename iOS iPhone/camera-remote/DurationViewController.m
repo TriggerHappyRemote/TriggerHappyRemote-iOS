@@ -34,6 +34,8 @@ IntervalData *intervalData;
         [durationPicker setHidden:false];
     }
 
+    //if([[intervalData interva )
+    
     [durationPicker setCountDownDuration:[[[intervalData duration] time]totalTimeInSeconds]];
 	
 }
@@ -51,6 +53,12 @@ IntervalData *intervalData;
 -(IBAction) changeInDuration {
     
  	NSTimeInterval durationCountDown = [durationPicker countDownDuration];
+    if(durationCountDown <= [[[intervalData interval] time] totalTimeInSeconds]) {
+        [durationPicker setCountDownDuration:[[[intervalData interval] time] totalTimeInSeconds]+2];
+        durationCountDown = [[[intervalData interval] time] totalTimeInSeconds]+2;
+    }
+    
+    
     [[[intervalData duration] time] setTotalTimeInSeconds:durationCountDown];
     NSLog(@"Change in duration: %@", [[[intervalData duration] time] toStringDownToSeconds] );
 }

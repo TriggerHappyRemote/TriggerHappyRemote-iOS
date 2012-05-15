@@ -21,11 +21,23 @@
 @synthesize minutes = _minutes;
 @synthesize seconds = _seconds;
 @synthesize milliseconds = _milliseconds;
-
+@synthesize unlimited = _unlimited;
 
 -(id) init {
     NSLog(@"init");
     _milliseconds = 0;
+    _unlimited = false;
+    return self;
+    
+    
+    [self hours];
+    [self setHours:4];
+}
+
+
+
+-(id) initUnlimited {
+    _unlimited = true;
     return self;
 }
 
@@ -40,6 +52,7 @@
 - (NSTimeInterval) totalTimeInSeconds {
     NSLog(@"Getting total time in seconds ***** %i %i %i", _hours, _minutes, _seconds);
     NSLog(@"Total seconds: %f", _totalTimeInSeconds );
+    
     return _totalTimeInSeconds;
 }
 

@@ -296,8 +296,6 @@
 			children = (
 				0AE2734D14BB85550013A44B /* DurationViewController.h */,
 				0AE2734E14BB85550013A44B /* DurationViewController.m */,
-				0AE197BF154B365400714F55 /* ShutterSelectorViewController.h */,
-				0AE197C0154B365500714F55 /* ShutterSelectorViewController.m */,
 			);
 			name = duration;
 			sourceTree = "<group>";
@@ -348,14 +346,11 @@
 			children = (
 				0AA7F48A15586A1000FBF5FD /* ITimeSelectorViewController.h */,
 				0AA7F48B15586A1000FBF5FD /* ITimeSelectorViewController.m */,
-				0A11B9AD155DD50F00A70849 /* IShutterSelectorViewController.h */,
-				0A11B9AE155DD50F00A70849 /* IShutterSelectorViewController.m */,
-				0A11B9B2155DD5BC00A70849 /* duration */,
 				0A11B9B1155DD5AD00A70849 /* interval */,
-				0A11B9B0155DD5A200A70849 /* bramping */,
+				0A11B9B2155DD5BC00A70849 /* duration */,
+				0AB5645D15618BB6006293F0 /* shutter */,
 				0A49F03E15466BD1006EC13D /* ITimeSelectorViewController-OLD.h */,
 				0A49F04115466CA6006EC13D /* ITimeSelectorViewController-OLD.m */,
-				0AC811A114F622ED0040D7B4 /* hdr */,
 			);
 			name = "Picker ViewControllers";
 			sourceTree = "<group>";
@@ -510,6 +505,27 @@
 				0A875FF614DCFF0C0005FBE0 /* Camera_icon.png */,
 			);
 			name = buttons;
+			sourceTree = "<group>";
+		};
+		0AB5645D15618BB6006293F0 /* shutter */ = {
+			isa = PBXGroup;
+			children = (
+				0A11B9AD155DD50F00A70849 /* IShutterSelectorViewController.h */,
+				0A11B9AE155DD50F00A70849 /* IShutterSelectorViewController.m */,
+				0AB5645F15618C28006293F0 /* normal */,
+				0A11B9B0155DD5A200A70849 /* bramping */,
+				0AC811A114F622ED0040D7B4 /* hdr */,
+			);
+			name = shutter;
+			sourceTree = "<group>";
+		};
+		0AB5645F15618C28006293F0 /* normal */ = {
+			isa = PBXGroup;
+			children = (
+				0AE197BF154B365400714F55 /* ShutterSelectorViewController.h */,
+				0AE197C0154B365500714F55 /* ShutterSelectorViewController.m */,
+			);
+			name = normal;
 			sourceTree = "<group>";
 		};
 		0AC811A114F622ED0040D7B4 /* hdr */ = {

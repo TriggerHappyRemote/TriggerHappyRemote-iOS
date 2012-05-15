@@ -34,4 +34,11 @@
     }
 }
 
+-(Time*) getMaxShutterLength {
+    // TODO
+    return self.baseShutterSpeed;
+}
+
+
+
 @end

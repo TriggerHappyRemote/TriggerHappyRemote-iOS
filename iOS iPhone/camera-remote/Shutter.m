@@ -7,6 +7,8 @@
 //
 
 #import "Shutter.h"
+#import "IntervalData.h"
+#import "AppDelegate.h"
 
 @implementation Shutter
 
@@ -18,6 +20,8 @@
 @synthesize hdr = _hdr;
 @synthesize pickerMode;
 
+IntervalData * intervalData;
+
 -(id) init {
     _mode = STANDARD;
     _bulbMode = false;
@@ -25,6 +29,8 @@
     _bramper = [Bramper new];
     _hdr = [HDR new];
     self.pickerMode = SECONDS;
+    intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
+
     return self;
 }
 
@@ -36,6 +42,24 @@
     }
     else {
         return [[NSString alloc] initWithFormat:@"Auto"];
+    }
+}
+
+-(Time*) getMaxTime {
+    if(self.mode == STANDARD) { // Standard shutter
+        return self.startLength; 
+    }
+    else if(self.mode == BRAMP) { // Bramping
+        if(self.bramper.startShutterLength.totalTimeInSeconds > 
+           self.bramper.endShutterLength.totalTimeInSeconds) {
+            return self.bramper.startShutterLength;
+        }
+        else {
+            return self.bramper.endShutterLength;
+        }
+    }
+    else { // HDR
+        return self.hdr.getMaxShutterLength;
     }
 }
 

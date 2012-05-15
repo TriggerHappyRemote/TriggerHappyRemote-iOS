@@ -12,6 +12,10 @@
 
 @interface ITimeSelectorViewController()
 -(void)loadLabels;
+-(void) zeroCheck:(NSInteger)row
+      inComponent:(NSInteger)component;// TODO: remove
+
+-(bool) shouldZeroCheck;
 @end
 
 @implementation ITimeSelectorViewController
@@ -294,26 +298,48 @@ numberOfRowsInComponent:(NSInteger)component {
     }
     
     [self loadLabels];
-    
-    Time * currentTime = [self time];
-    
-    // Make it so time can never go to 00:00:00
-    //  If user enters the state of 0h:0m:0s it changes the model & view to 00:00:01
-    if(self.getPickerMode == SECONDS) {
-        if((component == 2 && row == 0 && [currentTime minutes] == 0 && [currentTime hours] == 0) ||
-         ([currentTime minutes] == 0 && [currentTime hours] == 0 && [currentTime seconds] == 0) ) {
-            [self.picker selectRow:1 inComponent:2 animated:false];
-            [self changeSecond:1];
-         }
-    }
-    else {
-        if((component == 2 && row == 0 && [currentTime minutes] == 0 && [currentTime seconds] == 0) ||
-           ([currentTime seconds] == 0 && [currentTime minutes] == 0 && [currentTime milliseconds] == 0) ) {
-            [self.picker selectRow:1 inComponent:2 animated:false];
-            [self changeMillisecond:[[self.subSecondsValuesNumbers objectAtIndex:1] intValue]];
-        }    
-    }
+    [self upperBoundsCheck:row inComponent:component];
+    [self lowerBoundsCheck:row inComponent:component];
+    [self zeroCheck:row inComponent:component];
 }
+
+-(void) upperBoundsCheck:(NSInteger)row
+             inComponent:(NSInteger)component{}
+-(void) lowerBoundsCheck:(NSInteger)row
+inComponent:(NSInteger)component {}
+
+
+-(void) zeroCheck:(NSInteger)row
+      inComponent:(NSInteger)component
+ {
+     
+     if([self shouldZeroCheck]) {
+        Time * currentTime = [self time];
+
+        // Make it so time can never go to 00:00:00
+        //  If user enters the state of 0h:0m:0s it changes the model & view to 00:00:01
+        if(self.getPickerMode == SECONDS) {
+            if((component == 2 && row == 0 && [currentTime minutes] == 0 && [currentTime hours] == 0) ||
+               ([currentTime minutes] == 0 && [currentTime hours] == 0 && [currentTime seconds] == 0) ) {
+                [self.picker selectRow:1 inComponent:2 animated:false];
+                [self changeSecond:1];
+            }
+        }
+        else {
+            if((component == 2 && row == 0 && [currentTime minutes] == 0 && [currentTime seconds] == 0) ||
+               ([currentTime seconds] == 0 && [currentTime minutes] == 0 && [currentTime milliseconds] == 0) ) {
+                [self.picker selectRow:1 inComponent:2 animated:false];
+                [self changeMillisecond:[[self.subSecondsValuesNumbers objectAtIndex:1] intValue]];
+            
+            }    
+        }
+     }
+}
+       
+-(bool) shouldZeroCheck {
+   return true;
+}
+
 
 -(IBAction)segmentDidChange {
     NSLog(@"selected segment: %i", [self.segment selectedSegmentIndex]);

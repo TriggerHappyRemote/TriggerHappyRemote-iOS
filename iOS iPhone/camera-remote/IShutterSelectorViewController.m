@@ -10,18 +10,26 @@
 
 @implementation IShutterSelectorViewController
 
+-(void) viewDidLoad {
+    // for lite
+    [self.segment setHidden:true];    
+}
+
 -(void) upperBoundsCheck:(NSInteger)row
              inComponent:(NSInteger)component {
     Time * max = [[self.intervalData interval] time];
-    if([[self time] totalTimeInSeconds] >= [max totalTimeInSeconds]) {
+    if([[self.intervalData interval] intervalEnabled] && [[self time] totalTimeInSeconds] >= [max totalTimeInSeconds]) {
         
-        [self.picker selectRow:[max hours] inComponent:0 animated:false];
-        [self.picker selectRow:[max minutes] inComponent:1 animated:false];
-        [self.picker selectRow:[max seconds]-1 inComponent:2 animated:false];
+        Time * newMax = [Time new];
+        [newMax setTotalTimeInSeconds:[max totalTimeInSeconds] - 1];
+        [self.picker selectRow:[newMax hours] inComponent:0 animated:false];
+        [self.picker selectRow:[newMax minutes] inComponent:1 animated:false];
+        [self.picker selectRow:[newMax seconds] inComponent:2 animated:false];
+        [self changeHour:[newMax hours]];
+        [self changeMinute:[newMax minutes]];
+        [self changeSecond:[newMax seconds]];
         
-        [self changeHour:[max hours]];
-        [self changeMinute:[max minutes]];
-        [self changeSecond:[max seconds]-1];
+        [self.instructionLabel setHidden:false];
     }
     
 }

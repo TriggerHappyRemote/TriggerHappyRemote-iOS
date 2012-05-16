@@ -16,6 +16,7 @@
       inComponent:(NSInteger)component;// TODO: remove
 
 -(bool) shouldZeroCheck;
+-(void) loadDefaultTime;
 @end
 
 @implementation ITimeSelectorViewController
@@ -28,7 +29,6 @@
 
 @synthesize segment, instructionLabel;
 @synthesize intervalData = _intervalData;
-@synthesize instructionLabelVisible;
 @synthesize secondSubSecondSegment;
 
 @synthesize hoursValues = _hoursValues;
@@ -45,8 +45,8 @@
     [self setPickerVisibility];
     
     [[[self navigationController] tabBarController] tabBar].hidden = YES;
+    [self.instructionLabel setHidden:true];
     
-    [self initializeInstructionLabel];
     [self loadHoursArray];
     [self loadMinutesArray];
     [self loadSecondsArray];
@@ -97,12 +97,6 @@
         else
             label_2.text = @"ms";
     }
-}
-
--(void) initializeInstructionLabel {
-    instructionLabelVisible = true;
-    instructionLabel.text = @"This is a suber class - off mode";
-    [instructionLabel setHidden:true];
 }
 
 -(void) loadHoursArray {
@@ -213,6 +207,7 @@
     [self.picker reloadAllComponents];
     [self loadLabels];
     [self loadDefaultTime];
+    [self.instructionLabel setHidden:true];
     
     if(self.getPickerMode == SECONDS) {
         [self changeMillisecond:0];
@@ -296,18 +291,17 @@ numberOfRowsInComponent:(NSInteger)component {
             [self changeMillisecond:[[self.subSecondsValuesNumbers objectAtIndex:row] intValue]];
         }
     }
-    
+    [self.instructionLabel setHidden:true];
     [self loadLabels];
+    [self zeroCheck:row inComponent:component];
     [self upperBoundsCheck:row inComponent:component];
     [self lowerBoundsCheck:row inComponent:component];
-    [self zeroCheck:row inComponent:component];
 }
 
 -(void) upperBoundsCheck:(NSInteger)row
              inComponent:(NSInteger)component{}
 -(void) lowerBoundsCheck:(NSInteger)row
 inComponent:(NSInteger)component {}
-
 
 -(void) zeroCheck:(NSInteger)row
       inComponent:(NSInteger)component
@@ -353,13 +347,11 @@ inComponent:(NSInteger)component {}
         NSLog(@"hidding picker");
         [self.picker setHidden:false];
         [self.secondSubSecondSegment setHidden:false];
-        [self.instructionLabel setHidden:true];
     }
     else {
         NSLog(@"showing picker");
         [self.picker setHidden:true];
         [self.secondSubSecondSegment setHidden:true];
-        [self.instructionLabel setHidden:false];
         
     }
 }

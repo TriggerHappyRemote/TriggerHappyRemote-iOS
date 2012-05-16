@@ -27,7 +27,8 @@ IntervalData *intervalData;
 
 -(void) viewWillAppear:(BOOL)animated {
     NSLog(@"View will appear ivc");
-    
+    // hide for trigger happy lite:
+    [settings setHidden:true];
     
     AppDelegate * d = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     intervalData = [d getIntervalData];
@@ -68,7 +69,13 @@ IntervalData *intervalData;
     [self setButtonTitles];
 }
 
-- (void) setButtonTitles {    
+- (void) setButtonTitles { 
+    intervalLabel.textAlignment = UITextAlignmentRight;
+    durationLabel.textAlignment = UITextAlignmentRight;
+    shutterLabel.textAlignment = UITextAlignmentRight;
+
+    
+    
     if([[intervalData interval] intervalEnabled]) {
         intervalLabel.text = [[intervalData interval] getButtonData];
     }

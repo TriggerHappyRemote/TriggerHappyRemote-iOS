@@ -69,10 +69,11 @@ float shutterLengthMS;
     
     currentCountDownTimeMS = [[[intervalData interval] time] totalTimeInSeconds] * 1000;
     
-    if(![[intervalData duration] unlimitedDuration]) {
+    if(![[intervalData duration] unlimitedDuration] && [[intervalData interval] intervalEnabled]) {
+        
         currentCountDownTimeSeconds = [[[intervalData duration] time] totalTimeInSeconds];
         [self.remainingTime setTotalTimeInSeconds:[[[intervalData duration] time] totalTimeInSeconds]];
-
+        
         durationTimer = [NSTimer scheduledTimerWithTimeInterval:1
                                                          target:self
                                                        selector:@selector(intervalometerDurationInterrupt)
@@ -80,12 +81,15 @@ float shutterLengthMS;
                                                         repeats:YES];
     }
     
-    // interval timer is constant
-    intervalTimer = [NSTimer scheduledTimerWithTimeInterval:interruptIntervalMS
+    if([[intervalData interval] intervalEnabled]) {
+        // interval timer is constant
+        intervalTimer = [NSTimer scheduledTimerWithTimeInterval:interruptIntervalMS
                                                      target:self
                                                    selector:@selector(intervalometerSubInterrupt)
                                                    userInfo:nil
                                                     repeats:YES];
+
+    }   
     
     // start the first shot when the camera fires
     [self intervalometerIntervalInterrupt];

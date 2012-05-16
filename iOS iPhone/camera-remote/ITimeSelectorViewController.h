@@ -33,15 +33,9 @@
 // model ref
 @property (strong, nonatomic) IntervalData * intervalData;
 
-@property (nonatomic) bool instructionLabelVisible;
-
 @property (weak, nonatomic) IBOutlet UISegmentedControl *secondSubSecondSegment;
 
 -(IBAction)textFieldReturn:(id)sender;
-
-
-// TODO: make private
--(void) loadDefaultTime;
 
 // Methods that will be overridden by the subclasses
 //
@@ -49,7 +43,6 @@
 // like in other c-family lanuages
 //
 
--(void) initializeInstructionLabel;
 
 -(void) loadHoursArray;
 

@@ -73,6 +73,20 @@
 		0A875FF914DCFF8A0005FBE0 /* dotdotdot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A875FF814DCFF8A0005FBE0 /* dotdotdot.png */; };
 		0A875FFB14DD00290005FBE0 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A875FFA14DD00290005FBE0 /* camera.png */; };
 		0AA7F48C15586A1000FBF5FD /* ITimeSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7F48B15586A1000FBF5FD /* ITimeSelectorViewController.m */; };
+		0AB8A1CC1563416D00C50043 /* 20kHz_1s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AB8A1C51563416D00C50043 /* 20kHz_1s.wav */; };
+		0AB8A1CD1563416D00C50043 /* 20kHz_033ms.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AB8A1C61563416D00C50043 /* 20kHz_033ms.wav */; };
+		0AB8A1CE1563416D00C50043 /* 20kHz_067ms.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AB8A1C71563416D00C50043 /* 20kHz_067ms.wav */; };
+		0AB8A1CF1563416D00C50043 /* 20kHz_100ms.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AB8A1C81563416D00C50043 /* 20kHz_100ms.wav */; };
+		0AB8A1D01563416D00C50043 /* 20kHz_125ms.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AB8A1C91563416D00C50043 /* 20kHz_125ms.wav */; };
+		0AB8A1D11563416D00C50043 /* 20kHz_250ms.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AB8A1CA1563416D00C50043 /* 20kHz_250ms.wav */; };
+		0AB8A1D21563416D00C50043 /* 20kHz_500ms.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AB8A1CB1563416D00C50043 /* 20kHz_500ms.wav */; };
+		0AB8A1DA1563446D00C50043 /* 20kHz_plus_1kHz_1s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AB8A1D31563446C00C50043 /* 20kHz_plus_1kHz_1s.wav */; };
+		0AB8A1DB1563446D00C50043 /* 20kHz_plus_1kHz_033ms.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AB8A1D41563446C00C50043 /* 20kHz_plus_1kHz_033ms.wav */; };
+		0AB8A1DC1563446D00C50043 /* 20kHz_plus_1kHz_067ms.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AB8A1D51563446C00C50043 /* 20kHz_plus_1kHz_067ms.wav */; };
+		0AB8A1DD1563446D00C50043 /* 20kHz_plus_1kHz_100ms.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AB8A1D61563446C00C50043 /* 20kHz_plus_1kHz_100ms.wav */; };
+		0AB8A1DE1563446D00C50043 /* 20kHz_plus_1kHz_125ms.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AB8A1D71563446C00C50043 /* 20kHz_plus_1kHz_125ms.wav */; };
+		0AB8A1DF1563446D00C50043 /* 20kHz_plus_1kHz_250ms.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AB8A1D81563446D00C50043 /* 20kHz_plus_1kHz_250ms.wav */; };
+		0AB8A1E01563446D00C50043 /* 20kHz_plus_1kHz_500ms.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AB8A1D91563446D00C50043 /* 20kHz_plus_1kHz_500ms.wav */; };
 		0AC8119B14F61F200040D7B4 /* hdrview2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AC8119614F61F200040D7B4 /* hdrview2.png */; };
 		0AC8119C14F61F200040D7B4 /* numberofshots.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AC8119714F61F200040D7B4 /* numberofshots.png */; };
 		0AC8119D14F61F200040D7B4 /* exposureInterval.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AC8119814F61F200040D7B4 /* exposureInterval.png */; };
@@ -199,6 +213,20 @@
 		0A875FFA14DD00290005FBE0 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = images/camera.png; sourceTree = SOURCE_ROOT; };
 		0AA7F48A15586A1000FBF5FD /* ITimeSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITimeSelectorViewController.h; sourceTree = "<group>"; };
 		0AA7F48B15586A1000FBF5FD /* ITimeSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITimeSelectorViewController.m; sourceTree = "<group>"; };
+		0AB8A1C51563416D00C50043 /* 20kHz_1s.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 20kHz_1s.wav; path = Sounds/20kHz_1s.wav; sourceTree = "<group>"; };
+		0AB8A1C61563416D00C50043 /* 20kHz_033ms.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 20kHz_033ms.wav; path = Sounds/20kHz_033ms.wav; sourceTree = "<group>"; };
+		0AB8A1C71563416D00C50043 /* 20kHz_067ms.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 20kHz_067ms.wav; path = Sounds/20kHz_067ms.wav; sourceTree = "<group>"; };
+		0AB8A1C81563416D00C50043 /* 20kHz_100ms.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 20kHz_100ms.wav; path = Sounds/20kHz_100ms.wav; sourceTree = "<group>"; };
+		0AB8A1C91563416D00C50043 /* 20kHz_125ms.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 20kHz_125ms.wav; path = Sounds/20kHz_125ms.wav; sourceTree = "<group>"; };
+		0AB8A1CA1563416D00C50043 /* 20kHz_250ms.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 20kHz_250ms.wav; path = Sounds/20kHz_250ms.wav; sourceTree = "<group>"; };
+		0AB8A1CB1563416D00C50043 /* 20kHz_500ms.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 20kHz_500ms.wav; path = Sounds/20kHz_500ms.wav; sourceTree = "<group>"; };
+		0AB8A1D31563446C00C50043 /* 20kHz_plus_1kHz_1s.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 20kHz_plus_1kHz_1s.wav; path = Sounds/20kHz_plus_1kHz_1s.wav; sourceTree = "<group>"; };
+		0AB8A1D41563446C00C50043 /* 20kHz_plus_1kHz_033ms.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 20kHz_plus_1kHz_033ms.wav; path = Sounds/20kHz_plus_1kHz_033ms.wav; sourceTree = "<group>"; };
+		0AB8A1D51563446C00C50043 /* 20kHz_plus_1kHz_067ms.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 20kHz_plus_1kHz_067ms.wav; path = Sounds/20kHz_plus_1kHz_067ms.wav; sourceTree = "<group>"; };
+		0AB8A1D61563446C00C50043 /* 20kHz_plus_1kHz_100ms.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 20kHz_plus_1kHz_100ms.wav; path = Sounds/20kHz_plus_1kHz_100ms.wav; sourceTree = "<group>"; };
+		0AB8A1D71563446C00C50043 /* 20kHz_plus_1kHz_125ms.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 20kHz_plus_1kHz_125ms.wav; path = Sounds/20kHz_plus_1kHz_125ms.wav; sourceTree = "<group>"; };
+		0AB8A1D81563446D00C50043 /* 20kHz_plus_1kHz_250ms.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 20kHz_plus_1kHz_250ms.wav; path = Sounds/20kHz_plus_1kHz_250ms.wav; sourceTree = "<group>"; };
+		0AB8A1D91563446D00C50043 /* 20kHz_plus_1kHz_500ms.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 20kHz_plus_1kHz_500ms.wav; path = Sounds/20kHz_plus_1kHz_500ms.wav; sourceTree = "<group>"; };
 		0AC8119614F61F200040D7B4 /* hdrview2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hdrview2.png; path = images/hdrview2.png; sourceTree = SOURCE_ROOT; };
 		0AC8119714F61F200040D7B4 /* numberofshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = numberofshots.png; path = images/numberofshots.png; sourceTree = SOURCE_ROOT; };
 		0AC8119814F61F200040D7B4 /* exposureInterval.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = exposureInterval.png; path = images/exposureInterval.png; sourceTree = SOURCE_ROOT; };
@@ -556,6 +584,20 @@
 		0AE197D8154B615E00714F55 /* SoundCommands */ = {
 			isa = PBXGroup;
 			children = (
+				0AB8A1D31563446C00C50043 /* 20kHz_plus_1kHz_1s.wav */,
+				0AB8A1D41563446C00C50043 /* 20kHz_plus_1kHz_033ms.wav */,
+				0AB8A1D51563446C00C50043 /* 20kHz_plus_1kHz_067ms.wav */,
+				0AB8A1D61563446C00C50043 /* 20kHz_plus_1kHz_100ms.wav */,
+				0AB8A1D71563446C00C50043 /* 20kHz_plus_1kHz_125ms.wav */,
+				0AB8A1D81563446D00C50043 /* 20kHz_plus_1kHz_250ms.wav */,
+				0AB8A1D91563446D00C50043 /* 20kHz_plus_1kHz_500ms.wav */,
+				0AB8A1C51563416D00C50043 /* 20kHz_1s.wav */,
+				0AB8A1C61563416D00C50043 /* 20kHz_033ms.wav */,
+				0AB8A1C71563416D00C50043 /* 20kHz_067ms.wav */,
+				0AB8A1C81563416D00C50043 /* 20kHz_100ms.wav */,
+				0AB8A1C91563416D00C50043 /* 20kHz_125ms.wav */,
+				0AB8A1CA1563416D00C50043 /* 20kHz_250ms.wav */,
+				0AB8A1CB1563416D00C50043 /* 20kHz_500ms.wav */,
 				0AE197D9154B61C900714F55 /* 100kHz_100ms.wav */,
 			);
 			name = SoundCommands;
@@ -701,6 +743,20 @@
 				0A62B4321559DB7000C55BB7 /* MainStoryboard.storyboard in Resources */,
 				0A11B9AB155DD32600A70849 /* endShutterButton.png in Resources */,
 				0A11B9AC155DD32600A70849 /* startShutterButton.png in Resources */,
+				0AB8A1CC1563416D00C50043 /* 20kHz_1s.wav in Resources */,
+				0AB8A1CD1563416D00C50043 /* 20kHz_033ms.wav in Resources */,
+				0AB8A1CE1563416D00C50043 /* 20kHz_067ms.wav in Resources */,
+				0AB8A1CF1563416D00C50043 /* 20kHz_100ms.wav in Resources */,
+				0AB8A1D01563416D00C50043 /* 20kHz_125ms.wav in Resources */,
+				0AB8A1D11563416D00C50043 /* 20kHz_250ms.wav in Resources */,
+				0AB8A1D21563416D00C50043 /* 20kHz_500ms.wav in Resources */,
+				0AB8A1DA1563446D00C50043 /* 20kHz_plus_1kHz_1s.wav in Resources */,
+				0AB8A1DB1563446D00C50043 /* 20kHz_plus_1kHz_033ms.wav in Resources */,
+				0AB8A1DC1563446D00C50043 /* 20kHz_plus_1kHz_067ms.wav in Resources */,
+				0AB8A1DD1563446D00C50043 /* 20kHz_plus_1kHz_100ms.wav in Resources */,
+				0AB8A1DE1563446D00C50043 /* 20kHz_plus_1kHz_125ms.wav in Resources */,
+				0AB8A1DF1563446D00C50043 /* 20kHz_plus_1kHz_250ms.wav in Resources */,
+				0AB8A1E01563446D00C50043 /* 20kHz_plus_1kHz_500ms.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,6 +878,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -837,6 +894,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -847,6 +905,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -856,6 +915,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

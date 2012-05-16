@@ -43,21 +43,35 @@ IIntervalometer *intervalometerModel;
     [intervalometerModel setIntervalometerCountdownViewControllerReference:self];
     
     [[[self navigationController] tabBarController] tabBar].hidden = YES;
-        
-    if([[intervalData duration] unlimitedDuration]) {
-        [unlimitedDuration setHidden:false];
-        [durationTime setHidden:true];
-        unlimitedDuration.text = @"Unlimited Duration";
+     
+    if([[intervalData interval] intervalEnabled]) {
+        if([[intervalData duration] unlimitedDuration]) {
+            [unlimitedDuration setHidden:false];
+            [durationTime setHidden:true];
+            unlimitedDuration.text = @"Unlimited Duration";
+        }
+        else {
+            [unlimitedDuration setHidden:true];
+            [durationTime setHidden:false];
+            durationTime.text = [[[intervalData duration] time] toStringDownToSeconds];
+            //[intervalometerModel getNotification];
+        }
     }
     else {
-        [unlimitedDuration setHidden:true];
-        [durationTime setHidden:false];
-        durationTime.text = [[[intervalData duration] time] toStringDownToSeconds];
-        //[intervalometerModel getNotification];
+        [unlimitedDuration setHidden:false];
+        [durationTime setHidden:true];
+        unlimitedDuration.text = @"Single Shot";
+        [stopButton setTitle:@"Return" forState:0];
     }
         
-    interval.textAlignment = UITextAlignmentRight;
-    interval.text =  [[[intervalData interval] time] toStringDownToSeconds];
+    if([[intervalData interval] intervalEnabled]) {
+        interval.textAlignment = UITextAlignmentRight;
+        interval.text =  [[[intervalData interval] time] toStringDownToSeconds];
+    }
+    else {
+        interval.text = @"Off";
+        [intervalProgress setHidden:true];
+    }
     
     shutterSpeed.textAlignment = UITextAlignmentRight;
     shutterSpeed.text = [[[intervalData shutter] startLength] toStringDownToSeconds];

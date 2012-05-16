@@ -24,7 +24,7 @@ IntervalData * intervalData;
 
 -(id) init {
     _mode = STANDARD;
-    _bulbMode = false;
+    _bulbMode = true;
     _startLength = [Time new];
     _bramper = [Bramper new];
     _hdr = [HDR new];

@@ -14,6 +14,7 @@
 @synthesize durationPicker;
 
 @synthesize duration;
+@synthesize warningLabel;
 
 bool unlimited;
 
@@ -34,8 +35,8 @@ IntervalData *intervalData;
         [durationPicker setHidden:false];
     }
 
-    //if([[intervalData interva )
-    
+
+    [self.warningLabel setHidden:true];
     [durationPicker setCountDownDuration:[[[intervalData duration] time]totalTimeInSeconds]];
 	
 }
@@ -52,10 +53,13 @@ IntervalData *intervalData;
 
 -(IBAction) changeInDuration {
     
+    [self.warningLabel setHidden:true];
  	NSTimeInterval durationCountDown = [durationPicker countDownDuration];
     if(durationCountDown <= [[[intervalData interval] time] totalTimeInSeconds]) {
         [durationPicker setCountDownDuration:[[[intervalData interval] time] totalTimeInSeconds]+2];
         durationCountDown = [[[intervalData interval] time] totalTimeInSeconds]+2;
+        [self.warningLabel setHidden:false];
+
     }
     
     
@@ -64,4 +68,8 @@ IntervalData *intervalData;
 }
 
 
+- (void)viewDidUnload {
+    [self setWarningLabel:nil];
+    [super viewDidUnload];
+}
 @end

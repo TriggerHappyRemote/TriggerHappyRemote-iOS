@@ -10,6 +10,5 @@
 
 @interface AudioOutputCameraController : ICameraController
 
-@property (nonatomic) UInt32 outputSignalID;
 
 @end

@@ -133,7 +133,7 @@
 }
 
 -(void) updateTotalTimeInSeconds {
-    _totalTimeInSeconds = _hours * 3600 + _minutes * 60 + _seconds + _milliseconds / 1000;
+    _totalTimeInSeconds = _hours * 3600 + _minutes * 60 + _seconds + ((double)_milliseconds) / 1000;
 }
 
 

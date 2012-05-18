@@ -10,153 +10,189 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface AudioOutputCameraController() 
-
-@property (nonatomic) UInt32 s033msID;
-@property (nonatomic) UInt32 s067msID;
-@property (nonatomic) UInt32 s100msID;
-@property (nonatomic) UInt32 s125msID;
-@property (nonatomic) UInt32 s250msID;
-@property (nonatomic) UInt32 s500msID;
-@property (nonatomic) UInt32 s1sID;
-
--(void) playAudio;
-//-(void) shutterIntervalInterrupt;
+@interface AudioOutputCameraController()
+- (void) playAudio;
+- (bool)isHeadsetPluggedIn;
 @end
 
 @implementation AudioOutputCameraController
 
-@synthesize s033msID = _s033msID, s067msID = _s067msID, s100msID = _s100msID, s125msID = _s125msID, s1sID = _s1sID, s250msID = _s250msID, s500msID = _s500msID;
 
-NSTimer * totalShutterLength;
-NSTimer * shutterInterval;
-AVAudioPlayer *audioPlayer;
+AVAudioPlayer *audioPlayer_033ms;
+AVAudioPlayer *audioPlayer_066ms;
+AVAudioPlayer *audioPlayer_125ms;
+AVAudioPlayer *audioPlayer_250ms;
+AVAudioPlayer *audioPlayer_500ms;
+AVAudioPlayer *audioPlayer_1s;
+AVAudioPlayer *audioPlayer_100ms;
+
 
 -(id) init {
-    // init av player
     
-    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_1s.wav", [[NSBundle mainBundle] resourcePath]]];
+    // init audio session with c callback block which allows us to get headphone data
+    // to detect if headphones are plugged in or not
+    AudioSessionInitialize (NULL, NULL, NULL, NULL);
+    AudioSessionSetActive(true);
     
+    // Allow playback even if Ring/Silent switch is on mute for AVAudioPlayer
+    UInt32 sessionCategory = kAudioSessionCategory_MediaPlayback;
+    AudioSessionSetProperty (kAudioSessionProperty_AudioCategory, 
+                             sizeof(sessionCategory),&sessionCategory);                                
+    // init av players
 	NSError *error;
-	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-    [audioPlayer setVolume:1.0];
     
-	if (audioPlayer == nil)
-		NSLog(@"Error! %@", [error description]);
+    NSURL *url_033 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_033ms.wav", [[NSBundle mainBundle] resourcePath]]];
+    NSURL *url_066 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_067ms.wav", [[NSBundle mainBundle] resourcePath]]];
+    NSURL *url_125 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_125ms.wav", [[NSBundle mainBundle] resourcePath]]];
+    NSURL *url_250 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_250ms.wav", [[NSBundle mainBundle] resourcePath]]];
+    NSURL *url_500 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_500ms.wav", [[NSBundle mainBundle] resourcePath]]];
+    NSURL *url_1 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_1s.wav", [[NSBundle mainBundle] resourcePath]]];
+    NSURL *url_100 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_100ms.wav", [[NSBundle mainBundle] resourcePath]]];
     
-	CFBundleRef mainBundle = CFBundleGetMainBundle();    
 
     
-    //CFURLRef soundFileRef1 = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"20kHz_033ms", CFSTR("wav"), NULL);
-    CFURLRef soundFileRef1 = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"20kHz_plus_1kHz_033ms", CFSTR("wav"), NULL);
-	AudioServicesCreateSystemSoundID(soundFileRef1, &_s033msID);
-    
-    
-    
-    //CFURLRef soundFileRef2 = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"20kHz_067ms", CFSTR("wav"), NULL);
-    CFURLRef soundFileRef2 = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"20kHz_plus_1kHz_067ms", CFSTR("wav"), NULL);
+	audioPlayer_033ms = [[AVAudioPlayer alloc] initWithContentsOfURL:url_033 error:&error];
+    audioPlayer_066ms = [[AVAudioPlayer alloc] initWithContentsOfURL:url_066 error:&error];
+    audioPlayer_125ms = [[AVAudioPlayer alloc] initWithContentsOfURL:url_125 error:&error];
+    audioPlayer_250ms = [[AVAudioPlayer alloc] initWithContentsOfURL:url_250 error:&error]; 
+    audioPlayer_500ms = [[AVAudioPlayer alloc] initWithContentsOfURL:url_500 error:&error];
+    audioPlayer_1s = [[AVAudioPlayer alloc] initWithContentsOfURL:url_1 error:&error];
+    audioPlayer_100ms = [[AVAudioPlayer alloc] initWithContentsOfURL:url_100 error:&error];
 
-	AudioServicesCreateSystemSoundID(soundFileRef2, &_s067msID);
     
-    //CFURLRef soundFileRef3 = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"20kHz_100ms", CFSTR("wav"), NULL);
-    CFURLRef soundFileRef3 = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"20kHz_plus_1kHz_100ms", CFSTR("wav"), NULL);
-
-	AudioServicesCreateSystemSoundID(soundFileRef3, &_s100msID);
+    [audioPlayer_033ms setVolume:1.0];
+    [audioPlayer_066ms setVolume:1.0];
+    [audioPlayer_125ms setVolume:1.0];
+    [audioPlayer_250ms setVolume:1.0];
+    [audioPlayer_500ms setVolume:1.0];
+    [audioPlayer_1s setVolume:1.0];
+    [audioPlayer_100ms setVolume:1.0];
     
-    //CFURLRef soundFileRef4 = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"20kHz_125ms", CFSTR("wav"), NULL);
-    CFURLRef soundFileRef4 = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"20kHz_plus_1kHz_125ms", CFSTR("wav"), NULL);
-
-	AudioServicesCreateSystemSoundID(soundFileRef4, &_s125msID);
+   
     
-    //CFURLRef soundFileRef5 = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"20kHz_250ms", CFSTR("wav"), NULL);
-    CFURLRef soundFileRef5 = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"20kHz_plus_1kHz_250ms", CFSTR("wav"), NULL);
 
-	AudioServicesCreateSystemSoundID(soundFileRef5, &_s250msID);
     
-    //CFURLRef soundFileRef6 = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"20kHz_500ms", CFSTR("wav"), NULL);
-    CFURLRef soundFileRef6 = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"20kHz_plus_1kHz_500ms", CFSTR("wav"), NULL);
 
-	AudioServicesCreateSystemSoundID(soundFileRef6, &_s500msID);
     
-    //CFURLRef soundFileRef7 = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"20kHz_1s", CFSTR("wav"), NULL);
-    CFURLRef soundFileRef7 = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"20kHz_plus_1kHz_1s", CFSTR("wav"), NULL);
+    
 
-	AudioServicesCreateSystemSoundID(soundFileRef7, &_s1sID);
     
     return self;
 }
 
 #pragma PrivateMethods
--(void) playAudio {
-    AudioServicesPlaySystemSound(self.s125msID);
-}
+
 
 -(void) startArbitraryAudioStream {
-    [self playAudio];
-    shutterInterval = [NSTimer scheduledTimerWithTimeInterval:.1
-                                             target:self
-                                           selector:@selector(playAudio)
-                                           userInfo:nil
-                                                      repeats:YES];
+    audioPlayer_100ms.numberOfLoops = -1;
+    [audioPlayer_100ms play];
+    
+    
 }
 
+- (void) playAudio {
+    [audioPlayer_100ms play];
+}
+
+
 -(void) stopAudioStream {
-    [audioPlayer stop];
-    [shutterInterval invalidate];
-    [totalShutterLength invalidate];
+    [audioPlayer_033ms stop];
+    [audioPlayer_066ms stop];
+    [audioPlayer_125ms stop];
+    [audioPlayer_250ms stop];
+    [audioPlayer_500ms stop];
+    [audioPlayer_1s stop];
+    [audioPlayer_100ms stop];
 }
 
 #pragma PublicMethods
 - (void) fireCamera: (Time *) time {
     
-    if([time totalTimeInSeconds] == .33) {
-        AudioServicesPlaySystemSound(self.s033msID);
-    }
-    else if([time totalTimeInSeconds] == .67) {
-        AudioServicesPlaySystemSound(self.s067msID);
-    }
-    else if([time totalTimeInSeconds] == .125) {
-        AudioServicesPlaySystemSound(self.s125msID);
-    }
-    else if([time totalTimeInSeconds] == .250) {
-        AudioServicesPlaySystemSound(self.s250msID);
-    }
-    else if([time totalTimeInSeconds] == .500) {
-        AudioServicesPlaySystemSound(self.s500msID);
-    }
-    else {
+    // Do not play audio is "headphones" (i.e. the Trigger Happy 
+    // cable/ unit) are not plugged in because
+    // 1) dont want to burden users with uneccessary sounds
+    // 2) violotes Apple's HIG if it's in silient
+    if(self.isHeadsetPluggedIn) {
         
-        if([time totalTimeInSeconds] - 1 >= 0) {
-            audioPlayer.numberOfLoops = (int)[time totalTimeInSeconds] - 1;
+        // if the shutter length (time) is less than 1 second,
+        // we play one file instead of looping to get a more accurate
+        // audio playback length
+        if([time totalTimeInSeconds] == .033) {
+            [audioPlayer_033ms play];
+        }
+        else if([time totalTimeInSeconds] == .067) {
+            [audioPlayer_066ms play];
+        }
+        else if([time totalTimeInSeconds] == .125) {
+
+            [audioPlayer_125ms play];
+        }
+        else if([time totalTimeInSeconds] == .250) {
+
+            [audioPlayer_250ms play];
+        }
+        else if([time totalTimeInSeconds] == .500) {
+
+            [audioPlayer_500ms play];
         }
         else {
-            audioPlayer.numberOfLoops = 0;
+            
+            // if time is great than a second, we set the number of loops
+            // to the number of seconds then play a 1 second file n time,
+            // where n = the integer number of seconds
+            if([time totalTimeInSeconds] - 1 >= 0) {
+                audioPlayer_1s.numberOfLoops = (int)[time totalTimeInSeconds] - 1;
+            }
+            else {
+                audioPlayer_1s.numberOfLoops = 0;
+            }
+            
+            [audioPlayer_1s play];
         }
-        NSLog(@"Total time in seconds: %i", [audioPlayer numberOfLoops]);
-        
-        [audioPlayer play];
-        
-        
-        /*[self playAudio];
-        shutterInterval = [NSTimer scheduledTimerWithTimeInterval:.1
-                                                           target:self
-                                                         selector:@selector(playAudio)
-                                                         userInfo:nil
-                                                          repeats:YES];
-        
-        totalShutterLength = [NSTimer scheduledTimerWithTimeInterval:[time totalTimeInSeconds]
-                                                              target:self
-                                                            selector:@selector(stopAudioStream)
-                                                            userInfo:nil
-                                                             repeats:NO];*/
     }
 }
 
 - (void) fireButtonPressed {
-    [self startArbitraryAudioStream];
+    if(self.isHeadsetPluggedIn) {
+        [self startArbitraryAudioStream];
+    }
 }
+
 - (void) fireButtonDepressed {
     [self stopAudioStream];
 }
+
+- (bool)isHeadsetPluggedIn {
+        UInt32 routeSize = sizeof (CFStringRef);
+        CFStringRef route;
+        
+        OSStatus error = AudioSessionGetProperty (kAudioSessionProperty_AudioRoute,
+                                                  &routeSize,
+                                                  &route);
+        
+        /* Known values of route:
+         * "Headset"
+         * "Headphone"
+         * "Speaker"
+         * "SpeakerAndMicrophone"
+         * "HeadphonesAndMicrophone"
+         * "HeadsetInOut"
+         * "ReceiverAndMicrophone"
+         * "Lineout"
+         */
+        
+        if (!error && (route != NULL)) {
+            
+            NSString* routeStr = (__bridge NSString*)route;
+            
+            NSRange headphoneRange = [routeStr rangeOfString : @"Head"];
+            
+            if (headphoneRange.location != NSNotFound) {
+                return YES;
+            }
+            
+        }
+        return NO;
+    }
 
 @end

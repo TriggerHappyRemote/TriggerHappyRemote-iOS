@@ -8,25 +8,201 @@
 		<data>
 		a6WPcEBGoAC9Kmg5lhbmoZALQRw=
 		</data>
+		<key>20kHz_033ms.wav</key>
+		<data>
+		L53yogSkDR8x7221KbzDePcdr4Q=
+		</data>
+		<key>20kHz_067ms.wav</key>
+		<data>
+		lwNT7tXdfLSz5BFsJHDWC1Bm270=
+		</data>
+		<key>20kHz_100ms.wav</key>
+		<data>
+		Rk6lo042dwpUUO1yQDXyJDsus10=
+		</data>
+		<key>20kHz_125ms.wav</key>
+		<data>
+		1N10p37GnxCb4TaNjmr310f6RQw=
+		</data>
+		<key>20kHz_1s.wav</key>
+		<data>
+		Cd8Lg4hXqDHOeF1FWGm9wubpOSc=
+		</data>
+		<key>20kHz_250ms.wav</key>
+		<data>
+		S2LUzWGDU5I0xJEsmJWMdvARNvo=
+		</data>
+		<key>20kHz_500ms.wav</key>
+		<data>
+		upQ6B6VRmfyrAVxOGoGl5GlJhs8=
+		</data>
+		<key>20kHz_plus_1kHz_033ms.wav</key>
+		<data>
+		Zw0TtRNuyxkbUmIgkH4AMUp1Nic=
+		</data>
+		<key>20kHz_plus_1kHz_067ms.wav</key>
+		<data>
+		fR+b2l3dBnZV1pTfHlqSQRkzwF4=
+		</data>
+		<key>20kHz_plus_1kHz_100ms.wav</key>
+		<data>
+		ls6Lx/Ftphv2Qg+k7oYNiSLDEIk=
+		</data>
+		<key>20kHz_plus_1kHz_125ms.wav</key>
+		<data>
+		av+Ht1Nze634aN1oNzOKzZGaXbM=
+		</data>
+		<key>20kHz_plus_1kHz_1s.wav</key>
+		<data>
+		jh4WGL+QVcNiDg7Ln1VF2Le+y9s=
+		</data>
+		<key>20kHz_plus_1kHz_250ms.wav</key>
+		<data>
+		2hHFvf/xNU2XX95vGn33jOxYis8=
+		</data>
+		<key>20kHz_plus_1kHz_500ms.wav</key>
+		<data>
+		kncaWSSGu12oMRJBWceHbplfpK8=
+		</data>
 		<key>Camera_icon.png</key>
 		<data>
 		yytr++IcIRhvoCvZCLqhbGHPwyM=
+		</data>
+		<key>MainStoryboard.storyboardc/2-view-16.nib</key>
+		<data>
+		VFJrlRzNJoCMeevML0tv736wh2M=
+		</data>
+		<key>MainStoryboard.storyboardc/9op-cb-AWg-view-Roj-EJ-zqr.nib</key>
+		<data>
+		aeKGsO6XTxV3vWMDISC+g/+boO0=
+		</data>
+		<key>MainStoryboard.storyboardc/EyP-hA-iSM-view-nlK-e3-hMn.nib</key>
+		<data>
+		7L85DReMH9eA30Y8dMXTTQsiwJU=
+		</data>
+		<key>MainStoryboard.storyboardc/NvC-Yx-taz-view-E1K-gI-PPG.nib</key>
+		<data>
+		4fFi4oEKzoU5sKFtE2J7z72Sq70=
+		</data>
+		<key>MainStoryboard.storyboardc/OLw-NM-Ry8-view-B4E-fl-Wz1.nib</key>
+		<data>
+		nddRBvgzfSiIZp1qcxlLUjSLxp8=
+		</data>
+		<key>MainStoryboard.storyboardc/QX8-2h-IU1-view-TzV-4i-pr2.nib</key>
+		<data>
+		yL15QPdjCoJlZogiI8Bj6KU0XmY=
+		</data>
+		<key>MainStoryboard.storyboardc/UI7-Z4-Dkf-view-dzs-Xx-0ac.nib</key>
+		<data>
+		ZNQdVcs9Mkzb+7FuzZxy/95lC2M=
+		</data>
+		<key>MainStoryboard.storyboardc/UIViewController-4.nib</key>
+		<data>
+		7H7Piji6jQpiTEMjDlATR4u2rjY=
+		</data>
+		<key>MainStoryboard.storyboardc/UIViewController-9op-cb-AWg.nib</key>
+		<data>
+		s7WI3mzArwRYyFEFMKfiBKRAwsw=
+		</data>
+		<key>MainStoryboard.storyboardc/UIViewController-EyP-hA-iSM.nib</key>
+		<data>
+		LLLbq5jG2yG2pV8UJo0MtoP5Y2k=
+		</data>
+		<key>MainStoryboard.storyboardc/UIViewController-NvC-Yx-taz.nib</key>
+		<data>
+		Fyyolcqjkj5zIZ3IPkv4nJTGk14=
+		</data>
+		<key>MainStoryboard.storyboardc/UIViewController-OLw-NM-Ry8.nib</key>
+		<data>
+		RmN2+ZRY26oMGGOMqDAtg/cFvYs=
+		</data>
+		<key>MainStoryboard.storyboardc/UIViewController-UI7-Z4-Dkf.nib</key>
+		<data>
+		6UAnHyCXu3YhEJUfw3ZWHlxsTqI=
+		</data>
+		<key>MainStoryboard.storyboardc/UIViewController-cJq-iJ-mpx.nib</key>
+		<data>
+		v9f3PpAit5xlux/EcCR7It8921Y=
+		</data>
+		<key>MainStoryboard.storyboardc/UIViewController-d6r-o9-MSm.nib</key>
+		<data>
+		hoHAU1AQg+7VU1TTcy+cx5bv+K4=
+		</data>
+		<key>MainStoryboard.storyboardc/UIViewController-i7k-T5-7fY.nib</key>
+		<data>
+		BVrnFKufheEupalKCidfriqWJ6U=
+		</data>
+		<key>MainStoryboard.storyboardc/UIViewController-jyS-tt-6x2.nib</key>
+		<data>
+		mPg5ifo7+OUn0Bvi97kD86QKiy8=
+		</data>
+		<key>MainStoryboard.storyboardc/UIViewController-ko8-Fk-2Km.nib</key>
+		<data>
+		onVoIlmMnQiROhJu0hQFYQqoev8=
+		</data>
+		<key>MainStoryboard.storyboardc/UIViewController-qaa-X4-zK1.nib</key>
+		<data>
+		tXs3qNjvttuhsJhKs5jS8pW5Gi4=
+		</data>
+		<key>MainStoryboard.storyboardc/UIViewController-z09-fs-OVH.nib</key>
+		<data>
+		JHzQKJhYYEGNKnH8vY4LBpYe1xA=
+		</data>
+		<key>MainStoryboard.storyboardc/cJq-iJ-mpx-view-s5O-o3-EBv.nib</key>
+		<data>
+		f1p+Sz1Y0aqlzlyCtNO8KHT5/1o=
+		</data>
+		<key>MainStoryboard.storyboardc/d6r-o9-MSm-view-94W-CY-gl3.nib</key>
+		<data>
+		czH2WbqPbGbDFGwDKb/2ti+M2Qg=
+		</data>
+		<key>MainStoryboard.storyboardc/i7k-T5-7fY-view-rdX-tp-OBr.nib</key>
+		<data>
+		8+nS2iLebUvAuGUXCyuOwnLNBo8=
+		</data>
+		<key>MainStoryboard.storyboardc/jyS-tt-6x2-view-F2F-ks-tPJ.nib</key>
+		<data>
+		on05tC+ySPj4Jec52/3G/TIQKD4=
+		</data>
+		<key>MainStoryboard.storyboardc/ko8-Fk-2Km-view-wgw-yy-oGE.nib</key>
+		<data>
+		FyamYK4POLaBK0TmFTP+7sdfE0U=
+		</data>
+		<key>MainStoryboard.storyboardc/pca-UN-G0m-view-3sq-bT-qmU.nib</key>
+		<data>
+		/KAdbPE1AzJ2xNYz9l8iMvqFUqM=
+		</data>
+		<key>MainStoryboard.storyboardc/qaa-X4-zK1-view-Jgb-lV-0kc.nib</key>
+		<data>
+		u9mpx2ElhiH8WQ14a+zIeOmvNPY=
+		</data>
+		<key>MainStoryboard.storyboardc/z09-fs-OVH-view-e2x-PN-FXJ.nib</key>
+		<data>
+		srBxOyh14/jlXnQ6stWo4SZ1Edk=
 		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
+		<key>TestBoard.storyboard</key>
+		<data>
+		nuTSwVnJAQxmusWD2Uq87MtM0DA=
+		</data>
+		<key>Trigger_Happy-1-0-iPad.storyboard</key>
+		<data>
+		ho8iLSlyAOMQdemtJIXvbv6yspc=
+		</data>
 		<key>Trigger_Happy-1-0-iPad.storyboardc/L28-Z1-Z0G-view-hUv-Bo-bs4.nib</key>
 		<data>
-		xEv6yOGYyDi3vUpT22KRpPqRm1M=
+		E/Urxb8tq2avQco2WqGAcT4IKCA=
 		</data>
 		<key>Trigger_Happy-1-0-iPad.storyboardc/UIViewController-0xl-Bg-Hy8.nib</key>
 		<data>
-		w19yuN0bEOT/i5IkKNlcKoXrb0o=
+		W3UQjRy387jt3IDTix5AiazB4YQ=
 		</data>
 		<key>Trigger_Happy-1-0-iPad.storyboardc/fUd-fm-mSn-view-iee-44-k4F.nib</key>
 		<data>
-		cdD7aRmta5XoIPqMhwAleLg7Alg=
+		MRyYIxV6ZKvu+oFk8FbFQyBfmkw=
 		</data>
 		<key>add.png</key>
 		<data>
@@ -86,115 +262,115 @@
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/2-view-16.nib</key>
 		<data>
-		Leehg1ju2y9fKbiIPjhLJj0KVW4=
+		AzOwtdaaofEJat5UpwoiMw9rR6s=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/9op-cb-AWg-view-Roj-EJ-zqr.nib</key>
 		<data>
-		YWPhEOz8uWtb7zY9iesqf5w86fY=
+		LSAlCqfsETOBo1uEKss1XNDfv1U=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/EyP-hA-iSM-view-nlK-e3-hMn.nib</key>
 		<data>
-		Tta2Cbykpi2alp6BffKCMgamqSo=
+		CsCSt7KvDFM1CAOoXrXlWuLDGsE=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/NvC-Yx-taz-view-E1K-gI-PPG.nib</key>
 		<data>
-		FAmYCflq135HC9NRbmcBSqYshR0=
+		d3V0HP5C+sCyt1aGU5aYsskYNNM=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/OLw-NM-Ry8-view-B4E-fl-Wz1.nib</key>
 		<data>
-		C2Hy4M6/jLhgIvdMWwLgqdkAT5Q=
+		aIyA6MTfTG263cyk+ebDQxxXgKs=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/QX8-2h-IU1-view-TzV-4i-pr2.nib</key>
 		<data>
-		6H/ggu+og9wB+QddEtke6dUDUgw=
+		eKXtL/DlFc0HIK4lstxDEFmTpao=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/UI7-Z4-Dkf-view-dzs-Xx-0ac.nib</key>
 		<data>
-		55Db3GiphyGDXsceoJn+bJQjOqo=
+		Bt3x0CM+Ojol1rlh2rHIpZg0Q4M=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/UIViewController-4.nib</key>
 		<data>
-		ZIJud1q60Gzp81laAd2H7djPV0A=
+		maEQkRDgVZ8XzRtYOqvHmY1BWw0=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/UIViewController-9op-cb-AWg.nib</key>
 		<data>
-		hQCHrr6tQhTuI2Npp+XUYBs7HMM=
+		Fij9VivQIn5utKSKsw+OF5aCLbI=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/UIViewController-EyP-hA-iSM.nib</key>
 		<data>
-		s6bVhQW8rSno/HLKUtJG6IVJjrQ=
+		gxfN2ndMmai20cCf9Tee6HX9OZA=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/UIViewController-NvC-Yx-taz.nib</key>
 		<data>
-		FoKf0YoatC9Y6cn6NTRtfrS57mA=
+		QG0VnafjvUftIiQvbN9BjGm87Ms=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/UIViewController-OLw-NM-Ry8.nib</key>
 		<data>
-		Kt1cRPvYFCaaxARoaJmua24a/GY=
+		zMTHdsD8XXC2gf9oGW1jAqwGdp0=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/UIViewController-UI7-Z4-Dkf.nib</key>
 		<data>
-		lhGtHJ7DeJoe9ZH5fHcdQpNxdjo=
+		egAVWxWLot2KYh8jCTqeonmYjsI=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/UIViewController-cJq-iJ-mpx.nib</key>
 		<data>
-		p1N8492AgQIwB70wfjQZ1AYbc7w=
+		CNdDdwCvwqRY3y/AgyyM+Y87eDk=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/UIViewController-d6r-o9-MSm.nib</key>
 		<data>
-		FeLY00zkP8Fq3g7B8qhhMoFe4qU=
+		FE9YLuxX/B6F1BHhY77X7MJroX0=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/UIViewController-i7k-T5-7fY.nib</key>
 		<data>
-		1Mfa7M5zvXof6+LcswoudHbPww4=
+		uRyP7yIKrMPGRs4v2hY3GHoBMhk=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/UIViewController-jyS-tt-6x2.nib</key>
 		<data>
-		MpnypEIg5+IYNZWV9Ie5ckLapUg=
+		E1Auc072vqY25Wn9V+TPmzdcxUc=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/UIViewController-ko8-Fk-2Km.nib</key>
 		<data>
-		b9Ul8siwQ7xagMVdfOKPHuTkR9o=
+		FO7w1gcCf5GOMEXvEwF6G4pPqt8=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/UIViewController-qaa-X4-zK1.nib</key>
 		<data>
-		iJtF6yXiMmLs6iu5rUw92Kezoww=
+		55quUbKIeqA5lgKOdKLPWVimBHM=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/UIViewController-z09-fs-OVH.nib</key>
 		<data>
-		x1OQKeJRus1Alvy5oKt9+KfTW/I=
+		E4M0n/T22chxKC0/CtPpyIa6iGY=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/cJq-iJ-mpx-view-s5O-o3-EBv.nib</key>
 		<data>
-		dYjkypT6uv9PYfSbyrG0O9HoLfU=
+		Hp3Ak6NPpDfP58sTJNr6QoTW9eM=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/d6r-o9-MSm-view-94W-CY-gl3.nib</key>
 		<data>
-		JihmQ2f/2tHUwaO+UR8ibOJwsyw=
+		ycIb8T1kKYJyUecPNEP0sTa0wWE=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/i7k-T5-7fY-view-rdX-tp-OBr.nib</key>
 		<data>
-		1RO8Tn5xuTevAJdKK5eTtAiVnJQ=
+		bQj8czymszWMi0cWD/KtoVsEhR8=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/jyS-tt-6x2-view-F2F-ks-tPJ.nib</key>
 		<data>
-		Q+G0Vt26em9uj1sptJCBhFpQ1tc=
+		ktyha+R1Y0TO+Qbczs+2VCVS+Ik=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/ko8-Fk-2Km-view-wgw-yy-oGE.nib</key>
 		<data>
-		gSMc/43Cu6AteY/bFOlhS1zE2IU=
+		AT5b5PPnM/IZXtISFX1p5t96xhM=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/pca-UN-G0m-view-3sq-bT-qmU.nib</key>
 		<data>
-		yD6ljElVISCuNo7mrEYeo/tYUTg=
+		x8eK9Z4x7TwFOIOdcPCz67pXBHg=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/qaa-X4-zK1-view-Jgb-lV-0kc.nib</key>
 		<data>
-		bBVgDouM3rWPzjY5aHtZHnlTOcs=
+		gtRyx15r6VQrD4uX8S5hKCpaRas=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/z09-fs-OVH-view-e2x-PN-FXJ.nib</key>
 		<data>
-		K1Lc0aaplebeXk2gXlqBDWcW5vQ=
+		oN33X1OOGFdhoklE3kqXs/g6jFs=
 		</data>
 		<key>endShutterButton.png</key>
 		<data>

@@ -138,7 +138,6 @@ float shutterLengthMS;
 
 - (void) shutterInterrupt {
     currentShutterTimeMS -= millisecondInterval;
-    NSLog(@"shutter interrupt: %i", currentShutterTimeMS);
     float progress = 0;
     if(currentShutterTimeMS <= 0) {
         currentShutterTimeMS = shutterLengthMS;

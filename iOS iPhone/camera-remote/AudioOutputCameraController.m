@@ -8,9 +8,9 @@
 
 #import "AudioOutputCameraController.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface AudioOutputCameraController() 
-@property (nonatomic) UInt32 outputSignalID;
 
 @property (nonatomic) UInt32 s033msID;
 @property (nonatomic) UInt32 s067msID;
@@ -26,16 +26,26 @@
 
 @implementation AudioOutputCameraController
 
-@synthesize outputSignalID = _outputSignalID;
 @synthesize s033msID = _s033msID, s067msID = _s067msID, s100msID = _s100msID, s125msID = _s125msID, s1sID = _s1sID, s250msID = _s250msID, s500msID = _s500msID;
 
 NSTimer * totalShutterLength;
 NSTimer * shutterInterval;
+AVAudioPlayer *audioPlayer;
 
 -(id) init {
-	CFBundleRef mainBundle = CFBundleGetMainBundle();
-	CFURLRef soundFileRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"100kHz_100ms", CFSTR("wav"), NULL);
-	AudioServicesCreateSystemSoundID(soundFileRef, &_outputSignalID);
+    // init av player
+    
+    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_1s.wav", [[NSBundle mainBundle] resourcePath]]];
+    
+	NSError *error;
+	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    [audioPlayer setVolume:1.0];
+    
+	if (audioPlayer == nil)
+		NSLog(@"Error! %@", [error description]);
+    
+	CFBundleRef mainBundle = CFBundleGetMainBundle();    
+
     
     //CFURLRef soundFileRef1 = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"20kHz_033ms", CFSTR("wav"), NULL);
     CFURLRef soundFileRef1 = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"20kHz_plus_1kHz_033ms", CFSTR("wav"), NULL);
@@ -91,29 +101,43 @@ NSTimer * shutterInterval;
 }
 
 -(void) stopAudioStream {
+    [audioPlayer stop];
     [shutterInterval invalidate];
     [totalShutterLength invalidate];
 }
 
 #pragma PublicMethods
-- (void) fireCamera: (Time *) time {    
-    if([time milliseconds] == 33) {
+- (void) fireCamera: (Time *) time {
+    
+    if([time totalTimeInSeconds] == .33) {
         AudioServicesPlaySystemSound(self.s033msID);
     }
-    else if([time milliseconds] == 67) {
+    else if([time totalTimeInSeconds] == .67) {
         AudioServicesPlaySystemSound(self.s067msID);
     }
-    else if([time milliseconds] == 125) {
+    else if([time totalTimeInSeconds] == .125) {
         AudioServicesPlaySystemSound(self.s125msID);
     }
-    else if([time milliseconds] == 250) {
+    else if([time totalTimeInSeconds] == .250) {
         AudioServicesPlaySystemSound(self.s250msID);
     }
-    else if([time milliseconds] == 500) {
+    else if([time totalTimeInSeconds] == .500) {
         AudioServicesPlaySystemSound(self.s500msID);
     }
     else {
-        [self playAudio];
+        
+        if([time totalTimeInSeconds] - 1 >= 0) {
+            audioPlayer.numberOfLoops = (int)[time totalTimeInSeconds] - 1;
+        }
+        else {
+            audioPlayer.numberOfLoops = 0;
+        }
+        NSLog(@"Total time in seconds: %i", [audioPlayer numberOfLoops]);
+        
+        [audioPlayer play];
+        
+        
+        /*[self playAudio];
         shutterInterval = [NSTimer scheduledTimerWithTimeInterval:.1
                                                            target:self
                                                          selector:@selector(playAudio)
@@ -124,7 +148,7 @@ NSTimer * shutterInterval;
                                                               target:self
                                                             selector:@selector(stopAudioStream)
                                                             userInfo:nil
-                                                             repeats:NO];
+                                                             repeats:NO];*/
     }
 }
 

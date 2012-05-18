@@ -87,12 +87,10 @@ IIntervalometer *intervalometerModel;
 }
 
 -(void) viewDidDisappear:(BOOL)animated {
-    NSLog(@"trying to stop intervalometer");
     [intervalometerModel stopIntervalometer];
 }
 
 -(IBAction) stopButtonPressed {
-    NSLog(@"Stop button pressed");
     [intervalometerModel stopIntervalometer];
     [self.navigationController popViewControllerAnimated:YES];
     
@@ -102,7 +100,6 @@ IIntervalometer *intervalometerModel;
 }
 
 -(void) notifyOfInterrupt:(NSString *) currentTime {
-    NSLog(@"Time passed");
     durationTime.text = currentTime;
 
 }
@@ -118,7 +115,6 @@ IIntervalometer *intervalometerModel;
 
 
 -(void) notifyOfDurationEnd { 
-    NSLog(@"Duration ended");
     [durationTime setHidden:true];
     unlimitedDuration.text = @"Duration Ended";
     [unlimitedDuration setHidden:false];
@@ -127,12 +123,10 @@ IIntervalometer *intervalometerModel;
 }
 
 -(void) viewDidLoad {
-    NSLog(@"IntervalometerCountdownVC did load");
     [navigation setHidesBackButton:true];
 }
 
 -(IBAction) testButtonPressed {
-    NSLog(@"Intervalometer Count Down View Controller: Test button pressed");
     
     //hide the back button
     [navigation setHidesBackButton:true];

@@ -53,8 +53,8 @@ IIntervalometer *intervalometerModel;
         else {
             [unlimitedDuration setHidden:true];
             [durationTime setHidden:false];
+           
             durationTime.text = [[[intervalData duration] time] toStringDownToSeconds];
-            //[intervalometerModel getNotification];
         }
     }
     else {
@@ -74,7 +74,14 @@ IIntervalometer *intervalometerModel;
     }
     
     shutterSpeed.textAlignment = UITextAlignmentRight;
-    shutterSpeed.text = [[[intervalData shutter] startLength] toStringDownToSeconds];
+    if([[[intervalData shutter] getMaxTime] totalTimeInSeconds] < 1) {
+        shutterSpeed.text = @"Subsecond";
+        [shutterProgress setHidden:true];
+
+    }
+    else {
+        shutterSpeed.text = [[[intervalData shutter] startLength] toStringDownToSeconds];
+    }
     
     [intervalometerModel startIntervalometer];
     

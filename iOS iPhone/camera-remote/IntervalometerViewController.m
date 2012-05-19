@@ -8,6 +8,9 @@
 
 #import "IntervalometerViewController.h"
 #import "AppDelegate.h"
+#import <MediaPlayer/MediaPlayer.h>
+
+
 
 
 @interface IntervalometerViewController()
@@ -96,6 +99,12 @@ IntervalData *intervalData;
 }
 
 -(IBAction) startButtonPressed {
+    MPMusicPlayerController *iPod = [MPMusicPlayerController iPodMusicPlayer];
+    float volumeLevel = iPod.volume;
+    if(volumeLevel < 1.0) {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Volume Too Low" message:@"Turn the volume to max, so Trigger Happy will work" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];        
+    }
 }
 
 -(IBAction) segmentSettingsChanged {    

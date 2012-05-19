@@ -12,7 +12,6 @@
 
 @interface AudioOutputCameraController()
 - (void) playAudio;
-- (bool)isHeadsetPluggedIn;
 @end
 
 @implementation AudioOutputCameraController
@@ -41,13 +40,13 @@ AVAudioPlayer *audioPlayer_100ms;
     // init av players
 	NSError *error;
     
-    NSURL *url_033 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_033ms.wav", [[NSBundle mainBundle] resourcePath]]];
-    NSURL *url_066 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_067ms.wav", [[NSBundle mainBundle] resourcePath]]];
-    NSURL *url_125 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_125ms.wav", [[NSBundle mainBundle] resourcePath]]];
-    NSURL *url_250 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_250ms.wav", [[NSBundle mainBundle] resourcePath]]];
-    NSURL *url_500 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_500ms.wav", [[NSBundle mainBundle] resourcePath]]];
-    NSURL *url_1 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_1s.wav", [[NSBundle mainBundle] resourcePath]]];
-    NSURL *url_100 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_100ms.wav", [[NSBundle mainBundle] resourcePath]]];
+    NSURL *url_033 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_033ms.wav", [[NSBundle mainBundle] resourcePath]]];
+    NSURL *url_066 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_067ms.wav", [[NSBundle mainBundle] resourcePath]]];
+    NSURL *url_125 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_125ms.wav", [[NSBundle mainBundle] resourcePath]]];
+    NSURL *url_250 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_250ms.wav", [[NSBundle mainBundle] resourcePath]]];
+    NSURL *url_500 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_500ms.wav", [[NSBundle mainBundle] resourcePath]]];
+    NSURL *url_1 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_1s.wav", [[NSBundle mainBundle] resourcePath]]];
+    NSURL *url_100 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_100ms.wav", [[NSBundle mainBundle] resourcePath]]];
     
 
     
@@ -68,15 +67,6 @@ AVAudioPlayer *audioPlayer_100ms;
     [audioPlayer_1s setVolume:1.0];
     [audioPlayer_100ms setVolume:1.0];
     
-   
-    
-
-    
-
-    
-    
-
-    
     return self;
 }
 
@@ -84,10 +74,10 @@ AVAudioPlayer *audioPlayer_100ms;
 
 
 -(void) startArbitraryAudioStream {
+    NSLog(@"Playing audio");
+    [audioPlayer_100ms setVolume:1.0];
     audioPlayer_100ms.numberOfLoops = -1;
     [audioPlayer_100ms play];
-    
-    
 }
 
 - (void) playAudio {
@@ -112,7 +102,7 @@ AVAudioPlayer *audioPlayer_100ms;
     // cable/ unit) are not plugged in because
     // 1) dont want to burden users with uneccessary sounds
     // 2) violotes Apple's HIG if it's in silient
-    if(self.isHeadsetPluggedIn) {
+    if(self.isHardwareConnected) {
         
         // if the shutter length (time) is less than 1 second,
         // we play one file instead of looping to get a more accurate
@@ -153,16 +143,24 @@ AVAudioPlayer *audioPlayer_100ms;
 }
 
 - (void) fireButtonPressed {
-    if(self.isHeadsetPluggedIn) {
+    if(self.isHardwareConnected) {
         [self startArbitraryAudioStream];
     }
+    
+    
+    //
+    [self startArbitraryAudioStream];
+
 }
 
 - (void) fireButtonDepressed {
     [self stopAudioStream];
 }
 
-- (bool)isHeadsetPluggedIn {
+- (bool)isHardwareConnected {
+    
+    
+    
         UInt32 routeSize = sizeof (CFStringRef);
         CFStringRef route;
         
@@ -170,16 +168,16 @@ AVAudioPlayer *audioPlayer_100ms;
                                                   &routeSize,
                                                   &route);
         
-        /* Known values of route:
-         * "Headset"
-         * "Headphone"
-         * "Speaker"
-         * "SpeakerAndMicrophone"
-         * "HeadphonesAndMicrophone"
-         * "HeadsetInOut"
-         * "ReceiverAndMicrophone"
-         * "Lineout"
-         */
+//         Known values of route:
+//         * "Headset"
+//         * "Headphone"
+//         * "Speaker"
+//         * "SpeakerAndMicrophone"
+//         * "HeadphonesAndMicrophone"
+//         * "HeadsetInOut"
+//         * "ReceiverAndMicrophone"
+//         * "Lineout"
+//         *
         
         if (!error && (route != NULL)) {
             
@@ -188,11 +186,14 @@ AVAudioPlayer *audioPlayer_100ms;
             NSRange headphoneRange = [routeStr rangeOfString : @"Head"];
             
             if (headphoneRange.location != NSNotFound) {
-                return YES;
+                NSLog(@"Headphone plugged in");
+                return true;
             }
             
         }
-        return NO;
+        NSLog(@"Headphone plugged in");
+
+        return false;
     }
 
 @end

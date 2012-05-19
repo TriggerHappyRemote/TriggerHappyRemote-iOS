@@ -37,11 +37,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "camera-remote/SingleShotViewController.m"
-         timestampString = "358469835.820782"
+         timestampString = "359085576.317165"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "80"
-         endingLineNumber = "80"
+         startingLineNumber = "130"
+         endingLineNumber = "130"
          landmarkName = "-pressHoldDidChange"
          landmarkType = "5">
       </FileBreakpoint>
@@ -77,12 +77,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "camera-remote/AudioOutputCameraController.m"
-         timestampString = "358999592.322358"
+         timestampString = "359085000.036554"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "200"
-         endingLineNumber = "200"
-         landmarkName = "-isHeadsetPluggedIn"
+         startingLineNumber = "183"
+         endingLineNumber = "183"
+         landmarkName = "-isHardwareConnected"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

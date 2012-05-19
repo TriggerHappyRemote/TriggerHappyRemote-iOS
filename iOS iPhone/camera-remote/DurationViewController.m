@@ -15,6 +15,7 @@
 
 @synthesize duration;
 @synthesize warningLabel;
+@synthesize warningBackground;
 
 bool unlimited;
 
@@ -37,6 +38,8 @@ IntervalData *intervalData;
 
 
     [self.warningLabel setHidden:true];
+    [self.warningBackground setHidden:true];
+
     [durationPicker setCountDownDuration:[[[intervalData duration] time]totalTimeInSeconds]];
 	
 }
@@ -44,6 +47,7 @@ IntervalData *intervalData;
 -(IBAction) toggleSegmentControl {
     NSLog(@"Toggle duration segment control %i", [self.duration selectedSegmentIndex]);
     
+    [self changeInDuration];
     [durationPicker setHidden:[self.duration selectedSegmentIndex] == 0];
     [[intervalData duration] 
      setUnlimitedDuration:[self.duration selectedSegmentIndex] == 0];
@@ -59,6 +63,8 @@ IntervalData *intervalData;
         [durationPicker setCountDownDuration:[[[intervalData interval] time] totalTimeInSeconds]+2];
         durationCountDown = [[[intervalData interval] time] totalTimeInSeconds]+2;
         [self.warningLabel setHidden:false];
+        [self.warningBackground setHidden:false];
+
 
     }
     
@@ -70,6 +76,7 @@ IntervalData *intervalData;
 
 - (void)viewDidUnload {
     [self setWarningLabel:nil];
+    [self setWarningBackground:nil];
     [super viewDidUnload];
 }
 @end

@@ -56,6 +56,15 @@ int secondOffSet;
     return [[self.intervalData interval] pickerMode];
 }
 
+-(void) loadHoursArray {
+    // Hours 0-24
+    self.hoursValues = [[NSMutableArray alloc] initWithCapacity:24];
+    for(int i = 0; i < 23; i++) {
+        [self.hoursValues addObject:[NSString stringWithFormat:@"%i", i]];
+    }
+    
+}
+
 -(void) lowerBoundsCheck:(NSInteger)row
              inComponent:(NSInteger)component {
     if([[self time] totalTimeInSeconds] <= [[[self.intervalData shutter] getMaxTime] totalTimeInSeconds]) {
@@ -70,10 +79,11 @@ int secondOffSet;
         [self changeSecond:[newMax seconds]];
         
         
-        
+    
         
         [self.instructionLabel setText:@"Interval must be longer than the shutter"];
         [self.instructionLabel setHidden:false];
+        [self.warningBackround setHidden:false];
     }
     
 }
@@ -83,7 +93,7 @@ int secondOffSet;
     
     
     Time * max = [[self.intervalData duration] time];
-    if([[self time] totalTimeInSeconds] >= [max totalTimeInSeconds]) {
+    if(![[self.intervalData duration] unlimitedDuration] && [[self time] totalTimeInSeconds] >= [max totalTimeInSeconds]) {
         Time * newMax = [Time new];
         [newMax setTotalTimeInSeconds:[max totalTimeInSeconds] - 1];
         [self.picker selectRow:[newMax hours] inComponent:0 animated:false];
@@ -94,6 +104,8 @@ int secondOffSet;
         [self changeSecond:[newMax seconds]];
         [self.instructionLabel setText:@"Interval must be shorter than duration"];
         [self.instructionLabel setHidden:false];
+        [self.warningBackround setHidden:false];
+
 
     }
     
@@ -102,4 +114,8 @@ int secondOffSet;
 }
 
 
+- (void)viewDidUnload {
+    [self setWarningBackround:nil];
+    [super viewDidUnload];
+}
 @end

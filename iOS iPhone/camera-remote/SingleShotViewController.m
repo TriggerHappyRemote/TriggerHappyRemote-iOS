@@ -9,7 +9,7 @@
 #import "SingleShotViewController.h"
 #import "Time.h"
 #import <AudioToolbox/AudioToolbox.h>
-
+#import <MediaPlayer/MediaPlayer.h>
 #import "AppDelegate.h"
 #import "IntervalData.h"
 #import "ICameraController.h"
@@ -17,8 +17,13 @@
 
 @implementation SingleShotViewController
 @synthesize fireButtonLabel;
+@synthesize waringLabel;
+@synthesize warningBackground;
 
 @synthesize useInfoMessage, fireButton, pressHoldSegment;
+
+NSString * pressMessage;
+NSString * holdMessage;
 
 ICameraController * cameraController;
 
@@ -31,11 +36,49 @@ typedef enum  {
 
 ButtonState state;
 
+NSTimer * headPhoneChecker;
+
 -(void) viewWillAppear:(BOOL)animated {
     AppDelegate * d = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     cameraController = [[d getIntervalData] cameraController]; 
+    
+    useInfoMessage.textAlignment = UITextAlignmentCenter;
 
+    pressMessage = @"Press and hold for rapid fire or bulb";
+    holdMessage = @"Press rapid fire sequence or a long exposure in bulb";
+
+    [self checkIfHeaphonesPluggedIn];
+    headPhoneChecker = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                        target:self
+                                                      selector:@selector(checkIfHeaphonesPluggedIn)
+                                                      userInfo:nil
+                                                       repeats:YES];
+    
     [self pressHoldDidChange];
+}
+
+-(void) checkIfHeaphonesPluggedIn {
+    if([cameraController isHardwareConnected]) {
+        [self.waringLabel setHidden:true];
+        [self.warningBackground setHidden:true];
+    }
+    else {
+        [self.waringLabel setHidden:false];
+        [self.warningBackground setHidden:false];
+    }
+}
+
+-(void) viewWillDisappear:(BOOL)animated {
+    [headPhoneChecker invalidate];
+}
+
+-(void) viewDidAppear:(BOOL)animated {
+    MPMusicPlayerController *iPod = [MPMusicPlayerController iPodMusicPlayer];
+    float volumeLevel = iPod.volume;
+    if(volumeLevel < 1.0) {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Volume Too Low" message:@"Turn the volume to max, so Trigger Happy will work" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];        
+    }
 }
 
 -(IBAction) fireTownDown {
@@ -49,7 +92,8 @@ ButtonState state;
         state = HOLD_DOWN;
         //[fireButton setHighlighted:true];
         NSLog(@"set hold down");
-        self.fireButtonLabel.text = @"Stop";        
+        self.fireButtonLabel.text = @"Stop";  
+        useInfoMessage.text = @"Press to stop sequence";
         [fireButton setHighlighted:false];
         [cameraController fireButtonPressed];
     }
@@ -58,6 +102,8 @@ ButtonState state;
         state = HOLD_UP;
         [fireButton setHighlighted:false];
         self.fireButtonLabel.text = @"Start";
+        useInfoMessage.text = holdMessage;
+
 
         [cameraController fireButtonDepressed];
     }
@@ -69,6 +115,8 @@ ButtonState state;
         [cameraController fireButtonDepressed];
         state = PRESS_UP;
         self.fireButtonLabel.text = @"Fire!";
+        useInfoMessage.text = pressMessage;
+
     }
    
 }
@@ -82,11 +130,13 @@ ButtonState state;
             NSLog(@"PRESS UP");
             state = PRESS_UP;
             self.fireButtonLabel.text = @"Fire!";
+            useInfoMessage.text = pressMessage;
         }
         else {
             NSLog(@"HOLD UP");
             state = HOLD_UP;
             self.fireButtonLabel.text = @"Start";
+            useInfoMessage.text = holdMessage;
 
         }
     }
@@ -104,6 +154,8 @@ ButtonState state;
 
 - (void)viewDidUnload {
     [self setFireButtonLabel:nil];
+    [self setWaringLabel:nil];
+    [self setWarningBackground:nil];
     [super viewDidUnload];
 }
 @end

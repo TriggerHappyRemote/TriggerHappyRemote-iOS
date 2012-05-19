@@ -6,12 +6,14 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface MoreViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
-}
+@interface MoreViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *buyButton;
 
+- (IBAction)learnMorePressed:(id)sender;
 
-@property (nonatomic, strong) UITableView * tableView;
+- (IBAction)buyButtonClicked:(id)sender;
+
 @end

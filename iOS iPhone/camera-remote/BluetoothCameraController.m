@@ -18,5 +18,7 @@
 // stop an aribarty long signal to the shutter on the camera
 - (void) fireButtonDepressed {}
 
+- (bool) isHardwareConnected {return false;}
+
 
 @end

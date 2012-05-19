@@ -36,6 +36,8 @@
 @synthesize subSecondsValues = _subSecondValues;
 @synthesize subSecondsValuesNumbers = _subSecondsValuesNumbers;
 
+@synthesize warningBackround;
+
 - (void)viewWillAppear:(BOOL)animated {
     
     _intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
@@ -54,6 +56,8 @@
     [self loadSubSecondsArray];
     
     [self loadLabels];
+    
+    [warningBackround setHidden:true];
     
     [self.secondSubSecondSegment setSelectedSegmentIndex:[self getPickerMode]];
     [self secondSubSecondSegmentChange];
@@ -92,10 +96,10 @@
         else
             label_1.text = @"secs";
         
-        if([self time].milliseconds == 1)
-            label_2.text = @"s";
+        if([self time].milliseconds == 0)
+            label_2.text = @"secs";
         else
-            label_2.text = @"ms";
+            label_2.text = @"sec";
     }
 }
 
@@ -204,17 +208,26 @@
 -(IBAction)secondSubSecondSegmentChange {
     NSLog(@"Cur val: %i", secondSubSecondSegment.selectedSegmentIndex);
     [self setPickerMode:secondSubSecondSegment.selectedSegmentIndex];
-    [self.picker reloadAllComponents];
     [self loadLabels];
     [self loadDefaultTime];
     [self.instructionLabel setHidden:true];
+    [self.warningBackround setHidden:true];
+
+    NSLog(@"Total time: %f", [[self time] totalTimeInSeconds]);
     
     if(self.getPickerMode == SECONDS) {
         [self changeMillisecond:0];
+        if([[self time] totalTimeInSeconds] < 1.0) {
+            [self zeroCheck:0 inComponent:2];
+        }
+        
     }
     else {
         [self changeHour:0];
     }
+    [self.picker reloadAllComponents];
+
+    
 }
 
 // ---------------------------------------------------------------------
@@ -292,6 +305,7 @@ numberOfRowsInComponent:(NSInteger)component {
         }
     }
     [self.instructionLabel setHidden:true];
+    [self.warningBackround setHidden:true];
     [self loadLabels];
     [self zeroCheck:row inComponent:component];
     [self upperBoundsCheck:row inComponent:component];
@@ -339,6 +353,9 @@ inComponent:(NSInteger)component {}
     NSLog(@"selected segment: %i", [self.segment selectedSegmentIndex]);
     [self setPickerVisibility];
     [self registerSegmentChangeToModel];
+    [self.warningBackround setHidden:true];
+    [self.instructionLabel setHidden:true];
+    
     
 }
 

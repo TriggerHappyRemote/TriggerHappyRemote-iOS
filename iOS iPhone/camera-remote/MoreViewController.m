@@ -11,47 +11,16 @@
 
 @implementation MoreViewController
 
+@synthesize buyButton;
 
-- (void) viewWillAppear:(BOOL)animated {
+- (IBAction)buyButtonClicked:(id)sender {
     
-}
-
-
-- (NSInteger)tableView:(UITableView *)tableView
- numberOfRowsInSection:(NSInteger)section {
-    return 3;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView 
-         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    // Identifier for retrieving reusable cells.
-    static NSString *cellIdentifier = @"MyCellIdentifier";
-    
-    // Attempt to request the reusable cell.
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    // No cell available - create one.
-    if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
-                                      reuseIdentifier:cellIdentifier];
-    }
-    
-    // Set the text of the cell to the row index.
-    cell.textLabel.text = [NSString stringWithFormat:@"gg%d", indexPath.row];
-    
-    return cell;
-}
-
--(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"slected");
-    
-    //FaceDetectionViewController * controller = [FaceDetectionViewController init];
-    
-    //[self.navigationController pushViewController:controller animated:false];
-    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.triggerhappyremote.com/Pages/TriggerHappy-Canon-DSLR-Remote/22724945_x8gMDh"]];
 }
 
 
 
+- (IBAction)learnMorePressed:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.triggerhappyremote.com/"]];
+}
 @end

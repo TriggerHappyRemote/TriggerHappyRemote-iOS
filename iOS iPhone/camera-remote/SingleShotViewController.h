@@ -6,8 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-//#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface SingleShotViewController : UIViewController
 
@@ -17,11 +16,15 @@
 
 -(IBAction) pressHoldDidChange;
 
+-(void) checkIfHeaphonesPluggedIn;
+
 @property (nonatomic, retain) IBOutlet UIButton * fireButton;
 @property (nonatomic, retain) IBOutlet UILabel * useInfoMessage;
 
 @property (nonatomic, retain) IBOutlet UISegmentedControl * pressHoldSegment;
 
 @property (strong, nonatomic) IBOutlet UILabel *fireButtonLabel;
+@property (weak, nonatomic) IBOutlet UILabel *waringLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *warningBackground;
 
 @end

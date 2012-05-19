@@ -43,6 +43,11 @@
 		0A47D38C14A05835008D728A /* IntervalometerCountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47D38B14A05834008D728A /* IntervalometerCountDownViewController.m */; };
 		0A49F04215466CA6006EC13D /* ITimeSelectorViewController-OLD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A49F04115466CA6006EC13D /* ITimeSelectorViewController-OLD.m */; };
 		0A49F04515466D72006EC13D /* IntervalSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A49F04415466D72006EC13D /* IntervalSelectorViewController.m */; };
+		0A4AA83C156711D50006E555 /* warning.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4AA83B156711D50006E555 /* warning.png */; };
+		0A4AA83E156718230006E555 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4AA83D156718230006E555 /* MediaPlayer.framework */; };
+		0A4AA843156725410006E555 /* aboutpage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4AA842156725410006E555 /* aboutpage.png */; };
+		0A4AA8461567254F0006E555 /* buybutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4AA8441567254F0006E555 /* buybutton.png */; };
+		0A4AA8471567254F0006E555 /* leanrmore.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4AA8451567254F0006E555 /* leanrmore.png */; };
 		0A6260ED14F48BAA00494D42 /* hdrbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A6260EC14F48BAA00494D42 /* hdrbutton.png */; };
 		0A6260F514F5E21E00494D42 /* hdrview.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A6260EF14F5E21E00494D42 /* hdrview.png */; };
 		0A6260F614F5E21E00494D42 /* sidearrowsmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A6260F014F5E21E00494D42 /* sidearrowsmall.png */; };
@@ -180,6 +185,11 @@
 		0A49F04115466CA6006EC13D /* ITimeSelectorViewController-OLD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ITimeSelectorViewController-OLD.m"; sourceTree = "<group>"; };
 		0A49F04315466D72006EC13D /* IntervalSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalSelectorViewController.h; sourceTree = "<group>"; };
 		0A49F04415466D72006EC13D /* IntervalSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalSelectorViewController.m; sourceTree = "<group>"; };
+		0A4AA83B156711D50006E555 /* warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = warning.png; path = images/warning.png; sourceTree = SOURCE_ROOT; };
+		0A4AA83D156718230006E555 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		0A4AA842156725410006E555 /* aboutpage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aboutpage.png; path = images/aboutpage.png; sourceTree = SOURCE_ROOT; };
+		0A4AA8441567254F0006E555 /* buybutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buybutton.png; path = images/buybutton.png; sourceTree = SOURCE_ROOT; };
+		0A4AA8451567254F0006E555 /* leanrmore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leanrmore.png; path = images/leanrmore.png; sourceTree = SOURCE_ROOT; };
 		0A6260EC14F48BAA00494D42 /* hdrbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hdrbutton.png; path = images/hdrbutton.png; sourceTree = SOURCE_ROOT; };
 		0A6260EF14F5E21E00494D42 /* hdrview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hdrview.png; path = images/hdrview.png; sourceTree = SOURCE_ROOT; };
 		0A6260F014F5E21E00494D42 /* sidearrowsmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sidearrowsmall.png; path = images/sidearrowsmall.png; sourceTree = SOURCE_ROOT; };
@@ -269,6 +279,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A4AA83E156718230006E555 /* MediaPlayer.framework in Frameworks */,
 				0A3038001565B00D00DE3E9B /* AVFoundation.framework in Frameworks */,
 				0AE197E1154B693D00714F55 /* AudioToolbox.framework in Frameworks */,
 				0A47D33D149F046A008D728A /* UIKit.framework in Frameworks */,
@@ -388,6 +399,7 @@
 		0A47D32D149F046A008D728A = {
 			isa = PBXGroup;
 			children = (
+				0A4AA83D156718230006E555 /* MediaPlayer.framework */,
 				0AE197E0154B693D00714F55 /* AudioToolbox.framework */,
 				0AE197DE154B68FE00714F55 /* AVFoundation.framework */,
 				0A47D342149F046A008D728A /* Trigger Happy */,
@@ -467,6 +479,7 @@
 		0A654B3714DBCFBE003B2126 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0A4AA83B156711D50006E555 /* warning.png */,
 				0A654B4514DBE57F003B2126 /* buttons */,
 				0A654B3A14DBCFE6003B2126 /* views */,
 				0A654B3914DBCFD2003B2126 /* app store logos */,
@@ -486,6 +499,7 @@
 		0A654B3A14DBCFE6003B2126 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				0A4AA842156725410006E555 /* aboutpage.png */,
 				0A654B3B14DBD001003B2126 /* count-down-view-template.jpg */,
 				0A875FEA14DCA4F00005FBE0 /* intervalometerviewbackground2.png */,
 				0A875FE814DC81E70005FBE0 /* intervalometerviewbackground.png */,
@@ -500,6 +514,8 @@
 		0A654B4514DBE57F003B2126 /* buttons */ = {
 			isa = PBXGroup;
 			children = (
+				0A4AA8441567254F0006E555 /* buybutton.png */,
+				0A4AA8451567254F0006E555 /* leanrmore.png */,
 				0A11B9A9155DD32600A70849 /* endShutterButton.png */,
 				0A11B9AA155DD32600A70849 /* startShutterButton.png */,
 				0AE197EC1550B87C00714F55 /* fire-button-blank.png */,
@@ -759,6 +775,10 @@
 				0AB8A1DF1563446D00C50043 /* 20kHz_plus_1kHz_250ms.wav in Resources */,
 				0AB8A1E01563446D00C50043 /* 20kHz_plus_1kHz_500ms.wav in Resources */,
 				0A3037FF1565AB5000DE3E9B /* MainStoryboard.storyboard in Resources */,
+				0A4AA83C156711D50006E555 /* warning.png in Resources */,
+				0A4AA843156725410006E555 /* aboutpage.png in Resources */,
+				0A4AA8461567254F0006E555 /* buybutton.png in Resources */,
+				0A4AA8471567254F0006E555 /* leanrmore.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,6 +29,7 @@
         [self changeMinute:[newMax minutes]];
         [self changeSecond:[newMax seconds]];
         
+        [self.warningBackround setHidden:false];
         [self.instructionLabel setHidden:false];
     }
     

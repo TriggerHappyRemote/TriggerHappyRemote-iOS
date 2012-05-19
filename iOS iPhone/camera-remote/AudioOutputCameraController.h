@@ -10,5 +10,4 @@
 
 @interface AudioOutputCameraController : ICameraController
 
-
 @end

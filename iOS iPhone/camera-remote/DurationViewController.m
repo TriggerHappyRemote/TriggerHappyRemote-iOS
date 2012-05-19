@@ -1,9 +1,9 @@
 //
 //  DurationViewController.m
-//  camera-remote
+//  Trigger Happy V1.0 Lite
 //
-//  Created by Kevin Harrington on 1/9/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Kevin Harrington on 10/10/11.
+//  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 
 #import "DurationViewController.h"
@@ -45,7 +45,6 @@ IntervalData *intervalData;
 }
 
 -(IBAction) toggleSegmentControl {
-    NSLog(@"Toggle duration segment control %i", [self.duration selectedSegmentIndex]);
     
     [self changeInDuration];
     [durationPicker setHidden:[self.duration selectedSegmentIndex] == 0];
@@ -70,7 +69,6 @@ IntervalData *intervalData;
     
     
     [[[intervalData duration] time] setTotalTimeInSeconds:durationCountDown];
-    NSLog(@"Change in duration: %@", [[[intervalData duration] time] toStringDownToSeconds] );
 }
 
 

@@ -74,7 +74,6 @@ AVAudioPlayer *audioPlayer_100ms;
 
 
 -(void) startArbitraryAudioStream {
-    NSLog(@"Playing audio");
     [audioPlayer_100ms setVolume:1.0];
     audioPlayer_100ms.numberOfLoops = -1;
     [audioPlayer_100ms play];
@@ -186,12 +185,10 @@ AVAudioPlayer *audioPlayer_100ms;
             NSRange headphoneRange = [routeStr rangeOfString : @"Head"];
             
             if (headphoneRange.location != NSNotFound) {
-                NSLog(@"Headphone plugged in");
                 return true;
             }
             
         }
-        NSLog(@"Headphone plugged in");
 
         return false;
     }

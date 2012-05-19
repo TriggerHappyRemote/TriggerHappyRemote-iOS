@@ -67,8 +67,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Trigger Happy is not plugged in to the headphone port" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="4Zj-dB-9Sq">
-                                <rect key="frame" x="81" y="117" width="219" height="47"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="The Trigger Happy Unit is not plugged into the headphone port" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" id="4Zj-dB-9Sq">
+                                <rect key="frame" x="84" y="108" width="205" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -84,8 +84,8 @@
                         <outlet property="fireButtonLabel" destination="XaE-W1-3ep" id="DHG-Tq-uS9"/>
                         <outlet property="pressHoldSegment" destination="kBf-mI-mIQ" id="PsP-Uz-UMC"/>
                         <outlet property="useInfoMessage" destination="ORc-pp-MJW" id="cI3-JQ-Z6c"/>
-                        <outlet property="waringLabel" destination="4Zj-dB-9Sq" id="qTn-Q8-irW"/>
                         <outlet property="warningBackground" destination="we9-uN-I1W" id="dlH-UF-Dhu"/>
+                        <outlet property="warningLabel" destination="4Zj-dB-9Sq" id="ZmQ-Ho-YSB"/>
                     </connections>
                 </viewController>
             </objects>
@@ -124,6 +124,17 @@
                                 <rect key="frame" x="0.0" y="-47" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="warning.png" id="oki-tl-wfN">
+                                <rect key="frame" x="1" y="187" width="320" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="The Trigger Happy Unit is not plugged into the headphone port" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" id="G61-Q7-BvP">
+                                <rect key="frame" x="85" y="196" width="205" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="K4p-Tz-VkS">
                                 <rect key="frame" x="20" y="294" width="280" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -270,6 +281,8 @@
                         <outlet property="settings" destination="5Kg-sN-Qvx" id="fGE-sQ-RYX"/>
                         <outlet property="shutterLabel" destination="Yvo-zd-Wc3" id="HwN-kV-DTr"/>
                         <outlet property="shutterSetButton" destination="vF0-8A-LPN" id="tM4-zj-ZjS"/>
+                        <outlet property="warningBackground" destination="oki-tl-wfN" id="iqj-6d-iRZ"/>
+                        <outlet property="warningLabel" destination="G61-Q7-BvP" id="Hx7-BZ-pGP"/>
                     </connections>
                 </viewController>
             </objects>
@@ -1372,6 +1385,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="shutterLengthLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
+        <class className="IDataAccessViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IDataAccessViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="warningBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="warningLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="IShutterSelectorViewController" superclassName="ITimeSelectorViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IShutterSelectorViewController.h"/>
         </class>
@@ -1410,7 +1430,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="unlimitedDuration" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="IntervalometerViewController" superclassName="UIViewController">
+        <class className="IntervalometerViewController" superclassName="IDataAccessViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IntervalometerViewController.h"/>
             <relationships>
                 <relationship kind="action" name="segmentSettingsChanged"/>
@@ -1425,6 +1445,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="settings" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="shutterLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="shutterSetButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="warningBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="warningLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="MainTabBarController" superclassName="UITabBarController">
@@ -1448,7 +1470,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <class className="ShutterSelectorViewController" superclassName="IShutterSelectorViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ShutterSelectorViewController.h"/>
         </class>
-        <class className="SingleShotViewController" superclassName="UIViewController">
+        <class className="SingleShotViewController" superclassName="IDataAccessViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SingleShotViewController.h"/>
             <relationships>
                 <relationship kind="action" name="fireTownDown"/>
@@ -1458,8 +1480,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="fireButtonLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="pressHoldSegment" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="useInfoMessage" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="waringLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="warningBackground" candidateClass="UIImageView"/>
             </relationships>
         </class>
     </classes>

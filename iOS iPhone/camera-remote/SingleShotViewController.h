@@ -1,14 +1,15 @@
 //
 //  SingleShotViewController.h
-//  camera-remote
+//  Trigger Happy V1.0 Lite
 //
-//  Created by Kevin Harrington on 1/17/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Kevin Harrington on 10/10/11.
+//  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "IDataAccessViewController.h"
 
-@interface SingleShotViewController : UIViewController
+@interface SingleShotViewController : IDataAccessViewController
 
 -(IBAction) fireTownDown;
 
@@ -16,7 +17,6 @@
 
 -(IBAction) pressHoldDidChange;
 
--(void) checkIfHeaphonesPluggedIn;
 
 @property (nonatomic, retain) IBOutlet UIButton * fireButton;
 @property (nonatomic, retain) IBOutlet UILabel * useInfoMessage;
@@ -24,7 +24,6 @@
 @property (nonatomic, retain) IBOutlet UISegmentedControl * pressHoldSegment;
 
 @property (strong, nonatomic) IBOutlet UILabel *fireButtonLabel;
-@property (weak, nonatomic) IBOutlet UILabel *waringLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *warningBackground;
+
 
 @end

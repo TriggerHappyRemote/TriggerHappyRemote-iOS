@@ -19,6 +19,8 @@
 @end
 
 @implementation IntervalometerViewController 
+@synthesize warningBackground;
+@synthesize warningLabel;
 
 @synthesize navigation;
 
@@ -27,9 +29,10 @@
 @synthesize shutterLabel, intervalLabel, durationLabel, settings;
 
 IntervalData *intervalData;
+NSTimer * headPhoneChecker;
 
 -(void) viewWillAppear:(BOOL)animated {
-    NSLog(@"View will appear ivc");
+    [super viewWillAppear:false];
     // hide for trigger happy lite:
     [settings setHidden:true];
     
@@ -115,4 +118,11 @@ IntervalData *intervalData;
 }
 
 
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    
+    [self setWarningLabel:nil];
+    [self setWarningLabel:nil];
+    [super viewDidUnload];
+}
 @end

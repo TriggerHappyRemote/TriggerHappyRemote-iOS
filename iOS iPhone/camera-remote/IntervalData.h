@@ -1,8 +1,8 @@
 //
 //  IntervalData.h
-//  Trigger Happy, LLC
+//  Trigger Happy V1.0 Lite
 //
-//  Created by Kevin Harrington on 1/9/12.
+//  Created by Kevin Harrington on 10/10/11.
 //  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 

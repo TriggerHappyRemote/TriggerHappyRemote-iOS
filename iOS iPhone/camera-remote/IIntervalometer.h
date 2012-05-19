@@ -1,9 +1,9 @@
 //
 //  IIntervalometer.h
-//  camera-remote
+//  Trigger Happy V1.0 Lite
 //
-//  Created by Kevin Harrington on 1/16/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Kevin Harrington on 10/10/11.
+//  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

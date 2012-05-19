@@ -11,8 +11,9 @@
 #import <UIKit/UIKit.h>
 
 #import "IntervalData.h"
+#import "IDataAccessViewController.h"
 
-@interface IntervalometerViewController : UIViewController
+@interface IntervalometerViewController : IDataAccessViewController
                                                             
 -(IBAction) startButtonPressed;
 
@@ -32,6 +33,8 @@
 @property (nonatomic, retain) IBOutlet UILabel * shutterLabel;
 @property (nonatomic, retain) IBOutlet UILabel * intervalLabel;
 @property (nonatomic, retain) IBOutlet UILabel * durationLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *warningBackground;
+@property (weak, nonatomic) IBOutlet UILabel *warningLabel;
 
 
 /**

@@ -206,14 +206,12 @@
 }
 
 -(IBAction)secondSubSecondSegmentChange {
-    NSLog(@"Cur val: %i", secondSubSecondSegment.selectedSegmentIndex);
     [self setPickerMode:secondSubSecondSegment.selectedSegmentIndex];
     [self loadLabels];
     [self loadDefaultTime];
     [self.instructionLabel setHidden:true];
     [self.warningBackround setHidden:true];
 
-    NSLog(@"Total time: %f", [[self time] totalTimeInSeconds]);
     
     if(self.getPickerMode == SECONDS) {
         [self changeMillisecond:0];
@@ -241,7 +239,7 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component {
-    NSLog(@"comp %i", component);
+
     switch (component) {
         case 0:
             if(self.getPickerMode == SECONDS)
@@ -282,8 +280,6 @@ numberOfRowsInComponent:(NSInteger)component {
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
       inComponent:(NSInteger)component
 {
-    NSLog(@"selected: row %i comp %i", row, component );
-    NSLog(@"Row 1 selected");
     if(component == 0) {
         if(self.getPickerMode == SECONDS)
             [self changeHour:row];
@@ -350,7 +346,6 @@ inComponent:(NSInteger)component {}
 
 
 -(IBAction)segmentDidChange {
-    NSLog(@"selected segment: %i", [self.segment selectedSegmentIndex]);
     [self setPickerVisibility];
     [self registerSegmentChangeToModel];
     [self.warningBackround setHidden:true];
@@ -361,12 +356,10 @@ inComponent:(NSInteger)component {}
 
 -(void) setPickerVisibility {
     if([self.segment selectedSegmentIndex] == 0) {
-        NSLog(@"hidding picker");
         [self.picker setHidden:false];
         [self.secondSubSecondSegment setHidden:false];
     }
     else {
-        NSLog(@"showing picker");
         [self.picker setHidden:true];
         [self.secondSubSecondSegment setHidden:true];
         

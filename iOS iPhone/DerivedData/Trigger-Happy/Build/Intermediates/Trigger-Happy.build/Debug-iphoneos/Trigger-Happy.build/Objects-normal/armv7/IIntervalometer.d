@@ -12,4 +12,5 @@ dependencies: \
   /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/Bramper.h \
   /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/ICameraController.h \
   /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/AppDelegate.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/IntervalometerViewController.h
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/IntervalometerViewController.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/IDataAccessViewController.h

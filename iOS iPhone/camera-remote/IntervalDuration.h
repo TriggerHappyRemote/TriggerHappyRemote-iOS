@@ -1,11 +1,9 @@
 //
 //  IntervalDuration.h
-//  Trigger Happy, V1.0
+//  Trigger Happy V1.0 Lite
 //
-//  Created by Kevin Harrington on 4/26/12.
+//  Created by Kevin Harrington on 10/10/11.
 //  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
-//
-//  Container class for data needed to represent an intervalometer duration
 //
 
 #import <Foundation/Foundation.h>

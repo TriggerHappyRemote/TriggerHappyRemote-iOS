@@ -27,19 +27,13 @@
 
 -(IBAction) stopButtonPressed;
 
--(IBAction) testButtonPressed;
-
 -(void) notifyOfInterrupt:(NSString *) currentTime;
 
 -(void) notifyOfInterruptToUpdateIntervalProgress:(float) percentage;
 
 -(void) notifyOfInterruptToUpdatShutterProgress:(float) percentage;
 
-
 -(void) notifyOfDurationEnd;
-
--(void) setIntervalText;
-
 
 @property (nonatomic, retain) IBOutlet UINavigationItem *navigation;
 @property (nonatomic, retain) IBOutlet UIButton *stopButton;

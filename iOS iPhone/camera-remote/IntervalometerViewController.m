@@ -19,8 +19,7 @@
 @end
 
 @implementation IntervalometerViewController 
-@synthesize warningBackground;
-@synthesize warningLabel;
+
 
 @synthesize navigation;
 
@@ -33,6 +32,7 @@ NSTimer * headPhoneChecker;
 
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:false];
+    
     // hide for trigger happy lite:
     [settings setHidden:true];
     
@@ -102,11 +102,17 @@ NSTimer * headPhoneChecker;
 }
 
 -(IBAction) startButtonPressed {
-    MPMusicPlayerController *iPod = [MPMusicPlayerController iPodMusicPlayer];
-    float volumeLevel = iPod.volume;
-    if(volumeLevel < 1.0) {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Volume Too Low" message:@"Turn the volume to max, so Trigger Happy will work" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];        
+    if([self.cameraController isHardwareConnected]) {
+        MPMusicPlayerController *iPod = [MPMusicPlayerController iPodMusicPlayer];
+        float volumeLevel = iPod.volume;
+        if(volumeLevel < 1.0) {
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Volume Too Low" message:@"Turn the volume to max, so Trigger Happy will work" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];        
+        }
+    }
+    else {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Trigger Happy Not Connected" message:@"Plug Trigger Happy in and turn the volume to max" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show]; 
     }
 }
 

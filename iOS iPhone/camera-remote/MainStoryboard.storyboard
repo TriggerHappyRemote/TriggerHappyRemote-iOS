@@ -49,13 +49,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="kBf-mI-mIQ">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="kBf-mI-mIQ">
                                 <rect key="frame" x="4" y="48" width="312" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Press"/>
-                                    <segment title="Hold"/>
+                                    <segment title="Button"/>
+                                    <segment title="Toggle"/>
                                 </segments>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
                                     <action selector="pressHoldDidChange" destination="2" eventType="valueChanged" id="It5-lq-ldL"/>
                                 </connections>
@@ -77,7 +78,7 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Basic" image="first.png" id="7"/>
+                    <tabBarItem key="tabBarItem" title="Basic" image="circle.png" id="7"/>
                     <navigationItem key="navigationItem" id="6uv-eD-EwR"/>
                     <connections>
                         <outlet property="fireButton" destination="oOt-Fr-rQD" id="TIb-LN-ToA"/>
@@ -91,12 +92,12 @@
             </objects>
             <point key="canvasLocation" x="382" y="-145"/>
         </scene>
-        <!--Navigation Controller - Interval-->
+        <!--Navigation Controller - Timelapse-->
         <scene sceneID="UfC-WZ-tvi">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mil-Z9-OOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="iBd-jR-9ZK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Interval" image="camera.png" id="IA0-4h-zgq"/>
+                    <tabBarItem key="tabBarItem" title="Timelapse" image="Camera_icon.png" id="IA0-4h-zgq"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -111,7 +112,7 @@
             </objects>
             <point key="canvasLocation" x="388" y="812"/>
         </scene>
-        <!--Intervalometer View Controller - Interval-->
+        <!--Intervalometer View Controller - Timelapse-->
         <scene sceneID="uxu-il-y8T">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tds-ym-lbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -124,17 +125,6 @@
                                 <rect key="frame" x="0.0" y="-47" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="warning.png" id="oki-tl-wfN">
-                                <rect key="frame" x="1" y="187" width="320" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="The Trigger Happy Unit is not plugged into the headphone port" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" id="G61-Q7-BvP">
-                                <rect key="frame" x="85" y="196" width="205" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="K4p-Tz-VkS">
                                 <rect key="frame" x="20" y="294" width="280" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -252,13 +242,6 @@
                                     <segue destination="UI7-Z4-Dkf" kind="push" id="swd-n7-fya"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3 shot" lineBreakMode="tailTruncation" minimumFontSize="10" id="GnC-Z7-fjX">
-                                <rect key="frame" x="219" y="184" width="48" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00:00" lineBreakMode="tailTruncation" minimumFontSize="10" id="Yvo-zd-Wc3">
                                 <rect key="frame" x="201" y="155" width="67" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -266,10 +249,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="warning.png" id="sgB-gl-4UC">
+                                <rect key="frame" x="1" y="189" width="320" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="The Trigger Happy Unit is not plugged into the headphone port" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" id="fmH-Pe-2sj">
+                                <rect key="frame" x="85" y="198" width="205" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Interval" id="4FY-Xl-GT4"/>
+                    <navigationItem key="navigationItem" title="Timelapse" id="4FY-Xl-GT4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="brampingSetButton" destination="2gE-Zu-Cof" id="6PZ-Io-WRn"/>
@@ -281,8 +275,8 @@
                         <outlet property="settings" destination="5Kg-sN-Qvx" id="fGE-sQ-RYX"/>
                         <outlet property="shutterLabel" destination="Yvo-zd-Wc3" id="HwN-kV-DTr"/>
                         <outlet property="shutterSetButton" destination="vF0-8A-LPN" id="tM4-zj-ZjS"/>
-                        <outlet property="warningBackground" destination="oki-tl-wfN" id="iqj-6d-iRZ"/>
-                        <outlet property="warningLabel" destination="G61-Q7-BvP" id="Hx7-BZ-pGP"/>
+                        <outlet property="warningBackground" destination="sgB-gl-4UC" id="iJL-DX-l3z"/>
+                        <outlet property="warningLabel" destination="fmH-Pe-2sj" id="PgO-DY-e3m"/>
                     </connections>
                 </viewController>
             </objects>
@@ -463,7 +457,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Seconds"/>
-                                    <segment title="Sub Seconds"/>
+                                    <segment title="Subseconds"/>
                                 </segments>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
@@ -560,7 +554,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="eaH-UU-xhb">
-                                <rect key="frame" x="57" y="3" width="207" height="44"/>
+                                <rect key="frame" x="8" y="8" width="304" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="On"/>
@@ -690,11 +684,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="k2D-hS-cY0">
-                                <rect key="frame" x="36" y="8" width="249" height="44"/>
+                                <rect key="frame" x="10" y="8" width="300" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Seconds"/>
-                                    <segment title="Sub Seconds"/>
+                                    <segment title="Normal"/>
+                                    <segment title="Subseconds"/>
                                 </segments>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
@@ -1047,7 +1041,6 @@
                                 <rect key="frame" x="9" y="361" width="302" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <size key="titleShadowOffset" width="7" height="17"/>
                                 <state key="normal" title="Stop" backgroundImage="redbutton.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1120,29 +1113,6 @@
             </objects>
             <point key="canvasLocation" x="1895" y="2807"/>
         </scene>
-        <!--Face Detection View Controller-->
-        <scene sceneID="eUL-1x-pW8">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qna-p0-JMU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="cJq-iJ-mpx" customClass="FaceDetectionViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="s5O-o3-EBv">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Video view controller" lineBreakMode="tailTruncation" minimumFontSize="10" id="Owr-6X-V5g">
-                                <rect key="frame" x="81" y="130" width="159" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="1050" y="3066"/>
-        </scene>
         <!--Duration View Controller - Duration-->
         <scene sceneID="EcE-qw-3pf">
             <objects>
@@ -1152,8 +1122,8 @@
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="3as-MY-ISk">
-                                <rect key="frame" x="57" y="7" width="207" height="44"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="3as-MY-ISk">
+                                <rect key="frame" x="9" y="7" width="302" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Unlimited"/>
@@ -1214,7 +1184,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <connections>
                         <outlet property="duration" destination="3as-MY-ISk" id="hRY-lu-Gwj"/>
                         <outlet property="durationPicker" destination="VgS-Ve-fVt" id="Krf-7G-eh0"/>
-                        <outlet property="warningBackground" destination="QH2-ty-86K" id="GCv-6m-ByQ"/>
+                        <outlet property="warningBackground" destination="c9t-b3-WzU" id="AcG-XH-2Zj"/>
                         <outlet property="warningLabel" destination="QH2-ty-86K" id="lw7-7X-dOn"/>
                     </connections>
                 </viewController>
@@ -1274,7 +1244,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" image="dotdotdot.png" id="GMg-0V-Wus"/>
+                    <tabBarItem key="tabBarItem" title="About" image="infoIcon.png" id="GMg-0V-Wus"/>
                     <connections>
                         <outlet property="buyButton" destination="spg-2L-weo" id="lPg-gu-AZv"/>
                     </connections>
@@ -1304,21 +1274,21 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
+        <image name="Camera_icon.png" width="30" height="30"/>
         <image name="aboutpage.png" width="640" height="960"/>
         <image name="baseshutter.png" width="549" height="83"/>
         <image name="bulb-ramping-button.png" width="549" height="83"/>
         <image name="buybutton.png" width="549" height="83"/>
-        <image name="camera.png" width="30" height="30"/>
+        <image name="circle.png" width="30" height="30"/>
         <image name="count-down-view-2.jpg" width="640" height="960"/>
-        <image name="dotdotdot.png" width="30" height="30"/>
         <image name="durationsetterbutton.png" width="549" height="83"/>
         <image name="endShutterButton.png" width="549" height="83"/>
         <image name="exposureInterval.png" width="549" height="83"/>
         <image name="fire-button-blank.png" width="340" height="367"/>
-        <image name="first.png" width="30" height="30"/>
         <image name="greenbutton.png" width="599" height="104"/>
         <image name="hdrbutton.png" width="549" height="83"/>
         <image name="hdrview2.png" width="640" height="960"/>
+        <image name="infoIcon.png" width="30" height="30"/>
         <image name="intervalSetterButton.png" width="549" height="83"/>
         <image name="intervalometerviewbackground2.png" width="640" height="960"/>
         <image name="leanrmore.png" width="549" height="83"/>
@@ -1350,12 +1320,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="action" name="toggleSegmentControl"/>
                 <relationship kind="outlet" name="duration" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="durationPicker" candidateClass="UIDatePicker"/>
-                <relationship kind="outlet" name="warningBackground" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="warningBackground" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="warningLabel" candidateClass="UILabel"/>
             </relationships>
-        </class>
-        <class className="FaceDetectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FaceDetectionViewController.h"/>
         </class>
         <class className="HDREVViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HDREVViewController.h"/>
@@ -1418,7 +1385,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IntervalometerCountDownViewController.h"/>
             <relationships>
                 <relationship kind="action" name="stopButtonPressed"/>
-                <relationship kind="action" name="testButtonPressed"/>
                 <relationship kind="outlet" name="durationTime" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="interval" candidateClass="UILabel"/>
@@ -1445,18 +1411,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="settings" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="shutterLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="shutterSetButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="warningBackground" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="warningLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="MainTabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainTabBarController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bulb" candidateClass="UITabBarItem"/>
-                <relationship kind="outlet" name="interval" candidateClass="UITabBarItem"/>
-                <relationship kind="outlet" name="more" candidateClass="UITabBarItem"/>
-                <relationship kind="outlet" name="single" candidateClass="UITabBarItem"/>
-                <relationship kind="outlet" name="timer" candidateClass="UITabBarItem"/>
             </relationships>
         </class>
         <class className="MoreViewController" superclassName="UIViewController">

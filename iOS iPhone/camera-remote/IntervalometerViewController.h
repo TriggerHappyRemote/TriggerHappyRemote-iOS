@@ -33,9 +33,6 @@
 @property (nonatomic, retain) IBOutlet UILabel * shutterLabel;
 @property (nonatomic, retain) IBOutlet UILabel * intervalLabel;
 @property (nonatomic, retain) IBOutlet UILabel * durationLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *warningBackground;
-@property (weak, nonatomic) IBOutlet UILabel *warningLabel;
-
 
 /**
  * Settings segemts - Standard | HDR | Bramping

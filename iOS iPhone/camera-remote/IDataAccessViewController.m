@@ -26,7 +26,10 @@
     AppDelegate * d = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     self.cameraController = [[d getIntervalData] cameraController]; 
     
+    
+    
     [self hardwareCheck];
+    
     self.hardwareChecker = [NSTimer scheduledTimerWithTimeInterval:1.0
                                                         target:self
                                                       selector:@selector(hardwareCheck)

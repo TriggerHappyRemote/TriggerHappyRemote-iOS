@@ -57,6 +57,8 @@ IntervalData *intervalData;
 -(IBAction) changeInDuration {
     
     [self.warningLabel setHidden:true];
+    [self.warningBackground setHidden:true];
+
  	NSTimeInterval durationCountDown = [durationPicker countDownDuration];
     if(durationCountDown <= [[[intervalData interval] time] totalTimeInSeconds]) {
         [durationPicker setCountDownDuration:[[[intervalData interval] time] totalTimeInSeconds]+2];

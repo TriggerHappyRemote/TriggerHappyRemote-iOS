@@ -14,6 +14,9 @@
 #import "IntervalData.h"
 #import "ICameraController.h"
 
+@interface SingleShotViewController()
+-(void)enableCanFire;
+@end
 
 @implementation SingleShotViewController
 @synthesize fireButtonLabel;
@@ -22,6 +25,9 @@
 
 NSString * pressMessage;
 NSString * holdMessage;
+
+NSTimer * fireMinIntervalTimer;
+bool canFire;
 
 ICameraController * cameraController;
 
@@ -36,6 +42,7 @@ ButtonState state;
 
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:false];
+    canFire = true;
     
     AppDelegate * d = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     cameraController = [[d getIntervalData] cameraController]; 
@@ -43,32 +50,46 @@ ButtonState state;
     useInfoMessage.textAlignment = UITextAlignmentCenter;
 
     pressMessage = @"Press and hold for rapid fire or bulb";
-    holdMessage = @"Press rapid fire sequence or a long exposure in bulb";
+    holdMessage = @"Press for a rapid fire sequence or put camera in blub for a long exposure";
     
     [self pressHoldDidChange];
 }
 
+-(void)enableCanFire {
+    canFire = true;
+}
+
 -(IBAction) fireTownDown {
-    if(state == PRESS_UP) {
-        state = PRESS_DOWN;
-        self.fireButtonLabel.text = @"";
-        [cameraController fireButtonPressed];
-    }
-    else if(state == HOLD_UP) {
-        state = HOLD_DOWN;
-        self.fireButtonLabel.text = @"Stop";  
-        useInfoMessage.text = @"Press to stop sequence";
-        [fireButton setHighlighted:false];
-        [cameraController fireButtonPressed];
-    }
-    else if(state == HOLD_DOWN) {
-        state = HOLD_UP;
-        [fireButton setHighlighted:false];
-        self.fireButtonLabel.text = @"Start";
-        useInfoMessage.text = holdMessage;
+    
+    if(canFire) {
+        canFire = false;
+        self.hardwareChecker = [NSTimer scheduledTimerWithTimeInterval:.3
+                                                                target:self
+                                                              selector:@selector(enableCanFire)
+                                                              userInfo:nil
+                                                               repeats:NO];
+        
+        if(state == PRESS_UP) {
+            state = PRESS_DOWN;
+            self.fireButtonLabel.text = @"";
+            [cameraController fireButtonPressed];
+        }
+        else if(state == HOLD_UP) {
+            state = HOLD_DOWN;
+            self.fireButtonLabel.text = @"Stop";  
+            useInfoMessage.text = @"Press to stop sequence";
+            [fireButton setHighlighted:false];
+            [cameraController fireButtonPressed];
+        }
+        else if(state == HOLD_DOWN) {
+            state = HOLD_UP;
+            [fireButton setHighlighted:false];
+            self.fireButtonLabel.text = @"Start";
+            useInfoMessage.text = holdMessage;
 
 
-        [cameraController fireButtonDepressed];
+            [cameraController fireButtonDepressed];
+        }
     }
 }
 

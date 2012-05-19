@@ -87,11 +87,6 @@ IIntervalometer *intervalometerModel;
 
 }
 
--(void) setIntervalText {
-    
-// remove
-}
-
 -(void) viewDidDisappear:(BOOL)animated {
     [intervalometerModel stopIntervalometer];
 }
@@ -129,12 +124,6 @@ IIntervalometer *intervalometerModel;
 }
 
 -(void) viewDidLoad {
-    [navigation setHidesBackButton:true];
-}
-
--(IBAction) testButtonPressed {
-    
-    //hide the back button
     [navigation setHidesBackButton:true];
 }
 

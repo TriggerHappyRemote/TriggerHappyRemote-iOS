@@ -11,7 +11,6 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface AudioOutputCameraController()
-- (void) playAudio;
 @end
 
 @implementation AudioOutputCameraController
@@ -79,10 +78,6 @@ AVAudioPlayer *audioPlayer_100ms;
     [audioPlayer_100ms play];
 }
 
-- (void) playAudio {
-    [audioPlayer_100ms play];
-}
-
 
 -(void) stopAudioStream {
     [audioPlayer_033ms stop];
@@ -145,11 +140,6 @@ AVAudioPlayer *audioPlayer_100ms;
     if(self.isHardwareConnected) {
         [self startArbitraryAudioStream];
     }
-    
-    
-    //
-    [self startArbitraryAudioStream];
-
 }
 
 - (void) fireButtonDepressed {
@@ -157,9 +147,6 @@ AVAudioPlayer *audioPlayer_100ms;
 }
 
 - (bool)isHardwareConnected {
-    
-    
-    
         UInt32 routeSize = sizeof (CFStringRef);
         CFStringRef route;
         

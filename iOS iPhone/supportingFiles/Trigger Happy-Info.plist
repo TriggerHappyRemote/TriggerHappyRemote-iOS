@@ -28,7 +28,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
-	<string>TriggerHappy-iPhoneFamily</string>
+	<string>Trigger_Happy-iPhoneFamily</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

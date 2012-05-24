@@ -44,7 +44,7 @@
 	0A47D32F149F046A008D728A /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 0A390F531565A94A00B0E2BD /* Trigger-Happy */;
-		activeTarget = 0A47D337149F046A008D728A /* Trigger-Happy */;
+		activeTarget = 0A47D337149F046A008D728A /* Trigger Happy */;
 		codeSenseManager = 0A390F6C1565A94D00B0E2BD /* Code sense */;
 		executables = (
 			0A390F531565A94A00B0E2BD /* Trigger-Happy */,
@@ -72,20 +72,17 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 358984490;
-			PBXWorkspaceStateSaveDate = 358984490;
+			PBXPerProjectTemplateStateSaveDate = 359509485;
+			PBXWorkspaceStateSaveDate = 359509485;
 		};
 		sourceControlManager = 0A390F6B1565A94D00B0E2BD /* Source Control */;
 		userBuildSettings = {
 		};
 	};
-	0A47D337149F046A008D728A /* Trigger-Happy */ = {
+	0A47D337149F046A008D728A /* Trigger Happy */ = {
 		activeExec = 0;
 		executables = (
 			0A390F531565A94A00B0E2BD /* Trigger-Happy */,
 		);
-	};
-	0A47D363149F046B008D728A /* Trigger-HappyTests */ = {
-		activeExec = 0;
 	};
 }

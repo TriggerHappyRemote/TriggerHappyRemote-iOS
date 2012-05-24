@@ -329,14 +329,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {580, 260}}</string>
+								<string>{{0, 0}, {580, 242}}</string>
 								<key>RubberWindowFrame</key>
 								<string>566 520 788 504 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>260pt</string>
+							<string>242pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -349,14 +349,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 265}, {580, 198}}</string>
+								<string>{{0, 247}, {580, 216}}</string>
 								<key>RubberWindowFrame</key>
 								<string>566 520 788 504 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>198pt</string>
+							<string>216pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -375,9 +375,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>0A1723B91565AB3000D8E78B</string>
+				<string>0A4F0321156DADEF007D02B0</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>0A1723BA1565AB3000D8E78B</string>
+				<string>0A4F0322156DADEF007D02B0</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -516,7 +516,7 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>0A390F691565A94D00B0E2BD</string>
-		<string>/Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS iPhone/Trigger-Happy.xcodeproj</string>
+		<string>/Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS iPhone/Trigger Happy.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>566 520 788 504 0 0 1920 1178 </string>
@@ -596,7 +596,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>0A390F691565A94D00B0E2BD</string>
-				<string>0A1723BB1565AB3000D8E78B</string>
+				<string>0A4F0323156DADEF007D02B0</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

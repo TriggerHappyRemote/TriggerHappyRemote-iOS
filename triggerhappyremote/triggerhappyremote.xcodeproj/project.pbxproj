@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AAB3055156F113E0028F04B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAB3054156F113E0028F04B /* UIKit.framework */; };
+		0AAB3057156F113E0028F04B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAB3056156F113E0028F04B /* Foundation.framework */; };
+		0AAB3059156F113E0028F04B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAB3058156F113E0028F04B /* CoreGraphics.framework */; };
+		0AAB305F156F113E0028F04B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB305D156F113E0028F04B /* InfoPlist.strings */; };
+		0AAB3061156F113E0028F04B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB3060156F113E0028F04B /* main.m */; };
+		0AAB3065156F113E0028F04B /* Trigger_HappyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB3064156F113E0028F04B /* Trigger_HappyAppDelegate.m */; };
+		0AAB3068156F113E0028F04B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB3066156F113E0028F04B /* MainStoryboard.storyboard */; };
+		0AAB306B156F113E0028F04B /* Trigger_HappyMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB306A156F113E0028F04B /* Trigger_HappyMasterViewController.m */; };
+		0AAB306E156F113E0028F04B /* Trigger_HappyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB306D156F113E0028F04B /* Trigger_HappyDetailViewController.m */; };
+		0AAB3076156F113F0028F04B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAB3075156F113F0028F04B /* SenTestingKit.framework */; };
+		0AAB3077156F113F0028F04B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAB3054156F113E0028F04B /* UIKit.framework */; };
+		0AAB3078156F113F0028F04B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAB3056156F113E0028F04B /* Foundation.framework */; };
+		0AAB3080156F113F0028F04B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB307E156F113F0028F04B /* InfoPlist.strings */; };
+		0AAB3083156F113F0028F04B /* triggerhappyremoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB3082156F113F0028F04B /* triggerhappyremoteTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AAB3079156F113F0028F04B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AAB3047156F113E0028F04B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AAB304F156F113E0028F04B;
+			remoteInfo = triggerhappyremote;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AAB3050156F113E0028F04B /* triggerhappyremote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = triggerhappyremote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AAB3054156F113E0028F04B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0AAB3056156F113E0028F04B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0AAB3058156F113E0028F04B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0AAB305C156F113E0028F04B /* triggerhappyremote-Info.plist */ = {isa = PBXFileReference; path = "triggerhappyremote-Info.plist"; sourceTree = "<group>"; };
+		0AAB305E156F113E0028F04B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0AAB3060156F113E0028F04B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0AAB3062156F113E0028F04B /* triggerhappyremote-Prefix.pch */ = {isa = PBXFileReference; path = "triggerhappyremote-Prefix.pch"; sourceTree = "<group>"; };
+		0AAB3063156F113E0028F04B /* Trigger_HappyAppDelegate.h */ = {isa = PBXFileReference; path = Trigger_HappyAppDelegate.h; sourceTree = "<group>"; };
+		0AAB3064156F113E0028F04B /* Trigger_HappyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trigger_HappyAppDelegate.m; sourceTree = "<group>"; };
+		0AAB3067156F113E0028F04B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		0AAB3069156F113E0028F04B /* Trigger_HappyMasterViewController.h */ = {isa = PBXFileReference; path = Trigger_HappyMasterViewController.h; sourceTree = "<group>"; };
+		0AAB306A156F113E0028F04B /* Trigger_HappyMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trigger_HappyMasterViewController.m; sourceTree = "<group>"; };
+		0AAB306C156F113E0028F04B /* Trigger_HappyDetailViewController.h */ = {isa = PBXFileReference; path = Trigger_HappyDetailViewController.h; sourceTree = "<group>"; };
+		0AAB306D156F113E0028F04B /* Trigger_HappyDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trigger_HappyDetailViewController.m; sourceTree = "<group>"; };
+		0AAB3074156F113F0028F04B /* triggerhappyremoteTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = triggerhappyremoteTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AAB3075156F113F0028F04B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		0AAB307D156F113F0028F04B /* triggerhappyremoteTests-Info.plist */ = {isa = PBXFileReference; path = "triggerhappyremoteTests-Info.plist"; sourceTree = "<group>"; };
+		0AAB307F156F113F0028F04B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0AAB3081156F113F0028F04B /* triggerhappyremoteTests.h */ = {isa = PBXFileReference; path = triggerhappyremoteTests.h; sourceTree = "<group>"; };
+		0AAB3082156F113F0028F04B /* triggerhappyremoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = triggerhappyremoteTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0AAB304D156F113E0028F04B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAB3055156F113E0028F04B /* UIKit.framework in Frameworks */,
+				0AAB3057156F113E0028F04B /* Foundation.framework in Frameworks */,
+				0AAB3059156F113E0028F04B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AAB3070156F113F0028F04B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAB3076156F113F0028F04B /* SenTestingKit.framework in Frameworks */,
+				0AAB3077156F113F0028F04B /* UIKit.framework in Frameworks */,
+				0AAB3078156F113F0028F04B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AAB3045156F113E0028F04B = {
+			isa = PBXGroup;
+			children = (
+				0AAB305A156F113E0028F04B /* triggerhappyremote */,
+				0AAB307B156F113F0028F04B /* triggerhappyremoteTests */,
+				0AAB3053156F113E0028F04B /* Frameworks */,
+				0AAB3051156F113E0028F04B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0AAB3051156F113E0028F04B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AAB3050156F113E0028F04B /* triggerhappyremote.app */,
+				0AAB3074156F113F0028F04B /* triggerhappyremoteTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AAB3053156F113E0028F04B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AAB3054156F113E0028F04B /* UIKit.framework */,
+				0AAB3056156F113E0028F04B /* Foundation.framework */,
+				0AAB3058156F113E0028F04B /* CoreGraphics.framework */,
+				0AAB3075156F113F0028F04B /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0AAB305A156F113E0028F04B /* triggerhappyremote */ = {
+			isa = PBXGroup;
+			children = (
+				0AAB3063156F113E0028F04B /* Trigger_HappyAppDelegate.h */,
+				0AAB3064156F113E0028F04B /* Trigger_HappyAppDelegate.m */,
+				0AAB3066156F113E0028F04B /* MainStoryboard.storyboard */,
+				0AAB3069156F113E0028F04B /* Trigger_HappyMasterViewController.h */,
+				0AAB306A156F113E0028F04B /* Trigger_HappyMasterViewController.m */,
+				0AAB306C156F113E0028F04B /* Trigger_HappyDetailViewController.h */,
+				0AAB306D156F113E0028F04B /* Trigger_HappyDetailViewController.m */,
+				0AAB305B156F113E0028F04B /* Supporting Files */,
+			);
+			path = triggerhappyremote;
+			sourceTree = "<group>";
+		};
+		0AAB305B156F113E0028F04B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AAB305C156F113E0028F04B /* triggerhappyremote-Info.plist */,
+				0AAB305D156F113E0028F04B /* InfoPlist.strings */,
+				0AAB3060156F113E0028F04B /* main.m */,
+				0AAB3062156F113E0028F04B /* triggerhappyremote-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0AAB307B156F113F0028F04B /* triggerhappyremoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				0AAB3081156F113F0028F04B /* triggerhappyremoteTests.h */,
+				0AAB3082156F113F0028F04B /* triggerhappyremoteTests.m */,
+				0AAB307C156F113F0028F04B /* Supporting Files */,
+			);
+			path = triggerhappyremoteTests;
+			sourceTree = "<group>";
+		};
+		0AAB307C156F113F0028F04B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AAB307D156F113F0028F04B /* triggerhappyremoteTests-Info.plist */,
+				0AAB307E156F113F0028F04B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0AAB304F156F113E0028F04B /* triggerhappyremote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AAB3086156F113F0028F04B /* Build configuration list for PBXNativeTarget "triggerhappyremote" */;
+			buildPhases = (
+				0AAB304C156F113E0028F04B /* Sources */,
+				0AAB304D156F113E0028F04B /* Frameworks */,
+				0AAB304E156F113E0028F04B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = triggerhappyremote;
+			productName = triggerhappyremote;
+			productReference = 0AAB3050156F113E0028F04B /* triggerhappyremote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0AAB3073156F113F0028F04B /* triggerhappyremoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AAB3089156F113F0028F04B /* Build configuration list for PBXNativeTarget "triggerhappyremoteTests" */;
+			buildPhases = (
+				0AAB306F156F113F0028F04B /* Sources */,
+				0AAB3070156F113F0028F04B /* Frameworks */,
+				0AAB3071156F113F0028F04B /* Resources */,
+				0AAB3072156F113F0028F04B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AAB307A156F113F0028F04B /* PBXTargetDependency */,
+			);
+			name = triggerhappyremoteTests;
+			productName = triggerhappyremoteTests;
+			productReference = 0AAB3074156F113F0028F04B /* triggerhappyremoteTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AAB3047156F113E0028F04B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = "Trigger Happy";
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = SmugMug;
+			};
+			buildConfigurationList = 0AAB304A156F113E0028F04B /* Build configuration list for PBXProject "triggerhappyremote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0AAB3045156F113E0028F04B;
+			productRefGroup = 0AAB3051156F113E0028F04B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AAB304F156F113E0028F04B /* triggerhappyremote */,
+				0AAB3073156F113F0028F04B /* triggerhappyremoteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AAB304E156F113E0028F04B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAB305F156F113E0028F04B /* InfoPlist.strings in Resources */,
+				0AAB3068156F113E0028F04B /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AAB3071156F113F0028F04B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAB3080156F113F0028F04B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AAB3072156F113F0028F04B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AAB304C156F113E0028F04B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAB3061156F113E0028F04B /* main.m in Sources */,
+				0AAB3065156F113E0028F04B /* Trigger_HappyAppDelegate.m in Sources */,
+				0AAB306B156F113E0028F04B /* Trigger_HappyMasterViewController.m in Sources */,
+				0AAB306E156F113E0028F04B /* Trigger_HappyDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AAB306F156F113F0028F04B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAB3083156F113F0028F04B /* triggerhappyremoteTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AAB307A156F113F0028F04B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AAB304F156F113E0028F04B /* triggerhappyremote */;
+			targetProxy = 0AAB3079156F113F0028F04B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0AAB305D156F113E0028F04B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AAB305E156F113E0028F04B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0AAB3066156F113E0028F04B /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AAB3067156F113E0028F04B /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		0AAB307E156F113F0028F04B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AAB307F156F113F0028F04B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0AAB3084156F113F0028F04B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0AAB3085156F113F0028F04B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0AAB3087156F113F0028F04B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "triggerhappyremote/triggerhappyremote-Prefix.pch";
+				INFOPLIST_FILE = "triggerhappyremote/triggerhappyremote-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0AAB3088156F113F0028F04B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "triggerhappyremote/triggerhappyremote-Prefix.pch";
+				INFOPLIST_FILE = "triggerhappyremote/triggerhappyremote-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0AAB308A156F113F0028F04B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/triggerhappyremote.app/triggerhappyremote";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "triggerhappyremote/triggerhappyremote-Prefix.pch";
+				INFOPLIST_FILE = "triggerhappyremoteTests/triggerhappyremoteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		0AAB308B156F113F0028F04B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/triggerhappyremote.app/triggerhappyremote";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "triggerhappyremote/triggerhappyremote-Prefix.pch";
+				INFOPLIST_FILE = "triggerhappyremoteTests/triggerhappyremoteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AAB304A156F113E0028F04B /* Build configuration list for PBXProject "triggerhappyremote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AAB3084156F113F0028F04B /* Debug */,
+				0AAB3085156F113F0028F04B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AAB3086156F113F0028F04B /* Build configuration list for PBXNativeTarget "triggerhappyremote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AAB3087156F113F0028F04B /* Debug */,
+				0AAB3088156F113F0028F04B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0AAB3089156F113F0028F04B /* Build configuration list for PBXNativeTarget "triggerhappyremoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AAB308A156F113F0028F04B /* Debug */,
+				0AAB308B156F113F0028F04B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0AAB3047156F113E0028F04B /* Project object */;
+}

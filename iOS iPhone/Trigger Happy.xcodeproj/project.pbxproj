@@ -45,6 +45,9 @@
 		0A01662B15700FC4000D4E28 /* learnMoreButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A01662A15700FC4000D4E28 /* learnMoreButton.png */; };
 		0A01662F15701054000D4E28 /* lightMeter0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A01662D15701054000D4E28 /* lightMeter0.png */; };
 		0A01663015701054000D4E28 /* lightMeterTick.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A01662E15701054000D4E28 /* lightMeterTick.png */; };
+		0A0166351570189C000D4E28 /* launchiPhonePortrait-480x320.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0166321570189C000D4E28 /* launchiPhonePortrait-480x320.png */; };
+		0A0166361570189C000D4E28 /* launchiPhonePortrait-960x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0166331570189C000D4E28 /* launchiPhonePortrait-960x640.png */; };
+		0A0166371570189C000D4E28 /* TEMPLATE-launchiPhonePortrait-960x640.psd in Resources */ = {isa = PBXBuildFile; fileRef = 0A0166341570189C000D4E28 /* TEMPLATE-launchiPhonePortrait-960x640.psd */; };
 		0A47D33D149F046A008D728A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47D33C149F046A008D728A /* UIKit.framework */; };
 		0A47D33F149F046A008D728A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47D33E149F046A008D728A /* Foundation.framework */; };
 		0A47D341149F046A008D728A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47D340149F046A008D728A /* CoreGraphics.framework */; };
@@ -140,6 +143,9 @@
 		0A01662A15700FC4000D4E28 /* learnMoreButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = learnMoreButton.png; sourceTree = "<group>"; };
 		0A01662D15701054000D4E28 /* lightMeter0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightMeter0.png; sourceTree = "<group>"; };
 		0A01662E15701054000D4E28 /* lightMeterTick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightMeterTick.png; sourceTree = "<group>"; };
+		0A0166321570189C000D4E28 /* launchiPhonePortrait-480x320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchiPhonePortrait-480x320.png"; sourceTree = "<group>"; };
+		0A0166331570189C000D4E28 /* launchiPhonePortrait-960x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchiPhonePortrait-960x640.png"; sourceTree = "<group>"; };
+		0A0166341570189C000D4E28 /* TEMPLATE-launchiPhonePortrait-960x640.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TEMPLATE-launchiPhonePortrait-960x640.psd"; sourceTree = "<group>"; };
 		0A47D338149F046A008D728A /* Trigger Happy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trigger Happy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A47D33C149F046A008D728A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A47D33E149F046A008D728A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -253,6 +259,7 @@
 		0A0165DC15700EE2000D4E28 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				0A0166311570189C000D4E28 /* launch */,
 				0A01662C15701053000D4E28 /* misc */,
 				0A0165DD15700EE2000D4E28 /* appIcons */,
 				0A0165E115700EE2000D4E28 /* buttons */,
@@ -341,6 +348,16 @@
 				0A01662E15701054000D4E28 /* lightMeterTick.png */,
 			);
 			path = misc;
+			sourceTree = "<group>";
+		};
+		0A0166311570189C000D4E28 /* launch */ = {
+			isa = PBXGroup;
+			children = (
+				0A0166321570189C000D4E28 /* launchiPhonePortrait-480x320.png */,
+				0A0166331570189C000D4E28 /* launchiPhonePortrait-960x640.png */,
+				0A0166341570189C000D4E28 /* TEMPLATE-launchiPhonePortrait-960x640.psd */,
+			);
+			path = launch;
 			sourceTree = "<group>";
 		};
 		0A47D32D149F046A008D728A = {
@@ -716,6 +733,9 @@
 				0A01662B15700FC4000D4E28 /* learnMoreButton.png in Resources */,
 				0A01662F15701054000D4E28 /* lightMeter0.png in Resources */,
 				0A01663015701054000D4E28 /* lightMeterTick.png in Resources */,
+				0A0166351570189C000D4E28 /* launchiPhonePortrait-480x320.png in Resources */,
+				0A0166361570189C000D4E28 /* launchiPhonePortrait-960x640.png in Resources */,
+				0A0166371570189C000D4E28 /* TEMPLATE-launchiPhonePortrait-960x640.psd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,10 +841,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "supportingFiles/Trigger Happy-Prefix.pch";
 				INFOPLIST_FILE = "supportingFiles/Trigger Happy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Trigger Happy";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -837,10 +859,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "supportingFiles/Trigger Happy-Prefix.pch";
 				INFOPLIST_FILE = "supportingFiles/Trigger Happy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Trigger Happy";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

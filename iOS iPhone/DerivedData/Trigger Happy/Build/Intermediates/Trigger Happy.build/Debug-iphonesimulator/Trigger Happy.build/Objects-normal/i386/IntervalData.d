@@ -1,13 +1,13 @@
 dependencies: \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/IntervalData.m \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/IntervalData.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/IntervalometerCountDownViewController.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/Time.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/IntervalDuration.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/Interval.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/Constants.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/Shutter.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/HDR.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/Bramper.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/ICameraController.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/AudioOutputCameraController.h
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/IntervalData.m \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/IntervalData.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/IntervalometerCountDownViewController.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/common/Time.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/IntervalDuration.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/Interval.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/common/Constants.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/Shutter.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/HDR.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/Bramper.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/cameraController/ICameraController.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/cameraController/AudioOutputCameraController.h

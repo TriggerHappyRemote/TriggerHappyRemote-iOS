@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/Interval.m \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/Interval.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/Time.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/Constants.h
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/Interval.m \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/Interval.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/common/Time.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/common/Constants.h

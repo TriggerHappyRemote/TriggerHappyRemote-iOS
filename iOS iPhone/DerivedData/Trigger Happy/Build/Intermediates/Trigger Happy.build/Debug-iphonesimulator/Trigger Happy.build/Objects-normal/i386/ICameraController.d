@@ -1,4 +1,4 @@
 dependencies: \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/ICameraController.m \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/ICameraController.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/Time.h
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/cameraController/ICameraController.m \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/cameraController/ICameraController.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/common/Time.h

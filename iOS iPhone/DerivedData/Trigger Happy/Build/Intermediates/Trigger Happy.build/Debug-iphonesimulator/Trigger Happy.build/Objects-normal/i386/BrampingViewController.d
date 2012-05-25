@@ -1,17 +1,17 @@
 dependencies: \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/BrampingViewController.m \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/BrampingViewController.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/AppDelegate.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/IntervalData.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/IntervalometerCountDownViewController.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/Time.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/IntervalDuration.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/Interval.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/Constants.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/Shutter.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/HDR.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/Bramper.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/ICameraController.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/IIntervalometer.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/IntervalometerViewController.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/camera-remote/IDataAccessViewController.h
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/pickerViewControllers/shutter/bramping/BrampingViewController.m \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/pickerViewControllers/shutter/bramping/BrampingViewController.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/appDelegate/AppDelegate.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/IntervalData.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/IntervalometerCountDownViewController.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/common/Time.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/IntervalDuration.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/Interval.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/common/Constants.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/Shutter.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/HDR.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/Bramper.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/cameraController/ICameraController.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/IIntervalometer.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/IntervalometerViewController.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/IDataAccessViewController.h

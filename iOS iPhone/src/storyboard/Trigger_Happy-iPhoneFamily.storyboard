@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
         <!--Single Shot View Controller - First-->
@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="92" width="321" height="321"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="fire-button-blank.png">
+                                <state key="normal" backgroundImage="fireButton.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -121,7 +121,7 @@
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="intervalometerviewbackground2.png" id="T5h-Zk-8t5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="intervalometerViewController.png" id="T5h-Zk-8t5">
                                 <rect key="frame" x="0.0" y="-47" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -129,7 +129,7 @@
                                 <rect key="frame" x="20" y="294" width="280" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Start" backgroundImage="greenbutton.png">
+                                <state key="normal" title="Start" backgroundImage="greenButton.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -160,7 +160,7 @@
                                 <rect key="frame" x="22" y="119" width="276" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="durationsetterbutton.png">
+                                <state key="normal" backgroundImage="durationSetterButton.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -219,7 +219,7 @@
                                 <rect key="frame" x="23" y="176" width="276" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="bulb-ramping-button.png">
+                                <state key="normal" backgroundImage="bulbRampingButton.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -657,7 +657,7 @@
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hdrview2.png" id="JRi-b9-gnK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="HDRViewController.png" id="JRi-b9-gnK">
                                 <rect key="frame" x="0.0" y="-40" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -703,23 +703,23 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lightmetertick.png" id="kNy-U7-BGo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lightMeterTick.png" id="kNy-U7-BGo">
                                 <rect key="frame" x="149" y="63" width="22" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lightmetertick.png" id="2KK-XY-Aq3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lightMeterTick.png" id="2KK-XY-Aq3">
                                 <rect key="frame" x="84" y="62" width="22" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lightmetertick.png" id="5RF-zn-z4K">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lightMeterTick.png" id="5RF-zn-z4K">
                                 <rect key="frame" x="207" y="62" width="22" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lightmetertick.png" id="j4v-jr-utJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lightMeterTick.png" id="j4v-jr-utJ">
                                 <rect key="frame" x="27" y="62" width="22" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lightmetertick.png" id="Ciy-tr-RkF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lightMeterTick.png" id="Ciy-tr-RkF">
                                 <rect key="frame" x="265" y="62" width="22" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -737,7 +737,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lightmeter0.png" id="OsB-cj-Uyo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lightMeter0.png" id="OsB-cj-Uyo">
                                 <rect key="frame" x="146" y="21" width="29" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -759,7 +759,7 @@
                                 <rect key="frame" x="22" y="324" width="276" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="baseshutter.png">
+                                <state key="normal" backgroundImage="baseShutterButton.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -774,7 +774,7 @@
                                 <rect key="frame" x="22" y="212" width="276" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="exposureInterval.png">
+                                <state key="normal" backgroundImage="exposureIntervalButton.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -789,7 +789,7 @@
                                 <rect key="frame" x="22" y="268" width="276" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="numberofshots.png">
+                                <state key="normal" backgroundImage="numberOfShotsButton.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -968,7 +968,7 @@
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="count-down-view-2.jpg" id="gD6-c9-NNf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="intervalometerCountdownViewController.jpg" id="gD6-c9-NNf">
                                 <rect key="frame" x="0.0" y="-40" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -977,7 +977,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <size key="titleShadowOffset" width="7" height="17"/>
-                                <state key="normal" title="Stop" backgroundImage="redbutton.png">
+                                <state key="normal" title="Stop" backgroundImage="redButton.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1126,16 +1126,16 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1288" y="43"/>
         </scene>
-        <!--More View Controller - About-->
+        <!--About View Controller - About-->
         <scene sceneID="YyE-vF-IwO">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Lo-cV-Ayv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="QX8-2h-IU1" customClass="MoreViewController" sceneMemberID="viewController">
+                <viewController id="QX8-2h-IU1" customClass="AboutViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TzV-4i-pr2">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="aboutpage.png" id="hcg-kK-U6u">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="aboutViewController.png" id="hcg-kK-U6u">
                                 <rect key="frame" x="0.0" y="-17" width="320" height="486"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1150,7 +1150,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <rect key="frame" x="20" y="345" width="276" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="buybutton.png">
+                                <state key="normal" image="buyButton.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1165,7 +1165,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <rect key="frame" x="20" y="290" width="276" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="leanrmore.png">
+                                <state key="normal" backgroundImage="learnMoreButton.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1210,32 +1210,40 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </scenes>
     <resources>
         <image name="Camera_icon.png" width="30" height="30"/>
-        <image name="aboutpage.png" width="640" height="960"/>
-        <image name="baseshutter.png" width="549" height="83"/>
-        <image name="bulb-ramping-button.png" width="549" height="83"/>
-        <image name="buybutton.png" width="549" height="83"/>
+        <image name="HDRViewController.png" width="640" height="960"/>
+        <image name="aboutViewController.png" width="640" height="960"/>
+        <image name="baseShutterButton.png" width="549" height="83"/>
+        <image name="bulbRampingButton.png" width="549" height="83"/>
+        <image name="buyButton.png" width="549" height="83"/>
         <image name="circle.png" width="30" height="30"/>
-        <image name="count-down-view-2.jpg" width="640" height="960"/>
-        <image name="durationsetterbutton.png" width="549" height="83"/>
+        <image name="durationSetterButton.png" width="549" height="83"/>
         <image name="endShutterButton.png" width="549" height="83"/>
-        <image name="exposureInterval.png" width="549" height="83"/>
-        <image name="fire-button-blank.png" width="340" height="367"/>
-        <image name="greenbutton.png" width="599" height="104"/>
+        <image name="exposureIntervalButton.png" width="549" height="83"/>
+        <image name="fireButton.png" width="340" height="367"/>
+        <image name="greenButton.png" width="599" height="104"/>
         <image name="hdrbutton.png" width="549" height="83"/>
-        <image name="hdrview2.png" width="640" height="960"/>
         <image name="infoIcon.png" width="30" height="30"/>
         <image name="intervalSetterButton.png" width="549" height="83"/>
-        <image name="intervalometerviewbackground2.png" width="640" height="960"/>
-        <image name="leanrmore.png" width="549" height="83"/>
-        <image name="lightmeter0.png" width="67" height="87"/>
-        <image name="lightmetertick.png" width="36" height="49"/>
-        <image name="numberofshots.png" width="549" height="83"/>
-        <image name="redbutton.png" width="556" height="90"/>
+        <image name="intervalometerCountdownViewController.jpg" width="640" height="960"/>
+        <image name="intervalometerViewController.png" width="640" height="960"/>
+        <image name="learnMoreButton.png" width="549" height="83"/>
+        <image name="lightMeter0.png" width="67" height="87"/>
+        <image name="lightMeterTick.png" width="36" height="49"/>
+        <image name="numberOfShotsButton.png" width="549" height="83"/>
+        <image name="redButton.png" width="556" height="90"/>
         <image name="shutterLength.png" width="549" height="83"/>
         <image name="startShutterButton.png" width="549" height="83"/>
         <image name="warning.png" width="641" height="162"/>
     </resources>
     <classes>
+        <class className="AboutViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buyButtonClicked:"/>
+                <relationship kind="action" name="learnMorePressed:"/>
+                <relationship kind="outlet" name="buyButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
         <class className="BrampingStartShutterSelectorViewController" superclassName="IShutterSelectorViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BrampingStartShutterSelectorViewController.h"/>
         </class>
@@ -1346,14 +1354,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="settings" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="shutterLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="shutterSetButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="MoreViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MoreViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buyButtonClicked:"/>
-                <relationship kind="action" name="learnMorePressed:"/>
-                <relationship kind="outlet" name="buyButton" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="ShutterSelectorViewController" superclassName="IShutterSelectorViewController">

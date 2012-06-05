@@ -7,7 +7,8 @@
 //
 
 #import "ICameraController.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface AudioOutputCameraController : ICameraController
+@interface AudioOutputCameraController : ICameraController <AVAudioPlayerDelegate> /* : ICameraController*/
 
 @end

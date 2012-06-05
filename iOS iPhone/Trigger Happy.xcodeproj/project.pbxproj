@@ -101,6 +101,7 @@
 		0AAB338A156F18F20028F04B /* ShutterSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB32F0156F18F10028F04B /* ShutterSelectorViewController.m */; };
 		0AAB338B156F18F20028F04B /* SingleShotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB32F2156F18F10028F04B /* SingleShotViewController.m */; };
 		0AAB338C156F18F20028F04B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB32F4156F18F10028F04B /* InfoPlist.strings */; };
+		0ABD738C157EC5B300A25B14 /* blank_test_1s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0ABD738B157EC5B300A25B14 /* blank_test_1s.wav */; };
 		0AE197E1154B693D00714F55 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE197E0154B693D00714F55 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
@@ -235,6 +236,7 @@
 		0AAB32F4156F18F10028F04B /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		0AAB32F5156F18F10028F04B /* Trigger Happy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Trigger Happy-Info.plist"; sourceTree = "<group>"; };
 		0AAB32F6156F18F10028F04B /* Trigger Happy-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Trigger Happy-Prefix.pch"; sourceTree = "<group>"; };
+		0ABD738B157EC5B300A25B14 /* blank_test_1s.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blank_test_1s.wav; sourceTree = "<group>"; };
 		0AE197DE154B68FE00714F55 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0AE197E0154B693D00714F55 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -432,6 +434,7 @@
 		0AAB329E156F18F10028F04B /* test */ = {
 			isa = PBXGroup;
 			children = (
+				0ABD738B157EC5B300A25B14 /* blank_test_1s.wav */,
 				0AAB329F156F18F10028F04B /* 100kHz_100ms.wav */,
 				0AAB32A0156F18F10028F04B /* 20kHz_plus_1kHz_033ms.wav */,
 				0AAB32A1156F18F10028F04B /* 20kHz_plus_1kHz_067ms.wav */,
@@ -736,6 +739,7 @@
 				0A0166351570189C000D4E28 /* launchiPhonePortrait-480x320.png in Resources */,
 				0A0166361570189C000D4E28 /* launchiPhonePortrait-960x640.png in Resources */,
 				0A0166371570189C000D4E28 /* TEMPLATE-launchiPhonePortrait-960x640.psd in Resources */,
+				0ABD738C157EC5B300A25B14 /* blank_test_1s.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

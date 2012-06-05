@@ -34,7 +34,7 @@ NSTimer * headPhoneChecker;
     [super viewWillAppear:false];
     
     // hide for trigger happy lite:
-    //[settings setHidden:true];
+    [settings setHidden:true];
     
     AppDelegate * d = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     intervalData = [d getIntervalData];

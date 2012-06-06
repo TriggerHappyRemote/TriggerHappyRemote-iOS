@@ -87,8 +87,17 @@ IIntervalometer *intervalometerModel;
 
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+}
+
 -(void) viewDidDisappear:(BOOL)animated {
     [intervalometerModel stopIntervalometer];
+    [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
+    [self resignFirstResponder];
+    [super viewWillDisappear:animated];
 }
 
 -(IBAction) stopButtonPressed {
@@ -127,6 +136,33 @@ IIntervalometer *intervalometerModel;
     [navigation setHidesBackButton:true];
 }
 
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+- (void) remoteControlReceivedWithEvent: (UIEvent *) receivedEvent {
+    
+    if (receivedEvent.type == UIEventTypeRemoteControl) {
+        
+        switch (receivedEvent.subtype) {
+                
+            case UIEventSubtypeRemoteControlTogglePlayPause:
+                NSLog(@"Play");
+                break;
+                
+            case UIEventSubtypeRemoteControlPreviousTrack:
+                NSLog(@"Prev");
+                break;
+                
+            case UIEventSubtypeRemoteControlNextTrack:
+                NSLog(@"stop");
+                break;
+                
+            default:
+                break;
+        }
+    }
+}
 
 
 @end

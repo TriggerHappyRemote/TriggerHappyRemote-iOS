@@ -358,7 +358,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" id="9xt-Ts-CzX">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="52" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
@@ -367,28 +367,28 @@
                                 </connections>
                             </pickerView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="hour" lineBreakMode="tailTruncation" minimumFontSize="10" id="il0-ct-QOP">
-                                <rect key="frame" x="53" y="102" width="42" height="21"/>
+                                <rect key="frame" x="53" y="152" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="mins" lineBreakMode="tailTruncation" minimumFontSize="10" id="dPa-Mc-T5d">
-                                <rect key="frame" x="157" y="102" width="42" height="21"/>
+                                <rect key="frame" x="157" y="152" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="secs" lineBreakMode="tailTruncation" minimumFontSize="10" id="glC-HU-ZQ3">
-                                <rect key="frame" x="267" y="102" width="42" height="21"/>
+                                <rect key="frame" x="264" y="152" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="a4R-KZ-LjF">
-                                <rect key="frame" x="36" y="239" width="249" height="44"/>
+                                <rect key="frame" x="6" y="4" width="309" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Seconds"/>
@@ -424,7 +424,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" id="Ft7-D6-b0P">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="50" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
@@ -433,28 +433,28 @@
                                 </connections>
                             </pickerView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="hour" lineBreakMode="tailTruncation" minimumFontSize="10" id="P5X-uU-4Vr">
-                                <rect key="frame" x="53" y="102" width="42" height="21"/>
+                                <rect key="frame" x="53" y="152" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="mins" lineBreakMode="tailTruncation" minimumFontSize="10" id="P7V-iQ-JfZ">
-                                <rect key="frame" x="157" y="102" width="42" height="21"/>
+                                <rect key="frame" x="157" y="152" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="secs" lineBreakMode="tailTruncation" minimumFontSize="10" id="1hy-Jk-Bke">
-                                <rect key="frame" x="267" y="102" width="42" height="21"/>
+                                <rect key="frame" x="267" y="152" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="mjy-F7-Vfl">
-                                <rect key="frame" x="36" y="241" width="249" height="44"/>
+                                <rect key="frame" x="4" y="2" width="310" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Seconds"/>
@@ -490,7 +490,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="eaH-UU-xhb">
-                                <rect key="frame" x="8" y="8" width="304" height="44"/>
+                                <rect key="frame" x="3" y="3" width="315" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="On"/>
@@ -502,7 +502,7 @@
                                 </connections>
                             </segmentedControl>
                             <pickerView contentMode="scaleToFill" id="to5-KQ-VfV">
-                                <rect key="frame" x="0.0" y="59" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="51" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
@@ -510,32 +510,32 @@
                                 </connections>
                             </pickerView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="hour" lineBreakMode="tailTruncation" minimumFontSize="10" id="2cL-Vt-k6X">
-                                <rect key="frame" x="53" y="156" width="42" height="21"/>
+                                <rect key="frame" x="53" y="148" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="mins" lineBreakMode="tailTruncation" minimumFontSize="10" id="f12-ao-VdS">
-                                <rect key="frame" x="157" y="156" width="42" height="21"/>
+                                <rect key="frame" x="157" y="148" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="secs" lineBreakMode="tailTruncation" minimumFontSize="10" id="lBt-qj-n4c">
-                                <rect key="frame" x="261" y="156" width="42" height="21"/>
+                                <rect key="frame" x="261" y="148" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="warning.png" id="CRV-W7-gbk">
-                                <rect key="frame" x="0.0" y="285" width="320" height="83"/>
+                                <rect key="frame" x="0.0" y="277" width="320" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Interval must be shorter than duration" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="YWm-rl-7aS">
-                                <rect key="frame" x="89" y="296" width="231" height="62"/>
+                                <rect key="frame" x="89" y="288" width="231" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -580,7 +580,7 @@
                                 </connections>
                             </segmentedControl>
                             <pickerView contentMode="scaleToFill" id="VFI-re-rPy">
-                                <rect key="frame" x="0.0" y="59" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="49" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
@@ -588,39 +588,39 @@
                                 </connections>
                             </pickerView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="hour" lineBreakMode="tailTruncation" minimumFontSize="10" id="QSX-6t-Lv3">
-                                <rect key="frame" x="53" y="156" width="42" height="21"/>
+                                <rect key="frame" x="53" y="146" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="mins" lineBreakMode="tailTruncation" minimumFontSize="10" id="9hi-rM-QGu">
-                                <rect key="frame" x="157" y="156" width="42" height="21"/>
+                                <rect key="frame" x="157" y="146" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="secs" lineBreakMode="tailTruncation" minimumFontSize="10" id="oSj-hH-2Lu">
-                                <rect key="frame" x="267" y="156" width="42" height="21"/>
+                                <rect key="frame" x="267" y="146" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="warning.png" id="LDj-IP-wLG">
-                                <rect key="frame" x="2" y="284" width="320" height="83"/>
+                                <rect key="frame" x="2" y="272" width="320" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Shutter length must be shorter than interval" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" id="XIi-HN-rJd">
-                                <rect key="frame" x="85" y="303" width="216" height="45"/>
+                                <rect key="frame" x="85" y="291" width="216" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="k2D-hS-cY0">
-                                <rect key="frame" x="10" y="8" width="300" height="44"/>
+                                <rect key="frame" x="6" y="2.5" width="312" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Normal"/>
@@ -1059,7 +1059,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="3as-MY-ISk">
-                                <rect key="frame" x="9" y="7" width="302" height="44"/>
+                                <rect key="frame" x="3" y="3" width="314" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Unlimited"/>
@@ -1071,7 +1071,7 @@
                                 </connections>
                             </segmentedControl>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" id="VgS-Ve-fVt">
-                                <rect key="frame" x="0.0" y="59" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="53" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="345968774.07019901">
                                     <!--2011-12-19 06:26:14 +0000-->
@@ -1103,11 +1103,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </connections>
                             </datePicker>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="warning.png" id="c9t-b3-WzU">
-                                <rect key="frame" x="-1" y="283" width="320" height="83"/>
+                                <rect key="frame" x="-1" y="280" width="320" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Duration must be longer than interval" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QH2-ty-86K">
-                                <rect key="frame" x="94" y="299" width="188" height="51"/>
+                                <rect key="frame" x="94" y="296" width="188" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -1236,143 +1236,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="timeLapseIcon.png" width="30" height="30"/>
         <image name="warning.png" width="641" height="162"/>
     </resources>
-    <classes>
-        <class className="AboutViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buyButtonClicked:"/>
-                <relationship kind="action" name="learnMorePressed:"/>
-                <relationship kind="outlet" name="buyButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="BrampingStartShutterSelectorViewController" superclassName="IShutterSelectorViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrampingStartShutterSelectorViewController.h"/>
-        </class>
-        <class className="BrampingStopShutterSelectorViewController" superclassName="IShutterSelectorViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrampingStopShutterSelectorViewController.h"/>
-        </class>
-        <class className="BrampingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrampingViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="endShutterDataLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="startShutterDataLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DurationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DurationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="toggleSegmentControl"/>
-                <relationship kind="outlet" name="duration" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="durationPicker" candidateClass="UIDatePicker"/>
-                <relationship kind="outlet" name="warningBackground" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="warningLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="HDREVViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HDREVViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="textFieldReturn:"/>
-                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-        <class className="HDRShotsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HDRShotsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="textFieldReturn:"/>
-                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-        <class className="HDRShutterSelectorViewController" superclassName="ITimeSelectorViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HDRShutterSelectorViewController.h"/>
-        </class>
-        <class className="HDRViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HDRViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="centerEVTick" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="exposureValueLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="neg1EVTick" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="numberOfShotsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="pos1EVTick" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="shutterLengthLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="IDataAccessViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IDataAccessViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="warningBackground" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="warningLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="IShutterSelectorViewController" superclassName="ITimeSelectorViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IShutterSelectorViewController.h"/>
-        </class>
-        <class className="ITimeSelectorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ITimeSelectorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="secondSubSecondSegmentChange"/>
-                <relationship kind="action" name="segmentDidChange"/>
-                <relationship kind="action" name="textFieldReturn:"/>
-                <relationship kind="outlet" name="instructionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="label_0" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="label_1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="label_2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="secondSubSecondSegment" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="segment" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="warningBackround" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="IntervalSelectorViewController" superclassName="ITimeSelectorViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IntervalSelectorViewController.h"/>
-        </class>
-        <class className="IntervalometerCountDownViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IntervalometerCountDownViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="stopButtonPressed"/>
-                <relationship kind="outlet" name="durationTime" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="interval" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="intervalProgress" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="navigation" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="shutterProgress" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="shutterSpeed" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="stopButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="unlimitedDuration" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="IntervalometerViewController" superclassName="IDataAccessViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IntervalometerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="segmentSettingsChanged"/>
-                <relationship kind="action" name="startButtonPressed"/>
-                <relationship kind="outlet" name="brampingSetButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="durationLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="durationSetButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="hdrSetButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="intervalLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="intervalSetButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="navigation" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="settings" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="shutterLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="shutterSetButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="ShutterSelectorViewController" superclassName="IShutterSelectorViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShutterSelectorViewController.h"/>
-        </class>
-        <class className="SingleShotViewController" superclassName="IDataAccessViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SingleShotViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="fireTownDown"/>
-                <relationship kind="action" name="fireTownUp"/>
-                <relationship kind="action" name="pressHoldDidChange"/>
-                <relationship kind="outlet" name="fireButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="fireButtonLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="pressHoldSegment" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="useInfoMessage" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

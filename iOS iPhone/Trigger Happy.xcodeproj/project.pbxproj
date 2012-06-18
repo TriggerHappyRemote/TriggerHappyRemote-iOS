@@ -223,6 +223,7 @@
 		0ABD738B157EC5B300A25B14 /* blank_test_1s.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blank_test_1s.wav; sourceTree = "<group>"; };
 		0AE197DE154B68FE00714F55 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0AE197E0154B693D00714F55 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0AEA9ACC158FDB9F0018C7D4 /* FractionConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FractionConverter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -465,6 +466,7 @@
 				0AAB32B4156F18F10028F04B /* Constants.h */,
 				0AAB32B5156F18F10028F04B /* Time.h */,
 				0AAB32B6156F18F10028F04B /* Time.m */,
+				0AEA9ACC158FDB9F0018C7D4 /* FractionConverter.h */,
 			);
 			path = common;
 			sourceTree = "<group>";

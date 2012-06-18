@@ -57,10 +57,7 @@
     _minutes = (_totalTimeInSeconds - self.hours * 3600) / 60; 
     _seconds = _totalTimeInSeconds - self.hours * 3600 - self.minutes * 60;
     
-    NSLog(@"Setting milliseconds: %f", _totalTimeInSeconds);
-    NSLog(@"\t milliseconds: %i", _milliseconds);
-    NSLog(@"\t 1: %f", (float)(int)(_totalTimeInSeconds* 1000));
-    NSLog(@"\t 2: %f", _totalTimeInSeconds * 1000);
+    
     
 
     _milliseconds = (int)((_totalTimeInSeconds* 1000) - (float)(int)_totalTimeInSeconds * 1000);

@@ -9,13 +9,19 @@
 #import "HDRViewController.h"
 #import "AppDelegate.h"
 #import "IntervalData.h"
+#import "FractionConverter.h"
 
 @interface HDRViewController() 
 -(void)loadShotsTickMarks;
 -(void) clearTickMarks;
+-(void) setLightMeterAxis;
 @end
 
 @implementation HDRViewController
+@synthesize axis0Label;
+@synthesize axis1Label;
+@synthesize axis2Label;
+@synthesize axis3Label;
 
 UIImageView *imageViewArray[15];
 
@@ -73,7 +79,7 @@ IntervalData *intervalData;
     */
 
     [self loadShotsTickMarks];
-    
+    [self setLightMeterAxis];
 }
 
 
@@ -111,22 +117,7 @@ IntervalData *intervalData;
         tickImg.opaque = YES; // explicitly opaque for performance
         [self.view addSubview:tickImg];
         imageViewArray[i] = tickImg;
-    }
-    
-//    CGRect myImageRect = CGRectMake(28.0f, 61.0f, 22.0f, 39.0f);
-//    UIImageView *myImage = [[UIImageView alloc] initWithFrame:myImageRect];
-//    [myImage setImage:[UIImage imageNamed:@"lightMeterTick.png"]];
-//    myImage.opaque = YES; // explicitly opaque for performance
-//    [self.view addSubview:myImage];
-//    
-//    CGRect myImageRect2 = CGRectMake(268.0f, 61.0f, 22.0f, 39.0f);
-//    UIImageView *myImage2 = [[UIImageView alloc] initWithFrame:myImageRect2];
-//    [myImage2 setImage:[UIImage imageNamed:@"lightMeterTick.png"]];
-//    myImage2.opaque = YES; // explicitly opaque for performance
-//    [self.view addSubview:myImage2];
-    
-    
-
+    } 
 }
 
 -(void) clearTickMarks {
@@ -135,9 +126,26 @@ IntervalData *intervalData;
     }
 }
 
+-(void) setLightMeterAxis {
+    
+    float totalDynamicRange = ([[[intervalData shutter] hdr] numberOfShots] - 1) * [[[intervalData shutter] hdr] evInterval];
+    
+    axis0Label.text = fractionConverter(totalDynamicRange / 2);
+    axis1Label.text = fractionConverter(totalDynamicRange / 4);
+    axis2Label.text = axis1Label.text;
+    axis3Label.text = axis0Label.text;
 
+    
+    
+    
+    
+}
 
-
-
-
+- (void)viewDidUnload {
+    [self setAxis0Label:nil];
+    [self setAxis1Label:nil];
+    [self setAxis2Label:nil];
+    [self setAxis3Label:nil];
+    [super viewDidUnload];
+}
 @end

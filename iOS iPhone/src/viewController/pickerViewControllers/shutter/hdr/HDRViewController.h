@@ -22,7 +22,9 @@
 @property (strong, nonatomic) IBOutlet UIImageView *pos1EVTick;
 @property (strong, nonatomic) IBOutlet UIImageView *neg1EVTick;
 
-
-
+@property (weak, nonatomic) IBOutlet UILabel *axis0Label;
+@property (weak, nonatomic) IBOutlet UILabel *axis1Label;
+@property (weak, nonatomic) IBOutlet UILabel *axis2Label;
+@property (weak, nonatomic) IBOutlet UILabel *axis3Label;
 
 @end

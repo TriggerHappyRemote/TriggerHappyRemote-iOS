@@ -26,6 +26,14 @@ IntervalData *intervalData;
 
 	[durationPicker setDatePickerMode:UIDatePickerModeCountDownTimer];
     
+    
+    
+    if([[intervalData shutter] mode] == BRAMP) {
+        [duration setHidden:true];
+        
+    }
+
+    
     if([[intervalData duration] unlimitedDuration]) {
         [duration setSelectedSegmentIndex:0];
         [durationPicker setHidden:true];

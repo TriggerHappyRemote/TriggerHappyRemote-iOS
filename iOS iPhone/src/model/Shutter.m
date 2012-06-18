@@ -19,6 +19,7 @@
 @synthesize bramper = _bramper;
 @synthesize hdr = _hdr;
 @synthesize pickerMode;
+@synthesize currentLength = _currentLength;
 
 IntervalData * intervalData;
 
@@ -30,8 +31,12 @@ IntervalData * intervalData;
     _hdr = [HDR new];
     self.pickerMode = SECONDS;
     intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
-
     return self;
+}
+
+-(void) initializeCurrentLength {
+    _currentLength = [Time new];
+    _currentLength.totalTimeInSeconds = _startLength.totalTimeInSeconds;
 }
 
 -(NSString*) getButtonData {

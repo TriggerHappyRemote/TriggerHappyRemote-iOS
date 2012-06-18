@@ -26,6 +26,8 @@ typedef enum  {
 
 // standard:
 @property (nonatomic, strong) Time* startLength;
+@property (nonatomic, strong) Time* currentLength;
+
 @property (nonatomic) bool bulbMode;
 
 // HDR:
@@ -40,5 +42,7 @@ typedef enum  {
 -(NSString*) getButtonData;
 
 -(Time*) getMaxTime;
+
+-(void) initializeCurrentLength;
 
 @end

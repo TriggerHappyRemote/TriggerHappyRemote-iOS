@@ -18,6 +18,11 @@
 @property (nonatomic) bool unlimited;
 
 /**
+ * constrcutor for totalTimeInSeconds
+ */
+-(Time *) initWithTotalTimeInSeconds:(NSTimeInterval) totalTime;
+
+/**
  * @return NSString is format of @"hh:mm"
  */
 - (NSString *) toStringDownToMinutes;

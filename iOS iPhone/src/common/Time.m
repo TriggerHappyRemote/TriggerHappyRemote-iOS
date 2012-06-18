@@ -24,13 +24,16 @@
 @synthesize unlimited = _unlimited;
 
 -(id) init {
-    _milliseconds = 0;
+    self = [super init];
     _unlimited = false;
     return self;
-    
-    
-    [self hours];
-    [self setHours:4];
+}
+
+-(Time *) initWithTotalTimeInSeconds:(NSTimeInterval) totalTime {
+    self = [super init];
+    [self setTotalTimeInSeconds:totalTime];
+    _unlimited = false;
+    return self;
 }
 
 
@@ -41,9 +44,8 @@
 }
 
 -(void) setTotalTimeInSeconds:(NSTimeInterval)totalTimeInSeconds {
-    _totalTimeInSeconds = (int)totalTimeInSeconds;
+    _totalTimeInSeconds = totalTimeInSeconds;
     [self timeComponentsChanged];
-    
 }
 
 - (NSTimeInterval) totalTimeInSeconds {    
@@ -54,7 +56,14 @@
     _hours = (int)(_totalTimeInSeconds / 3600);
     _minutes = (_totalTimeInSeconds - self.hours * 3600) / 60; 
     _seconds = _totalTimeInSeconds - self.hours * 3600 - self.minutes * 60;
-    _milliseconds = _totalTimeInSeconds - (int)_totalTimeInSeconds;
+    
+    NSLog(@"Setting milliseconds: %f", _totalTimeInSeconds);
+    NSLog(@"\t milliseconds: %i", _milliseconds);
+    NSLog(@"\t 1: %f", (float)(int)(_totalTimeInSeconds* 1000));
+    NSLog(@"\t 2: %f", _totalTimeInSeconds * 1000);
+    
+
+    _milliseconds = (int)((_totalTimeInSeconds* 1000) - (float)(int)_totalTimeInSeconds * 1000);
 
 }
 
@@ -93,6 +102,9 @@
 }
 
 - (NSString *) toStringDownToMilliseconds {
+    NSLog(@"Milliseconds %d", self.milliseconds);
+    NSLog(@"Milliseconds %i", self.milliseconds);
+
     NSString * milliseconds;
     if(self.milliseconds < 10) {
         milliseconds = [[NSString alloc]initWithFormat:@":0%i", self.milliseconds];

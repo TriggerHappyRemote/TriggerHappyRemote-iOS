@@ -14,6 +14,10 @@
 #import "IntervalData.h"
 #import "IIntervalometer.h"
 
+@interface IntervalometerCountDownViewController() 
+-(void) setLabels;
+@end
+
 @implementation IntervalometerCountDownViewController
 
 @synthesize navigation, shutterSpeed, unlimitedDuration, durationTime, 
@@ -43,6 +47,16 @@ IIntervalometer *intervalometerModel;
     
     [[[self navigationController] tabBarController] tabBar].hidden = YES;
      
+    [[intervalData shutter] initializeCurrentLength];
+
+    [self setLabels];
+    [intervalometerModel startIntervalometer];
+    
+
+}
+
+-(void) setLabels {
+    NSLog(@"Set labels");
     if([[intervalData interval] intervalEnabled]) {
         if([[intervalData duration] unlimitedDuration]) {
             [unlimitedDuration setHidden:false];
@@ -52,7 +66,7 @@ IIntervalometer *intervalometerModel;
         else {
             [unlimitedDuration setHidden:true];
             [durationTime setHidden:false];
-           
+            
             durationTime.text = [[[intervalData duration] time] toStringDownToSeconds];
         }
     }
@@ -62,7 +76,7 @@ IIntervalometer *intervalometerModel;
         unlimitedDuration.text = @"Single Shot";
         [stopButton setTitle:@"Return" forState:0];
     }
-        
+    
     if([[intervalData interval] intervalEnabled]) {
         interval.textAlignment = UITextAlignmentRight;
         interval.text =  [[[intervalData interval] time] toStringDownToSeconds];
@@ -76,15 +90,17 @@ IIntervalometer *intervalometerModel;
     if([[[intervalData shutter] getMaxTime] totalTimeInSeconds] < 1) {
         shutterSpeed.text = @"Subsecond";
         [shutterProgress setHidden:true];
-
+        
     }
     else {
-        shutterSpeed.text = [[[intervalData shutter] startLength] toStringDownToSeconds];
+        NSLog(@"Current length: %f " , [[[intervalData shutter] currentLength] totalTimeInSeconds]);
+        if([[[intervalData shutter] currentLength] hours] == 0) {
+            shutterSpeed.text = [[[intervalData shutter] currentLength] toStringDownToMilliseconds];
+        }
+        else {
+            shutterSpeed.text = [[[intervalData shutter] currentLength] toStringDownToSeconds];
+        }
     }
-    
-    [intervalometerModel startIntervalometer];
-    
-
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -111,11 +127,13 @@ IIntervalometer *intervalometerModel;
 
 -(void) notifyOfInterrupt:(NSString *) currentTime {
     durationTime.text = currentTime;
-
 }
 
 -(void) notifyOfInterruptToUpdateIntervalProgress:(float) percentage {
     [intervalProgress setProgress:percentage];
+    if(percentage == 0) {
+        [self setLabels];
+    }
 }
 
 -(void) notifyOfInterruptToUpdatShutterProgress:(float) percentage {

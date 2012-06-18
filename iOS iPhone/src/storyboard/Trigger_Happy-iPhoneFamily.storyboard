@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
     </dependencies>
     <scenes>
         <!--Single Shot View Controller - First-->
@@ -185,6 +185,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vF0-8A-LPN">
+                                <rect key="frame" x="24" y="148" width="276" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="shutterLengthButton.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="i7k-T5-7fY" kind="push" id="2UV-C6-BKY"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2gE-Zu-Cof">
                                 <rect key="frame" x="24" y="148" width="276" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -204,7 +219,7 @@
                                 <rect key="frame" x="24" y="148" width="276" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="hdrbutton.png">
+                                <state key="normal" backgroundImage="hdrButton.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -213,21 +228,6 @@
                                 </state>
                                 <connections>
                                     <segue destination="ko8-Fk-2Km" kind="push" id="xL8-Oq-Yx6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vF0-8A-LPN">
-                                <rect key="frame" x="24" y="148" width="276" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="shutterLengthButton.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="i7k-T5-7fY" kind="push" id="2UV-C6-BKY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00:00" lineBreakMode="tailTruncation" minimumFontSize="10" id="Yvo-zd-Wc3">
@@ -1221,7 +1221,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="exposureIntervalButton.png" width="549" height="83"/>
         <image name="fireButton.png" width="340" height="367"/>
         <image name="greenButton.png" width="599" height="104"/>
-        <image name="hdrbutton.png" width="549" height="83"/>
+        <image name="hdrButton.png" width="549" height="83"/>
         <image name="infoIcon.png" width="30" height="30"/>
         <image name="intervalSetterButton.png" width="549" height="83"/>
         <image name="intervalometerCountdownViewController.jpg" width="640" height="960"/>
@@ -1236,6 +1236,143 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="timeLapseIcon.png" width="30" height="30"/>
         <image name="warning.png" width="641" height="162"/>
     </resources>
+    <classes>
+        <class className="AboutViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buyButtonClicked:"/>
+                <relationship kind="action" name="learnMorePressed:"/>
+                <relationship kind="outlet" name="buyButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="BrampingStartShutterSelectorViewController" superclassName="IShutterSelectorViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrampingStartShutterSelectorViewController.h"/>
+        </class>
+        <class className="BrampingStopShutterSelectorViewController" superclassName="IShutterSelectorViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrampingStopShutterSelectorViewController.h"/>
+        </class>
+        <class className="BrampingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrampingViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="endShutterDataLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="startShutterDataLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="DurationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DurationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="toggleSegmentControl"/>
+                <relationship kind="outlet" name="duration" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="durationPicker" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="warningBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="warningLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="HDREVViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HDREVViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="textFieldReturn:"/>
+                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="HDRShotsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HDRShotsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="textFieldReturn:"/>
+                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="HDRShutterSelectorViewController" superclassName="ITimeSelectorViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HDRShutterSelectorViewController.h"/>
+        </class>
+        <class className="HDRViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HDRViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="centerEVTick" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="exposureValueLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="neg1EVTick" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="numberOfShotsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pos1EVTick" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="shutterLengthLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="IDataAccessViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IDataAccessViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="warningBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="warningLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="IShutterSelectorViewController" superclassName="ITimeSelectorViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IShutterSelectorViewController.h"/>
+        </class>
+        <class className="ITimeSelectorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ITimeSelectorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="secondSubSecondSegmentChange"/>
+                <relationship kind="action" name="segmentDidChange"/>
+                <relationship kind="action" name="textFieldReturn:"/>
+                <relationship kind="outlet" name="instructionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="label_0" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="label_1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="label_2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="secondSubSecondSegment" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="segment" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="warningBackround" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="IntervalSelectorViewController" superclassName="ITimeSelectorViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IntervalSelectorViewController.h"/>
+        </class>
+        <class className="IntervalometerCountDownViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IntervalometerCountDownViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="stopButtonPressed"/>
+                <relationship kind="outlet" name="durationTime" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="interval" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="intervalProgress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="navigation" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="shutterProgress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="shutterSpeed" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="stopButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="unlimitedDuration" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="IntervalometerViewController" superclassName="IDataAccessViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IntervalometerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="segmentSettingsChanged"/>
+                <relationship kind="action" name="startButtonPressed"/>
+                <relationship kind="outlet" name="brampingSetButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="durationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="durationSetButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="hdrSetButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="intervalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="intervalSetButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="navigation" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="settings" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="shutterLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="shutterSetButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="ShutterSelectorViewController" superclassName="IShutterSelectorViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShutterSelectorViewController.h"/>
+        </class>
+        <class className="SingleShotViewController" superclassName="IDataAccessViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SingleShotViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="fireTownDown"/>
+                <relationship kind="action" name="fireTownUp"/>
+                <relationship kind="action" name="pressHoldDidChange"/>
+                <relationship kind="outlet" name="fireButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="fireButtonLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pressHoldSegment" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="useInfoMessage" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

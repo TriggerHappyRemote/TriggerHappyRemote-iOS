@@ -119,6 +119,12 @@ NSTimer * headPhoneChecker;
 -(IBAction) segmentSettingsChanged {    
     // remember: Standard = 0, hdr = 1, bramping = 2
     [[intervalData shutter] setMode:settings.selectedSegmentIndex];
+    
+    // you can't bramp unless there's a finite time in which the intervalometer
+    // will bramp
+    if(settings.selectedSegmentIndex == 2) {
+        [[intervalData duration] setUnlimitedDuration:false];
+    }
     [self loadButtons];
     
 }

@@ -42,6 +42,7 @@ int currentShutterTimeMS;
 float interruptIntervalMS;
 int millisecondInterval;
 float shutterLengthMS;
+float brampingAlpha;
 
 
 - (id) init {
@@ -62,10 +63,30 @@ float shutterLengthMS;
     interruptIntervalMS = .025;
     millisecondInterval = (int)(1000 * interruptIntervalMS);
     
-    // TODO: MUST CHANGE WITH BRAMPING
-    shutterLengthMS = [[[intervalData shutter] startLength] totalTimeInSeconds] * 1000;
+    shutterLengthMS = [[[intervalData shutter] currentLength] totalTimeInSeconds] * 1000;
     currentShutterTimeMS = shutterLengthMS;
     
+    
+    if([[intervalData shutter] mode] == BRAMP) {
+        
+        // DELTA = stop - start
+        // NUM_INTERVALS = DURATION / Interval;
+        // ALPHA = DELTA / NO_INTERVALS
+        
+        float delta = [[[[intervalData shutter] bramper] endShutterLength] totalTimeInSeconds] - [[[[intervalData shutter] bramper] startShutterLength] totalTimeInSeconds];
+        
+        
+        float num_intervals = [[[intervalData duration] time] totalTimeInSeconds] / [[[intervalData interval] time] totalTimeInSeconds] - 1;
+        brampingAlpha = delta / num_intervals;
+
+        
+    }
+    else {
+        brampingAlpha = 0.0;
+    }
+    
+    [[intervalData shutter] initializeCurrentLength];
+    [[intervalData shutter] currentLength].totalTimeInSeconds -= brampingAlpha;
     
     currentCountDownTimeMS = [[[intervalData interval] time] totalTimeInSeconds] * 1000;
     
@@ -96,6 +117,8 @@ float shutterLengthMS;
      
 
 }
+
+
 
 - (void) intervalometerDurationInterrupt {
     currentCountDownTimeSeconds--;
@@ -151,7 +174,12 @@ float shutterLengthMS;
 }
 
 - (void) startShutter {
-    [cameraController fireCamera:[[intervalData shutter] startLength]];
+    
+    NSTimeInterval newTime = [[[intervalData shutter] currentLength] totalTimeInSeconds] + brampingAlpha;    
+    Time * updatedTime = [[Time new] initWithTotalTimeInSeconds:newTime];
+    [[intervalData shutter] setCurrentLength:updatedTime];
+    [cameraController fireCamera:[[intervalData shutter] currentLength]];
+    NSLog(@"Shutter length: %f", [[[intervalData shutter] currentLength] totalTimeInSeconds] );
 }
 
 - (void) getNotification {

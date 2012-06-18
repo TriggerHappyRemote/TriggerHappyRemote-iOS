@@ -21,9 +21,7 @@ IntervalData *intervalData;
 //base 3
 // due to Apple's fail, we can map anything
 const int evValuesThirdsSize = 10;
-const double evModelValues[evValuesThirdsSize] = {.333,.666,1,2,3,4,5,6,7,8 };
-
-
+const double evModelValues[evValuesThirdsSize] = {.333,.666,1,2,3,4,5,6,7,8};
 NSString * evValuesThirds[evValuesThirdsSize] = {@"1/3",@"2/3",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8"};
 
 - (void)viewWillAppear:(BOOL)animated {

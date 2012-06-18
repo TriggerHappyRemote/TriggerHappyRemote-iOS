@@ -55,4 +55,16 @@
 
 
 
+-(void) setPickerMode:(PickerMode) state {
+    [[[self.intervalData shutter] hdr ] setPickerMode:state];
+    
+}
+
+-(PickerMode)getPickerMode {
+    return [[[self.intervalData shutter] hdr] pickerMode];
+}
+
+
+
+
 @end

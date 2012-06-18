@@ -46,7 +46,4 @@
 @property (nonatomic, retain) IBOutlet UIProgressView * shutterProgress;
 @property (nonatomic, retain) IBOutlet UIImageView * imageView;
 
-
-
-
 @end

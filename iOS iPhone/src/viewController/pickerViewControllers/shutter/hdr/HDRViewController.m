@@ -10,7 +10,14 @@
 #import "AppDelegate.h"
 #import "IntervalData.h"
 
+@interface HDRViewController() 
+-(void)loadShotsTickMarks;
+-(void) clearTickMarks;
+@end
+
 @implementation HDRViewController
+
+UIImageView *imageViewArray[15];
 
 @synthesize exposureValueLabel, numberOfShotsLabel, shutterLengthLabel,
 pos1EVTick, neg1EVTick, centerEVTick;
@@ -65,9 +72,71 @@ IntervalData *intervalData;
     [self.view drawRect:CGRectMake(20, 30, 20, 30)];
     */
 
-    
+    [self loadShotsTickMarks];
     
 }
+
+
+-(void)loadShotsTickMarks {
+
+    [self clearTickMarks];
+    
+    // coordinates based on 480x320 display dimensions
+    // yBase - top of screen to top of tick - 125 px
+    // xLeft - 35 from left edge
+    // xRight - 35 from right edge (about)
+    // xRange - 250
+    
+    // tick size - 39 px h x 22 (must be smaller)  < 7 shots
+    
+    
+    const int ticks = [[[intervalData shutter] hdr] numberOfShots];
+
+    const float xTick = 10.0f; 
+    const float yTick = 39.0f; 
+    const float xLeft = 33.0f;
+    const float xRight = 274.0f;
+    const float xLength = xRight - xLeft;
+    const float yBase = 61.0f;
+    
+
+    // distance between ticks
+    const float xDelta = xLength / (float)(ticks-1);
+    
+    
+    for(int i = 0; i < ticks; i++) {
+        CGRect tickRec = CGRectMake(xLeft + i*xDelta, yBase, xTick, yTick);
+        UIImageView *tickImg = [[UIImageView alloc] initWithFrame:tickRec];
+        [tickImg setImage:[UIImage imageNamed:@"lightMeterTick.png"]];
+        tickImg.opaque = YES; // explicitly opaque for performance
+        [self.view addSubview:tickImg];
+        imageViewArray[i] = tickImg;
+    }
+    
+//    CGRect myImageRect = CGRectMake(28.0f, 61.0f, 22.0f, 39.0f);
+//    UIImageView *myImage = [[UIImageView alloc] initWithFrame:myImageRect];
+//    [myImage setImage:[UIImage imageNamed:@"lightMeterTick.png"]];
+//    myImage.opaque = YES; // explicitly opaque for performance
+//    [self.view addSubview:myImage];
+//    
+//    CGRect myImageRect2 = CGRectMake(268.0f, 61.0f, 22.0f, 39.0f);
+//    UIImageView *myImage2 = [[UIImageView alloc] initWithFrame:myImageRect2];
+//    [myImage2 setImage:[UIImage imageNamed:@"lightMeterTick.png"]];
+//    myImage2.opaque = YES; // explicitly opaque for performance
+//    [self.view addSubview:myImage2];
+    
+    
+
+}
+
+-(void) clearTickMarks {
+    for(int i = 0; i < 15; i++) {
+        [imageViewArray[i] removeFromSuperview];
+    }
+}
+
+
+
 
 
 

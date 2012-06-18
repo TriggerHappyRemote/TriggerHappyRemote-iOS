@@ -14,6 +14,7 @@
 @synthesize baseShutterSpeed = _baseShutterSpeed;
 @synthesize bulb = _bulb;
 @synthesize evInterval = _evInterval;
+@synthesize pickerMode;
 
 -(id) init {
     _numberOfShots = 3;

@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ITimeSelectorViewController.h"
+#import "IShutterSelectorViewController.h"
 
-@interface HDRShutterSelectorViewController : ITimeSelectorViewController
+@interface HDRShutterSelectorViewController :IShutterSelectorViewController
 
 @end

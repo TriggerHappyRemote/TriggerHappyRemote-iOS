@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Time.h"
+#import "Constants.h"
 
 @interface HDR : NSObject
 
@@ -24,5 +25,7 @@
 -(NSString*) getButtonData;
 
 -(Time*) getMaxShutterLength;
+
+@property (nonatomic) PickerMode pickerMode;
 
 @end

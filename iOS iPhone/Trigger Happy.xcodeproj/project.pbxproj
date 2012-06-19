@@ -38,8 +38,6 @@
 		0A01662B15700FC4000D4E28 /* learnMoreButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A01662A15700FC4000D4E28 /* learnMoreButton.png */; };
 		0A01662F15701054000D4E28 /* lightMeter0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A01662D15701054000D4E28 /* lightMeter0.png */; };
 		0A01663015701054000D4E28 /* lightMeterTick.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A01662E15701054000D4E28 /* lightMeterTick.png */; };
-		0A0166351570189C000D4E28 /* launchiPhonePortrait-480x320.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0166321570189C000D4E28 /* launchiPhonePortrait-480x320.png */; };
-		0A0166361570189C000D4E28 /* launchiPhonePortrait-960x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0166331570189C000D4E28 /* launchiPhonePortrait-960x640.png */; };
 		0A47D33D149F046A008D728A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47D33C149F046A008D728A /* UIKit.framework */; };
 		0A47D33F149F046A008D728A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47D33E149F046A008D728A /* Foundation.framework */; };
 		0A47D341149F046A008D728A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47D340149F046A008D728A /* CoreGraphics.framework */; };
@@ -95,6 +93,8 @@
 		0AAB338C156F18F20028F04B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB32F4156F18F10028F04B /* InfoPlist.strings */; };
 		0ABD738C157EC5B300A25B14 /* blank_test_1s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0ABD738B157EC5B300A25B14 /* blank_test_1s.wav */; };
 		0AE197E1154B693D00714F55 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE197E0154B693D00714F55 /* AudioToolbox.framework */; };
+		0AEA9AD415902A320018C7D4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEA9AD215902A320018C7D4 /* Default.png */; };
+		0AEA9AD515902A320018C7D4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEA9AD315902A320018C7D4 /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,8 +129,6 @@
 		0A01662A15700FC4000D4E28 /* learnMoreButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = learnMoreButton.png; sourceTree = "<group>"; };
 		0A01662D15701054000D4E28 /* lightMeter0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightMeter0.png; sourceTree = "<group>"; };
 		0A01662E15701054000D4E28 /* lightMeterTick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightMeterTick.png; sourceTree = "<group>"; };
-		0A0166321570189C000D4E28 /* launchiPhonePortrait-480x320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchiPhonePortrait-480x320.png"; sourceTree = "<group>"; };
-		0A0166331570189C000D4E28 /* launchiPhonePortrait-960x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchiPhonePortrait-960x640.png"; sourceTree = "<group>"; };
 		0A47D338149F046A008D728A /* Trigger Happy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trigger Happy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A47D33C149F046A008D728A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A47D33E149F046A008D728A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -224,6 +222,8 @@
 		0AE197DE154B68FE00714F55 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0AE197E0154B693D00714F55 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0AEA9ACC158FDB9F0018C7D4 /* FractionConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FractionConverter.h; sourceTree = "<group>"; };
+		0AEA9AD215902A320018C7D4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		0AEA9AD315902A320018C7D4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,8 +333,8 @@
 		0A0166311570189C000D4E28 /* launch */ = {
 			isa = PBXGroup;
 			children = (
-				0A0166321570189C000D4E28 /* launchiPhonePortrait-480x320.png */,
-				0A0166331570189C000D4E28 /* launchiPhonePortrait-960x640.png */,
+				0AEA9AD215902A320018C7D4 /* Default.png */,
+				0AEA9AD315902A320018C7D4 /* Default@2x.png */,
 			);
 			path = launch;
 			sourceTree = "<group>";
@@ -707,9 +707,9 @@
 				0A01662B15700FC4000D4E28 /* learnMoreButton.png in Resources */,
 				0A01662F15701054000D4E28 /* lightMeter0.png in Resources */,
 				0A01663015701054000D4E28 /* lightMeterTick.png in Resources */,
-				0A0166351570189C000D4E28 /* launchiPhonePortrait-480x320.png in Resources */,
-				0A0166361570189C000D4E28 /* launchiPhonePortrait-960x640.png in Resources */,
 				0ABD738C157EC5B300A25B14 /* blank_test_1s.wav in Resources */,
+				0AEA9AD415902A320018C7D4 /* Default.png in Resources */,
+				0AEA9AD515902A320018C7D4 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

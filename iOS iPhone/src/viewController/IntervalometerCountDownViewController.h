@@ -24,7 +24,6 @@
 
 }
 
-
 -(IBAction) stopButtonPressed;
 
 -(void) notifyOfInterrupt:(NSString *) currentTime;

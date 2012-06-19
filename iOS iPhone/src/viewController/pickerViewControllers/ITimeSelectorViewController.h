@@ -84,8 +84,7 @@
 
 -(PickerMode) getPickerMode;
 
--(void) upperBoundsCheck:(NSInteger)row
-             inComponent:(NSInteger)component;
+-(void) upperBoundsCheck:(NSInteger)row inComponent:(NSInteger)component withPreviousLength:(Time *)time;
 -(void) lowerBoundsCheck:(NSInteger)row
 inComponent:(NSInteger)component;
 

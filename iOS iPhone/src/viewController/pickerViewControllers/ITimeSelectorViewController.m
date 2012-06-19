@@ -278,8 +278,9 @@ numberOfRowsInComponent:(NSInteger)component {
 
 // set model values when a row is selected in a picker column
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
-      inComponent:(NSInteger)component
-{
+      inComponent:(NSInteger)component {
+
+    Time * previousLength = [[Time alloc] initWithTotalTimeInSeconds:[[self time] totalTimeInSeconds]];
     if(component == 0) {
         if(self.getPickerMode == SECONDS)
             [self changeHour:row];
@@ -304,18 +305,17 @@ numberOfRowsInComponent:(NSInteger)component {
     [self.warningBackround setHidden:true];
     [self loadLabels];
     [self zeroCheck:row inComponent:component];
-    [self upperBoundsCheck:row inComponent:component];
+    [self upperBoundsCheck:row inComponent:component withPreviousLength:previousLength];
     [self lowerBoundsCheck:row inComponent:component];
+
 }
 
--(void) upperBoundsCheck:(NSInteger)row
-             inComponent:(NSInteger)component{}
+-(void) upperBoundsCheck:(NSInteger)row inComponent:(NSInteger)component withPreviousLength:(Time *)time {}
 -(void) lowerBoundsCheck:(NSInteger)row
 inComponent:(NSInteger)component {}
 
 -(void) zeroCheck:(NSInteger)row
-      inComponent:(NSInteger)component
- {
+      inComponent:(NSInteger)component {
      
      if([self shouldZeroCheck]) {
         Time * currentTime = [self time];

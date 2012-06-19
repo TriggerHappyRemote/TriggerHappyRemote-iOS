@@ -63,8 +63,8 @@ IntervalData * intervalData;
             return self.bramper.endShutterLength;
         }
     }
-    else { // HDR
-        return self.hdr.getMaxShutterLength;
+    else {
+        return nil;
     }
 }
 

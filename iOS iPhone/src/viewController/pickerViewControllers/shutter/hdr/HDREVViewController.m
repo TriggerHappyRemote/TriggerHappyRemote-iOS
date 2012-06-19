@@ -11,11 +11,15 @@
 #include "AppDelegate.h"
 
 @implementation HDREVViewController
+@synthesize instructionLabel;
+@synthesize warningBackground;
 
 @synthesize picker;
 
 
 IntervalData *intervalData;
+
+int prevRowIndex;
 
 
 //base 3
@@ -32,7 +36,7 @@ NSString * evValuesThirds[evValuesThirdsSize] = {@"1/3",@"2/3",@"1",@"2",@"3",@"
         [picker selectRow:0 inComponent:0 animated:false];
 
     }
-    else if([[[intervalData shutter] hdr] evInterval] == .333) {
+    else if([[[intervalData shutter] hdr] evInterval] == .666) {
         [picker selectRow:1 inComponent:0 animated:false];
 
     }
@@ -43,7 +47,10 @@ NSString * evValuesThirds[evValuesThirdsSize] = {@"1/3",@"2/3",@"1",@"2",@"3",@"
     }
     [[[self navigationController] tabBarController] tabBar].hidden = YES;
 
-    
+    prevRowIndex = 0;
+    [warningBackground setHidden:true];
+    [instructionLabel setHidden:true];
+
 }
 
 
@@ -72,7 +79,25 @@ numberOfRowsInComponent:(NSInteger)component {
     NSLog(@"selected: row %i comp %i", row, component );
     NSLog(@"setting %f", evModelValues[row]);
 
+    
+    NSLog(@"selected: row %i comp %i", row, component ); 
+    [warningBackground setHidden:true];
+    [instructionLabel setHidden:true];
+    
+    int previousEVInterval = [[[intervalData shutter] hdr] evInterval];
+    
     [[[intervalData shutter] hdr] setEvInterval:evModelValues[row]];
+    
+    if([[[intervalData shutter] hdr] getMaxShutterLength] >= [[[intervalData interval] time] totalTimeInSeconds]) {
+        [[[intervalData shutter] hdr] setEvInterval:previousEVInterval];
+        [self.picker selectRow:prevRowIndex inComponent:0 animated:false];
+        [warningBackground setHidden:false];
+        [instructionLabel setHidden:false];
+    }
+    else {
+        prevRowIndex = row;
+    }
+
     
 }
 
@@ -83,6 +108,8 @@ numberOfRowsInComponent:(NSInteger)component {
 
 - (void)viewDidUnload
 {
+    [self setInstructionLabel:nil];
+    [self setWarningBackground:nil];
     [super viewDidUnload];
     self.picker = nil;
 }

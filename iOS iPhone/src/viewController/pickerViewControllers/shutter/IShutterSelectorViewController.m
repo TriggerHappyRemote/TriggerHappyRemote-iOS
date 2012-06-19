@@ -15,8 +15,7 @@
     [self.segment setHidden:true];    
 }
 
--(void) upperBoundsCheck:(NSInteger)row
-             inComponent:(NSInteger)component {
+-(void) upperBoundsCheck:(NSInteger)row inComponent:(NSInteger)component withPreviousLength:(Time *)time {
     Time * max = [[self.intervalData interval] time];
     if([[self.intervalData interval] intervalEnabled] && [[self time] totalTimeInSeconds] >= [max totalTimeInSeconds]) {
         

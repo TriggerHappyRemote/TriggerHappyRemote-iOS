@@ -15,13 +15,14 @@
 @synthesize bulb = _bulb;
 @synthesize evInterval = _evInterval;
 @synthesize pickerMode;
+@synthesize shutterGap = _shutterGap;
 
 -(id) init {
     _numberOfShots = 3;
     _baseShutterSpeed = [Time new];
     _bulb = true;
-    _evInterval = 1;
-    
+    _evInterval = .333;
+    _shutterGap = .333;
     [_baseShutterSpeed setTotalTimeInSeconds:1];
     return self;
 }
@@ -35,9 +36,20 @@
     }
 }
 
--(Time*) getMaxShutterLength {
-    // TODO
-    return self.baseShutterSpeed;
+-(NSTimeInterval) getMaxShutterLength {
+
+    
+    NSTimeInterval totalTime = [self.baseShutterSpeed totalTimeInSeconds];
+    for(int i = 0; i < (int)(self.numberOfShots / 2); i++) {
+        totalTime += [self.baseShutterSpeed totalTimeInSeconds] * pow (2, self.evInterval);
+        totalTime += [self.baseShutterSpeed totalTimeInSeconds] * pow (2, -1 * self.evInterval);
+
+    }
+    
+    totalTime += self.shutterGap * self.numberOfShots;
+
+    NSLog(@"Total time: %f", totalTime);
+    return totalTime;
 }
 
 

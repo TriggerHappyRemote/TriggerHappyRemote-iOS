@@ -24,8 +24,10 @@
 
 -(NSString*) getButtonData;
 
--(Time*) getMaxShutterLength;
+-(NSTimeInterval) getMaxShutterLength;
 
 @property (nonatomic) PickerMode pickerMode;
+
+@property (nonatomic) NSTimeInterval shutterGap;
 
 @end

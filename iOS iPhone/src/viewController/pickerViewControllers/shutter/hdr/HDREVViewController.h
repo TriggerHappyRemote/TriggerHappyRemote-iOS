@@ -17,7 +17,8 @@
 -(IBAction)textFieldReturn:(id)sender;
 
 
-
+@property (weak, nonatomic) IBOutlet UILabel *instructionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *warningBackground;
 
 
 @end

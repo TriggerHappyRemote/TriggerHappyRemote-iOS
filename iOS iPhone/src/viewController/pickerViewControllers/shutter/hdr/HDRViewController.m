@@ -80,6 +80,7 @@ IntervalData *intervalData;
 
     [self loadShotsTickMarks];
     [self setLightMeterAxis];
+    [[[intervalData shutter] hdr] getMaxShutterLength];
 }
 
 

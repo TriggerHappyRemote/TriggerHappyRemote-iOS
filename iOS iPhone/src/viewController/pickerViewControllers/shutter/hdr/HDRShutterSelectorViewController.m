@@ -64,6 +64,24 @@
     return [[[self.intervalData shutter] hdr] pickerMode];
 }
 
+// for hdr, upper bounds check must sum all exposures
+-(void) upperBoundsCheck:(NSInteger)row inComponent:(NSInteger)component withPreviousLength:(Time *)_time {
+    Time * max = [[self.intervalData interval] time];
+    if([[self.intervalData interval] intervalEnabled] && [[[self.intervalData shutter] hdr] getMaxShutterLength] >= [max totalTimeInSeconds]) {
+        
+        [self.picker selectedRowInComponent:0];
+        
+        [self.picker selectRow:[_time hours] inComponent:0 animated:false];
+        [self.picker selectRow:[_time minutes] inComponent:1 animated:false];
+        [self.picker selectRow:[_time seconds] inComponent:2 animated:false];
+        [self changeHour:[_time hours]];
+        [self changeMinute:[_time minutes]];
+        [self changeSecond:[_time seconds]];
+        
+        [self.warningBackround setHidden:false];
+        [self.instructionLabel setHidden:false];
+    }
+}
 
 
 

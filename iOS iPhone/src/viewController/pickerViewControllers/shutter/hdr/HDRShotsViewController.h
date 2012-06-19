@@ -12,6 +12,8 @@
     UIPickerView       *picker;
 
 }
+@property (weak, nonatomic) IBOutlet UILabel *instructionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *warningBackground;
 
 @property (strong, nonatomic) IBOutlet UIPickerView *picker;
 

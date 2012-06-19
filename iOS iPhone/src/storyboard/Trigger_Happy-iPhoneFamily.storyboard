@@ -823,12 +823,25 @@
                                     <outlet property="delegate" destination="OLw-NM-Ry8" id="8r4-ng-eWs"/>
                                 </connections>
                             </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="warning.png" id="qg4-ZQ-gAa">
+                                <rect key="frame" x="0.0" y="219" width="320" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="The cumlative shutter length of each shot in the bracket must be shorter than the interval" lineBreakMode="tailTruncation" numberOfLines="3" minimumFontSize="10" id="FdL-Yn-88H">
+                                <rect key="frame" x="83" y="209" width="227" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="EV Interval" id="Yvc-qf-Phk"/>
                     <connections>
+                        <outlet property="instructionLabel" destination="FdL-Yn-88H" id="K0s-cW-iWj"/>
                         <outlet property="picker" destination="3AA-o2-4yd" id="2dh-FN-Iy4"/>
+                        <outlet property="warningBackground" destination="qg4-ZQ-gAa" id="grA-K6-DvY"/>
                     </connections>
                 </viewController>
             </objects>
@@ -850,12 +863,25 @@
                                     <outlet property="delegate" destination="NvC-Yx-taz" id="ykt-6Y-hNA"/>
                                 </connections>
                             </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="warning.png" id="SoM-7i-9zd">
+                                <rect key="frame" x="0.0" y="219" width="320" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="The cumlative shutter length of each shot in the bracket must be shorter than the interval" lineBreakMode="tailTruncation" numberOfLines="3" minimumFontSize="10" id="hVa-WP-csD">
+                                <rect key="frame" x="83" y="209" width="227" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Number of Shots" id="iFE-ML-IRH"/>
                     <connections>
+                        <outlet property="instructionLabel" destination="hVa-WP-csD" id="51p-hx-6hq"/>
                         <outlet property="picker" destination="Rcd-46-eXj" id="jar-C9-ogV"/>
+                        <outlet property="warningBackground" destination="SoM-7i-9zd" id="VIv-Md-Qn2"/>
                     </connections>
                 </viewController>
             </objects>
@@ -916,8 +942,8 @@
                                 <rect key="frame" x="0.0" y="266" width="320" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Shutter length must be shorter than interval" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" id="iWT-U8-yXa">
-                                <rect key="frame" x="83" y="285" width="216" height="45"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="The cumlative shutter length of each shot in the bracket must be shorter than the interval" lineBreakMode="tailTruncation" numberOfLines="3" minimumFontSize="10" id="iWT-U8-yXa">
+                                <rect key="frame" x="77" y="270" width="223" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1215,147 +1241,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="timeLapseIcon.png" width="30" height="30"/>
         <image name="warning.png" width="641" height="162"/>
     </resources>
-    <classes>
-        <class className="AboutViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buyButtonClicked:"/>
-                <relationship kind="action" name="learnMorePressed:"/>
-                <relationship kind="outlet" name="buyButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="BrampingStartShutterSelectorViewController" superclassName="IShutterSelectorViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrampingStartShutterSelectorViewController.h"/>
-        </class>
-        <class className="BrampingStopShutterSelectorViewController" superclassName="IShutterSelectorViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrampingStopShutterSelectorViewController.h"/>
-        </class>
-        <class className="BrampingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrampingViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="endShutterDataLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="startShutterDataLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DurationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DurationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="toggleSegmentControl"/>
-                <relationship kind="outlet" name="duration" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="durationPicker" candidateClass="UIDatePicker"/>
-                <relationship kind="outlet" name="warningBackground" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="warningLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="HDREVViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HDREVViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="textFieldReturn:"/>
-                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-        <class className="HDRShotsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HDRShotsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="textFieldReturn:"/>
-                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-        <class className="HDRShutterSelectorViewController" superclassName="IShutterSelectorViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HDRShutterSelectorViewController.h"/>
-        </class>
-        <class className="HDRViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HDRViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="axis0Label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="axis1Label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="axis2Label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="axis3Label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="centerEVTick" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="exposureValueLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="neg1EVTick" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="numberOfShotsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="pos1EVTick" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="shutterLengthLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="IDataAccessViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IDataAccessViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="warningBackground" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="warningLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="IShutterSelectorViewController" superclassName="ITimeSelectorViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IShutterSelectorViewController.h"/>
-        </class>
-        <class className="ITimeSelectorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ITimeSelectorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="secondSubSecondSegmentChange"/>
-                <relationship kind="action" name="segmentDidChange"/>
-                <relationship kind="action" name="textFieldReturn:"/>
-                <relationship kind="outlet" name="instructionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="label_0" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="label_1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="label_2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="secondSubSecondSegment" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="segment" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="warningBackround" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="IntervalSelectorViewController" superclassName="ITimeSelectorViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IntervalSelectorViewController.h"/>
-        </class>
-        <class className="IntervalometerCountDownViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IntervalometerCountDownViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="stopButtonPressed"/>
-                <relationship kind="outlet" name="durationTime" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="interval" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="intervalProgress" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="navigation" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="shutterProgress" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="shutterSpeed" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="stopButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="unlimitedDuration" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="IntervalometerViewController" superclassName="IDataAccessViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IntervalometerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="segmentSettingsChanged"/>
-                <relationship kind="action" name="startButtonPressed"/>
-                <relationship kind="outlet" name="brampingSetButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="durationLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="durationSetButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="hdrSetButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="intervalLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="intervalSetButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="navigation" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="settings" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="shutterLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="shutterSetButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="ShutterSelectorViewController" superclassName="IShutterSelectorViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShutterSelectorViewController.h"/>
-        </class>
-        <class className="SingleShotViewController" superclassName="IDataAccessViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SingleShotViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="fireTownDown"/>
-                <relationship kind="action" name="fireTownUp"/>
-                <relationship kind="action" name="pressHoldDidChange"/>
-                <relationship kind="outlet" name="fireButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="fireButtonLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="pressHoldSegment" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="useInfoMessage" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

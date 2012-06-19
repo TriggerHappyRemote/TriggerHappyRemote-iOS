@@ -19,20 +19,22 @@
     - (void) intervalometerSubInterrupt;
     - (void) startShutter;
     - (void) shutterInterrupt;
-- (void) clearShutterTimer;
+- (void) clearShuttersTimer;
 @end
 
 @implementation IIntervalometer
 
 @synthesize remainingTime = _remainingTime;
+@synthesize intervalData;
 
 IntervalometerCountDownViewController *intervalometerCountDownViewController;
 
 NSTimer *durationTimer;
 NSTimer *intervalTimer;
+NSTimer *shuttersTimer;
 NSTimer *shutterTimer;
 
-IntervalData *intervalData;
+//IntervalData *intervalData;
 ICameraController * cameraController;
 
 int currentCountDownTimeSeconds;
@@ -44,11 +46,17 @@ int millisecondInterval;
 float shutterLengthMS;
 float brampingAlpha;
 
+NSMutableArray * shutterTimes;
+
+int hdrShutterIndex;
+
 
 - (id) init {
     intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
     cameraController = [intervalData cameraController];
-    _remainingTime = [Time new];    
+    _remainingTime = [Time new];  
+    shutterTimes = [[intervalData shutter] getShutterLengths];
+    hdrShutterIndex = 0;
     return self;
 }
 
@@ -65,6 +73,8 @@ float brampingAlpha;
     
     shutterLengthMS = [[[intervalData shutter] currentLength] totalTimeInSeconds] * 1000;
     currentShutterTimeMS = shutterLengthMS;
+    
+    
     
     
     if([[intervalData shutter] mode] == BRAMP) {
@@ -150,11 +160,20 @@ float brampingAlpha;
 
 - (void) intervalometerIntervalInterrupt {
     
-    shutterTimer = [NSTimer scheduledTimerWithTimeInterval:interruptIntervalMS
+    
+    
+    
+    
+    
+    
+    shuttersTimer = [NSTimer scheduledTimerWithTimeInterval:interruptIntervalMS
                                                     target:self
                                                   selector:@selector(shutterInterrupt)
                                                   userInfo:nil
                                                    repeats:YES];
+    
+    
+    
     [self startShutter];
     
 }
@@ -164,7 +183,7 @@ float brampingAlpha;
     float progress = 0;
     if(currentShutterTimeMS <= 0) {
         currentShutterTimeMS = shutterLengthMS;
-        [self clearShutterTimer];
+        [self clearShuttersTimer];
     }
     else {
         progress = currentShutterTimeMS / shutterLengthMS;
@@ -175,11 +194,40 @@ float brampingAlpha;
 
 - (void) startShutter {
     
-    NSTimeInterval newTime = [[[intervalData shutter] currentLength] totalTimeInSeconds] + brampingAlpha;    
-    Time * updatedTime = [[Time new] initWithTotalTimeInSeconds:newTime];
-    [[intervalData shutter] setCurrentLength:updatedTime];
-    [cameraController fireCamera:[[intervalData shutter] currentLength]];
-    NSLog(@"Shutter length: %f", [[[intervalData shutter] currentLength] totalTimeInSeconds] );
+    Time * time;
+    if([[intervalData shutter] mode] == HDR_MODE &&
+       hdrShutterIndex < [[[intervalData shutter] hdr] numberOfShots]) {
+        
+        NSLog(@"Shutter index: %i", hdrShutterIndex );
+        NSLog(@"shutters count: %i", [shutterTimes count] );
+
+        time = (Time *)[shutterTimes objectAtIndex:hdrShutterIndex];
+
+        
+        shutterTimer = [NSTimer scheduledTimerWithTimeInterval:[time totalTimeInSeconds] + [[[intervalData shutter] hdr] shutterGap]
+                                                        target:self
+                                                      selector:@selector(startShutter)
+                                                      userInfo:nil
+                                                       repeats:NO];
+
+        hdrShutterIndex++;
+    }
+    else if([[intervalData shutter] mode] != HDR_MODE) {
+        time = (Time *)[shutterTimes objectAtIndex:0];
+    }
+    else {
+        hdrShutterIndex = 0;
+        return;
+    }
+    
+    if([[intervalData shutter] mode] == BRAMP) {
+        NSTimeInterval newTime = [[[intervalData shutter] currentLength] totalTimeInSeconds] + brampingAlpha;    
+        time = [[Time new] initWithTotalTimeInSeconds:newTime];
+        [[intervalData shutter] setCurrentLength:time];
+
+    }
+    [cameraController fireCamera:time];
+    NSLog(@"Shutter length: %f", [time totalTimeInSeconds] );
 }
 
 - (void) getNotification {
@@ -187,13 +235,15 @@ float brampingAlpha;
     [self intervalometerDurationInterrupt];
 }
 
-- (void) clearShutterTimer {
-    [shutterTimer invalidate];
-    shutterTimer = nil;
+- (void) clearShuttersTimer {
+    [shuttersTimer invalidate];
+    shuttersTimer = nil;
 }
 
 - (void) stopIntervalometer {
-    [self clearShutterTimer];
+    [self clearShuttersTimer];
+    [shutterTimer invalidate];
+    shutterTimer = nil;
     [durationTimer invalidate];
     durationTimer = nil;
     [intervalTimer invalidate];

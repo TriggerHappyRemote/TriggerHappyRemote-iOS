@@ -45,4 +45,6 @@ typedef enum  {
 
 -(void) initializeCurrentLength;
 
+- (NSMutableArray *) getShutterLengths;
+
 @end

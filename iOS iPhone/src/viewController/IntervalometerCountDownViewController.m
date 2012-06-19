@@ -42,7 +42,14 @@ IIntervalometer *intervalometerModel;
     
     intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
     
+    /*
+     
+     TODO: remove intervaolmeter in app delegate
     intervalometerModel = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalometerModel];
+    */
+
+    intervalometerModel = [IIntervalometer new];
+    
     [intervalometerModel setIntervalometerCountdownViewControllerReference:self];
     
     [[[self navigationController] tabBarController] tabBar].hidden = YES;

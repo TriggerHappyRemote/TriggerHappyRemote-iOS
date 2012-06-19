@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "IntervalometerCountDownViewController.h"
+#import "IntervalData.h"
 
 @interface IIntervalometer : NSObject
 
@@ -22,5 +23,8 @@
 
 // method the view can call to reviece a call back updating the view
 - (void) getNotification;
+
+@property (nonatomic, strong) IntervalData * intervalData;
+
 
 @end

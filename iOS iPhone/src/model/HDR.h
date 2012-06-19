@@ -30,4 +30,6 @@
 
 @property (nonatomic) NSTimeInterval shutterGap;
 
+- (NSMutableArray *) getShutterLengths;
+
 @end

@@ -68,4 +68,17 @@ IntervalData * intervalData;
     }
 }
 
+- (NSMutableArray *) getShutterLengths {
+    if(self.mode == STANDARD) { // Standard shutter
+        return [NSMutableArray arrayWithObject:self.startLength];
+    }
+    else if(self.mode == BRAMP) { // Bramping
+        return [NSMutableArray arrayWithObject:[self.bramper startShutterLength]];
+
+    }
+    else {
+        return [self.hdr getShutterLengths];
+    }
+}
+
 @end

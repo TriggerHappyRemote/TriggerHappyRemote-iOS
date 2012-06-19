@@ -71,7 +71,12 @@ int hdrShutterIndex;
     interruptIntervalMS = .025;
     millisecondInterval = (int)(1000 * interruptIntervalMS);
     
-    shutterLengthMS = [[[intervalData shutter] currentLength] totalTimeInSeconds] * 1000;
+    if([[intervalData shutter] mode] == HDR_MODE) {
+        shutterLengthMS = [[[intervalData shutter] getMaxTime] totalTimeInSeconds] * 1000;
+    }
+    else {
+        shutterLengthMS = [[[intervalData shutter] currentLength] totalTimeInSeconds] * 1000;
+    }
     currentShutterTimeMS = shutterLengthMS;
     
     

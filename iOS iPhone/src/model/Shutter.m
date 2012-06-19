@@ -64,7 +64,7 @@ IntervalData * intervalData;
         }
     }
     else {
-        return nil;
+        return [[Time alloc] initWithTotalTimeInSeconds:[self.hdr getMaxShutterLength]];
     }
 }
 

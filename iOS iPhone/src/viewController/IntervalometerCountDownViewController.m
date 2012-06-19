@@ -59,11 +59,6 @@ IIntervalometer *intervalometerModel;
     [self setLabels];
     [intervalometerModel startIntervalometer];
     
-
-}
-
--(void) setLabels {
-    NSLog(@"Set labels");
     if([[intervalData interval] intervalEnabled]) {
         if([[intervalData duration] unlimitedDuration]) {
             [unlimitedDuration setHidden:false];
@@ -83,7 +78,14 @@ IIntervalometer *intervalometerModel;
         unlimitedDuration.text = @"Single Shot";
         [stopButton setTitle:@"Return" forState:0];
     }
+
     
+
+}
+
+-(void) setLabels {
+    NSLog(@"Set labels");
+        
     if([[intervalData interval] intervalEnabled]) {
         interval.textAlignment = UITextAlignmentRight;
         interval.text =  [[[intervalData interval] time] toStringDownToSeconds];
@@ -95,9 +97,13 @@ IIntervalometer *intervalometerModel;
     
     shutterSpeed.textAlignment = UITextAlignmentRight;
     if([[[intervalData shutter] getMaxTime] totalTimeInSeconds] < 1) {
+        
         shutterSpeed.text = @"Subsecond";
         [shutterProgress setHidden:true];
         
+    }
+    else if([[intervalData shutter] mode] == HDR_MODE) {
+        shutterSpeed.text = @"HDR";
     }
     else {
         NSLog(@"Current length: %f " , [[[intervalData shutter] currentLength] totalTimeInSeconds]);

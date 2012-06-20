@@ -1,6 +1,7 @@
 dependencies: \
   /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/pickerViewControllers/shutter/hdr/HDRShutterSelectorViewController.m \
   /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/pickerViewControllers/shutter/hdr/HDRShutterSelectorViewController.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/pickerViewControllers/shutter/IShutterSelectorViewController.h \
   /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/pickerViewControllers/ITimeSelectorViewController.h \
   /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/IntervalData.h \
   /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/IntervalometerCountDownViewController.h \

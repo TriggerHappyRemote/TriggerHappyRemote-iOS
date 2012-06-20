@@ -130,8 +130,6 @@ ButtonState state;
     }
 }
 
-
-
 - (void)viewDidUnload {
     [self setFireButtonLabel:nil];
     [super viewDidUnload];

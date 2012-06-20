@@ -72,6 +72,48 @@
     [self.hardwareChecker invalidate];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+}
+
+-(void) viewDidDisappear:(BOOL)animated {
+    [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
+    [self resignFirstResponder];
+    [super viewWillDisappear:animated];
+}
+
+- (void) remoteControlReceivedWithEvent: (UIEvent *) receivedEvent {
+    NSLog(@"Recived remote control even");
+    if (receivedEvent.type == UIEventTypeRemoteControl) {
+        
+        switch (receivedEvent.subtype) {
+                
+            case UIEventSubtypeRemoteControlTogglePlayPause:
+                NSLog(@"Play");
+                
+                break;
+                
+            case UIEventSubtypeRemoteControlPreviousTrack:
+                NSLog(@"Prev");
+                break;
+                
+            case UIEventSubtypeRemoteControlNextTrack:
+                NSLog(@"stop");
+                break;
+                
+            default:
+                break;
+        }
+    }
+}
+
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+
 -(void) viewDidUnload {
     [self setIntervalData:nil];
     [self setWarningLabel:nil];

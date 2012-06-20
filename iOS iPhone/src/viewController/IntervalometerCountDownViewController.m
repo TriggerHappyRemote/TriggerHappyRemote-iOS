@@ -27,6 +27,8 @@ IntervalData *intervalData;
 
 IIntervalometer *intervalometerModel;
 
+bool running;
+
 -(id)init {
     self.navigationController.navigationBarHidden = NO;
 
@@ -57,6 +59,7 @@ IIntervalometer *intervalometerModel;
     [[intervalData shutter] initializeCurrentLength];
 
     [self setLabels];
+    running = true;
     [intervalometerModel startIntervalometer];
     
     if([[intervalData interval] intervalEnabled]) {
@@ -123,6 +126,7 @@ IIntervalometer *intervalometerModel;
 }
 
 -(void) viewDidDisappear:(BOOL)animated {
+    running = false;
     [intervalometerModel stopIntervalometer];
     [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
     [self resignFirstResponder];
@@ -130,6 +134,7 @@ IIntervalometer *intervalometerModel;
 }
 
 -(IBAction) stopButtonPressed {
+    running = false;
     [intervalometerModel stopIntervalometer];
     [self.navigationController popViewControllerAnimated:YES];
     
@@ -179,6 +184,11 @@ IIntervalometer *intervalometerModel;
                 
             case UIEventSubtypeRemoteControlTogglePlayPause:
                 NSLog(@"Play");
+                if(running)
+                    [intervalometerModel stopIntervalometer];
+                else
+                    [intervalometerModel stopIntervalometer];
+                running = !running;
                 break;
                 
             case UIEventSubtypeRemoteControlPreviousTrack:
@@ -188,7 +198,6 @@ IIntervalometer *intervalometerModel;
             case UIEventSubtypeRemoteControlNextTrack:
                 NSLog(@"stop");
                 break;
-                
             default:
                 break;
         }

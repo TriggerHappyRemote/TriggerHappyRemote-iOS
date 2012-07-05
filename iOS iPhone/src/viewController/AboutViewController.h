@@ -10,7 +10,7 @@
 
 @interface AboutViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIButton *buyButton;
+@property (strong, nonatomic) IBOutlet UIButton *buyButton;
 
 - (IBAction)learnMorePressed:(id)sender;
 

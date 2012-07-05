@@ -8,11 +8,17 @@
 //  Supercass for all ViewControllers using a 3 column UIPickerView 
 //  
 
-#import <UIKit/UIKit.h>
-#import "IntervalData.h"
-#import "Time.h"
+
+#import "Constants.h"
+
+@class InfoViewController;
+@class IntervalData;
+@class Time;
 
 @interface ITimeSelectorViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
+    @protected 
+    InfoViewController * infoViewController;
+    
 }
 
 @property (strong, nonatomic) IBOutlet UIPickerView *picker;
@@ -30,13 +36,13 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *instructionLabel;
 
-@property (weak, nonatomic) IBOutlet UIImageView *warningBackround;
+@property (retain, nonatomic) IBOutlet UIImageView *warningBackround;
 
 
 // model ref
 @property (strong, nonatomic) IntervalData * intervalData;
 
-@property (weak, nonatomic) IBOutlet UISegmentedControl *secondSubSecondSegment;
+@property (retain, nonatomic) IBOutlet UISegmentedControl *secondSubSecondSegment;
 
 -(IBAction)textFieldReturn:(id)sender;
 
@@ -54,7 +60,6 @@
 -(void) loadSecondsArray;
 
 -(void) loadSubSecondsArray;
-
 
 // Delegates that will be registered to a model source in the
 //  class inheriting this superclass

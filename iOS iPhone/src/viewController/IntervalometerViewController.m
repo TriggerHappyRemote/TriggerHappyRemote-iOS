@@ -30,15 +30,16 @@
 IntervalData *intervalData;
 NSTimer * headPhoneChecker;
 
--(void) viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:false];
-    
-    // hide for trigger happy lite:
-    //[settings setHidden:true];
-    
+-(void) viewDidLoad {
+    [super viewDidLoad];
+    infoViewController = [InfoViewController withLocation:0 and:187];
+    [self.view addSubview:infoViewController.view];
     AppDelegate * d = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     intervalData = [d getIntervalData];
-    
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:false];
     [[[self navigationController] tabBarController] tabBar].hidden = NO;
     [navigation setHidesBackButton:true];
     [self loadButtons];
@@ -102,7 +103,7 @@ NSTimer * headPhoneChecker;
 }
 
 -(IBAction) startButtonPressed {
-    if([self.cameraController isHardwareConnected]) {
+    if([cameraController isHardwareConnected]) {
         MPMusicPlayerController *iPod = [MPMusicPlayerController iPodMusicPlayer];
         float volumeLevel = iPod.volume;
         if(volumeLevel < 1.0) {
@@ -132,9 +133,6 @@ NSTimer * headPhoneChecker;
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-    
-    [self setWarningLabel:nil];
-    [self setWarningLabel:nil];
-    [super viewDidUnload];
 }
+
 @end

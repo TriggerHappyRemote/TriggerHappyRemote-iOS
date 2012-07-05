@@ -80,7 +80,7 @@ AVAudioPlayer *audioPlayer_blank_1s;
     [audioPlayer_500ms setVolume:1.0];
     [audioPlayer_1s setVolume:1.0];
     [audioPlayer_100ms setVolume:1.0];
-    [audioPlayer_blank_1s setVolume:0.0];
+    [audioPlayer_blank_1s setVolume:.2];
 
     
     [audioPlayer_033ms setDelegate:self];

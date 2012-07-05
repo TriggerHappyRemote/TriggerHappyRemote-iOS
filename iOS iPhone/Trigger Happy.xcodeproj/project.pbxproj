@@ -92,6 +92,8 @@
 		0AAB338B156F18F20028F04B /* SingleShotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB32F2156F18F10028F04B /* SingleShotViewController.m */; };
 		0AAB338C156F18F20028F04B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB32F4156F18F10028F04B /* InfoPlist.strings */; };
 		0ABD738C157EC5B300A25B14 /* blank_test_1s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0ABD738B157EC5B300A25B14 /* blank_test_1s.wav */; };
+		0ADDC48015A62959003996E6 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDC47E15A62959003996E6 /* info.png */; };
+		0ADDC48915A63A8C003996E6 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADDC48815A63A8C003996E6 /* InfoViewController.m */; };
 		0AE197E1154B693D00714F55 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE197E0154B693D00714F55 /* AudioToolbox.framework */; };
 		0AEA9AD415902A320018C7D4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEA9AD215902A320018C7D4 /* Default.png */; };
 		0AEA9AD515902A320018C7D4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEA9AD315902A320018C7D4 /* Default@2x.png */; };
@@ -219,6 +221,9 @@
 		0AAB32F5156F18F10028F04B /* Trigger Happy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Trigger Happy-Info.plist"; sourceTree = "<group>"; };
 		0AAB32F6156F18F10028F04B /* Trigger Happy-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Trigger Happy-Prefix.pch"; sourceTree = "<group>"; };
 		0ABD738B157EC5B300A25B14 /* blank_test_1s.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blank_test_1s.wav; sourceTree = "<group>"; };
+		0ADDC47E15A62959003996E6 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		0ADDC48715A63A8C003996E6 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoViewController.h; path = info/InfoViewController.h; sourceTree = "<group>"; };
+		0ADDC48815A63A8C003996E6 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoViewController.m; path = info/InfoViewController.m; sourceTree = "<group>"; };
 		0AE197DE154B68FE00714F55 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0AE197E0154B693D00714F55 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0AEA9ACC158FDB9F0018C7D4 /* FractionConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FractionConverter.h; sourceTree = "<group>"; };
@@ -246,6 +251,7 @@
 		0A0165DC15700EE2000D4E28 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				0ADDC47D15A62959003996E6 /* info */,
 				0A0166311570189C000D4E28 /* launch */,
 				0A01662C15701053000D4E28 /* misc */,
 				0A0165DD15700EE2000D4E28 /* appIcons */,
@@ -504,6 +510,7 @@
 		0AAB32C9156F18F10028F04B /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				0ADDC48615A63A69003996E6 /* info */,
 				0AAB32CA156F18F10028F04B /* IDataAccessViewController.h */,
 				0AAB32CB156F18F10028F04B /* IDataAccessViewController.m */,
 				0AAB32CC156F18F10028F04B /* IntervalometerCountDownViewController.h */,
@@ -608,6 +615,23 @@
 			path = supportingFiles;
 			sourceTree = SOURCE_ROOT;
 		};
+		0ADDC47D15A62959003996E6 /* info */ = {
+			isa = PBXGroup;
+			children = (
+				0ADDC47E15A62959003996E6 /* info.png */,
+			);
+			path = info;
+			sourceTree = "<group>";
+		};
+		0ADDC48615A63A69003996E6 /* info */ = {
+			isa = PBXGroup;
+			children = (
+				0ADDC48715A63A8C003996E6 /* InfoViewController.h */,
+				0ADDC48815A63A8C003996E6 /* InfoViewController.m */,
+			);
+			name = info;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -710,6 +734,7 @@
 				0ABD738C157EC5B300A25B14 /* blank_test_1s.wav in Resources */,
 				0AEA9AD415902A320018C7D4 /* Default.png in Resources */,
 				0AEA9AD515902A320018C7D4 /* Default@2x.png in Resources */,
+				0ADDC48015A62959003996E6 /* info.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -750,6 +775,7 @@
 				0AAB3389156F18F20028F04B /* IShutterSelectorViewController.m in Sources */,
 				0AAB338A156F18F20028F04B /* ShutterSelectorViewController.m in Sources */,
 				0AAB338B156F18F20028F04B /* SingleShotViewController.m in Sources */,
+				0ADDC48915A63A8C003996E6 /* InfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,12 +841,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "supportingFiles/Trigger Happy-Prefix.pch";
 				INFOPLIST_FILE = "supportingFiles/Trigger Happy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Trigger Happy";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -833,12 +859,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "supportingFiles/Trigger Happy-Prefix.pch";
 				INFOPLIST_FILE = "supportingFiles/Trigger Happy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Trigger Happy";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -11,65 +11,68 @@
 #import "AppDelegate.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "AudioOutputCameraController.h"
+#import "InfoViewController.h"
 
+@interface IDataAccessViewController() 
+@end
 
 @implementation IDataAccessViewController
 
-@synthesize warningBackground;
-@synthesize warningLabel;
-@synthesize hardwareChecker;
-@synthesize cameraController;
-@synthesize intervalData;
+@synthesize visible;
 
+-(void) viewDidLoad {
+    AppDelegate * d = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    cameraController = [[d getIntervalData] cameraController]; 
+}
 
 -(void) viewWillAppear:(BOOL)animated {
-    AppDelegate * d = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    self.cameraController = [[d getIntervalData] cameraController]; 
-    
-    
-    
     [self hardwareCheck];
     
-    self.hardwareChecker = [NSTimer scheduledTimerWithTimeInterval:1.0
+    hardwareChecker = [NSTimer scheduledTimerWithTimeInterval:1.0
                                                         target:self
                                                       selector:@selector(hardwareCheck)
                                                       userInfo:nil
                                                        repeats:YES];
     
+
+    
 }
+
 
 -(void) hardwareCheck {
     if([cameraController isHardwareConnected]) {
         if([cameraController class] == [AudioOutputCameraController class]) {
-            [self.warningLabel setHidden:true];
-            [self.warningBackground setHidden:true];
+            infoViewController.hidden = true;
+            
+            
+#if !(TARGET_IPHONE_SIMULATOR)
             MPMusicPlayerController *iPod = [MPMusicPlayerController iPodMusicPlayer];
             float volumeLevel = iPod.volume;
             if(volumeLevel < 1.0) {
-                warningLabel.text = @"Headphone volume too low to communicate with Trigger Happy";
-                [self.warningLabel setHidden:false];
-                [self.warningBackground setHidden:false];
+                infoViewController.text = @"Headphone volume too low to communicate with Trigger Happy";
+                infoViewController.hidden = false;
             }
             else {
-                [self.warningLabel setHidden:true];
-                [self.warningBackground setHidden:true];
+                infoViewController.hidden = true;
             }
+#endif
         }
+        
     }
     else {
         if([cameraController class] == [AudioOutputCameraController class]) {
-            warningLabel.text = @"The Trigger Happy Unit is not plugged into the headphone port";
+            
+            infoViewController.text = @"The Trigger Happy Unit is not plugged into the headphone port";
         }
         else {
-            warningLabel.text = @"Not plugged in - ICameraController inheritant";
+            infoViewController.text = @"Not plugged in - ICameraController inheritant";
         }
-        [self.warningLabel setHidden:false];
-        [self.warningBackground setHidden:false];
+        infoViewController.hidden = false;
     }
 }
 
 -(void) viewWillDisappear:(BOOL)animated {
-    [self.hardwareChecker invalidate];
+    [hardwareChecker invalidate];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -92,7 +95,7 @@
                 
             case UIEventSubtypeRemoteControlTogglePlayPause:
                 NSLog(@"Play");
-                
+                [cameraController fireButtonDepressed];
                 break;
                 
             case UIEventSubtypeRemoteControlPreviousTrack:
@@ -115,12 +118,10 @@
 
 
 -(void) viewDidUnload {
-    [self setIntervalData:nil];
-    [self setWarningLabel:nil];
-    [self setCameraController:nil];
-    [self setWarningBackground:nil];
-    [self.hardwareChecker invalidate];
-    [self setHardwareChecker:nil];
+    intervalData = nil;
+    cameraController = nil;
+    hardwareChecker = nil;
+    infoViewController = nil;
 }
 
 @end

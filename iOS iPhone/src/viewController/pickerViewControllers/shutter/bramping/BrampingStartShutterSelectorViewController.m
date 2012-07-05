@@ -7,6 +7,7 @@
 //
 
 #import "BrampingStartShutterSelectorViewController.h"
+#import "IntervalData.h"
 
 @implementation BrampingStartShutterSelectorViewController
 

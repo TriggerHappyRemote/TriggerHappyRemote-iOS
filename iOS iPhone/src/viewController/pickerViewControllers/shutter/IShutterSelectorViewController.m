@@ -7,6 +7,7 @@
 //
 
 #import "IShutterSelectorViewController.h"
+#import "IntervalData.h"
 
 @implementation IShutterSelectorViewController
 

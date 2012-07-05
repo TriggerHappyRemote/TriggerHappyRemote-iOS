@@ -17,7 +17,7 @@
 
 @property (nonatomic, retain) IBOutlet UIDatePicker *durationPicker;
 @property (nonatomic, retain) IBOutlet UISegmentedControl *duration;
-@property (weak, nonatomic) IBOutlet UILabel *warningLabel;
-@property (weak, nonatomic) IBOutlet UIImageView*warningBackground;
+@property (strong, nonatomic) IBOutlet UILabel *warningLabel;
+@property (strong, nonatomic) IBOutlet UIImageView*warningBackground;
 
 @end

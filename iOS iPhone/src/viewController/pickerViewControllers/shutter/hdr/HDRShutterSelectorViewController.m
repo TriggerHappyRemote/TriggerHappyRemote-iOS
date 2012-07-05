@@ -7,6 +7,7 @@
 //
 
 #import "HDRShutterSelectorViewController.h"
+#import "IntervalData.h"
 
 @implementation HDRShutterSelectorViewController
 

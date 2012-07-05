@@ -7,12 +7,22 @@
 //
 
 #import "IntervalSelectorViewController.h"
+#import "IntervalData.h"
+#import "Time.h"
+#import "InfoViewController.h"
 
 @implementation IntervalSelectorViewController 
 
 int hourOffSet;
 int minuteOffSet;
 int secondOffSet;
+
+-(void) viewDidLoad {
+    infoViewController = [InfoViewController withLocation:0 and:277];
+    infoViewController.type = InfoViewControllerInfo;
+    infoViewController.text = [[NSString alloc] initWithFormat:@"A picture will be taken every %@ seconds", [[[self.intervalData interval] time] totalTimeInSeconds]];
+    [self.view addSubview:infoViewController.view];
+}
 
 -(void) initializeInstructionLabel {
     //self.instructionLabel.text = @"Interval off";
@@ -89,7 +99,7 @@ int secondOffSet;
 }
 
 -(void) upperBoundsCheck:(NSInteger)row
-             inComponent:(NSInteger)component {
+             inComponent:(NSInteger)component withPreviousLength:(Time *)time {
     
     
     Time * max = [[self.intervalData duration] time];

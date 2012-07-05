@@ -10,7 +10,7 @@
 
 @interface BrampingViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *endShutterDataLabel;
-@property (weak, nonatomic) IBOutlet UILabel *startShutterDataLabel;
+@property (retain, nonatomic) IBOutlet UILabel *endShutterDataLabel;
+@property (retain, nonatomic) IBOutlet UILabel *startShutterDataLabel;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ShutterSelectorViewController.h"
+#import "IntervalData.h"
 
 @implementation ShutterSelectorViewController
 
@@ -56,9 +57,5 @@
 -(PickerMode)getPickerMode {
     return [[self.intervalData shutter] pickerMode];
 }
-
-
-
-
 
 @end

@@ -9,6 +9,7 @@
 #import "ITimeSelectorViewController.h"
 #import "IntervalData.h"
 #import "AppDelegate.h"
+#import "Time.h"
 
 @interface ITimeSelectorViewController()
 -(void)loadLabels;
@@ -368,7 +369,7 @@ inComponent:(NSInteger)component {}
 
 -(void) registerSegmentChangeToModel {}
 
--(int) getSegmentIndex { return 0;}
+-(int) getSegmentIndex {return 0;}
 
 -(IBAction)textFieldReturn:(id)sender {
     [sender resignFirstResponder];
@@ -384,6 +385,7 @@ inComponent:(NSInteger)component {}
     [self setSecondSubSecondSegment:nil];
     [super viewDidUnload];
     self.picker = nil;
+    infoViewController = nil;
 }
 
 @end

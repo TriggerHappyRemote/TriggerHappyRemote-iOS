@@ -13,6 +13,7 @@
 #import "AppDelegate.h"
 #import "IntervalData.h"
 #import "ICameraController.h"
+#import "InfoViewController.h"
 
 @interface SingleShotViewController()
 -(void)enableCanFire;
@@ -49,10 +50,16 @@ ButtonState state;
     
     useInfoMessage.textAlignment = UITextAlignmentCenter;
 
-    pressMessage = @"Press and hold for rapid fire or bulb";
-    holdMessage = @"Press for a rapid fire sequence or put camera in blub for a long exposure";
+    pressMessage = @"Touch once to trigger, touch and hold for sequence";
+    holdMessage = @"Touch once to start";
     
     [self pressHoldDidChange];
+}
+
+-(void) viewDidLoad {
+    [super viewDidLoad];
+    infoViewController = [InfoViewController withLocation:0 and:323];
+    [self.view addSubview:infoViewController.view];
 }
 
 -(void)enableCanFire {
@@ -63,7 +70,7 @@ ButtonState state;
     
     if(canFire) {
         canFire = false;
-        self.hardwareChecker = [NSTimer scheduledTimerWithTimeInterval:.3
+        hardwareChecker = [NSTimer scheduledTimerWithTimeInterval:.3
                                                                 target:self
                                                               selector:@selector(enableCanFire)
                                                               userInfo:nil
@@ -77,7 +84,7 @@ ButtonState state;
         else if(state == HOLD_UP) {
             state = HOLD_DOWN;
             self.fireButtonLabel.text = @"Stop";  
-            useInfoMessage.text = @"Press to stop sequence";
+            useInfoMessage.text = @"Touch to stop sequence";
             [fireButton setHighlighted:false];
             [cameraController fireButtonPressed];
         }
@@ -91,6 +98,7 @@ ButtonState state;
             [cameraController fireButtonDepressed];
         }
     }
+    
 }
 
 -(IBAction) fireTownUp {

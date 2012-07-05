@@ -9,16 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "IntervalData.h"
 #import "ICameraController.h"
+#import "InfoViewController.h"
 
-@interface IDataAccessViewController : UIViewController
+@interface IDataAccessViewController : UIViewController {    
+    InfoViewController * infoViewController;
+    NSTimer * hardwareChecker;
+    IntervalData * intervalData;
+    ICameraController * cameraController;
+}
 
-@property (weak, nonatomic) IBOutlet UILabel *warningLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *warningBackground;
 
-@property (strong, nonatomic) NSTimer * hardwareChecker;
+@property (nonatomic) bool visible;
 
-@property (strong, nonatomic) IntervalData * intervalData;
-@property (strong, nonatomic) ICameraController * cameraController;
 
 -(void) hardwareCheck;
 

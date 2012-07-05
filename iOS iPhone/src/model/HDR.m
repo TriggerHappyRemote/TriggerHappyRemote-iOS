@@ -55,15 +55,9 @@
 - (NSMutableArray *) getShutterLengths {
     NSMutableArray * times = [[NSMutableArray alloc] init];
     [times addObject:self.baseShutterSpeed];
-    //NSTimeInterval totalTime = [self.baseShutterSpeed totalTimeInSeconds];
     for(int i = 0; i < (int)(self.numberOfShots / 2); i++) {
-        
         [times addObject:[[Time alloc] initWithTotalTimeInSeconds: [self.baseShutterSpeed totalTimeInSeconds] * pow (2, self.evInterval)]];
-        
         [times addObject:[[Time alloc] initWithTotalTimeInSeconds:[self.baseShutterSpeed totalTimeInSeconds] * pow (2, -1 * self.evInterval)]];
-        
-        
-
     }
     return times;
 }

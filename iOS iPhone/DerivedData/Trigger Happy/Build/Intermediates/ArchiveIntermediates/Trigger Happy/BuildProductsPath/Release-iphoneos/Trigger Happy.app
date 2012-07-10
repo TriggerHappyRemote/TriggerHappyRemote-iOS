@@ -1,0 +1,1 @@
+/Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS iPhone/DerivedData/Trigger Happy/Build/Intermediates/ArchiveIntermediates/Trigger Happy/InstallationBuildProductsLocation/Applications/Trigger Happy.app

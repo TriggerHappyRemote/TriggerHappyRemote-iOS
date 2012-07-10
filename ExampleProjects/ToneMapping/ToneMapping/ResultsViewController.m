@@ -18,8 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    AppDelegate * appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    resultImage.image = [appDelegate.hdrToneMapper proccessImage];
+    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    resultImage.image = [appDelegate.hdrToneMapper proccessImage:128];
 }
 
 - (IBAction)backButtonPressed:(id)sender {
@@ -28,7 +28,19 @@
 
 - (void)viewDidUnload {
     [self setResultImage:nil];
+    gammaSlider = nil;
     [super viewDidUnload];
+}
+
+- (IBAction)gammaSliderValueDidChange:(id)sender {
+    //NSLog(@"val: %f", gammaSlider.value);
+    //resultImage.image = [appDelegate.hdrToneMapper proccessImage:255.0*gammaSlider.value];
+
+}
+- (IBAction)gammaSliderTouchUp:(id)sender {
+    NSLog(@"val: %f", gammaSlider.value);
+    resultImage.image = [appDelegate.hdrToneMapper proccessImage:255.0*gammaSlider.value];
+
 }
 
 

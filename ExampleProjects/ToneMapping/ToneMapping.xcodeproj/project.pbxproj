@@ -15,6 +15,9 @@
 		0A11049D15A221C4002D4831 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A11049C15A221C4002D4831 /* AppDelegate.m */; };
 		0A1104A015A221C4002D4831 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A11049E15A221C4002D4831 /* MainStoryboard.storyboard */; };
 		0A1104A615A221C4002D4831 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1104A515A221C4002D4831 /* MainViewController.m */; };
+		0AA08A3215A784F6007150E1 /* mean530.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0AA08A2F15A784F6007150E1 /* mean530.jpeg */; };
+		0AA08A3315A784F6007150E1 /* over530.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0AA08A3015A784F6007150E1 /* over530.jpeg */; };
+		0AA08A3415A784F6007150E1 /* under530.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0AA08A3115A784F6007150E1 /* under530.jpeg */; };
 		0AAFF7CF15A237F1001CF21B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAFF7CE15A237F1001CF21B /* SettingsViewController.m */; };
 		0AAFF7D315A23A2B001CF21B /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAFF7D215A23A2B001CF21B /* ResultsViewController.m */; };
 		0AAFF7D615A243F2001CF21B /* HDRToneMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAFF7D515A243F2001CF21B /* HDRToneMapper.m */; };
@@ -37,6 +40,9 @@
 		0A11049F15A221C4002D4831 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		0A1104A415A221C4002D4831 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		0A1104A515A221C4002D4831 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		0AA08A2F15A784F6007150E1 /* mean530.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mean530.jpeg; sourceTree = "<group>"; };
+		0AA08A3015A784F6007150E1 /* over530.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = over530.jpeg; sourceTree = "<group>"; };
+		0AA08A3115A784F6007150E1 /* under530.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = under530.jpeg; sourceTree = "<group>"; };
 		0AAFF7CD15A237F1001CF21B /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		0AAFF7CE15A237F1001CF21B /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		0AAFF7D115A23A2B001CF21B /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 		0A11049215A221C4002D4831 /* ToneMapping */ = {
 			isa = PBXGroup;
 			children = (
+				0AA08A2E15A784F6007150E1 /* photomatixSet */,
 				0AB7545515A235A6004F1975 /* hdrSet */,
 				0A11049B15A221C4002D4831 /* AppDelegate.h */,
 				0A11049C15A221C4002D4831 /* AppDelegate.m */,
@@ -118,6 +125,16 @@
 				0A11049A15A221C4002D4831 /* ToneMapping-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0AA08A2E15A784F6007150E1 /* photomatixSet */ = {
+			isa = PBXGroup;
+			children = (
+				0AA08A2F15A784F6007150E1 /* mean530.jpeg */,
+				0AA08A3015A784F6007150E1 /* over530.jpeg */,
+				0AA08A3115A784F6007150E1 /* under530.jpeg */,
+			);
+			path = photomatixSet;
 			sourceTree = "<group>";
 		};
 		0AB7545515A235A6004F1975 /* hdrSet */ = {
@@ -185,6 +202,9 @@
 				0AB7545915A235A6004F1975 /* IMG_1453.jpg in Resources */,
 				0AB7545A15A235A6004F1975 /* IMG_1454.jpg in Resources */,
 				0AB7545B15A235A6004F1975 /* IMG_1455.jpg in Resources */,
+				0AA08A3215A784F6007150E1 /* mean530.jpeg in Resources */,
+				0AA08A3315A784F6007150E1 /* over530.jpeg in Resources */,
+				0AA08A3415A784F6007150E1 /* under530.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

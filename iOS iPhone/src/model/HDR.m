@@ -41,8 +41,8 @@
     
     NSTimeInterval totalTime = [self.baseShutterSpeed totalTimeInSeconds];
     for(int i = 0; i < (int)(self.numberOfShots / 2); i++) {
-        totalTime += [self.baseShutterSpeed totalTimeInSeconds] * pow (2, self.evInterval);
-        totalTime += [self.baseShutterSpeed totalTimeInSeconds] * pow (2, -1 * self.evInterval);
+        totalTime += [self.baseShutterSpeed totalTimeInSeconds] * pow (2, self.evInterval * i);
+        totalTime += [self.baseShutterSpeed totalTimeInSeconds] * pow (2, -1 * self.evInterval * i);
 
     }
     
@@ -56,8 +56,8 @@
     NSMutableArray * times = [[NSMutableArray alloc] init];
     [times addObject:self.baseShutterSpeed];
     for(int i = 0; i < (int)(self.numberOfShots / 2); i++) {
-        [times addObject:[[Time alloc] initWithTotalTimeInSeconds: [self.baseShutterSpeed totalTimeInSeconds] * pow (2, self.evInterval)]];
-        [times addObject:[[Time alloc] initWithTotalTimeInSeconds:[self.baseShutterSpeed totalTimeInSeconds] * pow (2, -1 * self.evInterval)]];
+        [times addObject:[[Time alloc] initWithTotalTimeInSeconds: [self.baseShutterSpeed totalTimeInSeconds] * pow (2, self.evInterval * i)]];
+        [times addObject:[[Time alloc] initWithTotalTimeInSeconds:[self.baseShutterSpeed totalTimeInSeconds] * pow (2, -1 * self.evInterval * i)]];
     }
     return times;
 }

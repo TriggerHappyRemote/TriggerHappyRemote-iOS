@@ -11,6 +11,6 @@
 @interface HDRToneMapper : NSObject
 
 + (HDRToneMapper *)operationWithImages:(UIImage *)img1 second:(UIImage *)img2 third:(UIImage *)img3;
-- (UIImage *) proccessImage;
+- (UIImage *) proccessImage:(float)gammaMiddle;
 
 @end

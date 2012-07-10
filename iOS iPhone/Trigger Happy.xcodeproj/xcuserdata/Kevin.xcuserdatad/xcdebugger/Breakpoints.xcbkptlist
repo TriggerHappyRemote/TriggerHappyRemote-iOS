@@ -94,7 +94,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "111"
          endingLineNumber = "111"
-         landmarkName = "-upperBoundsCheck:inComponent:"
+         landmarkName = "-upperBoundsCheck:inComponent:withPreviousLength:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -107,7 +107,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "103"
          endingLineNumber = "103"
-         landmarkName = "-upperBoundsCheck:inComponent:"
+         landmarkName = "-upperBoundsCheck:inComponent:withPreviousLength:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint

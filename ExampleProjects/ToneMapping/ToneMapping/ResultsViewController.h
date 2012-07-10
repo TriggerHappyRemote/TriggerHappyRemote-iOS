@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ResultsViewController : UIViewController
+@class AppDelegate;
+
+@interface ResultsViewController : UIViewController {
+    __weak IBOutlet UISlider *gammaSlider;
+    AppDelegate * appDelegate;
+}
 
 @property (weak, nonatomic) IBOutlet UIImageView *resultImage;
 

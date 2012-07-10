@@ -16,7 +16,7 @@
 @interface HDRToneMapper (internal)
 -(void)imageDump:(CGImageRef)cgimage;
 -(UIImage *) invert: (CGImageRef)_CGImage;
--(UIImage *) tonemap;
+-(UIImage *) tonemap:(float)gammaMedian;
 @end
 
 @interface HDRToneMapper()
@@ -40,13 +40,13 @@
     return [[[self class] alloc] initWithImages:[img1 CGImage] second:[img2 CGImage] third:[img3 CGImage]];
 }
 
-- (UIImage *) proccessImage {
+- (UIImage *) proccessImage:(float)middle {
     NSLog(@"Proccess image"); 
     
-    return [self tonemap];
+    return [self tonemap:middle];
 }
 
--(UIImage *) tonemap {
+-(UIImage *) tonemap:(float)middle {
     CFDataRef dataref = CGDataProviderCopyData(CGImageGetDataProvider(_originalImage1));
     
     size_t width=CGImageGetWidth(_originalImage1);
@@ -58,6 +58,15 @@
     CGBitmapInfo bitmapInfo=CGImageGetBitmapInfo(_originalImage1);
     int length = height * width * 4;
     
+    unsigned char *dataReturn = malloc(length);
+    CGContextRef contextDataReturn = CGBitmapContextCreate(dataReturn, width, height,
+                                                  bitsPerComponent, bytesPerRow, colorspace,
+                                                  kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
+    CGContextDrawImage(contextDataReturn, CGRectMake(0, 0, width, height), _originalImage1);
+    
+    CGContextRelease(contextDataReturn);
+    //CGImageRelease(_originalImage1);
+    
     // img 1
     unsigned char *data1 = malloc(length);
     CGContextRef context1 = CGBitmapContextCreate(data1, width, height,
@@ -66,7 +75,7 @@
     CGContextDrawImage(context1, CGRectMake(0, 0, width, height), _originalImage1);
     
     CGContextRelease(context1);
-    CGImageRelease(_originalImage1);
+    //CGImageRelease(_originalImage1);
     
     // img 2
     unsigned char *data2 = malloc(length);
@@ -76,7 +85,7 @@
     CGContextDrawImage(context2, CGRectMake(0, 0, width, height), _originalImage2);
     
     CGContextRelease(context2);
-    CGImageRelease(_originalImage2);
+    //CGImageRelease(_originalImage2);
     
     // img 3
     unsigned char *data3 = malloc(length);
@@ -86,12 +95,11 @@
     CGContextDrawImage(context3, CGRectMake(0, 0, width, height), _originalImage3);
     
     CGContextRelease(context3);
-    CGImageRelease(_originalImage3);
+    //CGImageRelease(_originalImage3);
     
     //UInt8 *data = (UInt8 *)CFDataGetBytePtr(dataref);
     //int length = CFDataGetLength(dataref);
     
-    const int middle = 128;
     /*
     // selective color HDR tonemapping, gives a crappy image IF in color
      
@@ -146,7 +154,6 @@
         }
     } */
     
-    
     for(int index=0;index<length;index+=4) {
         int a1 = abs(middle-data1[index+OFFSET_R]) + abs(middle-data1[index+OFFSET_R]) + abs(middle-data1[index+OFFSET_R]);
         int a2 = abs(middle-data2[index+OFFSET_G]) + abs(middle-data2[index+OFFSET_G]) + abs(middle-data2[index+OFFSET_G]);
@@ -154,29 +161,32 @@
         int amin = MIN(a1, MIN(a2, a3));
         if(a1 == amin) {
             // do nothing because data1 is also the cache
+            dataReturn[index+OFFSET_R] = data1[index+OFFSET_R];
+            dataReturn[index+OFFSET_G] = data1[index+OFFSET_G];
+            dataReturn[index+OFFSET_B] = data1[index+OFFSET_B];
         }
         else if(a2 == amin) {
-            data1[index+OFFSET_R] = data2[index+OFFSET_R];
-            data1[index+OFFSET_G] = data2[index+OFFSET_G];
-            data1[index+OFFSET_B] = data2[index+OFFSET_B];
+            dataReturn[index+OFFSET_R] = data2[index+OFFSET_R];
+            dataReturn[index+OFFSET_G] = data2[index+OFFSET_G];
+            dataReturn[index+OFFSET_B] = data2[index+OFFSET_B];
         }
         else if(a3 == amin) {
-            data1[index+OFFSET_R] = data3[index+OFFSET_R];
-            data1[index+OFFSET_G] = data3[index+OFFSET_G];
-            data1[index+OFFSET_B] = data3[index+OFFSET_B];            
+            dataReturn[index+OFFSET_R] = data3[index+OFFSET_R];
+            dataReturn[index+OFFSET_G] = data3[index+OFFSET_G];
+            dataReturn[index+OFFSET_B] = data3[index+OFFSET_B];            
         }
     }
 
     
-    CFDataRef newData = CFDataCreate(NULL,data1,length);
+    CFDataRef newData = CFDataCreate(NULL,dataReturn,length);
     //		NSData *newDataObject = [NSData dataWithBytesNoCopy:data length:length freeWhenDone:NO];
     //		CFDataRef newData = (CFDataRef)newDataObject;
     CGDataProviderRef provider = CGDataProviderCreateWithCFData(newData);
     //		CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, &data, length, NULL);
     
-    _originalImage1 = CGImageCreate(width,height,bitsPerComponent,bitsPerPixel,bytesPerRow,colorspace,bitmapInfo,provider,nil,YES,kCGRenderingIntentPerceptual);
+    CGImageRef newImage = CGImageCreate(width,height,bitsPerComponent,bitsPerPixel,bytesPerRow,colorspace,bitmapInfo,provider,nil,YES,kCGRenderingIntentPerceptual);
     
-    UIImage * invertedImage = [[UIImage alloc] initWithCGImage:_originalImage1];
+    UIImage * invertedImage = [[UIImage alloc] initWithCGImage:newImage];
     
     CGDataProviderRelease(provider);
     CFRelease(newData);

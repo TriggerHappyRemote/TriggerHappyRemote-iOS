@@ -8,8 +8,17 @@
 
 #import "BrampingStopShutterSelectorViewController.h"
 #import "IntervalData.h"
+#import "InfoViewController.h"
 
 @implementation BrampingStopShutterSelectorViewController
+
+-(void) viewDidLoad {
+    [super viewDidLoad];
+    infoViewController = [InfoViewController withLocation:0 and:277];
+    infoViewController.type = InfoViewControllerInfo;
+    [infoViewController setText:self.infoMessage];
+    [self.view addSubview:infoViewController.view];
+}
 
 -(void) changeHour: (int) hour {
     [[[[self.intervalData shutter] bramper] endShutterLength] setHours:hour];
@@ -38,6 +47,14 @@
 
 -(PickerMode)getPickerMode {
     return [[[self.intervalData shutter] bramper] pickerModeStop];
+}
+
+- (NSString *) infoMessage {
+    return [[NSString alloc] initWithFormat:@"The shutter at the end of the time lapse is %@", [[self time] toStringDescriptive]];
+}
+
+- (NSString *) warningMessage {
+    return [[NSString alloc] initWithFormat:@"The end shutter length must be shorter than the interval of %@", [self.intervalData.interval.time toStringDescriptive]];
 }
 
 @end

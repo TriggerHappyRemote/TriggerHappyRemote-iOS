@@ -8,11 +8,20 @@
 
 #import "HDRShutterSelectorViewController.h"
 #import "IntervalData.h"
+#import "InfoViewController.h"
 
 @implementation HDRShutterSelectorViewController
 
+-(void) viewDidLoad {
+    [super viewDidLoad];
+    infoViewController = [InfoViewController withLocation:0 and:277];
+    infoViewController.type = InfoViewControllerInfo;
+    infoViewController.text = self.infoMessage;
+    [self.view addSubview:infoViewController.view];
+}
+
 -(void) initializeInstructionLabel {
-    self.instructionLabel.text = @"HDR base shutter auto";
+    //self.instructionLabel.text = @"HDR base shutter auto";
 }
 
 -(void) changeHour: (int) hour {
@@ -54,8 +63,6 @@
     }
 }
 
-
-
 -(void) setPickerMode:(PickerMode) state {
     [[[self.intervalData shutter] hdr ] setPickerMode:state];
     
@@ -66,22 +73,32 @@
 }
 
 // for hdr, upper bounds check must sum all exposures
--(void) upperBoundsCheck:(NSInteger)row inComponent:(NSInteger)component withPreviousLength:(Time *)_time {
+-(void) boundsCheck:(NSInteger)row inComponent:(NSInteger)component withPreviousLength:(Time *)_time {
     Time * max = [[self.intervalData interval] time];
     if([[self.intervalData interval] intervalEnabled] && [[[self.intervalData shutter] hdr] getMaxShutterLength] >= [max totalTimeInSeconds]) {
-        
         [self.picker selectedRowInComponent:0];
-        
         [self.picker selectRow:[_time hours] inComponent:0 animated:false];
         [self.picker selectRow:[_time minutes] inComponent:1 animated:false];
         [self.picker selectRow:[_time seconds] inComponent:2 animated:false];
         [self changeHour:[_time hours]];
         [self changeMinute:[_time minutes]];
         [self changeSecond:[_time seconds]];
-        
-        [self.warningBackround setHidden:false];
-        [self.instructionLabel setHidden:false];
+                
+        infoViewController.type = InfoViewControllerWarning;
+        infoViewController.text = self.warningMessage;
     }
+    else {
+        infoViewController.type = InfoViewControllerInfo;
+        infoViewController.text = self.infoMessage;
+    }
+}
+
+- (NSString *) infoMessage {
+    return [[NSString alloc] initWithFormat:@"For each interval %i shots will be taken in %@", self.intervalData.shutter.hdr.numberOfShots, [[self.intervalData.shutter getMaxTime] toStringDescriptive]];
+}
+
+- (NSString *) warningMessage {
+    return @"The cumulation of shutter lengths must be shorter than the interval";
 }
 
 

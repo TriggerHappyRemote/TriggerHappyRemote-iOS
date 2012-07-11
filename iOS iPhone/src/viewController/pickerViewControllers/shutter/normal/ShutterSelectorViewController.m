@@ -8,11 +8,20 @@
 
 #import "ShutterSelectorViewController.h"
 #import "IntervalData.h"
+#import "InfoViewController.h"
 
 @implementation ShutterSelectorViewController
 
+-(void) viewDidLoad {
+    [super viewDidLoad];
+    infoViewController = [InfoViewController withLocation:0 and:277];
+    infoViewController.type = InfoViewControllerInfo;
+    [infoViewController setText:self.infoMessage];
+    [self.view addSubview:infoViewController.view];
+}
+
 -(void) initializeInstructionLabel {
-    self.instructionLabel.text = @"shutter selector - auto shutter";
+    //self.instructionLabel.text = @"shutter selector - auto shutter";
 }
 
 -(void) changeHour: (int) hour {
@@ -56,6 +65,14 @@
 
 -(PickerMode)getPickerMode {
     return [[self.intervalData shutter] pickerMode];
+}
+
+- (NSString *) infoMessage {
+    return [[NSString alloc] initWithFormat:@"Each photo will have a %@shutter length", [[self time] toStringDescriptive]];
+}
+
+- (NSString *) warningMessage {
+    return [[NSString alloc] initWithFormat:@"Shutter must be shorter than the %@ interval", [self.intervalData.interval.time toStringDescriptive]];
 }
 
 @end

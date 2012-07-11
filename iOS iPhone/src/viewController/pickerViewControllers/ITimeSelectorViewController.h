@@ -18,7 +18,6 @@
 @interface ITimeSelectorViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
     @protected 
     InfoViewController * infoViewController;
-    
 }
 
 @property (strong, nonatomic) IBOutlet UIPickerView *picker;
@@ -34,9 +33,9 @@
 
 @property (nonatomic, strong) IBOutlet UISegmentedControl * segment;
 
-@property (strong, nonatomic) IBOutlet UILabel *instructionLabel;
+//@property (strong, nonatomic) IBOutlet UILabel *instructionLabel;
 
-@property (retain, nonatomic) IBOutlet UIImageView *warningBackround;
+//@property (retain, nonatomic) IBOutlet UIImageView *warningBackround;
 
 
 // model ref
@@ -46,52 +45,16 @@
 
 -(IBAction)textFieldReturn:(id)sender;
 
-// Methods that will be overridden by the subclasses
-//
-// Due to the dynamic nature of the compiler, these can't be "protected"
-// like in other c-family lanuages
-//
-
-
--(void) loadHoursArray;
-
--(void) loadMinutesArray;
-
--(void) loadSecondsArray;
-
--(void) loadSubSecondsArray;
-
 // Delegates that will be registered to a model source in the
 //  class inheriting this superclass
 -(void) changeHour: (int) hour;
-
 -(void) changeMinute: (int) minute;
-
 -(void) changeSecond: (int) second;
-
 -(void) changeMillisecond: (int) millisecond;
 
-// Delegate to load time from a model
--(Time *) time;
-
--(IBAction) segmentDidChange;
-
--(void) setPickerVisibility;
-
--(void) registerSegmentChangeToModel;
-
--(int) getSegmentIndex;
-
--(IBAction)secondSubSecondSegmentChange;
 
 // delegates to set and get picker state
--(void) setPickerMode: (PickerMode) state;
-
--(PickerMode) getPickerMode;
-
--(void) upperBoundsCheck:(NSInteger)row inComponent:(NSInteger)component withPreviousLength:(Time *)time;
--(void) lowerBoundsCheck:(NSInteger)row
-inComponent:(NSInteger)component;
+-(Time *) time;
 
 
 @end  

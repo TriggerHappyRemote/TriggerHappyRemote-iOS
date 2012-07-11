@@ -16,25 +16,26 @@ NSString * fractionConverter(float fraction);
 NSString * fractionConverter(float fraction) {
     
     int milliseconds = (int)((fraction* 1000) - (float)(int)fraction * 1000);
-     
+    
+    int seconds = (int)fraction;
     
     switch (milliseconds) {
         case 0:
             return [[NSString alloc] initWithFormat:@"%i", (int)fraction];
         case 166:
-            return @"1/6";
+            return [[NSString alloc] initWithFormat:@"%i/6", 1+seconds*6];
         case 250:
-            return @"1/4";
+            return [[NSString alloc] initWithFormat:@"%i/4", 1+seconds*4];
         case 333:
-            return @"1/3";
+            return [[NSString alloc] initWithFormat:@"%i/3", 1+seconds*3];
         case 500:
-            return @"1/2";
+            return [[NSString alloc] initWithFormat:@"%i/2", 1+seconds*2];
         case 666:
-            return @"2/3";
+            return [[NSString alloc] initWithFormat:@"%i/3", 2+seconds*3];
         case 750:
-            return @"3/4";
+            return [[NSString alloc] initWithFormat:@"%i/4", 3+seconds*4];
         case 833:
-            return @"5/6";
+            return [[NSString alloc] initWithFormat:@"%i/6", 5+seconds*6];
         default:
             return @"|";
 

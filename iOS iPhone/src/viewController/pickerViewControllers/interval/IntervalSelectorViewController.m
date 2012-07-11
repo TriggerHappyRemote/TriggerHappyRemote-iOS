@@ -18,9 +18,10 @@ int minuteOffSet;
 int secondOffSet;
 
 -(void) viewDidLoad {
+    [super viewDidLoad];
     infoViewController = [InfoViewController withLocation:0 and:277];
     infoViewController.type = InfoViewControllerInfo;
-    infoViewController.text = [[NSString alloc] initWithFormat:@"A picture will be taken every %@ seconds", [[[self.intervalData interval] time] totalTimeInSeconds]];
+    [infoViewController setText:[[NSString alloc] initWithFormat:@"A photo will be taken every %@", [[self time] toStringDescriptive]]];
     [self.view addSubview:infoViewController.view];
 }
 
@@ -72,38 +73,15 @@ int secondOffSet;
     for(int i = 0; i < 23; i++) {
         [self.hoursValues addObject:[NSString stringWithFormat:@"%i", i]];
     }
-    
 }
 
--(void) lowerBoundsCheck:(NSInteger)row
-             inComponent:(NSInteger)component {
-    if([[self time] totalTimeInSeconds] <= [[[self.intervalData shutter] getMaxTime] totalTimeInSeconds]) {
-
-        Time * newMax = [Time new];
-        [newMax setTotalTimeInSeconds:[[[self.intervalData shutter] getMaxTime] totalTimeInSeconds] + 1];
-        [self.picker selectRow:[newMax hours] inComponent:0 animated:false];
-        [self.picker selectRow:[newMax minutes] inComponent:1 animated:false];
-        [self.picker selectRow:[newMax seconds] inComponent:2 animated:false];
-        [self changeHour:[newMax hours]];
-        [self changeMinute:[newMax minutes]];
-        [self changeSecond:[newMax seconds]];
-        
-        
-    
-        
-        [self.instructionLabel setText:@"Interval must be longer than the shutter"];
-        [self.instructionLabel setHidden:false];
-        [self.warningBackround setHidden:false];
-    }
-    
-}
-
--(void) upperBoundsCheck:(NSInteger)row
-             inComponent:(NSInteger)component withPreviousLength:(Time *)time {
-    
+/* Upper then lower called by super class */
+-(void) boundsCheck:(NSInteger)row inComponent:(NSInteger)component withPreviousLength:(Time *)time {
     
     Time * max = [[self.intervalData duration] time];
+    
     if(![[self.intervalData duration] unlimitedDuration] && [[self time] totalTimeInSeconds] >= [max totalTimeInSeconds]) {
+        // upper bounds off
         Time * newMax = [Time new];
         [newMax setTotalTimeInSeconds:[max totalTimeInSeconds] - 1];
         [self.picker selectRow:[newMax hours] inComponent:0 animated:false];
@@ -112,20 +90,34 @@ int secondOffSet;
         [self changeHour:[newMax hours]];
         [self changeMinute:[newMax minutes]];
         [self changeSecond:[newMax seconds]];
-        [self.instructionLabel setText:@"Interval must be shorter than duration"];
-        [self.instructionLabel setHidden:false];
-        [self.warningBackround setHidden:false];
-
-
+        
+        [infoViewController setText:[[NSString alloc] initWithFormat:@"Interval must be shorter than the duration of %@", [[[self.intervalData duration] time] toStringDescriptive]]];
+        [infoViewController setType:InfoViewControllerWarning];
     }
-    
+    else if([[self time] totalTimeInSeconds] <= [[[self.intervalData shutter] getMaxTime] totalTimeInSeconds]) {
+        // lower bounds off
+        Time * newMax = [Time new];
+        [newMax setTotalTimeInSeconds:[[[self.intervalData shutter] getMaxTime] totalTimeInSeconds] + 1];
+        [self.picker selectRow:[newMax hours] inComponent:0 animated:false];
+        [self.picker selectRow:[newMax minutes] inComponent:1 animated:false];
+        [self.picker selectRow:[newMax seconds] inComponent:2 animated:false];
+        [self changeHour:[newMax hours]];
+        [self changeMinute:[newMax minutes]];
+        [self changeSecond:[newMax seconds]];
 
-    
+        [infoViewController setText:[[NSString alloc] initWithFormat:@"Interval must be longer than the shutter of %@", [[[self.intervalData shutter] getMaxTime] toStringDescriptive]]];
+        [infoViewController setType:InfoViewControllerWarning];
+    }
+    else {
+        // in bounds
+        [infoViewController setText:[[NSString alloc] initWithFormat:@"A photo will be taken every %@", [[self time] toStringDescriptive]]];
+        
+        [infoViewController setType:InfoViewControllerInfo];
+    }
 }
-
 
 - (void)viewDidUnload {
-    [self setWarningBackround:nil];
     [super viewDidUnload];
 }
+
 @end

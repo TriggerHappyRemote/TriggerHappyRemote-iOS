@@ -15,4 +15,5 @@ dependencies: \
   /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/model/IIntervalometer.h \
   /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/IntervalometerViewController.h \
   /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/IDataAccessViewController.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/info/InfoViewController.h \
   /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/common/FractionConverter.h

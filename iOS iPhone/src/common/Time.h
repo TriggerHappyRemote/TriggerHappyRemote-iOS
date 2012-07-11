@@ -37,6 +37,12 @@
  */
 - (NSString *) toStringDownToMilliseconds;
 
+/**
+ * @return NSString with format of @"XX hours XX minutes XX seconds XX milliseconds 
+ */
+- (NSString *) toStringDescriptive;
+
+
 - (void) decrementSecond;
 
 -(id) initUnlimited;

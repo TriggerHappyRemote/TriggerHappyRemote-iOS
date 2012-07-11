@@ -8,17 +8,19 @@
 
 #import "IShutterSelectorViewController.h"
 #import "IntervalData.h"
+#import "InfoViewController.h"
 
 @implementation IShutterSelectorViewController
 
+@synthesize infoMessage, warningMessage;
+
 -(void) viewDidLoad {
-    // for lite
-    [self.segment setHidden:true];    
+    [super viewDidLoad];
 }
 
--(void) upperBoundsCheck:(NSInteger)row inComponent:(NSInteger)component withPreviousLength:(Time *)time {
+-(void) boundsCheck:(NSInteger)row inComponent:(NSInteger)component withPreviousLength:(Time *)time {
     Time * max = [[self.intervalData interval] time];
-    if([[self.intervalData interval] intervalEnabled] && [[self time] totalTimeInSeconds] >= [max totalTimeInSeconds]) {
+    if([[self.intervalData interval] intervalEnabled] && [self.time totalTimeInSeconds] >= [max totalTimeInSeconds]) {
         
         Time * newMax = [Time new];
         [newMax setTotalTimeInSeconds:[max totalTimeInSeconds] - 1];
@@ -29,10 +31,12 @@
         [self changeMinute:[newMax minutes]];
         [self changeSecond:[newMax seconds]];
         
-        [self.warningBackround setHidden:false];
-        [self.instructionLabel setHidden:false];
+        infoViewController.text = self.warningMessage;
+        infoViewController.type = InfoViewControllerWarning;
+    } else {
+        infoViewController.text = self.infoMessage;
+        infoViewController.type = InfoViewControllerInfo;
     }
-    
 }
 
 @end

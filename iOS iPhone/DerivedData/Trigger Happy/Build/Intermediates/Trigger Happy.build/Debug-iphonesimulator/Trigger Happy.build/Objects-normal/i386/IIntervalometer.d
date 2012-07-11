@@ -13,4 +13,5 @@ dependencies: \
   /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/cameraController/ICameraController.h \
   /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/appDelegate/AppDelegate.h \
   /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/IntervalometerViewController.h \
-  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/IDataAccessViewController.h
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/IDataAccessViewController.h \
+  /Users/Kevin/Documents/git-repo/triggerhappy-ios/iOS\ iPhone/src/viewController/info/InfoViewController.h

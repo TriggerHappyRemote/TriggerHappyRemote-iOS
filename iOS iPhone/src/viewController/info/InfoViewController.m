@@ -26,6 +26,7 @@
     info.backgroundColor = [UIColor clearColor];
     info.textColor = [UIColor whiteColor];
     info.numberOfLines = 3;
+    info.adjustsFontSizeToFitWidth = YES;
     [self.view addSubview:info];
     return self;
 }
@@ -56,6 +57,12 @@
 
 -(void) setHidden:(bool)hidden {
     self.view.hidden = hidden;
+} 
+
+-(void) viewDidUnload {
+    background = nil;
+    info = nil;
+    self.text = nil;
 }
 
 @end

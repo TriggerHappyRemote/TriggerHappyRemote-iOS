@@ -41,6 +41,7 @@
     
     NSTimeInterval totalTime = [self.baseShutterSpeed totalTimeInSeconds];
     for(int i = 0; i < (int)(self.numberOfShots / 2); i++) {
+        NSLog(@"-- %f", [self.baseShutterSpeed totalTimeInSeconds] * pow (2, self.evInterval * i));
         totalTime += [self.baseShutterSpeed totalTimeInSeconds] * pow (2, self.evInterval * i);
         totalTime += [self.baseShutterSpeed totalTimeInSeconds] * pow (2, -1 * self.evInterval * i);
 
@@ -48,7 +49,8 @@
     
     totalTime += self.shutterGap * self.numberOfShots;
 
-    NSLog(@"Total time: %f", totalTime);
+    NSLog(@"Total time: %f EVInterval %f", totalTime, self.evInterval);
+    [self getShutterLengths];
     return totalTime;
 }
 
@@ -58,6 +60,10 @@
     for(int i = 0; i < (int)(self.numberOfShots / 2); i++) {
         [times addObject:[[Time alloc] initWithTotalTimeInSeconds: [self.baseShutterSpeed totalTimeInSeconds] * pow (2, self.evInterval * i)]];
         [times addObject:[[Time alloc] initWithTotalTimeInSeconds:[self.baseShutterSpeed totalTimeInSeconds] * pow (2, -1 * self.evInterval * i)]];
+    }
+    
+    for(int i = 0; i < times.count; i++) {
+        NSLog(@"%f, ", [(Time *)[times objectAtIndex:i] totalTimeInSeconds] );
     }
     return times;
 }

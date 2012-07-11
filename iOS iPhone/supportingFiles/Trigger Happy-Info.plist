@@ -31,6 +31,8 @@
 	<array>
 		<string>audio</string>
 	</array>
+	<key>UIMainStoryboardFile</key>
+	<string>Trigger_Happy-iPhoneFamily</string>
 	<key>UIMainStoryboardFile~ipad</key>
 	<string>Trigger_Happy-iPad</string>
 	<key>UIMainStoryboardFile~iphone</key>

@@ -11,13 +11,33 @@
 #import "AppDelegate.h"
 #import "Time.h"
 
-@interface ITimeSelectorViewController()
+@interface ITimeSelectorViewController(internal)
 -(void)loadLabels;
--(void) zeroCheck:(NSInteger)row
-      inComponent:(NSInteger)component;// TODO: remove
+-(void) zeroCheck:(NSInteger)row inComponent:(NSInteger)component;// TODO: remove
 
 -(bool) shouldZeroCheck;
 -(void) loadDefaultTime;
+-(void) boundsCheck:(NSInteger)row inComponent:(NSInteger)component withPreviousLength:(Time *)time;
+
+
+-(void) loadHoursArray;
+-(void) loadMinutesArray;
+-(void) loadSecondsArray;
+-(void) loadSubSecondsArray;
+
+
+
+// Delegate to load time from a model
+-(IBAction) segmentDidChange;
+-(void) setPickerVisibility;
+-(void) registerSegmentChangeToModel;
+-(int) getSegmentIndex;
+-(IBAction)secondSubSecondSegmentChange;
+
+// delegates to set and get picker state
+-(void) setPickerMode: (PickerMode) state;
+-(PickerMode) getPickerMode;
+
 @end
 
 @implementation ITimeSelectorViewController
@@ -28,7 +48,7 @@
 
 @synthesize label_0, label_1, label_2;
 
-@synthesize segment, instructionLabel;
+@synthesize segment;
 @synthesize intervalData = _intervalData;
 @synthesize secondSubSecondSegment;
 
@@ -37,10 +57,8 @@
 @synthesize subSecondsValues = _subSecondValues;
 @synthesize subSecondsValuesNumbers = _subSecondsValuesNumbers;
 
-@synthesize warningBackround;
 
-- (void)viewWillAppear:(BOOL)animated {
-    
+-(void) viewDidLoad {
     _intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
     
     [self.segment setSelectedSegmentIndex:[self getSegmentIndex]];
@@ -48,7 +66,6 @@
     [self setPickerVisibility];
     
     [[[self navigationController] tabBarController] tabBar].hidden = YES;
-    [self.instructionLabel setHidden:true];
     
     [self loadHoursArray];
     [self loadMinutesArray];
@@ -58,10 +75,15 @@
     
     [self loadLabels];
     
-    [warningBackround setHidden:true];
     
     [self.secondSubSecondSegment setSelectedSegmentIndex:[self getPickerMode]];
     [self secondSubSecondSegmentChange];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    // TODO remove
 }
 
 //private to this class
@@ -110,7 +132,6 @@
     for(int i = 0; i < 24; i++) {
         [self.hoursValues addObject:[NSString stringWithFormat:@"%i", i]];
     }
-    
 }
 
 -(void) loadMinutesArray {
@@ -191,7 +212,6 @@
     }
 }
 
-
 -(void) changeHour: (int) hour {}
 -(void) changeMinute: (int) minute {}
 -(void) changeSecond: (int) second {}
@@ -210,23 +230,17 @@
     [self setPickerMode:secondSubSecondSegment.selectedSegmentIndex];
     [self loadLabels];
     [self loadDefaultTime];
-    [self.instructionLabel setHidden:true];
-    [self.warningBackround setHidden:true];
-
     
     if(self.getPickerMode == SECONDS) {
         [self changeMillisecond:0];
         if([[self time] totalTimeInSeconds] < 1.0) {
             [self zeroCheck:0 inComponent:2];
         }
-        
     }
     else {
         [self changeHour:0];
     }
     [self.picker reloadAllComponents];
-
-    
 }
 
 // ---------------------------------------------------------------------
@@ -278,8 +292,7 @@ numberOfRowsInComponent:(NSInteger)component {
 
 
 // set model values when a row is selected in a picker column
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
-      inComponent:(NSInteger)component {
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
 
     Time * previousLength = [[Time alloc] initWithTotalTimeInSeconds:[[self time] totalTimeInSeconds]];
     if(component == 0) {
@@ -302,22 +315,17 @@ numberOfRowsInComponent:(NSInteger)component {
             [self changeMillisecond:[[self.subSecondsValuesNumbers objectAtIndex:row] intValue]];
         }
     }
-    [self.instructionLabel setHidden:true];
-    [self.warningBackround setHidden:true];
+    
+        // TODO set instuction label to info
+    
     [self loadLabels];
     [self zeroCheck:row inComponent:component];
-    [self upperBoundsCheck:row inComponent:component withPreviousLength:previousLength];
-    [self lowerBoundsCheck:row inComponent:component];
-
+    [self boundsCheck:row inComponent:component withPreviousLength:previousLength];
 }
 
--(void) upperBoundsCheck:(NSInteger)row inComponent:(NSInteger)component withPreviousLength:(Time *)time {}
--(void) lowerBoundsCheck:(NSInteger)row
-inComponent:(NSInteger)component {}
+-(void) boundsCheck:(NSInteger)row inComponent:(NSInteger)component withPreviousLength:(Time *)time {/* overridden in subclass */}
 
--(void) zeroCheck:(NSInteger)row
-      inComponent:(NSInteger)component {
-     
+-(void) zeroCheck:(NSInteger)row inComponent:(NSInteger)component {
      if([self shouldZeroCheck]) {
         Time * currentTime = [self time];
 
@@ -342,17 +350,16 @@ inComponent:(NSInteger)component {}
 }
        
 -(bool) shouldZeroCheck {
-   return true;
+    // used with shutter subseconds
+    return true;
 }
 
 
 -(IBAction)segmentDidChange {
     [self setPickerVisibility];
     [self registerSegmentChangeToModel];
-    [self.warningBackround setHidden:true];
-    [self.instructionLabel setHidden:true];
     
-    
+    [infoViewController setHidden:segment.selectedSegmentIndex==1];
 }
 
 -(void) setPickerVisibility {
@@ -363,7 +370,6 @@ inComponent:(NSInteger)component {}
     else {
         [self.picker setHidden:true];
         [self.secondSubSecondSegment setHidden:true];
-        
     }
 }
 

@@ -121,6 +121,43 @@
 }
 
 
+- (NSString *) toStringDescriptive {
+    NSMutableString * timeDescription = [[NSMutableString alloc] initWithFormat:@"" ];
+    
+    if(self.hours > 1) {
+        [timeDescription appendFormat:@"%i hours ", self.hours];
+    }
+    else if(self.hours > 0) {
+        [timeDescription appendFormat:@"1 hour "];
+    }
+    
+    if(self.minutes > 1) {
+        [timeDescription appendFormat:@"%i minutes ", self.minutes];
+    }
+    else if(self.minutes > 0) {
+        [timeDescription appendFormat:@"1 minute "];
+    }
+    
+    if(self.seconds > 1) {
+        [timeDescription appendFormat:@"%i seconds ", self.seconds];
+    }
+    else if(self.seconds > 0) {
+        [timeDescription appendFormat:@"1 second "];
+    }
+    
+    if(self.milliseconds > 1) {
+        [timeDescription appendFormat:@"%i milliseconds ", self.milliseconds];
+    }
+    else if(self.milliseconds > 0) {
+        [timeDescription appendFormat:@"1 millisecond "];
+    }
+    
+    
+    
+    return timeDescription;
+}
+
+
 -(void) setHours:(int)hours {
     _hours = hours; 
     [self updateTotalTimeInSeconds];

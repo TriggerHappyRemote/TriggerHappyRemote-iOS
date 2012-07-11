@@ -52,32 +52,6 @@ IntervalData *intervalData;
     }
     shutterLengthLabel.text = [[NSString alloc] initWithFormat:@"%@ Shutter Length", [[[intervalData shutter] hdr] getButtonData]];
     
-/*
-    numberOfShotsLabel.text = [[NSString alloc] initWithFormat:@"%d Shot", [intervalData getNumberOfShots]];
-    
-    [intervalData setAutoShutter:false];
-    int shutterSeconds = [[intervalData shutterSpeed] seconds];
-    shutterLengthLabel.text = [[NSString alloc] initWithFormat:@"%d Second Base Shutter", shutterSeconds];
-    
-    
-    NSString * ev;
-    int evValue = [intervalData getEV];
-    if(evValue % 3 == 0) {
-        ev = [[NSString alloc] initWithFormat:@"%d",evValue/3];
-    }
-    else {
-        ev = [[NSString alloc] initWithFormat:@"%d/3",evValue];
-    }
-    
-    exposureValueLabel.text = [[NSString alloc] initWithFormat:@"%@ EV Interval", ev];
-    
-    //[centerEVTick setHidden:true];
-    //[self.view addSubview:centerEVTick];
-    
-    
-    [self.view drawRect:CGRectMake(20, 30, 20, 30)];
-    */
-
     [self loadShotsTickMarks];
     [self setLightMeterAxis];
     [[[intervalData shutter] hdr] getMaxShutterLength];

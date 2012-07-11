@@ -12,4 +12,8 @@
 
 @interface IShutterSelectorViewController : ITimeSelectorViewController
 
+@property (nonatomic, retain) NSString * infoMessage;
+@property (nonatomic, retain) NSString * warningMessage;
+
+
 @end

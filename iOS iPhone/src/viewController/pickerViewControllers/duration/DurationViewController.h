@@ -6,18 +6,16 @@
 //  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@class InfoViewController;
 
 @interface DurationViewController : UIViewController {
-    UIDatePicker *durationPicker;
-    UISegmentedControl *duration;
+    @protected
+    InfoViewController * infoViewController;
 }
 
 -(IBAction) toggleSegmentControl;
 
 @property (nonatomic, retain) IBOutlet UIDatePicker *durationPicker;
 @property (nonatomic, retain) IBOutlet UISegmentedControl *duration;
-@property (strong, nonatomic) IBOutlet UILabel *warningLabel;
-@property (strong, nonatomic) IBOutlet UIImageView*warningBackground;
 
 @end

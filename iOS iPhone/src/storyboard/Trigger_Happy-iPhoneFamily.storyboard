@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
     </dependencies>
     <scenes>
         <!--Single Shot View Controller - First-->
@@ -497,40 +497,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="warning.png" id="CRV-W7-gbk">
-                                <rect key="frame" x="0.0" y="277" width="320" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Interval must be shorter than duration" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="YWm-rl-7aS">
-                                <rect key="frame" x="89" y="288" width="231" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="info.png" id="Mn3-E8-DH2">
-                                <rect key="frame" x="1" y="277" width="320" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="The camera will take a picture every ZZZZ seconds" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Xaj-dZ-w4u">
-                                <rect key="frame" x="86" y="285" width="222" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Interval" id="x7B-L6-0cx"/>
                     <connections>
-                        <outlet property="instructionLabel" destination="YWm-rl-7aS" id="4T0-AW-1TU"/>
                         <outlet property="label_0" destination="2cL-Vt-k6X" id="LLH-Yz-Png"/>
                         <outlet property="label_1" destination="f12-ao-VdS" id="ecs-IO-069"/>
                         <outlet property="label_2" destination="lBt-qj-n4c" id="cuQ-Tj-Mpu"/>
                         <outlet property="picker" destination="to5-KQ-VfV" id="kNO-vj-A0C"/>
                         <outlet property="segment" destination="eaH-UU-xhb" id="KhQ-U4-xHe"/>
-                        <outlet property="warningBackround" destination="CRV-W7-gbk" id="J1e-1s-8Gw"/>
                     </connections>
                 </viewController>
             </objects>
@@ -574,17 +550,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="warning.png" id="LDj-IP-wLG">
-                                <rect key="frame" x="2" y="272" width="320" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Shutter length must be shorter than interval" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" id="XIi-HN-rJd">
-                                <rect key="frame" x="85" y="291" width="216" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="k2D-hS-cY0">
                                 <rect key="frame" x="6" y="2.5" width="312" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -602,13 +567,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Shutter" id="yqJ-iK-PAi"/>
                     <connections>
-                        <outlet property="instructionLabel" destination="XIi-HN-rJd" id="EyM-RX-6Wo"/>
                         <outlet property="label_0" destination="QSX-6t-Lv3" id="nyl-EG-dlE"/>
                         <outlet property="label_1" destination="9hi-rM-QGu" id="9SF-d0-iPW"/>
                         <outlet property="label_2" destination="oSj-hH-2Lu" id="ed8-LU-cIC"/>
                         <outlet property="picker" destination="VFI-re-rPy" id="nP3-Lh-rjI"/>
                         <outlet property="secondSubSecondSegment" destination="k2D-hS-cY0" id="WxH-6y-r2D"/>
-                        <outlet property="warningBackround" destination="LDj-IP-wLG" id="KYJ-M8-y9p"/>
                     </connections>
                 </viewController>
             </objects>
@@ -916,29 +879,16 @@
                                     <action selector="secondSubSecondSegmentChange" destination="qaa-X4-zK1" eventType="valueChanged" id="SvS-jo-jMg"/>
                                 </connections>
                             </segmentedControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="warning.png" id="MBK-1F-aCT">
-                                <rect key="frame" x="0.0" y="266" width="320" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="The cumulative shutter length of each shot in the bracket must be shorter than the interval" lineBreakMode="tailTruncation" numberOfLines="3" minimumFontSize="10" id="iWT-U8-yXa">
-                                <rect key="frame" x="78" y="271" width="227" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Base Shutter" id="3Qg-30-KLI"/>
                     <connections>
-                        <outlet property="instructionLabel" destination="iWT-U8-yXa" id="DmF-73-Yoj"/>
                         <outlet property="label_0" destination="g9Q-JD-N66" id="DAW-H0-COU"/>
                         <outlet property="label_1" destination="A39-1J-rRM" id="OUN-11-tFR"/>
                         <outlet property="label_2" destination="M6j-hz-ZCL" id="acC-K3-QzB"/>
                         <outlet property="picker" destination="Bmc-ib-j3S" id="Wgt-zR-l42"/>
                         <outlet property="secondSubSecondSegment" destination="ZJ9-4B-K0D" id="9Cn-Z2-9bA"/>
-                        <outlet property="warningBackround" destination="MBK-1F-aCT" id="Q8y-eC-yJp"/>
                     </connections>
                 </viewController>
             </objects>
@@ -1086,17 +1036,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <action selector="changeInDuration" destination="EyP-hA-iSM" eventType="valueChanged" id="OZQ-nS-EXf"/>
                                 </connections>
                             </datePicker>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="warning.png" id="c9t-b3-WzU">
-                                <rect key="frame" x="-1" y="280" width="320" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Duration must be longer than interval" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QH2-ty-86K">
-                                <rect key="frame" x="94" y="296" width="188" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
@@ -1104,8 +1043,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <connections>
                         <outlet property="duration" destination="3as-MY-ISk" id="hRY-lu-Gwj"/>
                         <outlet property="durationPicker" destination="VgS-Ve-fVt" id="Krf-7G-eh0"/>
-                        <outlet property="warningBackground" destination="c9t-b3-WzU" id="AcG-XH-2Zj"/>
-                        <outlet property="warningLabel" destination="QH2-ty-86K" id="lw7-7X-dOn"/>
                     </connections>
                 </viewController>
             </objects>
@@ -1206,7 +1143,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="fireButton.png" width="340" height="367"/>
         <image name="greenButton.png" width="599" height="104"/>
         <image name="hdrButton.png" width="549" height="83"/>
-        <image name="info.png" width="641" height="162"/>
         <image name="infoIcon.png" width="30" height="30"/>
         <image name="intervalSetterButton.png" width="549" height="83"/>
         <image name="intervalometerCountdownViewController.jpg" width="640" height="960"/>

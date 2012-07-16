@@ -16,9 +16,14 @@ typedef enum {
     IBOutlet UIImageView * background;
     IBOutlet UILabel * info;
     
+    UIImage * warningImage;
+    UIImage * infoImage;
 }
 
-+(InfoViewController *) withLocation:(float) x and:(float)y;
++(InfoViewController *) withLocationForPhone:(float) x and:(float)y;
+
++(InfoViewController *) withLocationForPad:(float) x and:(float)y;
+
 
 @property (nonatomic) InfoViewControllerType type;
 @property (retain, nonatomic) NSString * text;

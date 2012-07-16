@@ -32,7 +32,11 @@ NSTimer * headPhoneChecker;
 
 -(void) viewDidLoad {
     [super viewDidLoad];
-    infoViewController = [InfoViewController withLocation:0 and:187];
+    if(IDIOM == IPAD)
+        infoViewController = [InfoViewController withLocationForPad:82 and:552];
+    else
+        infoViewController = [InfoViewController withLocationForPhone:0 and:187];
+
     [self.view addSubview:infoViewController.view];
     AppDelegate * d = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     intervalData = [d getIntervalData];

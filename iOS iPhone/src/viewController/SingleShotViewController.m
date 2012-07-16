@@ -58,7 +58,10 @@ ButtonState state;
 
 -(void) viewDidLoad {
     [super viewDidLoad];
-    infoViewController = [InfoViewController withLocation:0 and:323];
+    if(IDIOM == IPAD)
+        infoViewController = [InfoViewController withLocationForPad:82 and:780];
+    else
+        infoViewController = [InfoViewController withLocationForPhone:0 and:323];
     [self.view addSubview:infoViewController.view];
 }
 

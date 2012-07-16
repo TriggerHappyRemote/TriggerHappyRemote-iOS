@@ -39,7 +39,28 @@
 		0A01662F15701054000D4E28 /* lightMeter0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A01662D15701054000D4E28 /* lightMeter0.png */; };
 		0A01663015701054000D4E28 /* lightMeterTick.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A01662E15701054000D4E28 /* lightMeterTick.png */; };
 		0A08C2E715ACEC200075ADFC /* padFireButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A08C2E615ACEC200075ADFC /* padFireButton.png */; };
-		0A08C2EB15ACFDFB0075ADFC /* intervalometerCountdownViewController.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A08C2EA15ACFDFB0075ADFC /* intervalometerCountdownViewController.png */; };
+		0A0E165E15AFA655003A2D4E /* aboutViewController_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0E165D15AFA655003A2D4E /* aboutViewController_PAD.png */; };
+		0A45535915ADF799002B955E /* intervalometerCountdownViewController_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45535815ADF799002B955E /* intervalometerCountdownViewController_PAD.png */; };
+		0A45535E15ADFDA5002B955E /* Default@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45535A15ADFDA5002B955E /* Default@2x~ipad.png */; };
+		0A45535F15ADFDA5002B955E /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45535B15ADFDA5002B955E /* Default@2x~iphone.png */; };
+		0A45536015ADFDA5002B955E /* Default~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45535C15ADFDA5002B955E /* Default~ipad.png */; };
+		0A45536115ADFDA5002B955E /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45535D15ADFDA5002B955E /* Default~iphone.png */; };
+		0A45536E15AE001F002B955E /* baseShutterSpeedButton_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45536215AE001F002B955E /* baseShutterSpeedButton_PAD.png */; };
+		0A45536F15AE001F002B955E /* bulbRampingButton_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45536315AE001F002B955E /* bulbRampingButton_PAD.png */; };
+		0A45537015AE001F002B955E /* buyTriggerHappyButton_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45536415AE001F002B955E /* buyTriggerHappyButton_PAD.png */; };
+		0A45537115AE001F002B955E /* durationSetterButton_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45536515AE001F002B955E /* durationSetterButton_PAD.png */; };
+		0A45537215AE001F002B955E /* endShutterButton_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45536615AE001F002B955E /* endShutterButton_PAD.png */; };
+		0A45537315AE001F002B955E /* exposureValueIntervalButton_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45536715AE001F002B955E /* exposureValueIntervalButton_PAD.png */; };
+		0A45537415AE001F002B955E /* HDRButton_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45536815AE001F002B955E /* HDRButton_PAD.png */; };
+		0A45537515AE001F002B955E /* intervalSetterButton_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45536915AE001F002B955E /* intervalSetterButton_PAD.png */; };
+		0A45537615AE001F002B955E /* learnMoreButton_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45536A15AE001F002B955E /* learnMoreButton_PAD.png */; };
+		0A45537715AE001F002B955E /* numberOfShotsButton_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45536B15AE001F002B955E /* numberOfShotsButton_PAD.png */; };
+		0A45537815AE001F002B955E /* shutterSetterButton_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45536C15AE001F002B955E /* shutterSetterButton_PAD.png */; };
+		0A45537915AE001F002B955E /* startShutterButton_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45536D15AE001F002B955E /* startShutterButton_PAD.png */; };
+		0A45537B15AE029C002B955E /* intervalometerViewController_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45537A15AE029C002B955E /* intervalometerViewController_PAD.png */; };
+		0A45537F15AE0A2F002B955E /* greenButton_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45537E15AE0A2F002B955E /* greenButton_PAD.png */; };
+		0A45538415AE0CAD002B955E /* info_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45538215AE0CAD002B955E /* info_PAD.png */; };
+		0A45538515AE0CAD002B955E /* warning_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45538315AE0CAD002B955E /* warning_PAD.png */; };
 		0A47D33D149F046A008D728A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47D33C149F046A008D728A /* UIKit.framework */; };
 		0A47D33F149F046A008D728A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47D33E149F046A008D728A /* Foundation.framework */; };
 		0A47D341149F046A008D728A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47D340149F046A008D728A /* CoreGraphics.framework */; };
@@ -97,8 +118,7 @@
 		0ADDC48015A62959003996E6 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDC47E15A62959003996E6 /* info.png */; };
 		0ADDC48915A63A8C003996E6 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADDC48815A63A8C003996E6 /* InfoViewController.m */; };
 		0AE197E1154B693D00714F55 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE197E0154B693D00714F55 /* AudioToolbox.framework */; };
-		0AEA9AD415902A320018C7D4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEA9AD215902A320018C7D4 /* Default.png */; };
-		0AEA9AD515902A320018C7D4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEA9AD315902A320018C7D4 /* Default@2x.png */; };
+		0AEF5C3815AE1D4700F58032 /* HDRViewController_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF5C3715AE1D4700F58032 /* HDRViewController_PAD.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,7 +154,28 @@
 		0A01662D15701054000D4E28 /* lightMeter0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightMeter0.png; sourceTree = "<group>"; };
 		0A01662E15701054000D4E28 /* lightMeterTick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightMeterTick.png; sourceTree = "<group>"; };
 		0A08C2E615ACEC200075ADFC /* padFireButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = padFireButton.png; path = pad/padFireButton.png; sourceTree = "<group>"; };
-		0A08C2EA15ACFDFB0075ADFC /* intervalometerCountdownViewController.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intervalometerCountdownViewController.png; path = pad/intervalometerCountdownViewController.png; sourceTree = "<group>"; };
+		0A0E165D15AFA655003A2D4E /* aboutViewController_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aboutViewController_PAD.png; path = pad/aboutViewController_PAD.png; sourceTree = "<group>"; };
+		0A45535815ADF799002B955E /* intervalometerCountdownViewController_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intervalometerCountdownViewController_PAD.png; path = pad/intervalometerCountdownViewController_PAD.png; sourceTree = "<group>"; };
+		0A45535A15ADFDA5002B955E /* Default@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x~ipad.png"; sourceTree = "<group>"; };
+		0A45535B15ADFDA5002B955E /* Default@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x~iphone.png"; sourceTree = "<group>"; };
+		0A45535C15ADFDA5002B955E /* Default~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~ipad.png"; sourceTree = "<group>"; };
+		0A45535D15ADFDA5002B955E /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
+		0A45536215AE001F002B955E /* baseShutterSpeedButton_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = baseShutterSpeedButton_PAD.png; path = pad/baseShutterSpeedButton_PAD.png; sourceTree = "<group>"; };
+		0A45536315AE001F002B955E /* bulbRampingButton_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bulbRampingButton_PAD.png; path = pad/bulbRampingButton_PAD.png; sourceTree = "<group>"; };
+		0A45536415AE001F002B955E /* buyTriggerHappyButton_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buyTriggerHappyButton_PAD.png; path = pad/buyTriggerHappyButton_PAD.png; sourceTree = "<group>"; };
+		0A45536515AE001F002B955E /* durationSetterButton_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = durationSetterButton_PAD.png; path = pad/durationSetterButton_PAD.png; sourceTree = "<group>"; };
+		0A45536615AE001F002B955E /* endShutterButton_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = endShutterButton_PAD.png; path = pad/endShutterButton_PAD.png; sourceTree = "<group>"; };
+		0A45536715AE001F002B955E /* exposureValueIntervalButton_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = exposureValueIntervalButton_PAD.png; path = pad/exposureValueIntervalButton_PAD.png; sourceTree = "<group>"; };
+		0A45536815AE001F002B955E /* HDRButton_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HDRButton_PAD.png; path = pad/HDRButton_PAD.png; sourceTree = "<group>"; };
+		0A45536915AE001F002B955E /* intervalSetterButton_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intervalSetterButton_PAD.png; path = pad/intervalSetterButton_PAD.png; sourceTree = "<group>"; };
+		0A45536A15AE001F002B955E /* learnMoreButton_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = learnMoreButton_PAD.png; path = pad/learnMoreButton_PAD.png; sourceTree = "<group>"; };
+		0A45536B15AE001F002B955E /* numberOfShotsButton_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = numberOfShotsButton_PAD.png; path = pad/numberOfShotsButton_PAD.png; sourceTree = "<group>"; };
+		0A45536C15AE001F002B955E /* shutterSetterButton_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shutterSetterButton_PAD.png; path = pad/shutterSetterButton_PAD.png; sourceTree = "<group>"; };
+		0A45536D15AE001F002B955E /* startShutterButton_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startShutterButton_PAD.png; path = pad/startShutterButton_PAD.png; sourceTree = "<group>"; };
+		0A45537A15AE029C002B955E /* intervalometerViewController_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intervalometerViewController_PAD.png; path = pad/intervalometerViewController_PAD.png; sourceTree = "<group>"; };
+		0A45537E15AE0A2F002B955E /* greenButton_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenButton_PAD.png; path = pad/greenButton_PAD.png; sourceTree = "<group>"; };
+		0A45538215AE0CAD002B955E /* info_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info_PAD.png; path = pad/info_PAD.png; sourceTree = "<group>"; };
+		0A45538315AE0CAD002B955E /* warning_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = warning_PAD.png; path = pad/warning_PAD.png; sourceTree = "<group>"; };
 		0A47D338149F046A008D728A /* Trigger Happy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trigger Happy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A47D33C149F046A008D728A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A47D33E149F046A008D728A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -191,7 +232,7 @@
 		0AAB32CB156F18F10028F04B /* IDataAccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDataAccessViewController.m; sourceTree = "<group>"; };
 		0AAB32CC156F18F10028F04B /* IntervalometerCountDownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalometerCountDownViewController.h; sourceTree = "<group>"; };
 		0AAB32CD156F18F10028F04B /* IntervalometerCountDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalometerCountDownViewController.m; sourceTree = "<group>"; };
-		0AAB32CE156F18F10028F04B /* IntervalometerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalometerViewController.h; sourceTree = "<group>"; };
+		0AAB32CE156F18F10028F04B /* IntervalometerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntervalometerViewController.h; path = ../viewController/IntervalometerViewController.h; sourceTree = "<group>"; };
 		0AAB32CF156F18F10028F04B /* IntervalometerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalometerViewController.m; sourceTree = "<group>"; };
 		0AAB32D0156F18F10028F04B /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		0AAB32D1156F18F10028F04B /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
@@ -231,8 +272,7 @@
 		0AE197DE154B68FE00714F55 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0AE197E0154B693D00714F55 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0AEA9ACC158FDB9F0018C7D4 /* FractionConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FractionConverter.h; sourceTree = "<group>"; };
-		0AEA9AD215902A320018C7D4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		0AEA9AD315902A320018C7D4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		0AEF5C3715AE1D4700F58032 /* HDRViewController_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HDRViewController_PAD.png; path = pad/HDRViewController_PAD.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,8 +368,10 @@
 		0A0166311570189C000D4E28 /* launch */ = {
 			isa = PBXGroup;
 			children = (
-				0AEA9AD215902A320018C7D4 /* Default.png */,
-				0AEA9AD315902A320018C7D4 /* Default@2x.png */,
+				0A45535A15ADFDA5002B955E /* Default@2x~ipad.png */,
+				0A45535B15ADFDA5002B955E /* Default@2x~iphone.png */,
+				0A45535C15ADFDA5002B955E /* Default~ipad.png */,
+				0A45535D15ADFDA5002B955E /* Default~iphone.png */,
 			);
 			path = launch;
 			sourceTree = "<group>";
@@ -359,6 +401,19 @@
 		0A08C2E515ACEBE90075ADFC /* pad */ = {
 			isa = PBXGroup;
 			children = (
+				0A45536215AE001F002B955E /* baseShutterSpeedButton_PAD.png */,
+				0A45536315AE001F002B955E /* bulbRampingButton_PAD.png */,
+				0A45536415AE001F002B955E /* buyTriggerHappyButton_PAD.png */,
+				0A45536515AE001F002B955E /* durationSetterButton_PAD.png */,
+				0A45536615AE001F002B955E /* endShutterButton_PAD.png */,
+				0A45537E15AE0A2F002B955E /* greenButton_PAD.png */,
+				0A45536715AE001F002B955E /* exposureValueIntervalButton_PAD.png */,
+				0A45536815AE001F002B955E /* HDRButton_PAD.png */,
+				0A45536915AE001F002B955E /* intervalSetterButton_PAD.png */,
+				0A45536A15AE001F002B955E /* learnMoreButton_PAD.png */,
+				0A45536B15AE001F002B955E /* numberOfShotsButton_PAD.png */,
+				0A45536C15AE001F002B955E /* shutterSetterButton_PAD.png */,
+				0A45536D15AE001F002B955E /* startShutterButton_PAD.png */,
 				0A08C2E615ACEC200075ADFC /* padFireButton.png */,
 			);
 			name = pad;
@@ -367,7 +422,10 @@
 		0A08C2E815ACFDE10075ADFC /* pad */ = {
 			isa = PBXGroup;
 			children = (
-				0A08C2EA15ACFDFB0075ADFC /* intervalometerCountdownViewController.png */,
+				0AEF5C3715AE1D4700F58032 /* HDRViewController_PAD.png */,
+				0A0E165D15AFA655003A2D4E /* aboutViewController_PAD.png */,
+				0A45537A15AE029C002B955E /* intervalometerViewController_PAD.png */,
+				0A45535815ADF799002B955E /* intervalometerCountdownViewController_PAD.png */,
 			);
 			name = pad;
 			sourceTree = "<group>";
@@ -381,6 +439,23 @@
 				0A0165FE15700EE2000D4E28 /* intervalometerViewController.png */,
 			);
 			name = phone;
+			sourceTree = "<group>";
+		};
+		0A45538015AE0C9B002B955E /* phone */ = {
+			isa = PBXGroup;
+			children = (
+				0ADDC47E15A62959003996E6 /* info.png */,
+			);
+			name = phone;
+			sourceTree = "<group>";
+		};
+		0A45538115AE0CA2002B955E /* pad */ = {
+			isa = PBXGroup;
+			children = (
+				0A45538215AE0CAD002B955E /* info_PAD.png */,
+				0A45538315AE0CAD002B955E /* warning_PAD.png */,
+			);
+			name = pad;
 			sourceTree = "<group>";
 		};
 		0A47D32D149F046A008D728A = {
@@ -527,6 +602,7 @@
 				0AAB32BE156F18F10028F04B /* Interval.h */,
 				0AAB32BF156F18F10028F04B /* Interval.m */,
 				0AAB32C0156F18F10028F04B /* IntervalData.h */,
+				0AAB32CE156F18F10028F04B /* IntervalometerViewController.h */,
 				0AAB32C1156F18F10028F04B /* IntervalData.m */,
 				0AAB32C2156F18F10028F04B /* IntervalDuration.h */,
 				0AAB32C3156F18F10028F04B /* IntervalDuration.m */,
@@ -553,7 +629,6 @@
 				0AAB32CB156F18F10028F04B /* IDataAccessViewController.m */,
 				0AAB32CC156F18F10028F04B /* IntervalometerCountDownViewController.h */,
 				0AAB32CD156F18F10028F04B /* IntervalometerCountDownViewController.m */,
-				0AAB32CE156F18F10028F04B /* IntervalometerViewController.h */,
 				0AAB32CF156F18F10028F04B /* IntervalometerViewController.m */,
 				0AAB32D0156F18F10028F04B /* AboutViewController.h */,
 				0AAB32D1156F18F10028F04B /* AboutViewController.m */,
@@ -656,7 +731,8 @@
 		0ADDC47D15A62959003996E6 /* info */ = {
 			isa = PBXGroup;
 			children = (
-				0ADDC47E15A62959003996E6 /* info.png */,
+				0A45538115AE0CA2002B955E /* pad */,
+				0A45538015AE0C9B002B955E /* phone */,
 			);
 			path = info;
 			sourceTree = "<group>";
@@ -770,11 +846,31 @@
 				0A01662F15701054000D4E28 /* lightMeter0.png in Resources */,
 				0A01663015701054000D4E28 /* lightMeterTick.png in Resources */,
 				0ABD738C157EC5B300A25B14 /* blank_test_1s.wav in Resources */,
-				0AEA9AD415902A320018C7D4 /* Default.png in Resources */,
-				0AEA9AD515902A320018C7D4 /* Default@2x.png in Resources */,
 				0ADDC48015A62959003996E6 /* info.png in Resources */,
 				0A08C2E715ACEC200075ADFC /* padFireButton.png in Resources */,
-				0A08C2EB15ACFDFB0075ADFC /* intervalometerCountdownViewController.png in Resources */,
+				0A45535915ADF799002B955E /* intervalometerCountdownViewController_PAD.png in Resources */,
+				0A45535E15ADFDA5002B955E /* Default@2x~ipad.png in Resources */,
+				0A45535F15ADFDA5002B955E /* Default@2x~iphone.png in Resources */,
+				0A45536015ADFDA5002B955E /* Default~ipad.png in Resources */,
+				0A45536115ADFDA5002B955E /* Default~iphone.png in Resources */,
+				0A45536E15AE001F002B955E /* baseShutterSpeedButton_PAD.png in Resources */,
+				0A45536F15AE001F002B955E /* bulbRampingButton_PAD.png in Resources */,
+				0A45537015AE001F002B955E /* buyTriggerHappyButton_PAD.png in Resources */,
+				0A45537115AE001F002B955E /* durationSetterButton_PAD.png in Resources */,
+				0A45537215AE001F002B955E /* endShutterButton_PAD.png in Resources */,
+				0A45537315AE001F002B955E /* exposureValueIntervalButton_PAD.png in Resources */,
+				0A45537415AE001F002B955E /* HDRButton_PAD.png in Resources */,
+				0A45537515AE001F002B955E /* intervalSetterButton_PAD.png in Resources */,
+				0A45537615AE001F002B955E /* learnMoreButton_PAD.png in Resources */,
+				0A45537715AE001F002B955E /* numberOfShotsButton_PAD.png in Resources */,
+				0A45537815AE001F002B955E /* shutterSetterButton_PAD.png in Resources */,
+				0A45537915AE001F002B955E /* startShutterButton_PAD.png in Resources */,
+				0A45537B15AE029C002B955E /* intervalometerViewController_PAD.png in Resources */,
+				0A45537F15AE0A2F002B955E /* greenButton_PAD.png in Resources */,
+				0A45538415AE0CAD002B955E /* info_PAD.png in Resources */,
+				0A45538515AE0CAD002B955E /* warning_PAD.png in Resources */,
+				0AEF5C3815AE1D4700F58032 /* HDRViewController_PAD.png in Resources */,
+				0A0E165E15AFA655003A2D4E /* aboutViewController_PAD.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -881,7 +977,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "supportingFiles/Trigger Happy-Prefix.pch";
 				INFOPLIST_FILE = "supportingFiles/Trigger Happy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Trigger Happy";
 				PROVISIONING_PROFILE = "";
@@ -899,7 +995,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "supportingFiles/Trigger Happy-Prefix.pch";
 				INFOPLIST_FILE = "supportingFiles/Trigger Happy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Trigger Happy";
 				PROVISIONING_PROFILE = "";

@@ -71,14 +71,30 @@ IntervalData *intervalData;
     // tick size - 39 px h x 22 (must be smaller)  < 7 shots
     
     
-    const int ticks = [[[intervalData shutter] hdr] numberOfShots];
-
-    const float xTick = 10.0f; 
-    const float yTick = 39.0f; 
-    const float xLeft = 33.0f;
-    const float xRight = 274.0f;
-    const float xLength = xRight - xLeft;
-    const float yBase = 61.0f;
+    int ticks;
+    float xTick;
+    float yTick; 
+    float xLeft;
+    float xRight;
+    float xLength;
+    float yBase;
+    if(IDIOM == IPAD) {
+        ticks = [[[intervalData shutter] hdr] numberOfShots];
+        xTick = 20.0f; 
+        yTick = 70.0f; 
+        xLeft = 115.0f;
+        xRight = 630.0f;
+        xLength = xRight - xLeft;
+        yBase = 156;
+    } else {
+        ticks = [[[intervalData shutter] hdr] numberOfShots];
+        xTick = 10.0f; 
+        yTick = 39.0f; 
+        xLeft = 33.0f;
+        xRight = 274.0f;
+        xLength = xRight - xLeft;
+        yBase = 61.0f;
+    }
     
 
     // distance between ticks
@@ -102,18 +118,11 @@ IntervalData *intervalData;
 }
 
 -(void) setLightMeterAxis {
-    
     float totalDynamicRange = ([[[intervalData shutter] hdr] numberOfShots] - 1) * [[[intervalData shutter] hdr] evInterval];
-    
     axis0Label.text = fractionConverter(totalDynamicRange / 2);
     axis1Label.text = fractionConverter(totalDynamicRange / 4);
     axis2Label.text = axis1Label.text;
     axis3Label.text = axis0Label.text;
-
-    
-    
-    
-    
 }
 
 - (void)viewDidUnload {

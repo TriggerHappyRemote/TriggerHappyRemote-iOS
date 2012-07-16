@@ -6,14 +6,13 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@class InfoViewController;
 
 @interface HDRShotsViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
     UIPickerView       *picker;
+    InfoViewController *infoViewController;
 
 }
-@property (retain, nonatomic) IBOutlet UILabel *instructionLabel;
-@property (retain, nonatomic) IBOutlet UIImageView *warningBackground;
 
 @property (strong, nonatomic) IBOutlet UIPickerView *picker;
 

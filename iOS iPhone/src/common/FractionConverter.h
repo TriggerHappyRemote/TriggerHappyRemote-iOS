@@ -3,11 +3,10 @@
 //  Trigger Happy
 //
 //  Created by Kevin Harrington on 6/18/12.
-//  Copyright (c) 2012 SmugMug. All rights reserved.
+//  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 
 
-#import <Foundation/Foundation.h>
 
 
 // C++ fraction converter

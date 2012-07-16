@@ -6,19 +6,19 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@class InfoViewController;
 
-@interface HDREVViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+@interface HDREVViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
+    IBOutlet InfoViewController * infoViewController;
+}
+
 
 @property (strong, nonatomic) IBOutlet UIPickerView *picker;
-//@property (strong, nonatomic) IBOutlet NSMutableArray *exposureValues;
 
 
 -(IBAction)textFieldReturn:(id)sender;
 
 
-@property (retain, nonatomic) IBOutlet UILabel *instructionLabel;
-@property (retain, nonatomic) IBOutlet UIImageView *warningBackground;
 
 
 @end

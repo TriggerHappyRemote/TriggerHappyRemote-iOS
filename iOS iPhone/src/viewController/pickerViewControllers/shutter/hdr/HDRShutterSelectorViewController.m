@@ -14,8 +14,10 @@
 
 -(void) viewDidLoad {
     [super viewDidLoad];
-    infoViewController = [InfoViewController withLocation:0 and:277];
-    infoViewController.type = InfoViewControllerInfo;
+    if(IDIOM == IPAD)
+        infoViewController = [InfoViewController withLocationForPad:82 and:300];
+    else
+        infoViewController = [InfoViewController withLocationForPhone:0 and:277];    infoViewController.type = InfoViewControllerInfo;
     infoViewController.text = self.infoMessage;
     [self.view addSubview:infoViewController.view];
 }

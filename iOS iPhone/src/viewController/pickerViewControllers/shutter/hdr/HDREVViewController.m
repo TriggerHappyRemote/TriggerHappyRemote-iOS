@@ -9,10 +9,9 @@
 #import "HDREVViewController.h"
 #include "IntervalData.h"
 #include "AppDelegate.h"
+//#include "FractionConverter.h"
 
 @implementation HDREVViewController
-@synthesize instructionLabel;
-@synthesize warningBackground;
 
 @synthesize picker;
 
@@ -48,8 +47,18 @@ NSString * evValuesThirds[evValuesThirdsSize] = {@"1/3",@"2/3",@"1",@"2",@"3",@"
     [[[self navigationController] tabBarController] tabBar].hidden = YES;
 
     prevRowIndex = 0;
-    [warningBackground setHidden:true];
-    [instructionLabel setHidden:true];
+}
+
+-(void) viewDidLoad {
+    if(IDIOM == IPAD)
+        infoViewController = [InfoViewController withLocationForPad:82 and:300];
+    else
+        infoViewController = [InfoViewController withLocationForPhone:0 and:277];
+    
+    
+    infoViewController.text =  @"The exposure between each shot in the bracket";
+    infoViewController.type = InfoViewControllerInfo;
+    [self.view addSubview:infoViewController.view];
 
 }
 
@@ -73,17 +82,7 @@ numberOfRowsInComponent:(NSInteger)component {
 } 
 
 
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
-      inComponent:(NSInteger)component
-{
-    NSLog(@"selected: row %i comp %i", row, component );
-    NSLog(@"setting %f", evModelValues[row]);
-
-    
-    NSLog(@"selected: row %i comp %i", row, component ); 
-    [warningBackground setHidden:true];
-    [instructionLabel setHidden:true];
-    
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     int previousEVInterval = [[[intervalData shutter] hdr] evInterval];
     
     [[[intervalData shutter] hdr] setEvInterval:evModelValues[row]];
@@ -91,11 +90,12 @@ numberOfRowsInComponent:(NSInteger)component {
     if([[[intervalData shutter] hdr] getMaxShutterLength] >= [[[intervalData interval] time] totalTimeInSeconds]) {
         [[[intervalData shutter] hdr] setEvInterval:previousEVInterval];
         [self.picker selectRow:prevRowIndex inComponent:0 animated:false];
-        [warningBackground setHidden:false];
-        [instructionLabel setHidden:false];
+        infoViewController.text = @"The cumulative shutter length of each shot in the bracket must be shorter than the interval";
+        infoViewController.type = InfoViewControllerWarning;
     }
     else {
-        prevRowIndex = row;
+        infoViewController.text = [[NSString alloc] initWithFormat:@"The exposure between each shot in the bracket will differ by %@ EV", evValuesThirds[row]];
+        infoViewController.type = InfoViewControllerInfo;
     }
 
     
@@ -108,8 +108,7 @@ numberOfRowsInComponent:(NSInteger)component {
 
 - (void)viewDidUnload
 {
-    [self setInstructionLabel:nil];
-    [self setWarningBackground:nil];
+    infoViewController = nil;
     [super viewDidUnload];
     self.picker = nil;
 }

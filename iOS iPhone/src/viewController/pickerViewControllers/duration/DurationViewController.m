@@ -37,7 +37,12 @@ IntervalData *intervalData;
         [durationPicker setHidden:false];
     }
     
-    infoViewController = [InfoViewController withLocation:0 and:277];
+    if(IDIOM == IPAD)
+        infoViewController = [InfoViewController withLocationForPad:82 and:300];
+    else
+        infoViewController = [InfoViewController withLocationForPhone:0 and:277];
+        
+        
     infoViewController.text =  [[NSString alloc] initWithFormat:@"The entire time lapse duration is %@", [intervalData.duration.time toStringDescriptive]];
     infoViewController.type = InfoViewControllerInfo;
     [self.view addSubview:infoViewController.view];

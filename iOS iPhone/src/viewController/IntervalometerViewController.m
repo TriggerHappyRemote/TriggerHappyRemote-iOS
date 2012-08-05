@@ -9,8 +9,10 @@
 #import "IntervalometerViewController.h"
 #import "AppDelegate.h"
 #import <MediaPlayer/MediaPlayer.h>
-
-
+#import "Constants.h"
+#import "Shutter.h"
+#import "Interval.h"
+#import "IntervalDuration.h"
 
 
 @interface IntervalometerViewController()
@@ -38,8 +40,7 @@ NSTimer * headPhoneChecker;
         infoViewController = [InfoViewController withLocationForPhone:0 and:187];
 
     [self.view addSubview:infoViewController.view];
-    AppDelegate * d = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    intervalData = [d getIntervalData];
+    intervalData = [IntervalData getInstance];
 }
 
 -(void) viewWillAppear:(BOOL)animated {

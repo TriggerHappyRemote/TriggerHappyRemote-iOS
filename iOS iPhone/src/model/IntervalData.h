@@ -6,13 +6,10 @@
 //  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "IntervalometerCountDownViewController.h"
-#import "Time.h"
-#import "IntervalDuration.h"
-#import "Interval.h"
-#import "Shutter.h"
-#import "ICameraController.h"
+@class ICameraController;
+@class Shutter;
+@class Interval;
+@class IntervalDuration;
 
 @interface IntervalData : NSObject
 
@@ -22,6 +19,6 @@
 
 @property (nonatomic, strong) ICameraController* cameraController;
 
-@property (nonatomic) CameraConrollerMode cameraContollerMode;
++ (IntervalData *)getInstance;
 
 @end

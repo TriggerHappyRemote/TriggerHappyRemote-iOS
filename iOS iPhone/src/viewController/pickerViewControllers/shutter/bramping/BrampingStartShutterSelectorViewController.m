@@ -9,6 +9,8 @@
 #import "BrampingStartShutterSelectorViewController.h"
 #import "IntervalData.h"
 #import "InfoViewController.h"
+#import "Shutter.h"
+#import "Interval.h"
 
 @implementation BrampingStartShutterSelectorViewController
 

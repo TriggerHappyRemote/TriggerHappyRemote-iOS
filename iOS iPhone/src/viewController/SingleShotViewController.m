@@ -14,6 +14,7 @@
 #import "IntervalData.h"
 #import "ICameraController.h"
 #import "InfoViewController.h"
+#import "Constants.h"
 
 @interface SingleShotViewController()
 -(void)enableCanFire;
@@ -45,8 +46,7 @@ ButtonState state;
     [super viewWillAppear:false];
     canFire = true;
     
-    AppDelegate * d = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    cameraController = [[d getIntervalData] cameraController]; 
+    intervalData = [IntervalData getInstance];
     
     useInfoMessage.textAlignment = UITextAlignmentCenter;
 

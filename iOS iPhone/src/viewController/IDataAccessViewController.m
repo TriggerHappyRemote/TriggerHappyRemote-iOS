@@ -19,8 +19,7 @@
 @synthesize visible;
 
 -(void) viewDidLoad {
-    AppDelegate * d = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    cameraController = [[d getIntervalData] cameraController]; 
+    intervalData = [IntervalData getInstance];
 }
 
 -(void) viewWillAppear:(BOOL)animated {

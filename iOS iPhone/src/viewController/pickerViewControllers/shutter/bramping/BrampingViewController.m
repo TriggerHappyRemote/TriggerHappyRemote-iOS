@@ -9,6 +9,7 @@
 #import "BrampingViewController.h"
 #import "AppDelegate.h"
 #import "IntervalData.h"
+#import "Shutter.h"
 
 @implementation BrampingViewController
 @synthesize endShutterDataLabel;
@@ -17,7 +18,7 @@
 IntervalData * intervalData;
 
 - (void) viewWillAppear:(BOOL)animated {
-    intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
+    intervalData = [IntervalData getInstance];
     
     endShutterDataLabel.text = [[[intervalData shutter] bramper] getEndShutterLabelText];
     

@@ -14,6 +14,10 @@
 #import "IntervalData.h"
 #import "IIntervalometer.h"
 
+#import "Shutter.h"
+#import "Interval.h"
+#import "IntervalDuration.h"
+
 @interface IntervalometerCountDownViewController() 
 -(void) setLabels;
 @end
@@ -42,7 +46,7 @@ bool running;
     
     [self.navigationController setNavigationBarHidden:YES animated:false];    
     
-    intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
+    intervalData = [IntervalData getInstance];
     
     /*
      

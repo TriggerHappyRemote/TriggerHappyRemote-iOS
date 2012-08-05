@@ -10,6 +10,9 @@
 #include "IntervalData.h"
 #include "AppDelegate.h"
 #import "InfoViewController.h"
+#import "Shutter.h"
+#import "Shutter.h"
+#import "Interval.h"
 
 @implementation HDREVViewController
 
@@ -29,7 +32,7 @@ NSString * evValuesThirds[evValuesThirdsSize] = {@"1/3",@"2/3",@"1",@"2",@"3",@"
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewDidLoad];
-    intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
+    intervalData = [IntervalData getInstance];
    
     if([[[intervalData shutter] hdr] evInterval] == .333) {
         [picker selectRow:0 inComponent:0 animated:false];

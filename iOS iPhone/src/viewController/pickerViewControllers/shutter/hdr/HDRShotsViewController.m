@@ -10,6 +10,8 @@
 #include "IntervalData.h"
 #include "AppDelegate.h"
 #import "InfoViewController.h"
+#import "Shutter.h"
+#import "Interval.h"
 
 @implementation HDRShotsViewController
 
@@ -28,7 +30,7 @@ int prevRowIndex;
     
     
     
-    intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
+    intervalData = [IntervalData getInstance];
         
   
     [[[self navigationController] tabBarController] tabBar].hidden = YES;

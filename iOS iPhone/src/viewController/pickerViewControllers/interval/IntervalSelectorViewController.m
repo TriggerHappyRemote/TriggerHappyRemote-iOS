@@ -10,6 +10,9 @@
 #import "IntervalData.h"
 #import "Time.h"
 #import "InfoViewController.h"
+#import "Shutter.h"
+#import "Interval.h"
+#import "IntervalDuration.h"
 
 @implementation IntervalSelectorViewController 
 

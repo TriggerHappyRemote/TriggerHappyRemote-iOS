@@ -11,6 +11,9 @@
 #import "AppDelegate.h"
 #import "Time.h"
 #import "ICameraController.h"
+#import "Shutter.h"
+#import "Interval.h"
+#import "IntervalDuration.h"
 
 @interface IIntervalometer()
     @property (nonatomic, strong) Time * remainingTime;
@@ -52,7 +55,7 @@ int hdrShutterIndex;
 
 
 - (id) init {
-    intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
+    intervalData = [IntervalData getInstance];
     cameraController = [intervalData cameraController];
     _remainingTime = [Time new];  
     shutterTimes = [[intervalData shutter] getShutterLengths];

@@ -7,7 +7,6 @@
 //
 
 #import "Shutter.h"
-#import "IntervalData.h"
 #import "AppDelegate.h"
 
 @implementation Shutter
@@ -21,7 +20,6 @@
 @synthesize pickerMode;
 @synthesize currentLength = _currentLength;
 
-IntervalData * intervalData;
 
 -(id) init {
     _mode = STANDARD;
@@ -30,7 +28,6 @@ IntervalData * intervalData;
     _bramper = [Bramper new];
     _hdr = [HDR new];
     self.pickerMode = SECONDS;
-    intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
     return self;
 }
 

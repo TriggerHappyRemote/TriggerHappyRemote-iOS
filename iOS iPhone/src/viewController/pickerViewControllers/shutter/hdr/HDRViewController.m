@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "IntervalData.h"
 #import "FractionConverter.h"
+#import "Shutter.h"
 
 @interface HDRViewController() 
 -(void)loadShotsTickMarks;
@@ -33,7 +34,7 @@ IntervalData *intervalData;
 
 
 -(void) viewWillAppear:(BOOL)animated {
-    intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
+    intervalData = [IntervalData getInstance];
 
     [[[self navigationController] tabBarController] tabBar].hidden = YES;
     

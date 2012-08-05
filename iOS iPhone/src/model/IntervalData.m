@@ -8,7 +8,12 @@
 
 #import "IntervalData.h"
 #import "AudioOutputCameraController.h"
+#import "IntervalDuration.h"
+#import "Interval.h"
+#import "Shutter.h"
+#import "ICameraController.h"
 
+static IntervalData *_globalInstance = nil;
 
 @implementation IntervalData
 
@@ -16,15 +21,11 @@
 @synthesize duration = _duration;
 @synthesize shutter = _shutter;
 @synthesize cameraController = _cameraController;
-@synthesize cameraContollerMode = _cameraContollerMode;
-
 
 - (id)init {
-    
     _shutter = [Shutter new];
     _interval = [Interval new];
     _duration = [IntervalDuration new];
-    _cameraContollerMode = AUDIO_CAMERA_CONTOLLER;
     _cameraController = [AudioOutputCameraController new];
     
     [[self.duration time] setTotalTimeInSeconds:3600];
@@ -35,6 +36,26 @@
 
     return self;
 }
+
++ (IntervalData *)getInstance {
+    static bool initialized = NO;
+    
+    if (!initialized) {
+        _globalInstance = [[self alloc] init];
+        initialized = YES;
+        NSLog(@"init");
+    }
+        else {
+            NSLog(@"return object");
+        }
+	
+	return  _globalInstance;
+}
+
+- (void) dealloc {
+	_globalInstance = nil;
+}
+
 
 @end
 

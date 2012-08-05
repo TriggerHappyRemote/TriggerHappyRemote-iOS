@@ -10,6 +10,9 @@
 #import "AppDelegate.h"
 #import "IntervalData.h"
 #import "InfoViewController.h"
+#import "Interval.h"
+#import "IntervalDuration.h"
+#import "Shutter.h"
 
 @implementation DurationViewController
 
@@ -22,7 +25,7 @@ IntervalData *intervalData;
 
 -(void) viewDidLoad {
     [super viewDidLoad];
-    intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
+    intervalData = [IntervalData getInstance];
 	[durationPicker setDatePickerMode:UIDatePickerModeCountDownTimer];
 
     if([[intervalData shutter] mode] == BRAMP) {

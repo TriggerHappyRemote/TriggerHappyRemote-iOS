@@ -12,31 +12,10 @@
 
 @implementation AppDelegate
 
-@synthesize intervalData, intervalometerModel;
-
 @synthesize window = _window;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{    
-    intervalData = [IntervalData new];
-    intervalometerModel = [IIntervalometer new];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     return YES;
-}
-
-- (IntervalData*) getIntervalData {
-    return intervalData;
-}
-
--(IIntervalometer *) getIntervalometerModel {
-    return intervalometerModel;
-}
-
--(void) setIntervalVC: (IntervalometerViewController *) vc {
-    intervalVC = vc;
-}
-
-- (IntervalometerViewController *) getIntervalVC {
-    return intervalVC;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

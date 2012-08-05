@@ -60,7 +60,7 @@
 
 
 -(void) viewDidLoad {
-    _intervalData = [(AppDelegate *)[[UIApplication sharedApplication] delegate] getIntervalData];
+    _intervalData = [IntervalData getInstance];
     
     [self.segment setSelectedSegmentIndex:[self getSegmentIndex]];
     

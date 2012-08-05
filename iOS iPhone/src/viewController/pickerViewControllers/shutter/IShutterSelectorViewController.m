@@ -9,6 +9,8 @@
 #import "IShutterSelectorViewController.h"
 #import "IntervalData.h"
 #import "InfoViewController.h"
+#import "Interval.h"
+#import "Time.h"
 
 @implementation IShutterSelectorViewController
 

@@ -9,6 +9,9 @@
 #import "HDRShutterSelectorViewController.h"
 #import "IntervalData.h"
 #import "InfoViewController.h"
+#import "Shutter.h"
+#import "Interval.h"
+#import "Time.h"
 
 @implementation HDRShutterSelectorViewController
 

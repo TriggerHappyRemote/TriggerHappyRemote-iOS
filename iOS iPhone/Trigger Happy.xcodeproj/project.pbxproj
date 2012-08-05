@@ -232,7 +232,7 @@
 		0AAB32CB156F18F10028F04B /* IDataAccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDataAccessViewController.m; sourceTree = "<group>"; };
 		0AAB32CC156F18F10028F04B /* IntervalometerCountDownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalometerCountDownViewController.h; sourceTree = "<group>"; };
 		0AAB32CD156F18F10028F04B /* IntervalometerCountDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalometerCountDownViewController.m; sourceTree = "<group>"; };
-		0AAB32CE156F18F10028F04B /* IntervalometerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntervalometerViewController.h; path = ../viewController/IntervalometerViewController.h; sourceTree = "<group>"; };
+		0AAB32CE156F18F10028F04B /* IntervalometerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalometerViewController.h; sourceTree = "<group>"; };
 		0AAB32CF156F18F10028F04B /* IntervalometerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalometerViewController.m; sourceTree = "<group>"; };
 		0AAB32D0156F18F10028F04B /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		0AAB32D1156F18F10028F04B /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
@@ -602,7 +602,6 @@
 				0AAB32BE156F18F10028F04B /* Interval.h */,
 				0AAB32BF156F18F10028F04B /* Interval.m */,
 				0AAB32C0156F18F10028F04B /* IntervalData.h */,
-				0AAB32CE156F18F10028F04B /* IntervalometerViewController.h */,
 				0AAB32C1156F18F10028F04B /* IntervalData.m */,
 				0AAB32C2156F18F10028F04B /* IntervalDuration.h */,
 				0AAB32C3156F18F10028F04B /* IntervalDuration.m */,
@@ -629,6 +628,7 @@
 				0AAB32CB156F18F10028F04B /* IDataAccessViewController.m */,
 				0AAB32CC156F18F10028F04B /* IntervalometerCountDownViewController.h */,
 				0AAB32CD156F18F10028F04B /* IntervalometerCountDownViewController.m */,
+				0AAB32CE156F18F10028F04B /* IntervalometerViewController.h */,
 				0AAB32CF156F18F10028F04B /* IntervalometerViewController.m */,
 				0AAB32D0156F18F10028F04B /* AboutViewController.h */,
 				0AAB32D1156F18F10028F04B /* AboutViewController.m */,

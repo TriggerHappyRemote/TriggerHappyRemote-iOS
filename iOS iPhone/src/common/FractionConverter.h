@@ -1,13 +1,10 @@
 //
 //  FractionConverter.h
-//  Trigger Happy
+//  Trigger Happy Remote
 //
-//  Created by Kevin Harrington on 6/18/12.
+//  Created by Kevin Harrington on 1/9/12.
 //  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
-
-
-
 
 // C++ fraction converter
 NSString * fractionConverter(float fraction);

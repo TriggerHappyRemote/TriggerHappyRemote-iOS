@@ -1,8 +1,8 @@
 //
 //  MoreViewController.h
-//  Trigger Happy V1.0 Lite
+//  Trigger Happy Remote
 //
-//  Created by Kevin Harrington on 10/10/11.
+//  Created by Kevin Harrington on 1/9/12.
 //  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 

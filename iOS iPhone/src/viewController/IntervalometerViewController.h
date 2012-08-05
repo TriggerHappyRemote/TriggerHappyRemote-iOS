@@ -1,11 +1,9 @@
 //
 //  IntervalometerViewController.h
-//  Trigger Happy V1.0
+//  Trigger Happy Remote
 //
-//  Created by Kevin Harrington on 12/19/11.
-//  Copyright (c) 2011 Trigger Happy, LLC. All rights reserved.
-//
-//  Serves as the main menu for the intervalometer 
+//  Created by Kevin Harrington on 1/9/12.
+//  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

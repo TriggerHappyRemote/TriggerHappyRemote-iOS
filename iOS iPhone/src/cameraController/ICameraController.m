@@ -1,9 +1,9 @@
 //
 //  ICameraController2.m
-//  Trigger-Happy
+//  Trigger Happy Remote
 //
-//  Created by Kevin Harrington on 5/11/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Kevin Harrington on 1/9/12.
+//  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 
 #import "ICameraController.h"

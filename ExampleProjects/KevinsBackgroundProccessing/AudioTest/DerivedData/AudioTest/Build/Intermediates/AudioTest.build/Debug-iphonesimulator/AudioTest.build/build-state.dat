@@ -1,304 +1,0 @@
-TAudioTest
-v5
-r1
-cCheck dependencies
-cProcessInfoPlistFile /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/Info.plist AudioTest/AudioTest-Info.plist
-cProcessPCH /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/PrecompiledHeaders/AudioTest-Prefix-gkcqcwzgslyojnerzckqbzufwxjq/AudioTest-Prefix.pch.pth AudioTest/AudioTest-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/main.o /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/audio_testAppDelegate.o /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/audio_testAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/AudioTestViewControllerViewController.o /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/AudioTestViewControllerViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/AudioTest normal i386
-cGenerateDSYMFile /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app.dSYM /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/AudioTest
-cCopyStringsFile /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/en.lproj/InfoPlist.strings AudioTest/en.lproj/InfoPlist.strings
-cCompileStoryboard /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/en.lproj/MainStoryboard.storyboard
-cCpResource "AudioTest/../../../../iOS iPhone/soundCommands/test/20kHz_plus_1kHz_1s.wav" DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/20kHz_plus_1kHz_1s.wav
-cTouch /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk
-c000000004F453DF80000000000000110
-t1329937912
-s272
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
-c000000004FAD66BA0000000000182900
-t1336764090
-s1583360
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004FAD66BB0000000000244490
-t1336764091
-s2376848
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004FAD66BC0000000000353830
-t1336764092
-s3487792
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004FAD66C50000000000905E40
-t1336764101
-s9461312
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/../../../../iOS iPhone/soundCommands/test/20kHz_plus_1kHz_1s.wav
-c000000004FBDA18C00000000000158B6
-t1337827724
-s88246
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/AudioTest-Prefix.pch
-c000000004FCE7C220000000000000141
-t1338932258
-s321
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/AudioTestViewControllerViewController.h
-c000000004FCE7E9000000000000003C4
-t1338932880
-s964
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/AudioTestViewControllerViewController.m
-c000000004FCE7F640000000000001069
-t1338933092
-s4201
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/audio_testAppDelegate.h
-c000000004FCE7C220000000000000135
-t1338932258
-s309
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/audio_testAppDelegate.m
-c000000004FCE7C220000000000000820
-t1338932258
-s2080
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/audio_testDetailViewController.m
-c000000004FCE7C22000000000000053A
-t1338932258
-s1338
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/audio_testMasterViewController.m
-c000000004FCE7C220000000000000E25
-t1338932258
-s3621
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/en.lproj/InfoPlist.strings
-c000000004FCE7C22000000000000002D
-t1338932258
-s45
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/en.lproj/MainStoryboard.storyboard
-c000000004FCE7F8F000000000000134A
-t1338933135
-s4938
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/main.m
-c000000004FCE7C220000000000000170
-t1338932258
-s368
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/AudioTest.LinkFileList
-c000000004FCE7F6400000000000002D8
-t1338933092
-s728
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/AudioTestViewControllerViewController.o
-t1338933093
-s67724
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/audio_testAppDelegate.o
-t1338933092
-s59920
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/audio_testDetailViewController.o
-t2
-s0
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/audio_testMasterViewController.o
-t2
-s0
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/main.o
-t1338933092
-s3380
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/PrecompiledHeaders/AudioTest-Prefix-gkcqcwzgslyojnerzckqbzufwxjq/AudioTest-Prefix.pch.pth
-t1338933092
-s4029792
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app
-t1338933094
-s238
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app.dSYM
-t1338933093
-s102
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/20kHz_plus_1kHz_1s.wav
-t1338933093
-s88246
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/AudioTest
-t1338933093
-s26948
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/Info.plist
-t1338933092
-s885
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/PkgInfo
-t1338933092
-s8
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/en.lproj/InfoPlist.strings
-t1338933093
-s42
-
-N/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/en.lproj/MainStoryboard.storyboardc
-t1338933094
-s170
-
-NAudioTest/AudioTest-Info.plist
-c000000004FCE7C7A0000000000000521
-t1338932346
-s1313
-
-CBuild AST from /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/AudioTestViewControllerViewController.m
-r0
-
-CBuild AST from /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/audio_testAppDelegate.m
-r0
-
-CBuild AST from /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/audio_testDetailViewController.m
-r0
-
-CBuild AST from /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/audio_testMasterViewController.m
-r0
-
-CBuild AST from /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/main.m
-r0
-
-CCheck dependencies
-r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies94a19e0fb77eb541^f60da40fb77eb541^---0#1#0#--18"Check dependencies36"435A66AD-0B68-483B-B24E-6C74070DB798-
-
-CCompileC DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/AudioTestViewControllerViewController.o /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/AudioTestViewControllerViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s360625892.937078
-e360625893.296649
-r1
-xCompileC
-xDerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/AudioTestViewControllerViewController.o
-x/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/AudioTestViewControllerViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection160"Compile /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/AudioTestViewControllerViewController.ma305f0e4b67eb541^a4fd4be5b67eb541^---0#0#0#-19%DVTDocumentLocation2@168"file://localhost/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/AudioTestViewControllerViewController.m0000000000000000^4771"CompileC DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/AudioTestViewControllerViewController.o AudioTest/AudioTestViewControllerViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/AudioTest-generated-files.hmap -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/AudioTest-own-target-headers.hmap -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/AudioTest-all-target-headers.hmap -iquote /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/AudioTest-project-headers.hmap -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/include -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/DerivedSources/i386 -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/DerivedSources -F/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator -include /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/PrecompiledHeaders/AudioTest-Prefix-gkcqcwzgslyojnerzckqbzufwxjq/AudioTest-Prefix.pch -MMD -MT dependencies -MF /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/AudioTestViewControllerViewController.d --serialize-diagnostics /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/AudioTestViewControllerViewController.dia -c /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/AudioTestViewControllerViewController.m -o /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/AudioTestViewControllerViewController.o36"FB4530ED-51F7-4181-847B-1C885C4586C8-
-
-CCompileC DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/audio_testAppDelegate.o /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/audio_testAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s360625892.872503
-e360625893.036273
-r1
-xCompileC
-xDerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/audio_testAppDelegate.o
-x/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/audio_testAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection144"Compile /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/audio_testAppDelegate.m4085dfe4b67eb541^2d770ae5b67eb541^---0#0#0#-19%DVTDocumentLocation2@152"file://localhost/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/audio_testAppDelegate.m0000000000000000^4675"CompileC DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/audio_testAppDelegate.o AudioTest/audio_testAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/AudioTest-generated-files.hmap -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/AudioTest-own-target-headers.hmap -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/AudioTest-all-target-headers.hmap -iquote /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/AudioTest-project-headers.hmap -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/include -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/DerivedSources/i386 -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/DerivedSources -F/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator -include /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/PrecompiledHeaders/AudioTest-Prefix-gkcqcwzgslyojnerzckqbzufwxjq/AudioTest-Prefix.pch -MMD -MT dependencies -MF /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/audio_testAppDelegate.d --serialize-diagnostics /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/audio_testAppDelegate.dia -c /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/audio_testAppDelegate.m -o /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/audio_testAppDelegate.o36"1643A51D-B89B-49C2-A51A-B20E80A63E65-
-
-CCompileC DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/audio_testDetailViewController.o /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/audio_testDetailViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-r0
-
-CCompileC DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/audio_testMasterViewController.o /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/audio_testMasterViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-r0
-
-CCompileC DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/main.o /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s360625892.871526
-e360625892.935817
-r1
-xCompileC
-xDerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/main.o
-x/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"Compile /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/main.m7f50dfe4b67eb541^2c9defe4b67eb541^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/main.m0000000000000000^4573"CompileC DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/main.o AudioTest/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/AudioTest-generated-files.hmap -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/AudioTest-own-target-headers.hmap -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/AudioTest-all-target-headers.hmap -iquote /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/AudioTest-project-headers.hmap -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/include -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/DerivedSources/i386 -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/DerivedSources -F/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator -include /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/PrecompiledHeaders/AudioTest-Prefix-gkcqcwzgslyojnerzckqbzufwxjq/AudioTest-Prefix.pch -MMD -MT dependencies -MF /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/main.dia -c /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/main.m -o /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/main.o36"F23836DB-858C-4596-8253-2CD3379920BA-
-
-CCompileStoryboard /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/en.lproj/MainStoryboard.storyboard
-s360625935.696921
-e360625935.892526
-r1
-xCompileStoryboard
-x/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/en.lproj/MainStoryboard.storyboard
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"CompileStoryboard AudioTest/en.lproj/MainStoryboard.storyboard967ab20fb77eb541^6d91e40fb77eb541^---0#0#0#-19%DVTDocumentLocation2@163"file://localhost/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/en.lproj/MainStoryboard.storyboard0000000000000000^1128"CompileStoryboard AudioTest/en.lproj/MainStoryboard.storyboard    cd /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest    setenv IBSC_MINIMUM_COMPATIBILITY_VERSION 5.1    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/en.lproj/MainStoryboard.storyboardc /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/en.lproj/MainStoryboard.storyboard --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk36"C196D59B-9CFC-4454-A945-9D7267C63774-
-
-CCopyStringsFile /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/en.lproj/InfoPlist.strings AudioTest/en.lproj/InfoPlist.strings
-s360625893.388083
-e360625893.415589
-r1
-xCopyStringsFile
-x/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/en.lproj/InfoPlist.strings
-xAudioTest/en.lproj/InfoPlist.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy AudioTest/en.lproj/InfoPlist.strings267063e5b67eb541^a3736ae5b67eb541^---0#0#0#-19%DVTDocumentLocation2@155"file://localhost/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/en.lproj/InfoPlist.strings0000000000000000^773"CopyStringsFile DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/en.lproj/InfoPlist.strings AudioTest/en.lproj/InfoPlist.strings    cd /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/en.lproj -- AudioTest/en.lproj/InfoPlist.strings36"A8E2E29C-CCDA-4070-A09C-9A6A6F22E8F0-
-
-CCpResource "AudioTest/../../../../iOS iPhone/soundCommands/test/20kHz_plus_1kHz_1s.wav" DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/20kHz_plus_1kHz_1s.wav
-s360625893.416785
-e360625893.431398
-r1
-xCpResource
-xAudioTest/../../../../iOS iPhone/soundCommands/test/20kHz_plus_1kHz_1s.wav
-xDerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/20kHz_plus_1kHz_1s.wav
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Copy DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/20kHz_plus_1kHz_1s.wav58c66ae5b67eb541^4b786ee5b67eb541^---0#0#0#-19%DVTDocumentLocation2@214"file://localhost/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/20kHz_plus_1kHz_1s.wav000000000080d041^1062"CpResource "AudioTest/../../../../iOS iPhone/soundCommands/test/20kHz_plus_1kHz_1s.wav" DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/20kHz_plus_1kHz_1s.wav    cd /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip "/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/../../../../iOS iPhone/soundCommands/test/20kHz_plus_1kHz_1s.wav" /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app36"B413FA72-D00C-4F67-832D-38B8B61CDB0C-
-
-CGenerateDSYMFile /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app.dSYM /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/AudioTest
-s360625893.357941
-e360625893.379308
-r1
-xGenerateDSYMFile
-x/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app.dSYM
-x/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/AudioTest
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection191"Generating /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app.dSYM18b55be5b67eb541^3a2461e5b67eb541^---0#0#0#-19%DVTDocumentLocation2@196"file://localhost/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app.dSYM000000000080d041^962"GenerateDSYMFile DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app.dSYM DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/AudioTest    cd /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/dsymutil /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/AudioTest -o /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app.dSYM36"A04DCD5C-A7B1-4EB5-A2C7-BBF3A4B43120-
-
-CLd /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/AudioTest normal i386
-s360625893.303801
-e360625893.350477
-r1
-xLd
-x/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/AudioTest
-xnormal
-xi386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection190"Link /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/AudioTestf0de4de5b67eb541^48c359e5b67eb541^---0#0#0#--1679"Ld DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/AudioTest normal i386    cd /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -L/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator -F/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator -filelist /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/Objects-normal/i386/AudioTest.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -Xlinker -no_implicit_dylibs -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -framework AVFoundation -framework UIKit -framework Foundation -framework CoreGraphics -o /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/AudioTest36"F4DDA07E-CCB8-435C-AA7D-60BE11EBE7A7-
-
-CProcessInfoPlistFile /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/Info.plist AudioTest/AudioTest-Info.plist
-s360625892.234810
-e360625892.239155
-r1
-xProcessInfoPlistFile
-x/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/Info.plist
-xAudioTest/AudioTest-Info.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"Process AudioTest/AudioTest-Info.plist772e3ce4b67eb541^d1ea44e4b67eb541^---0#0#0#-19%DVTDocumentLocation2@149"file://localhost/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/AudioTest-Info.plist0000000000000000^949"ProcessInfoPlistFile DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/Info.plist AudioTest/AudioTest-Info.plist    cd /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility AudioTest/AudioTest-Info.plist -genpkginfo /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app/Info.plist36"7318433C-24C1-44AF-BDBB-1E231B08B1F8-
-
-CProcessPCH /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/PrecompiledHeaders/AudioTest-Prefix-gkcqcwzgslyojnerzckqbzufwxjq/AudioTest-Prefix.pch.pth AudioTest/AudioTest-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s360625892.247439
-e360625892.864509
-r1
-xProcessPCH
-x/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/PrecompiledHeaders/AudioTest-Prefix-gkcqcwzgslyojnerzckqbzufwxjq/AudioTest-Prefix.pch.pth
-xAudioTest/AudioTest-Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Precompile AudioTest/AudioTest-Prefix.pch64793fe4b67eb541^8560dde4b67eb541^---0#0#0#-19%DVTDocumentLocation2@149"file://localhost/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/AudioTest-Prefix.pch0000000000000000^4402"ProcessPCH DerivedData/AudioTest/Build/Intermediates/PrecompiledHeaders/AudioTest-Prefix-gkcqcwzgslyojnerzckqbzufwxjq/AudioTest-Prefix.pch.pth AudioTest/AudioTest-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/AudioTest-generated-files.hmap -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/AudioTest-own-target-headers.hmap -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/AudioTest-all-target-headers.hmap -iquote /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/AudioTest-project-headers.hmap -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/include -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/DerivedSources/i386 -I/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/AudioTest.build/Debug-iphonesimulator/AudioTest.build/DerivedSources -F/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator --serialize-diagnostics /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/PrecompiledHeaders/AudioTest-Prefix-gkcqcwzgslyojnerzckqbzufwxjq/AudioTest-Prefix.pch.dia -c /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/AudioTest/AudioTest-Prefix.pch -o /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/PrecompiledHeaders/AudioTest-Prefix-gkcqcwzgslyojnerzckqbzufwxjq/AudioTest-Prefix.pch.pth -MMD -MT dependencies -MF /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Intermediates/PrecompiledHeaders/AudioTest-Prefix-gkcqcwzgslyojnerzckqbzufwxjq/AudioTest-Prefix.pch.d36"26B1F146-94FE-4917-8BBC-D67031600519-
-
-CProcessPCH /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Index/PrecompiledHeaders/AudioTest-Prefix-fxckihoxqncdwuewxgewedrcaizq_ast/AudioTest-Prefix.pch.pth AudioTest/AudioTest-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CTouch /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app
-s360625935.901125
-e360625935.906348
-r1
-xTouch
-x/Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection181"Touch /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app66bfe60fb77eb541^8813e80fb77eb541^---0#0#0#--582"Touch DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app    cd /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Kevin/Documents/git-repo/triggerhappy-ios/ExampleProjects/KevinsBackgroundProccessing/AudioTest/DerivedData/AudioTest/Build/Products/Debug-iphonesimulator/AudioTest.app36"2A756F4A-F96D-477C-BB62-E08F26F20B5A-
-

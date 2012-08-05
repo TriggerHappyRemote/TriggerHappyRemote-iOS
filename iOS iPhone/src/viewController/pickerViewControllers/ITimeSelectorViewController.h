@@ -1,12 +1,10 @@
 //
 //  ITimeSelectorViewController.h
-//  Trigger Happy, V1.0
+//  Trigger Happy Remote
 //
-//  Created by Kevin Harrington on 4/23/12.
+//  Created by Kevin Harrington on 1/9/12.
 //  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
-//  Supercass for all ViewControllers using a 3 column UIPickerView 
-//  
 
 
 #import "Constants.h"

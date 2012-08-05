@@ -1,9 +1,9 @@
 //
 //  AppDelegate.h
-//  camera-remote
+//  Trigger Happy Remote
 //
-//  Created by Kevin Harrington on 12/18/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by Kevin Harrington on 1/9/12.
+//  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

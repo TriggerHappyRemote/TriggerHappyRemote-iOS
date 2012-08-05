@@ -13,7 +13,6 @@
 -(void) updateTotalTimeInSeconds;
 @end
 
-
 @implementation Time
 
 @synthesize totalTimeInSeconds = _totalTimeInSeconds;

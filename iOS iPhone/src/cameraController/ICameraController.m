@@ -13,7 +13,9 @@
 - (void) fireCamera: (Time *) time {}
 
 // start an aribarty long signal to the shutter on the camera
-- (void) fireButtonPressed {}
+- (void) fireButtonPressed {
+    NSLog(@"big error");
+}
 
 // stop an aribarty long signal to the shutter on the camera
 - (void) fireButtonDepressed {}

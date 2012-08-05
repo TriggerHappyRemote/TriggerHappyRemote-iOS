@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "Time.h"
 #import "Constants.h"
+@class Time;
+
 @interface Bramper : NSObject
 
 @property (nonatomic, strong) Time * startShutterLength;

@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #include "AppDelegate.h"
-
 
 int main(int argc, char *argv[])
 {

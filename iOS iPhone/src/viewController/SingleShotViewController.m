@@ -72,6 +72,8 @@ ButtonState state;
 -(IBAction) fireTownDown {
     
     if(canFire) {
+        
+        // TODO: figure out why the heck I do below:
         canFire = false;
         hardwareChecker = [NSTimer scheduledTimerWithTimeInterval:.3
                                                                 target:self

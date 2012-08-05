@@ -76,11 +76,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/cameraController/AudioOutputCameraController.m"
-         timestampString = "365889876.105716"
+         timestampString = "365895054.963516"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "110"
-         endingLineNumber = "110"
+         startingLineNumber = "105"
+         endingLineNumber = "105"
          landmarkName = "-startArbitraryAudioStream"
          landmarkType = "5">
       </FileBreakpoint>
@@ -89,11 +89,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/cameraController/AudioOutputCameraController.m"
-         timestampString = "365889879.32936"
+         timestampString = "365895054.963516"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "109"
-         endingLineNumber = "109"
+         startingLineNumber = "104"
+         endingLineNumber = "104"
          landmarkName = "-startArbitraryAudioStream"
          landmarkType = "5">
       </FileBreakpoint>
@@ -102,11 +102,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/cameraController/AudioOutputCameraController.m"
-         timestampString = "365889907.630773"
+         timestampString = "365895054.963516"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "111"
-         endingLineNumber = "111"
+         startingLineNumber = "106"
+         endingLineNumber = "106"
          landmarkName = "-startArbitraryAudioStream"
          landmarkType = "5">
       </FileBreakpoint>
@@ -115,11 +115,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/cameraController/AudioOutputCameraController.m"
-         timestampString = "365889942.830067"
+         timestampString = "365895054.963516"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "33"
-         endingLineNumber = "33"
+         startingLineNumber = "28"
+         endingLineNumber = "28"
          landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
@@ -290,6 +290,136 @@
          startingLineNumber = "27"
          endingLineNumber = "27"
          landmarkName = "-init"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/cameraController/AudioOutputCameraController.m"
+         timestampString = "365895137.123068"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "210"
+         endingLineNumber = "210"
+         landmarkName = "-isHardwareConnected"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/cameraController/AudioOutputCameraController.m"
+         timestampString = "365895139.206692"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "208"
+         endingLineNumber = "208"
+         landmarkName = "-isHardwareConnected"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/cameraController/AudioOutputCameraController.m"
+         timestampString = "365895140.125743"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "206"
+         endingLineNumber = "206"
+         landmarkName = "-isHardwareConnected"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/viewController/IDataAccessViewController.m"
+         timestampString = "365895209.907074"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "26"
+         endingLineNumber = "26"
+         landmarkName = "-viewWillAppear:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/viewController/IDataAccessViewController.m"
+         timestampString = "365895210.735429"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "29"
+         endingLineNumber = "29"
+         landmarkName = "-viewWillAppear:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/viewController/IDataAccessViewController.m"
+         timestampString = "365895219.944157"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "40"
+         endingLineNumber = "40"
+         landmarkName = "-hardwareCheck"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/viewController/IDataAccessViewController.m"
+         timestampString = "365895256.560274"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "46"
+         endingLineNumber = "46"
+         landmarkName = "-hardwareCheck"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/cameraController/AudioOutputCameraController.m"
+         timestampString = "365895495.346375"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "123"
+         endingLineNumber = "123"
+         landmarkName = "-fireCamera:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/viewController/SingleShotViewController.m"
+         timestampString = "365895562.892043"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "73"
+         endingLineNumber = "73"
+         landmarkName = "-fireTownDown"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/viewController/SingleShotViewController.m"
+         timestampString = "365895577.155842"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "93"
+         endingLineNumber = "93"
+         landmarkName = "-fireTownDown"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

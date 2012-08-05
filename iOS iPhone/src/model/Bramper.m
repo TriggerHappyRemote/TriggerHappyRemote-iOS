@@ -7,6 +7,7 @@
 //
 
 #import "Bramper.h"
+#import "Time.h"
 
 @implementation Bramper
 
@@ -16,7 +17,6 @@
 @synthesize pickerModeStart = _pickerModeStart;
 
 -(id) init {
-    
     _endShutterLength = [Time new];
     _startShutterLength = [Time new];
     _pickerModeStart = SECONDS;

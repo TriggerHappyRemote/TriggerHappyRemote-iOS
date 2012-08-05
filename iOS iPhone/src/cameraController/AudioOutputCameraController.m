@@ -10,13 +10,9 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVFoundation.h>
 #include "TargetConditionals.h"
-
-
-@interface AudioOutputCameraController()
-@end
+#import "ICameraController.h"
 
 @implementation AudioOutputCameraController
-
 
 AVAudioPlayer *audioPlayer_033ms;
 AVAudioPlayer *audioPlayer_066ms;
@@ -26,7 +22,6 @@ AVAudioPlayer *audioPlayer_500ms;
 AVAudioPlayer *audioPlayer_1s;
 AVAudioPlayer *audioPlayer_100ms;
 AVAudioPlayer *audioPlayer_blank_1s;
-
 
 -(id) init {
     

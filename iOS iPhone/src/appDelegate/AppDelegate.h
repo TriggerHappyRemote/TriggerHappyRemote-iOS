@@ -6,10 +6,7 @@
 //  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate> {
-}
-
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

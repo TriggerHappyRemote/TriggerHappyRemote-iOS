@@ -6,16 +6,14 @@
 //  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "IntervalData.h"
-#import "IIntervalometer.h"
-#import "IntervalometerViewController.h"
-
+@class IntervalData;
+@class IIntervalometer;
+@class IntervalometerViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
     IntervalData *intervalData;
     IIntervalometer *intervalometerModel;    
-    IntervalometerViewController * intervalVC;
+    IntervalometerViewController *intervalVC;
 }
 
 - (IntervalData*) getIntervalData;

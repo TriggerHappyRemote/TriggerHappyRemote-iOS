@@ -10,6 +10,7 @@
 #import "IntervalData.h"
 #import "AppDelegate.h"
 #import "Time.h"
+#import "InfoViewController.h"
 
 @interface ITimeSelectorViewController(internal)
 -(void)loadLabels;

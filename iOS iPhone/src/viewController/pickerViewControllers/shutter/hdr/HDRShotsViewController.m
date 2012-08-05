@@ -9,6 +9,7 @@
 #import "HDRShotsViewController.h"
 #include "IntervalData.h"
 #include "AppDelegate.h"
+#import "InfoViewController.h"
 
 @implementation HDRShotsViewController
 

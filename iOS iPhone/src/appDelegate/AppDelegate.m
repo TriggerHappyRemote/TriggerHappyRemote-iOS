@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "IntervalData.h"
+#import "IIntervalometer.h"
 
 @implementation AppDelegate
 

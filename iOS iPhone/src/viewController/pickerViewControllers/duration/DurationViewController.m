@@ -8,6 +8,8 @@
 
 #import "DurationViewController.h"
 #import "AppDelegate.h"
+#import "IntervalData.h"
+#import "InfoViewController.h"
 
 @implementation DurationViewController
 

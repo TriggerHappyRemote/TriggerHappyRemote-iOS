@@ -9,7 +9,7 @@
 #import "HDREVViewController.h"
 #include "IntervalData.h"
 #include "AppDelegate.h"
-//#include "FractionConverter.h"
+#import "InfoViewController.h"
 
 @implementation HDREVViewController
 

@@ -23,6 +23,8 @@
 }
 
 -(void) viewWillAppear:(BOOL)animated {
+    cameraController = intervalData.cameraController;
+    
     [self hardwareCheck];
     
     hardwareChecker = [NSTimer scheduledTimerWithTimeInterval:1.0

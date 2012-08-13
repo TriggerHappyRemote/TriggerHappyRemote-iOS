@@ -29,9 +29,7 @@ UIImageView *imageViewArray[15];
 @synthesize exposureValueLabel, numberOfShotsLabel, shutterLengthLabel,
 pos1EVTick, neg1EVTick, centerEVTick;
 
-
 IntervalData *intervalData;
-
 
 -(void) viewWillAppear:(BOOL)animated {
     intervalData = [IntervalData getInstance];

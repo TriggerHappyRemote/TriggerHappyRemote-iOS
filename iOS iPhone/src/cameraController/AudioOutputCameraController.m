@@ -37,6 +37,7 @@ AVAudioPlayer *audioPlayer_blank_1s;
     // init av players
 	NSError *error;
     
+    /*
     NSURL *url_033 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_033ms.wav", [[NSBundle mainBundle] resourcePath]]];
     NSURL *url_066 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_067ms.wav", [[NSBundle mainBundle] resourcePath]]];
     NSURL *url_125 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_125ms.wav", [[NSBundle mainBundle] resourcePath]]];
@@ -44,7 +45,7 @@ AVAudioPlayer *audioPlayer_blank_1s;
     NSURL *url_500 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_500ms.wav", [[NSBundle mainBundle] resourcePath]]];
     NSURL *url_1 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_1s.wav", [[NSBundle mainBundle] resourcePath]]];
     NSURL *url_100 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_100ms.wav", [[NSBundle mainBundle] resourcePath]]];
-    /*
+    */
     
     NSURL *url_033 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_033ms.wav", [[NSBundle mainBundle] resourcePath]]];
     NSURL *url_066 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_067ms.wav", [[NSBundle mainBundle] resourcePath]]];
@@ -53,7 +54,7 @@ AVAudioPlayer *audioPlayer_blank_1s;
     NSURL *url_500 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_500ms.wav", [[NSBundle mainBundle] resourcePath]]];
     NSURL *url_1 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_1s.wav", [[NSBundle mainBundle] resourcePath]]];
     NSURL *url_100 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_100ms.wav", [[NSBundle mainBundle] resourcePath]]];
-    */
+    
     NSURL *url_blank_1 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/blank_test_1s.wav", [[NSBundle mainBundle] resourcePath]]];
     
 
@@ -75,7 +76,7 @@ AVAudioPlayer *audioPlayer_blank_1s;
     [audioPlayer_500ms setVolume:1.0];
     [audioPlayer_1s setVolume:1.0];
     [audioPlayer_100ms setVolume:1.0];
-    [audioPlayer_blank_1s setVolume:.2];
+    [audioPlayer_blank_1s setVolume:0.0];
 
     
     [audioPlayer_033ms setDelegate:self];

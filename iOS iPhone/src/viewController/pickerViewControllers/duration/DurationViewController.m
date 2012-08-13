@@ -47,7 +47,7 @@ IntervalData *intervalData;
     else
         infoViewController = [InfoViewController withLocationForPhone:0 and:277];
         
-        
+    infoViewController.hidden = (self.duration.selectedSegmentIndex == 0);
     infoViewController.text =  [[NSString alloc] initWithFormat:@"The entire time lapse duration is %@", [intervalData.duration.time toStringDescriptive]];
     infoViewController.type = InfoViewControllerInfo;
     [self.view addSubview:infoViewController.view];
@@ -60,6 +60,7 @@ IntervalData *intervalData;
     [durationPicker setHidden:[self.duration selectedSegmentIndex] == 0];
     [[intervalData duration] 
      setUnlimitedDuration:[self.duration selectedSegmentIndex] == 0];
+    infoViewController.hidden = (self.duration.selectedSegmentIndex == 0);
 }
 
 -(IBAction) changeInDuration {

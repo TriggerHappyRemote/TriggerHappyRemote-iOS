@@ -88,7 +88,7 @@ numberOfRowsInComponent:(NSInteger)component {
     if([[[intervalData shutter] hdr] getMaxShutterLength] >= [[[intervalData interval] time] totalTimeInSeconds]) {
         [[[intervalData shutter] hdr] setNumberOfShots:previousNumberOfShots];
         [self.picker selectRow:prevRowIndex inComponent:0 animated:false];
-        infoViewController.text = @"The cumulative shutter length of each shot in the bracket must be shorter than the interval";
+        infoViewController.text = @"The cumulative shutter length must be shorter than the interval";
         infoViewController.type = InfoViewControllerWarning;
     }
     else {

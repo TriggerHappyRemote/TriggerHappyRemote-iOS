@@ -302,6 +302,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="brampingInfo.png" id="WO4-hU-Nbt">
+                                <rect key="frame" x="6" y="145" width="303" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1107,6 +1111,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="HDRViewController.png" width="640" height="960"/>
         <image name="aboutViewController.png" width="640" height="960"/>
         <image name="baseShutterButton.png" width="549" height="83"/>
+        <image name="brampingInfo.png" width="640" height="640"/>
         <image name="bulbRampingButton.png" width="549" height="83"/>
         <image name="buyButton.png" width="549" height="83"/>
         <image name="circle.png" width="30" height="30"/>

@@ -32,9 +32,6 @@
                                                       selector:@selector(hardwareCheck)
                                                       userInfo:nil
                                                        repeats:YES];
-    
-
-    
 }
 
 

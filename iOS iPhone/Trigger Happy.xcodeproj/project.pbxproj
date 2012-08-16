@@ -72,6 +72,9 @@
 		0A6A4BF215DC8B8500B61EB3 /* MoreElements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A6A4BF115DC8B8500B61EB3 /* MoreElements.plist */; };
 		0A6A4BFD15DC8FED00B61EB3 /* IndividualSubviewsBasedApplicationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6A4BFC15DC8FED00B61EB3 /* IndividualSubviewsBasedApplicationCell.xib */; };
 		0A860DF515DC9A1A003E9288 /* IndividualSubviewsBasedApplicationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A4BFF15DC970100B61EB3 /* IndividualSubviewsBasedApplicationCell.m */; };
+		0A860DFB15DCA471003E9288 /* SingleShotViewControllerInstructions_Phone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A860DFA15DCA471003E9288 /* SingleShotViewControllerInstructions_Phone.xib */; };
+		0A860E0115DCA66D003E9288 /* SingleShotScrollingHelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A860E0015DCA66D003E9288 /* SingleShotScrollingHelpView.m */; };
+		0A860E0B15DCAE03003E9288 /* SingleShotScrollingHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A860E0A15DCAE03003E9288 /* SingleShotScrollingHelpViewController.m */; };
 		0A865CBA15D4426100538A36 /* brampingInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A865CB915D4426100538A36 /* brampingInfo.png */; };
 		0AA89F8A156F0B7600782F2C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4AA83D156718230006E555 /* MediaPlayer.framework */; };
 		0AA89F8B156F0B7F00782F2C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE197DE154B68FE00714F55 /* AVFoundation.framework */; };
@@ -205,6 +208,11 @@
 		0A6A4BFC15DC8FED00B61EB3 /* IndividualSubviewsBasedApplicationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndividualSubviewsBasedApplicationCell.xib; sourceTree = "<group>"; };
 		0A6A4BFE15DC970000B61EB3 /* IndividualSubviewsBasedApplicationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IndividualSubviewsBasedApplicationCell.h; path = viewController/more/IndividualSubviewsBasedApplicationCell.h; sourceTree = "<group>"; };
 		0A6A4BFF15DC970100B61EB3 /* IndividualSubviewsBasedApplicationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IndividualSubviewsBasedApplicationCell.m; path = viewController/more/IndividualSubviewsBasedApplicationCell.m; sourceTree = "<group>"; };
+		0A860DFA15DCA471003E9288 /* SingleShotViewControllerInstructions_Phone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleShotViewControllerInstructions_Phone.xib; sourceTree = "<group>"; };
+		0A860DFF15DCA66D003E9288 /* SingleShotScrollingHelpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingleShotScrollingHelpView.h; path = help/SingleShotScrollingHelpView.h; sourceTree = "<group>"; };
+		0A860E0015DCA66D003E9288 /* SingleShotScrollingHelpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SingleShotScrollingHelpView.m; path = help/SingleShotScrollingHelpView.m; sourceTree = "<group>"; };
+		0A860E0915DCAE03003E9288 /* SingleShotScrollingHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingleShotScrollingHelpViewController.h; path = help/SingleShotScrollingHelpViewController.h; sourceTree = "<group>"; };
+		0A860E0A15DCAE03003E9288 /* SingleShotScrollingHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SingleShotScrollingHelpViewController.m; path = help/SingleShotScrollingHelpViewController.m; sourceTree = "<group>"; };
 		0A865CB915D4426100538A36 /* brampingInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brampingInfo.png; sourceTree = "<group>"; };
 		0AA89F8C156F0B9700782F2C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0AA89F8E156F0BA300782F2C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -535,6 +543,10 @@
 			children = (
 				0A6A4BC715DC5D2300B61EB3 /* helpModalViewContollerViewController.h */,
 				0A6A4BC815DC5D2300B61EB3 /* helpModalViewContollerViewController.m */,
+				0A860DFF15DCA66D003E9288 /* SingleShotScrollingHelpView.h */,
+				0A860E0015DCA66D003E9288 /* SingleShotScrollingHelpView.m */,
+				0A860E0915DCAE03003E9288 /* SingleShotScrollingHelpViewController.h */,
+				0A860E0A15DCAE03003E9288 /* SingleShotScrollingHelpViewController.m */,
 			);
 			name = help;
 			sourceTree = "<group>";
@@ -678,6 +690,7 @@
 				0AAB32C7156F18F10028F04B /* Trigger_Happy-iPad.storyboard */,
 				0AAB32C8156F18F10028F04B /* Trigger_Happy-iPhoneFamily.storyboard */,
 				0A6A4BFC15DC8FED00B61EB3 /* IndividualSubviewsBasedApplicationCell.xib */,
+				0A860DFA15DCA471003E9288 /* SingleShotViewControllerInstructions_Phone.xib */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -940,6 +953,7 @@
 				0A6A4BF015DC886900B61EB3 /* LightBackground.png in Resources */,
 				0A6A4BF215DC8B8500B61EB3 /* MoreElements.plist in Resources */,
 				0A6A4BFD15DC8FED00B61EB3 /* IndividualSubviewsBasedApplicationCell.xib in Resources */,
+				0A860DFB15DCA471003E9288 /* SingleShotViewControllerInstructions_Phone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -985,6 +999,8 @@
 				0A6A4BE415DC84DF00B61EB3 /* MoreViewController.m in Sources */,
 				0A860DF515DC9A1A003E9288 /* IndividualSubviewsBasedApplicationCell.m in Sources */,
 				0A6A4BE815DC856B00B61EB3 /* FeatureCell.m in Sources */,
+				0A860E0115DCA66D003E9288 /* SingleShotScrollingHelpView.m in Sources */,
+				0A860E0B15DCAE03003E9288 /* SingleShotScrollingHelpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,7 +17,6 @@
 
 -(IBAction) pressHoldDidChange;
 
-
 @property (nonatomic, retain) IBOutlet UIButton * fireButton;
 @property (nonatomic, retain) IBOutlet UILabel * useInfoMessage;
 

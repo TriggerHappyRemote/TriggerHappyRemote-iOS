@@ -15,6 +15,8 @@
 #import "ICameraController.h"
 #import "InfoViewController.h"
 #import "Constants.h"
+#import "helpModalViewContollerViewController.h"
+
 
 @interface SingleShotViewController()
 -(void)enableCanFire;
@@ -147,4 +149,5 @@ ButtonState state;
     [self setFireButtonLabel:nil];
     [super viewDidUnload];
 }
+
 @end

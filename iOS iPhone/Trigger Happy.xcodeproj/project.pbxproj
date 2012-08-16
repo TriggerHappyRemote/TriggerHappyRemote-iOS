@@ -64,6 +64,14 @@
 		0A47D33D149F046A008D728A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47D33C149F046A008D728A /* UIKit.framework */; };
 		0A47D33F149F046A008D728A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47D33E149F046A008D728A /* Foundation.framework */; };
 		0A47D341149F046A008D728A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47D340149F046A008D728A /* CoreGraphics.framework */; };
+		0A6A4BC915DC5D2300B61EB3 /* helpModalViewContollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A4BC815DC5D2300B61EB3 /* helpModalViewContollerViewController.m */; };
+		0A6A4BE415DC84DF00B61EB3 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A4BE315DC84DF00B61EB3 /* MoreViewController.m */; };
+		0A6A4BE815DC856B00B61EB3 /* FeatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A4BE715DC856B00B61EB3 /* FeatureCell.m */; };
+		0A6A4BEF15DC886900B61EB3 /* DarkBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A6A4BED15DC886900B61EB3 /* DarkBackground.png */; };
+		0A6A4BF015DC886900B61EB3 /* LightBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A6A4BEE15DC886900B61EB3 /* LightBackground.png */; };
+		0A6A4BF215DC8B8500B61EB3 /* MoreElements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A6A4BF115DC8B8500B61EB3 /* MoreElements.plist */; };
+		0A6A4BFD15DC8FED00B61EB3 /* IndividualSubviewsBasedApplicationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6A4BFC15DC8FED00B61EB3 /* IndividualSubviewsBasedApplicationCell.xib */; };
+		0A860DF515DC9A1A003E9288 /* IndividualSubviewsBasedApplicationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A4BFF15DC970100B61EB3 /* IndividualSubviewsBasedApplicationCell.m */; };
 		0A865CBA15D4426100538A36 /* brampingInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A865CB915D4426100538A36 /* brampingInfo.png */; };
 		0AA89F8A156F0B7600782F2C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4AA83D156718230006E555 /* MediaPlayer.framework */; };
 		0AA89F8B156F0B7F00782F2C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE197DE154B68FE00714F55 /* AVFoundation.framework */; };
@@ -183,6 +191,20 @@
 		0A47D340149F046A008D728A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0A47D365149F046B008D728A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		0A4AA83D156718230006E555 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		0A6A4BC715DC5D2300B61EB3 /* helpModalViewContollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = helpModalViewContollerViewController.h; path = help/helpModalViewContollerViewController.h; sourceTree = "<group>"; };
+		0A6A4BC815DC5D2300B61EB3 /* helpModalViewContollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = helpModalViewContollerViewController.m; path = help/helpModalViewContollerViewController.m; sourceTree = "<group>"; };
+		0A6A4BE215DC84DF00B61EB3 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoreViewController.h; path = viewController/MoreViewController.h; sourceTree = "<group>"; };
+		0A6A4BE315DC84DF00B61EB3 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoreViewController.m; path = viewController/MoreViewController.m; sourceTree = "<group>"; };
+		0A6A4BE615DC856B00B61EB3 /* FeatureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeatureCell.h; sourceTree = "<group>"; };
+		0A6A4BE715DC856B00B61EB3 /* FeatureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeatureCell.m; sourceTree = "<group>"; };
+		0A6A4BED15DC886900B61EB3 /* DarkBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DarkBackground.png; path = more/DarkBackground.png; sourceTree = "<group>"; };
+		0A6A4BEE15DC886900B61EB3 /* LightBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LightBackground.png; path = more/LightBackground.png; sourceTree = "<group>"; };
+		0A6A4BF115DC8B8500B61EB3 /* MoreElements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MoreElements.plist; path = viewController/more/MoreElements.plist; sourceTree = "<group>"; };
+		0A6A4BF715DC8E3400B61EB3 /* RatingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RatingView.h; path = viewController/more/RatingView.h; sourceTree = "<group>"; };
+		0A6A4BF815DC8E3400B61EB3 /* RatingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RatingView.m; path = viewController/more/RatingView.m; sourceTree = "<group>"; };
+		0A6A4BFC15DC8FED00B61EB3 /* IndividualSubviewsBasedApplicationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndividualSubviewsBasedApplicationCell.xib; sourceTree = "<group>"; };
+		0A6A4BFE15DC970000B61EB3 /* IndividualSubviewsBasedApplicationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IndividualSubviewsBasedApplicationCell.h; path = viewController/more/IndividualSubviewsBasedApplicationCell.h; sourceTree = "<group>"; };
+		0A6A4BFF15DC970100B61EB3 /* IndividualSubviewsBasedApplicationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IndividualSubviewsBasedApplicationCell.m; path = viewController/more/IndividualSubviewsBasedApplicationCell.m; sourceTree = "<group>"; };
 		0A865CB915D4426100538A36 /* brampingInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brampingInfo.png; sourceTree = "<group>"; };
 		0AA89F8C156F0B9700782F2C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0AA89F8E156F0BA300782F2C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -297,6 +319,7 @@
 		0A0165DC15700EE2000D4E28 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				0A6A4BE915DC85E300B61EB3 /* more */,
 				0ADDC47D15A62959003996E6 /* info */,
 				0A0166311570189C000D4E28 /* launch */,
 				0A01662C15701053000D4E28 /* misc */,
@@ -507,6 +530,41 @@
 			path = "camera-remote";
 			sourceTree = "<group>";
 		};
+		0A6A4BC615DC5CF000B61EB3 /* help */ = {
+			isa = PBXGroup;
+			children = (
+				0A6A4BC715DC5D2300B61EB3 /* helpModalViewContollerViewController.h */,
+				0A6A4BC815DC5D2300B61EB3 /* helpModalViewContollerViewController.m */,
+			);
+			name = help;
+			sourceTree = "<group>";
+		};
+		0A6A4BE515DC852500B61EB3 /* more */ = {
+			isa = PBXGroup;
+			children = (
+				0A6A4BF715DC8E3400B61EB3 /* RatingView.h */,
+				0A6A4BF815DC8E3400B61EB3 /* RatingView.m */,
+				0A6A4BFE15DC970000B61EB3 /* IndividualSubviewsBasedApplicationCell.h */,
+				0A6A4BFF15DC970100B61EB3 /* IndividualSubviewsBasedApplicationCell.m */,
+				0A6A4BE215DC84DF00B61EB3 /* MoreViewController.h */,
+				0A6A4BE315DC84DF00B61EB3 /* MoreViewController.m */,
+				0A6A4BF115DC8B8500B61EB3 /* MoreElements.plist */,
+				0A6A4BE615DC856B00B61EB3 /* FeatureCell.h */,
+				0A6A4BE715DC856B00B61EB3 /* FeatureCell.m */,
+			);
+			name = more;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0A6A4BE915DC85E300B61EB3 /* more */ = {
+			isa = PBXGroup;
+			children = (
+				0A6A4BED15DC886900B61EB3 /* DarkBackground.png */,
+				0A6A4BEE15DC886900B61EB3 /* LightBackground.png */,
+			);
+			name = more;
+			sourceTree = "<group>";
+		};
 		0AAB3286156F18F10028F04B /* soundCommands */ = {
 			isa = PBXGroup;
 			children = (
@@ -619,6 +677,7 @@
 			children = (
 				0AAB32C7156F18F10028F04B /* Trigger_Happy-iPad.storyboard */,
 				0AAB32C8156F18F10028F04B /* Trigger_Happy-iPhoneFamily.storyboard */,
+				0A6A4BFC15DC8FED00B61EB3 /* IndividualSubviewsBasedApplicationCell.xib */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -626,6 +685,7 @@
 		0AAB32C9156F18F10028F04B /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				0A6A4BC615DC5CF000B61EB3 /* help */,
 				0ADDC48615A63A69003996E6 /* info */,
 				0AAB32CA156F18F10028F04B /* IDataAccessViewController.h */,
 				0AAB32CB156F18F10028F04B /* IDataAccessViewController.m */,
@@ -638,6 +698,7 @@
 				0AAB32D2156F18F10028F04B /* pickerViewControllers */,
 				0AAB32F1156F18F10028F04B /* SingleShotViewController.h */,
 				0AAB32F2156F18F10028F04B /* SingleShotViewController.m */,
+				0A6A4BE515DC852500B61EB3 /* more */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -875,6 +936,10 @@
 				0AEF5C3815AE1D4700F58032 /* HDRViewController_PAD.png in Resources */,
 				0A0E165E15AFA655003A2D4E /* aboutViewController_PAD.png in Resources */,
 				0A865CBA15D4426100538A36 /* brampingInfo.png in Resources */,
+				0A6A4BEF15DC886900B61EB3 /* DarkBackground.png in Resources */,
+				0A6A4BF015DC886900B61EB3 /* LightBackground.png in Resources */,
+				0A6A4BF215DC8B8500B61EB3 /* MoreElements.plist in Resources */,
+				0A6A4BFD15DC8FED00B61EB3 /* IndividualSubviewsBasedApplicationCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -916,6 +981,10 @@
 				0AAB338A156F18F20028F04B /* ShutterSelectorViewController.m in Sources */,
 				0AAB338B156F18F20028F04B /* SingleShotViewController.m in Sources */,
 				0ADDC48915A63A8C003996E6 /* InfoViewController.m in Sources */,
+				0A6A4BC915DC5D2300B61EB3 /* helpModalViewContollerViewController.m in Sources */,
+				0A6A4BE415DC84DF00B61EB3 /* MoreViewController.m in Sources */,
+				0A860DF515DC9A1A003E9288 /* IndividualSubviewsBasedApplicationCell.m in Sources */,
+				0A6A4BE815DC856B00B61EB3 /* FeatureCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

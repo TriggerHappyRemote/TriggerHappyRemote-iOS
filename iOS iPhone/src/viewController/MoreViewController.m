@@ -109,9 +109,6 @@
     cell.icon = [UIImage imageNamed:[dataItem objectForKey:@"Icon"]];
     cell.publisher = [dataItem objectForKey:@"Publisher"];
     cell.name = [dataItem objectForKey:@"Name"];
-    cell.numRatings = [[dataItem objectForKey:@"NumRatings"] intValue];
-    cell.rating = [[dataItem objectForKey:@"Rating"] floatValue];
-    cell.price = [dataItem objectForKey:@"Price"];
         
     return cell;
 }
@@ -124,6 +121,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    
+    NSDictionary *dataItem = [data objectAtIndex:indexPath.row];
+    
+    [self performSegueWithIdentifier:[dataItem objectForKey:@"SegueID"] sender:self];
+
+    
+    
 }
 
 @end

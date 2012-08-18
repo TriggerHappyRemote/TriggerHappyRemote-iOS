@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Publisher</key>
+		<string>What is it?</string>
+		<key>Name</key>
+		<string>About Trigger Happy</string>
+		<key>NumRatings</key>
+		<integer>106</integer>
+		<key>Rating</key>
+		<real>3.5</real>
+		<key>Price</key>
+		<string>$2.98</string>
+		<key>Icon</key>
+		<string>infoIcon@2x.png</string>
+		<key>SegueID</key>
+		<string>PushToAboutViewController</string>
+	</dict>
+</array>
+</plist>

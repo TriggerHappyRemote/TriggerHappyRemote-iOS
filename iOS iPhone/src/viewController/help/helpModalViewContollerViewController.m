@@ -34,7 +34,9 @@
     
     SingleShotScrollingHelpViewController *help = [[SingleShotScrollingHelpViewController alloc] initWithNibName:@"SingleShotViewControllerInstructions_Phone" bundle:nil];
     
-    help.view.frame = CGRectMake(118,21,445,117);
+    //help.view.frame = CGRectMake(118,21,445,117);
+    
+    help.view.backgroundColor = [UIColor blackColor];
     
     InfoViewController *infoViewController1 = [InfoViewController withLocationForPhone:0 and:0];
     InfoViewController *infoViewController2 = [InfoViewController withLocationForPhone:0 and:50];
@@ -51,7 +53,7 @@
 
     
     // set the content size so it can be scrollable
-	[scrollView setContentSize:CGSizeMake([scrollView bounds].size.width, 900)];
+	[scrollView setContentSize:CGSizeMake([scrollView bounds].size.width, 700)];
 
 
 

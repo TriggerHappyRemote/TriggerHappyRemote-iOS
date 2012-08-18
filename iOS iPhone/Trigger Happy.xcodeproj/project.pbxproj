@@ -75,6 +75,9 @@
 		0A860DFB15DCA471003E9288 /* SingleShotViewControllerInstructions_Phone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A860DFA15DCA471003E9288 /* SingleShotViewControllerInstructions_Phone.xib */; };
 		0A860E0115DCA66D003E9288 /* SingleShotScrollingHelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A860E0015DCA66D003E9288 /* SingleShotScrollingHelpView.m */; };
 		0A860E0B15DCAE03003E9288 /* SingleShotScrollingHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A860E0A15DCAE03003E9288 /* SingleShotScrollingHelpViewController.m */; };
+		0A860E1415DF4F15003E9288 /* information-icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A860E1215DF4F15003E9288 /* information-icon-small.png */; };
+		0A860E1515DF4F15003E9288 /* information-icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A860E1315DF4F15003E9288 /* information-icon-small@2x.png */; };
+		0A860E1A15DF59E9003E9288 /* singleShotScrollingView.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A860E1915DF59E9003E9288 /* singleShotScrollingView.png */; };
 		0A865CBA15D4426100538A36 /* brampingInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A865CB915D4426100538A36 /* brampingInfo.png */; };
 		0AA89F8A156F0B7600782F2C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4AA83D156718230006E555 /* MediaPlayer.framework */; };
 		0AA89F8B156F0B7F00782F2C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE197DE154B68FE00714F55 /* AVFoundation.framework */; };
@@ -213,6 +216,9 @@
 		0A860E0015DCA66D003E9288 /* SingleShotScrollingHelpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SingleShotScrollingHelpView.m; path = help/SingleShotScrollingHelpView.m; sourceTree = "<group>"; };
 		0A860E0915DCAE03003E9288 /* SingleShotScrollingHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingleShotScrollingHelpViewController.h; path = help/SingleShotScrollingHelpViewController.h; sourceTree = "<group>"; };
 		0A860E0A15DCAE03003E9288 /* SingleShotScrollingHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SingleShotScrollingHelpViewController.m; path = help/SingleShotScrollingHelpViewController.m; sourceTree = "<group>"; };
+		0A860E1215DF4F15003E9288 /* information-icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "information-icon-small.png"; sourceTree = "<group>"; };
+		0A860E1315DF4F15003E9288 /* information-icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "information-icon-small@2x.png"; sourceTree = "<group>"; };
+		0A860E1915DF59E9003E9288 /* singleShotScrollingView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = singleShotScrollingView.png; path = help/singleShot/singleShotScrollingView.png; sourceTree = "<group>"; };
 		0A865CB915D4426100538A36 /* brampingInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brampingInfo.png; sourceTree = "<group>"; };
 		0AA89F8C156F0B9700782F2C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0AA89F8E156F0BA300782F2C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -327,6 +333,7 @@
 		0A0165DC15700EE2000D4E28 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				0A860E1615DF53BA003E9288 /* help */,
 				0A6A4BE915DC85E300B61EB3 /* more */,
 				0ADDC47D15A62959003996E6 /* info */,
 				0A0166311570189C000D4E28 /* launch */,
@@ -477,6 +484,8 @@
 		0A45538015AE0C9B002B955E /* phone */ = {
 			isa = PBXGroup;
 			children = (
+				0A860E1215DF4F15003E9288 /* information-icon-small.png */,
+				0A860E1315DF4F15003E9288 /* information-icon-small@2x.png */,
 				0A865CB915D4426100538A36 /* brampingInfo.png */,
 				0ADDC47E15A62959003996E6 /* info.png */,
 			);
@@ -575,6 +584,22 @@
 				0A6A4BEE15DC886900B61EB3 /* LightBackground.png */,
 			);
 			name = more;
+			sourceTree = "<group>";
+		};
+		0A860E1615DF53BA003E9288 /* help */ = {
+			isa = PBXGroup;
+			children = (
+				0A860E1715DF53C1003E9288 /* singleShot */,
+			);
+			name = help;
+			sourceTree = "<group>";
+		};
+		0A860E1715DF53C1003E9288 /* singleShot */ = {
+			isa = PBXGroup;
+			children = (
+				0A860E1915DF59E9003E9288 /* singleShotScrollingView.png */,
+			);
+			name = singleShot;
 			sourceTree = "<group>";
 		};
 		0AAB3286156F18F10028F04B /* soundCommands */ = {
@@ -954,6 +979,9 @@
 				0A6A4BF215DC8B8500B61EB3 /* MoreElements.plist in Resources */,
 				0A6A4BFD15DC8FED00B61EB3 /* IndividualSubviewsBasedApplicationCell.xib in Resources */,
 				0A860DFB15DCA471003E9288 /* SingleShotViewControllerInstructions_Phone.xib in Resources */,
+				0A860E1415DF4F15003E9288 /* information-icon-small.png in Resources */,
+				0A860E1515DF4F15003E9288 /* information-icon-small@2x.png in Resources */,
+				0A860E1A15DF59E9003E9288 /* singleShotScrollingView.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

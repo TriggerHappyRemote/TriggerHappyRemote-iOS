@@ -22,7 +22,7 @@
     _baseShutterSpeed = [Time new];
     _bulb = true;
     _evInterval = .333;
-    _shutterGap = .333;
+    _shutterGap = .75;
     [_baseShutterSpeed setTotalTimeInSeconds:1];
     return self;
 }

@@ -73,7 +73,7 @@ ButtonState state;
 
 -(IBAction) fireTownDown {
     
-    if(canFire) {
+    //if(canFire) {
         
         // TODO: figure out why the heck I do below:
         canFire = false;
@@ -104,7 +104,7 @@ ButtonState state;
 
             [cameraController fireButtonDepressed];
         }
-    }
+    //}
     
 }
 
@@ -112,7 +112,7 @@ ButtonState state;
     if(state == PRESS_DOWN) {
         [cameraController fireButtonDepressed];
         state = PRESS_UP;
-        self.fireButtonLabel.text = @"Fire!";
+        self.fireButtonLabel.text = @"Trigger";
         useInfoMessage.text = pressMessage;
 
     }
@@ -125,7 +125,7 @@ ButtonState state;
     if(state != PRESS_DOWN && state != HOLD_DOWN) {
         if([self.pressHoldSegment selectedSegmentIndex] == 0 ) {
             state = PRESS_UP;
-            self.fireButtonLabel.text = @"Fire!";
+            self.fireButtonLabel.text = @"Trigger";
             useInfoMessage.text = pressMessage;
         }
         else {

@@ -34,21 +34,10 @@
     
     SingleShotScrollingHelpViewController *help = [[SingleShotScrollingHelpViewController alloc] initWithNibName:@"SingleShotViewControllerInstructions_Phone" bundle:nil];
     
-    //help.view.frame = CGRectMake(118,21,445,117);
     
-    help.view.backgroundColor = [UIColor blackColor];
-    
-    InfoViewController *infoViewController1 = [InfoViewController withLocationForPhone:0 and:0];
-    InfoViewController *infoViewController2 = [InfoViewController withLocationForPhone:0 and:50];
-    InfoViewController *infoViewController3 = [InfoViewController withLocationForPhone:0 and:100];
-    InfoViewController *infoViewController4 = [InfoViewController withLocationForPhone:0 and:200];
-    InfoViewController *infoViewController5 = [InfoViewController withLocationForPhone:0 and:400];
+    //help.view.backgroundColor = [UIColor blackColor];
 
-//    [scrollView addSubview:infoViewController1.view];
-//    [scrollView addSubview:infoViewController2.view];
-//    [scrollView addSubview:infoViewController3.view];
-//    [scrollView addSubview:infoViewController5.view];
-//    [scrollView addSubview:infoViewController4.view];
+
     [scrollView addSubview:help.view];
 
     

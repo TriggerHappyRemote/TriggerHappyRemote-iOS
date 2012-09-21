@@ -8,20 +8,12 @@
 
 #import "AudioOutputCameraController.h"
 #import <AudioToolbox/AudioToolbox.h>
-#import <AVFoundation/AVFoundation.h>
+//#import <AVFoundation/AVFoundation.h>
 #include "TargetConditionals.h"
 #import "ICameraController.h"
+#include "Constants.h"
 
 @implementation AudioOutputCameraController
-
-AVAudioPlayer *audioPlayer_033ms;
-AVAudioPlayer *audioPlayer_066ms;
-AVAudioPlayer *audioPlayer_125ms;
-AVAudioPlayer *audioPlayer_250ms;
-AVAudioPlayer *audioPlayer_500ms;
-AVAudioPlayer *audioPlayer_1s;
-AVAudioPlayer *audioPlayer_100ms;
-AVAudioPlayer *audioPlayer_blank_1s;
 
 -(id) init {
     
@@ -37,7 +29,7 @@ AVAudioPlayer *audioPlayer_blank_1s;
     // init av players
 	NSError *error;
     
-    /*
+#if PRODUCT == 1
     NSURL *url_033 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_033ms.wav", [[NSBundle mainBundle] resourcePath]]];
     NSURL *url_066 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_067ms.wav", [[NSBundle mainBundle] resourcePath]]];
     NSURL *url_125 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_125ms.wav", [[NSBundle mainBundle] resourcePath]]];
@@ -45,8 +37,7 @@ AVAudioPlayer *audioPlayer_blank_1s;
     NSURL *url_500 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_500ms.wav", [[NSBundle mainBundle] resourcePath]]];
     NSURL *url_1 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_1s.wav", [[NSBundle mainBundle] resourcePath]]];
     NSURL *url_100 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_100ms.wav", [[NSBundle mainBundle] resourcePath]]];
-    */
-    
+#elif TEST == 1
     NSURL *url_033 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_033ms.wav", [[NSBundle mainBundle] resourcePath]]];
     NSURL *url_066 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_067ms.wav", [[NSBundle mainBundle] resourcePath]]];
     NSURL *url_125 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_125ms.wav", [[NSBundle mainBundle] resourcePath]]];
@@ -54,10 +45,11 @@ AVAudioPlayer *audioPlayer_blank_1s;
     NSURL *url_500 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_500ms.wav", [[NSBundle mainBundle] resourcePath]]];
     NSURL *url_1 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_1s.wav", [[NSBundle mainBundle] resourcePath]]];
     NSURL *url_100 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/20kHz_plus_1kHz_100ms.wav", [[NSBundle mainBundle] resourcePath]]];
-    
-    NSURL *url_blank_1 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/blank_test_1s.wav", [[NSBundle mainBundle] resourcePath]]];
-    
+#else
+    [NSException raise:@"Invalid constants definded in Constants.h. TEST or PRODUCT must be defined at 1"];
+#endif
 
+    NSURL *url_blank_1 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/blank_test_1s.wav", [[NSBundle mainBundle] resourcePath]]];
     
 	audioPlayer_033ms = [[AVAudioPlayer alloc] initWithContentsOfURL:url_033 error:&error];
     audioPlayer_066ms = [[AVAudioPlayer alloc] initWithContentsOfURL:url_066 error:&error];
@@ -77,7 +69,6 @@ AVAudioPlayer *audioPlayer_blank_1s;
     [audioPlayer_1s setVolume:1.0];
     [audioPlayer_100ms setVolume:1.0];
     [audioPlayer_blank_1s setVolume:0.0];
-
     
     [audioPlayer_033ms setDelegate:self];
     [audioPlayer_066ms setDelegate:self];
@@ -91,8 +82,6 @@ AVAudioPlayer *audioPlayer_blank_1s;
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     [[AVAudioSession sharedInstance] setActive: YES error: nil];
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
-
-    
     
     return self;
 }
@@ -125,7 +114,7 @@ AVAudioPlayer *audioPlayer_blank_1s;
     // cable/ unit) are not plugged in because
     // 1) dont want to burden users with uneccessary sounds
     // 2) violotes Apple's HIG if it's in silient
-    if(self.isHardwareConnected) {
+    //if(self.isHardwareConnected) {
         
         // if the shutter length (time) is less than 1 second,
         // we play one file instead of looping to get a more accurate
@@ -162,13 +151,13 @@ AVAudioPlayer *audioPlayer_blank_1s;
             
             [audioPlayer_1s play];
         }
-    }
+    //}
 }
 
 - (void) fireButtonPressed {
-    if(self.isHardwareConnected) {
+    //if(self.isHardwareConnected) {
         [self startArbitraryAudioStream];
-    }
+    //}
 }
 
 - (void) fireButtonDepressed {

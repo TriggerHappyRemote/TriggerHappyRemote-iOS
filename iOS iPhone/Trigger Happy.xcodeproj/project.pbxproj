@@ -75,10 +75,10 @@
 		0A860DFB15DCA471003E9288 /* SingleShotViewControllerInstructions_Phone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A860DFA15DCA471003E9288 /* SingleShotViewControllerInstructions_Phone.xib */; };
 		0A860E0115DCA66D003E9288 /* SingleShotScrollingHelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A860E0015DCA66D003E9288 /* SingleShotScrollingHelpView.m */; };
 		0A860E0B15DCAE03003E9288 /* SingleShotScrollingHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A860E0A15DCAE03003E9288 /* SingleShotScrollingHelpViewController.m */; };
-		0A860E1415DF4F15003E9288 /* information-icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A860E1215DF4F15003E9288 /* information-icon-small.png */; };
-		0A860E1515DF4F15003E9288 /* information-icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A860E1315DF4F15003E9288 /* information-icon-small@2x.png */; };
 		0A860E1A15DF59E9003E9288 /* singleShotScrollingView.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A860E1915DF59E9003E9288 /* singleShotScrollingView.png */; };
 		0A865CBA15D4426100538A36 /* brampingInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A865CB915D4426100538A36 /* brampingInfo.png */; };
+		0AA807A015E7662C00E82F90 /* information-icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8079E15E7662C00E82F90 /* information-icon-small.png */; };
+		0AA807A115E7662C00E82F90 /* information-icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8079F15E7662C00E82F90 /* information-icon-small@2x.png */; };
 		0AA89F8A156F0B7600782F2C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4AA83D156718230006E555 /* MediaPlayer.framework */; };
 		0AA89F8B156F0B7F00782F2C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE197DE154B68FE00714F55 /* AVFoundation.framework */; };
 		0AAB335D156F18F20028F04B /* 20kHz_033ms.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB3297156F18F10028F04B /* 20kHz_033ms.wav */; };
@@ -133,6 +133,10 @@
 		0ADDC48015A62959003996E6 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDC47E15A62959003996E6 /* info.png */; };
 		0ADDC48915A63A8C003996E6 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADDC48815A63A8C003996E6 /* InfoViewController.m */; };
 		0AE197E1154B693D00714F55 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE197E0154B693D00714F55 /* AudioToolbox.framework */; };
+		0AEC98E2160C03D900192928 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC98E1160C03D900192928 /* Default-568h@2x.png */; };
+		0AEC98E4160C0D7A00192928 /* timeBetweenShotsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC98E3160C0D7A00192928 /* timeBetweenShotsButton.png */; };
+		0AEC98E8160C0FB400192928 /* mono-lcd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC98E7160C0FB400192928 /* mono-lcd.png */; };
+		0AEC98EB160C1BCF00192928 /* TimeBetweenShotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC98EA160C1BCF00192928 /* TimeBetweenShotsViewController.m */; };
 		0AEF5C3815AE1D4700F58032 /* HDRViewController_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF5C3715AE1D4700F58032 /* HDRViewController_PAD.png */; };
 /* End PBXBuildFile section */
 
@@ -216,10 +220,10 @@
 		0A860E0015DCA66D003E9288 /* SingleShotScrollingHelpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SingleShotScrollingHelpView.m; path = help/SingleShotScrollingHelpView.m; sourceTree = "<group>"; };
 		0A860E0915DCAE03003E9288 /* SingleShotScrollingHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingleShotScrollingHelpViewController.h; path = help/SingleShotScrollingHelpViewController.h; sourceTree = "<group>"; };
 		0A860E0A15DCAE03003E9288 /* SingleShotScrollingHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SingleShotScrollingHelpViewController.m; path = help/SingleShotScrollingHelpViewController.m; sourceTree = "<group>"; };
-		0A860E1215DF4F15003E9288 /* information-icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "information-icon-small.png"; sourceTree = "<group>"; };
-		0A860E1315DF4F15003E9288 /* information-icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "information-icon-small@2x.png"; sourceTree = "<group>"; };
 		0A860E1915DF59E9003E9288 /* singleShotScrollingView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = singleShotScrollingView.png; path = help/singleShot/singleShotScrollingView.png; sourceTree = "<group>"; };
 		0A865CB915D4426100538A36 /* brampingInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brampingInfo.png; sourceTree = "<group>"; };
+		0AA8079E15E7662C00E82F90 /* information-icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "information-icon-small.png"; sourceTree = "<group>"; };
+		0AA8079F15E7662C00E82F90 /* information-icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "information-icon-small@2x.png"; sourceTree = "<group>"; };
 		0AA89F8C156F0B9700782F2C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0AA89F8E156F0BA300782F2C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		0AA89F8F156F0BA300782F2C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -310,6 +314,11 @@
 		0AE197DE154B68FE00714F55 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0AE197E0154B693D00714F55 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0AEA9ACC158FDB9F0018C7D4 /* FractionConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FractionConverter.h; sourceTree = "<group>"; };
+		0AEC98E1160C03D900192928 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0AEC98E3160C0D7A00192928 /* timeBetweenShotsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeBetweenShotsButton.png; sourceTree = "<group>"; };
+		0AEC98E7160C0FB400192928 /* mono-lcd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mono-lcd.png"; sourceTree = "<group>"; };
+		0AEC98E9160C1BCF00192928 /* TimeBetweenShotsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeBetweenShotsViewController.h; sourceTree = "<group>"; };
+		0AEC98EA160C1BCF00192928 /* TimeBetweenShotsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeBetweenShotsViewController.m; sourceTree = "<group>"; };
 		0AEF5C3715AE1D4700F58032 /* HDRViewController_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HDRViewController_PAD.png; path = pad/HDRViewController_PAD.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -399,6 +408,7 @@
 		0A01662C15701053000D4E28 /* misc */ = {
 			isa = PBXGroup;
 			children = (
+				0AEC98E7160C0FB400192928 /* mono-lcd.png */,
 				0A01662D15701054000D4E28 /* lightMeter0.png */,
 				0A01662E15701054000D4E28 /* lightMeterTick.png */,
 			);
@@ -409,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				0A45535A15ADFDA5002B955E /* Default@2x~ipad.png */,
+				0AEC98E1160C03D900192928 /* Default-568h@2x.png */,
 				0A45535B15ADFDA5002B955E /* Default@2x~iphone.png */,
 				0A45535C15ADFDA5002B955E /* Default~ipad.png */,
 				0A45535D15ADFDA5002B955E /* Default~iphone.png */,
@@ -419,6 +430,7 @@
 		0A08C2E415ACEBDB0075ADFC /* phone */ = {
 			isa = PBXGroup;
 			children = (
+				0AEC98E3160C0D7A00192928 /* timeBetweenShotsButton.png */,
 				0A01662A15700FC4000D4E28 /* learnMoreButton.png */,
 				0A0165E215700EE2000D4E28 /* baseShutterButton.png */,
 				0A0165E315700EE2000D4E28 /* bulbRampingButton.png */,
@@ -484,8 +496,8 @@
 		0A45538015AE0C9B002B955E /* phone */ = {
 			isa = PBXGroup;
 			children = (
-				0A860E1215DF4F15003E9288 /* information-icon-small.png */,
-				0A860E1315DF4F15003E9288 /* information-icon-small@2x.png */,
+				0AA8079E15E7662C00E82F90 /* information-icon-small.png */,
+				0AA8079F15E7662C00E82F90 /* information-icon-small@2x.png */,
 				0A865CB915D4426100538A36 /* brampingInfo.png */,
 				0ADDC47E15A62959003996E6 /* info.png */,
 			);
@@ -807,6 +819,8 @@
 				0AAB32E9156F18F10028F04B /* HDRShutterSelectorViewController.m */,
 				0AAB32EA156F18F10028F04B /* HDRViewController.h */,
 				0AAB32EB156F18F10028F04B /* HDRViewController.m */,
+				0AEC98E9160C1BCF00192928 /* TimeBetweenShotsViewController.h */,
+				0AEC98EA160C1BCF00192928 /* TimeBetweenShotsViewController.m */,
 			);
 			path = hdr;
 			sourceTree = "<group>";
@@ -979,9 +993,12 @@
 				0A6A4BF215DC8B8500B61EB3 /* MoreElements.plist in Resources */,
 				0A6A4BFD15DC8FED00B61EB3 /* IndividualSubviewsBasedApplicationCell.xib in Resources */,
 				0A860DFB15DCA471003E9288 /* SingleShotViewControllerInstructions_Phone.xib in Resources */,
-				0A860E1415DF4F15003E9288 /* information-icon-small.png in Resources */,
-				0A860E1515DF4F15003E9288 /* information-icon-small@2x.png in Resources */,
 				0A860E1A15DF59E9003E9288 /* singleShotScrollingView.png in Resources */,
+				0AA807A015E7662C00E82F90 /* information-icon-small.png in Resources */,
+				0AA807A115E7662C00E82F90 /* information-icon-small@2x.png in Resources */,
+				0AEC98E2160C03D900192928 /* Default-568h@2x.png in Resources */,
+				0AEC98E4160C0D7A00192928 /* timeBetweenShotsButton.png in Resources */,
+				0AEC98E8160C0FB400192928 /* mono-lcd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1029,6 +1046,7 @@
 				0A6A4BE815DC856B00B61EB3 /* FeatureCell.m in Sources */,
 				0A860E0115DCA66D003E9288 /* SingleShotScrollingHelpView.m in Sources */,
 				0A860E0B15DCAE03003E9288 /* SingleShotScrollingHelpViewController.m in Sources */,
+				0AEC98EB160C1BCF00192928 /* TimeBetweenShotsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1042,7 +1060,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1060,6 +1078,7 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1070,7 +1089,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1082,6 +1101,7 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1089,16 +1109,16 @@
 		0A47D377149F046B008D728A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kevin Harrington (W9929SXGD3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kevin Harrington (W9929SXGD3)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "supportingFiles/Trigger Happy-Prefix.pch";
 				INFOPLIST_FILE = "supportingFiles/Trigger Happy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Trigger Happy";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "5D86676A-88A4-4AC7-891F-FA3D4BA66847";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5D86676A-88A4-4AC7-891F-FA3D4BA66847";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1107,16 +1127,16 @@
 		0A47D378149F046B008D728A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kevin Harrington (W9929SXGD3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kevin Harrington (W9929SXGD3)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "supportingFiles/Trigger Happy-Prefix.pch";
 				INFOPLIST_FILE = "supportingFiles/Trigger Happy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Trigger Happy";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "5D86676A-88A4-4AC7-891F-FA3D4BA66847";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5D86676A-88A4-4AC7-891F-FA3D4BA66847";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

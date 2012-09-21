@@ -45,7 +45,7 @@
             MPMusicPlayerController *iPod = [MPMusicPlayerController iPodMusicPlayer];
             float volumeLevel = iPod.volume;
             if(volumeLevel < 1.0) {
-                infoViewController.text = @"Headphone volume too low to communicate with Trigger Happy";
+                infoViewController.text = @"Set volume to max. Volume could be too low.";
                 infoViewController.hidden = false;
             }
             else {
@@ -58,7 +58,7 @@
     else {
         if([cameraController class] == [AudioOutputCameraController class]) {
             
-            infoViewController.text = @"The Trigger Happy Unit is not plugged into the headphone port";
+            infoViewController.text = @"Please plug the Trigger Happy Unit into headphone port.";
         }
         else {
             infoViewController.text = @"Not plugged in - ICameraController inheritant";

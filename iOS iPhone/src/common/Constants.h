@@ -12,6 +12,9 @@
 #define IDIOM    UI_USER_INTERFACE_IDIOM()
 #define IPAD     UIUserInterfaceIdiomPad
 
+#define TEST 1
+#define PRODUCT 0
+
 typedef enum  {
     SECONDS = 0,
     SUBSECONDS = 1

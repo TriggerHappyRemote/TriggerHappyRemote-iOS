@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--Help Modal View Contoller View Controller - Intro-->
         <scene sceneID="7gL-vf-UtW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aXq-sb-PMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="5rB-D6-q9N" customClass="helpModalViewContollerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QWL-UZ-KX8">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
@@ -40,13 +39,13 @@
                         <outlet property="scrollView" destination="wR1-sX-p2r" id="aI9-pD-NVD"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aXq-sb-PMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-145" y="-190"/>
         </scene>
         <!--Single Shot View Controller - First-->
         <scene sceneID="11">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
                 <viewController title="First" id="2" customClass="SingleShotViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
@@ -87,8 +86,8 @@
                                     <action selector="pressHoldDidChange" destination="2" eventType="valueChanged" id="It5-lq-ldL"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Fire" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="33" id="y7E-2L-apG">
-                                <rect key="frame" x="76" y="208" width="169" height="42"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Trigger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="33" id="y7E-2L-apG">
+                                <rect key="frame" x="9" y="208" width="307" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -121,13 +120,13 @@
                         <outlet property="useInfoMessage" destination="ORc-pp-MJW" id="cI3-JQ-Z6c"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="388" y="259"/>
         </scene>
         <!--Navigation Controller - Time Lapse-->
         <scene sceneID="UfC-WZ-tvi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mil-Z9-OOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="iBd-jR-9ZK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Time Lapse" image="timeLapseIcon.png" id="IA0-4h-zgq"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -141,13 +140,13 @@
                         <segue destination="pca-UN-G0m" kind="relationship" relationship="rootViewController" id="OHQ-Ey-2gf"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mil-Z9-OOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="388" y="812"/>
         </scene>
         <!--Intervalometer View Controller - Time Lapse-->
         <scene sceneID="uxu-il-y8T">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tds-ym-lbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="pca-UN-G0m" customClass="IntervalometerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3sq-bT-qmU">
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
@@ -299,13 +298,13 @@
                         <outlet property="shutterSetButton" destination="vF0-8A-LPN" id="tM4-zj-ZjS"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tds-ym-lbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="783" y="820"/>
         </scene>
         <!--Bramping View Controller - Shutter Progression-->
         <scene sceneID="TZt-5P-FW0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sn8-fB-nxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="UI7-Z4-Dkf" customClass="BrampingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dzs-Xx-0ac">
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
@@ -355,18 +354,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="brampingInfo.png" id="WO4-hU-Nbt">
-                                <rect key="frame" x="6" y="173" width="303" height="208"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Etg-vm-czZ">
-                                <rect key="frame" x="38" y="199" width="244" height="155"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">The shutter will be 00:00:00 at start of the time lapse, and the shutter will linerly progress to 00:00:00 at the end of the time lapse. Each shot will be 00:00:00 longer for the duration of the time lapse.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -376,13 +363,13 @@
                         <outlet property="startShutterDataLabel" destination="NKu-dC-Teu" id="W59-LR-Ldb"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sn8-fB-nxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3289" y="663"/>
         </scene>
         <!--Bramping Start Shutter Selector View Controller - Start Shutter-->
         <scene sceneID="Zcp-0t-bfD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hzT-HI-Hvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="jyS-tt-6x2" customClass="BrampingStartShutterSelectorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F2F-ks-tPJ">
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
@@ -442,13 +429,13 @@
                         <outlet property="secondSubSecondSegment" destination="a4R-KZ-LjF" id="pys-GD-HwY"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzT-HI-Hvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3906" y="318"/>
         </scene>
         <!--Bramping Stop Shutter Selector View Controller - End Shutter-->
         <scene sceneID="1ye-1r-StJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o6l-Em-68a" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="z09-fs-OVH" customClass="BrampingStopShutterSelectorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e2x-PN-FXJ">
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
@@ -508,13 +495,13 @@
                         <outlet property="secondSubSecondSegment" destination="mjy-F7-Vfl" id="zL3-lU-FIY"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o6l-Em-68a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3788" y="970"/>
         </scene>
         <!--Interval Selector View Controller - Interval-->
         <scene sceneID="YkW-Tf-IMY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xxl-vA-IQs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="d6r-o9-MSm" customClass="IntervalSelectorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="94W-CY-gl3">
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
@@ -573,13 +560,13 @@
                         <outlet property="segment" destination="eaH-UU-xhb" id="KhQ-U4-xHe"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xxl-vA-IQs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="905" y="35"/>
         </scene>
         <!--Shutter Selector View Controller - Shutter-->
         <scene sceneID="KJs-4J-Tev">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ujw-gM-u0z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="i7k-T5-7fY" customClass="ShutterSelectorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rdX-tp-OBr">
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
@@ -638,13 +625,13 @@
                         <outlet property="secondSubSecondSegment" destination="k2D-hS-cY0" id="WxH-6y-r2D"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujw-gM-u0z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1789" y="72"/>
         </scene>
         <!--View Controller - HDR-->
         <scene sceneID="ehA-Zc-p6t">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BTv-hW-pvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ko8-Fk-2Km" customClass="HDRViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wgw-yy-oGE">
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
@@ -729,7 +716,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KnT-oH-1Gr">
-                                <rect key="frame" x="22" y="324" width="276" height="41"/>
+                                <rect key="frame" x="22" y="284" width="276" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="baseShutterButton.png">
@@ -743,8 +730,23 @@
                                     <segue destination="qaa-X4-zK1" kind="push" id="bvB-PD-jSP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Imv-bb-p7t">
+                                <rect key="frame" x="22" y="326" width="276" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="timeBetweenShotsButton.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wwZ-nZ-MOd" kind="push" id="KOt-tn-ibn"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IZz-ji-Uay">
-                                <rect key="frame" x="22" y="212" width="276" height="41"/>
+                                <rect key="frame" x="22" y="200" width="276" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="exposureIntervalButton.png">
@@ -759,7 +761,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g6u-Cy-cGo">
-                                <rect key="frame" x="22" y="268" width="276" height="41"/>
+                                <rect key="frame" x="22" y="242" width="276" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="numberOfShotsButton.png">
@@ -808,13 +810,13 @@
                         <outlet property="shutterLengthLabel" destination="r1Y-qf-3FZ" id="Ker-7k-aNw"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BTv-hW-pvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1482" y="756"/>
         </scene>
         <!--View Controller - EV Interval-->
         <scene sceneID="Uof-H9-8be">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oEi-jz-00Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="OLw-NM-Ry8" customClass="HDREVViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B4E-fl-Wz1">
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
@@ -836,13 +838,13 @@
                         <outlet property="picker" destination="3AA-o2-4yd" id="2dh-FN-Iy4"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEi-jz-00Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2287" y="162"/>
         </scene>
         <!--Shots View Controller - Number of Shots-->
         <scene sceneID="kkQ-Xf-WhD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GCd-if-DdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="NvC-Yx-taz" customClass="HDRShotsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E1K-gI-PPG">
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
@@ -863,13 +865,13 @@
                         <outlet property="picker" destination="Rcd-46-eXj" id="jar-C9-ogV"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GCd-if-DdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2315" y="1324"/>
         </scene>
         <!--Shutter Selector View Controller - Base Shutter-->
         <scene sceneID="IIR-Q0-zVT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJR-lD-zFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="qaa-X4-zK1" customClass="HDRShutterSelectorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jgb-lV-0kc">
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
@@ -929,13 +931,13 @@
                         <outlet property="secondSubSecondSegment" destination="ZJ9-4B-K0D" id="9Cn-Z2-9bA"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJR-lD-zFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2287" y="756"/>
         </scene>
         <!--Intervalometer Count Down View Controller - Interval-->
         <scene sceneID="tWe-me-17u">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="onY-jf-pnI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="9op-cb-AWg" customClass="IntervalometerCountDownViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Roj-EJ-zqr">
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
@@ -1018,13 +1020,72 @@
                         <outlet property="unlimitedDuration" destination="RAx-YC-IVO" id="8SK-qC-MRK"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onY-jf-pnI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1491" y="1429"/>
+        </scene>
+        <!--Time Between Shots View Controller - Time Between Shots-->
+        <scene sceneID="lfq-HA-grj">
+            <objects>
+                <viewController id="wwZ-nZ-MOd" customClass="TimeBetweenShotsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DQT-aS-OTI">
+                        <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="Lvg-0n-xTO">
+                                <rect key="frame" x="18" y="118" width="284" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" red="0.47477921195652173" green="0.47477921195652173" blue="0.47477921195652173" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="timeValueDidChange:" destination="wwZ-nZ-MOd" eventType="valueChanged" id="FPY-M9-3Zp"/>
+                                </connections>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="mono-lcd.png" id="6Va-Qt-86G">
+                                <rect key="frame" x="11" y="14" width="299" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3.54 Seconds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E7U-sH-zLK">
+                                <rect key="frame" x="60" y="31" width="201" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Between Each Shot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VfO-Xj-yTx">
+                                <rect key="frame" x="60" y="70" width="201" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="brampingInfo.png" id="okP-nI-0aJ">
+                                <rect key="frame" x="11" y="149" width="299" height="194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XEP-wZ-1Tj">
+                                <rect key="frame" x="38" y="157" width="245" height="177"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">This is the amount of time between each image in an exposure bracket. This time may need to be increased or decrease depending upon the frames per second of the camera.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Time Between Shots" id="gj3-5G-nxJ"/>
+                    <connections>
+                        <outlet property="time" destination="E7U-sH-zLK" id="oxK-ia-gP3"/>
+                        <outlet property="timeSlider" destination="Lvg-0n-xTO" id="KTt-D3-dN1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QYF-iu-coq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="1214"/>
         </scene>
         <!--Duration View Controller - Duration-->
         <scene sceneID="EcE-qw-3pf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aL1-64-SRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="EyP-hA-iSM" customClass="DurationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nlK-e3-hMn">
                         <rect key="frame" x="0.0" y="44" width="320" height="387"/>
@@ -1083,13 +1144,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="durationPicker" destination="VgS-Ve-fVt" id="Krf-7G-eh0"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aL1-64-SRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1288" y="43"/>
         </scene>
         <!--About View Controller - About-->
         <scene sceneID="YyE-vF-IwO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Lo-cV-Ayv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="QX8-2h-IU1" customClass="AboutViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TzV-4i-pr2">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -1138,13 +1199,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="buyButton" destination="spg-2L-weo" id="lPg-gu-AZv"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Lo-cV-Ayv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="313" y="1424"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
                 <tabBarController id="4" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5">
@@ -1158,13 +1219,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <segue destination="Dca-qr-prw" kind="relationship" relationship="viewControllers" id="oGe-oz-EfH"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-238" y="670"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="JTF-qQ-n7R">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U1F-8A-Jg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="Dca-qr-prw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="uW8-zJ-58q"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="U8I-uX-TTa">
@@ -1174,13 +1235,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <segue destination="45O-qC-CU0" kind="relationship" relationship="rootViewController" id="7oc-ZH-JB4"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U1F-8A-Jg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-811" y="1601"/>
         </scene>
         <!--More View Controller - More-->
         <scene sceneID="fB6-fS-jPw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uPE-TI-OM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="45O-qC-CU0" customClass="MoreViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vZI-dU-FbW">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -1208,6 +1269,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <tabBarItem key="tabBarItem" title="More" image="infoIcon.png" id="Syk-4h-d2r"/>
                     <navigationItem key="navigationItem" title="More" id="GZv-z7-bKe"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uPE-TI-OM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-225" y="1590"/>
         </scene>
@@ -1233,10 +1295,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="intervalometerViewController.png" width="640" height="960"/>
         <image name="learnMoreButton.png" width="549" height="83"/>
         <image name="lightMeter0.png" width="67" height="87"/>
+        <image name="mono-lcd.png" width="600" height="200"/>
         <image name="numberOfShotsButton.png" width="549" height="83"/>
         <image name="redButton.png" width="556" height="90"/>
         <image name="shutterLengthButton.png" width="549" height="83"/>
         <image name="startShutterButton.png" width="549" height="83"/>
+        <image name="timeBetweenShotsButton.png" width="549" height="83"/>
         <image name="timeLapseIcon.png" width="30" height="30"/>
     </resources>
     <classes>
@@ -1386,6 +1450,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="fireButtonLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="pressHoldSegment" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="useInfoMessage" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TimeBetweenShotsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimeBetweenShotsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="timeValueDidChange:"/>
+                <relationship kind="outlet" name="time" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeSlider" candidateClass="UISlider"/>
             </relationships>
         </class>
         <class className="helpModalViewContollerViewController" superclassName="UIViewController">

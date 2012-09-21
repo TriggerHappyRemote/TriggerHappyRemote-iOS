@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="0xl-Bg-Hy8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12A269" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="0xl-Bg-Hy8">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller - Time Lapse-->
         <scene sceneID="MRD-8P-Dwg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mpm-AC-49n" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="UVB-sb-0JK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Time Lapse" image="timeLapseIcon.png" id="0c2-Iz-8Dg"/>
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="cLI-i3-2Be">
@@ -19,13 +17,13 @@
                         <segue destination="fUd-fm-mSn" kind="relationship" relationship="rootViewController" id="H4S-Za-vkN"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mpm-AC-49n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="111" y="112"/>
         </scene>
         <!--Intervalometer View Controller - Time Lapse-->
         <scene sceneID="sa0-GU-b9t">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kdx-QO-kxJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="fUd-fm-mSn" customClass="IntervalometerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iee-44-k4F">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
@@ -205,13 +203,13 @@
                         <outlet property="shutterSetButton" destination="tjl-fk-zKa" id="L70-Tq-iGn"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kdx-QO-kxJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1223" y="100"/>
         </scene>
         <!--Shutter Selector View Controller - Shutter-->
         <scene sceneID="WOx-oR-nJA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p8M-lE-h6A" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="UQO-OL-7oV" customClass="ShutterSelectorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sha-I0-ODM">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
@@ -270,13 +268,13 @@
                         <outlet property="secondSubSecondSegment" destination="4p6-LL-xe6" id="tdw-3O-KQa"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p8M-lE-h6A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2233" y="56"/>
         </scene>
         <!--View Controller - HDR Bracketing-->
         <scene sceneID="dXc-wx-W4q">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZKc-6B-8UW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="3s0-Af-OFk" customClass="HDRViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ckG-EA-EtG">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
@@ -426,13 +424,13 @@
                         <outlet property="shutterLengthLabel" destination="raw-hJ-ZCo" id="kuz-PA-RZX"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZKc-6B-8UW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2165" y="1336"/>
         </scene>
         <!--View Controller - Exposure Value Interval-->
         <scene sceneID="GFv-Ei-a2E">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MDE-UW-Nuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="44u-xm-fdN" customClass="HDREVViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xyc-8y-unp">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
@@ -454,13 +452,13 @@
                         <outlet property="picker" destination="LqV-CO-A8F" id="mtZ-Dr-Q2y"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MDE-UW-Nuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3289" y="1440"/>
         </scene>
         <!--Shots View Controller - Number of Shots-->
         <scene sceneID="In2-Vg-OKf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vUq-DZ-hev" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="t3T-ZU-I6u" customClass="HDRShotsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4D5-xS-fMH">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
@@ -482,13 +480,13 @@
                         <outlet property="picker" destination="U6H-Il-jpC" id="2a4-ST-g5V"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vUq-DZ-hev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3293" y="2624"/>
         </scene>
         <!--Shutter Selector View Controller - Base Shutter-->
         <scene sceneID="Uww-Tk-A7g">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gEg-ir-756" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="tG7-E1-8nd" customClass="HDRShutterSelectorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xcw-Hk-geg">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
@@ -547,13 +545,13 @@
                         <outlet property="secondSubSecondSegment" destination="RiL-WN-Dhc" id="Eu0-Tr-mYB"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gEg-ir-756" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2285" y="2572"/>
         </scene>
         <!--Bramping View Controller - Bulb Ramping (Bramping)-->
         <scene sceneID="hWB-ni-Ngl">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YOU-Af-3qI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="iMf-ZN-jEM" customClass="BrampingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K5v-a2-A3D">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
@@ -612,13 +610,13 @@
                         <outlet property="startShutterDataLabel" destination="FI4-6x-50i" id="b13-ar-slM"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YOU-Af-3qI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3353" y="139"/>
         </scene>
         <!--Bramping Start Shutter Selector View Controller - Shutter Length when Time Lapse Starts-->
         <scene sceneID="0uf-SW-zzc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PME-p7-84P" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="n3s-dc-0Uq" customClass="BrampingStartShutterSelectorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MKO-od-ZYT">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
@@ -677,13 +675,13 @@
                         <outlet property="secondSubSecondSegment" destination="il0-ua-HzM" id="ZXH-8w-Hdg"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PME-p7-84P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4612" y="-399"/>
         </scene>
         <!--Bramping Stop Shutter Selector View Controller - Shutter Length when Time Lapse Ends-->
         <scene sceneID="BFE-OK-nGo">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="J93-P9-v67" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="M56-85-KHA" customClass="BrampingStopShutterSelectorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EAB-Mh-LLd">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
@@ -742,13 +740,13 @@
                         <outlet property="secondSubSecondSegment" destination="Myw-VS-EUM" id="gfE-9z-D6E"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J93-P9-v67" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4580" y="913"/>
         </scene>
         <!--Interval Selector View Controller - Interval-->
         <scene sceneID="geW-dw-XhY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H11-jJ-g0H" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="kb6-0G-NPO" customClass="IntervalSelectorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ay4-f2-edC">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
@@ -807,13 +805,13 @@
                         <outlet property="segment" destination="nq4-tr-jMk" id="RRy-p4-XVB"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H11-jJ-g0H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2206" y="-1285"/>
         </scene>
         <!--Duration View Controller - Duration-->
         <scene sceneID="APs-Ok-mWX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vqL-Vz-Q6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="kBj-N8-ycV" customClass="DurationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ilD-5k-zZj">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
@@ -873,13 +871,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="durationPicker" destination="P67-DN-tKS" id="n5g-Gk-R7E"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vqL-Vz-Q6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3087" y="-1255"/>
         </scene>
         <!--About View Controller - About-->
         <scene sceneID="Lcs-M9-jnI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fws-Mf-I04" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ITS-ui-HL6" customClass="AboutViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zSl-TW-q6W">
                         <rect key="frame" x="0.0" y="20" width="768" height="955"/>
@@ -931,13 +929,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="infoIcon.png" id="JGp-uH-ZX7"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fws-Mf-I04" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="103" y="1251"/>
         </scene>
         <!--Intervalometer Count Down View Controller - Time Lapse-->
         <scene sceneID="90O-TK-d3w">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B53-uq-I1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="oSm-24-Sol" customClass="IntervalometerCountDownViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ntm-HH-B8e">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
@@ -1022,13 +1020,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="unlimitedDuration" destination="dp8-10-X0J" id="AJ8-Ug-D6S"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B53-uq-I1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1149" y="1504"/>
         </scene>
         <!--Single Shot View Controller - Single-->
         <scene sceneID="YbX-8X-NZp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VY4-4p-CyN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="L28-Z1-Z0G" customClass="SingleShotViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hUv-Bo-bs4">
                         <rect key="frame" x="0.0" y="20" width="768" height="955"/>
@@ -1093,13 +1091,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="useInfoMessage" destination="vgy-Jc-LKh" id="m0f-yD-i5I"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VY4-4p-CyN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="103" y="-982"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4l4-VI-1So">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hIi-RP-naP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController definesPresentationContext="YES" id="0xl-Bg-Hy8" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="4pD-zi-I3d">
@@ -1113,6 +1111,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <segue destination="ITS-ui-HL6" kind="relationship" relationship="viewControllers" id="vxQ-QV-g5m"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hIi-RP-naP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-879" y="-429"/>
         </scene>

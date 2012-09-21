@@ -8,6 +8,12 @@
 
 #import "TimeBetweenShotsViewController.h"
 #include "IntervalData.h"
+#include "Shutter.h"
+#include "Interval.h"
+#include "HDR.h"
+
+#define MAXVAL 2.0
+#define MINVAL .1
 
 @interface TimeBetweenShotsViewController ()
 
@@ -16,14 +22,26 @@
 @implementation TimeBetweenShotsViewController
 
 -(void) viewWillAppear:(BOOL)animated {
-    //timeSlider.value = [IntervalData getInstance].shutter  ;
-    time.text = @"0.33 Seconds";
+    timeSlider.value = ([IntervalData getInstance].shutter.hdr.shutterGap  - MINVAL) / (MAXVAL-MINVAL);
+    [self timeValueDidChange:self];
+    info.text = @"This is the amount of time between each image in an exposure bracket. This time may need to be increased or decrease depending upon the frames per second of the camera.";
 }
 
 - (IBAction)timeValueDidChange:(id)sender {
-    
-    // .1 and 2 seconds   1.9 seconds
-    time.text = [[NSString alloc] initWithFormat:@"%.02f Seconds", timeSlider.value * 1.9 + .1];
+    [IntervalData getInstance].shutter.hdr.shutterGap = (timeSlider.value * (MAXVAL-MINVAL)) + MINVAL;
+    time.text = [[NSString alloc] initWithFormat:@"%.02f Seconds", [IntervalData getInstance].shutter.hdr.shutterGap];
+    ;
+    // enforce interval longer than shutter:
+    NSTimeInterval totalShutter = [[IntervalData getInstance].shutter.hdr getMaxShutterLength];
+    NSTimeInterval intervalLength = [IntervalData getInstance].interval.time.totalTimeInSeconds;
+    if(totalShutter >= intervalLength) {
+        timeSlider.value = sliderValuePrevious;
+        [self timeValueDidChange:self];
+        info.text = @"Increase the interval of the time lapse to increase the time between each shot. To do that, nagivate back to HDR then to Time Lapse and select Interval";
+    } else {
+        info.text = @"This is the amount of time between each image in an exposure bracket. This time may need to be increased or decrease depending upon the frames per second of the camera.";
+        sliderValuePrevious = timeSlider.value;
+    }
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -50,6 +68,7 @@
 - (void)viewDidUnload {
     time = nil;
     timeSlider = nil;
+    info = nil;
     [super viewDidUnload];
 }
 

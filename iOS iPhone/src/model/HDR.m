@@ -15,14 +15,14 @@
 @synthesize bulb = _bulb;
 @synthesize evInterval = _evInterval;
 @synthesize pickerMode;
-@synthesize shutterGap = _shutterGap;
+@synthesize shutterGap;
 
 -(id) init {
     _numberOfShots = 3;
     _baseShutterSpeed = [Time new];
     _bulb = true;
     _evInterval = .333;
-    _shutterGap = .75;
+    self.shutterGap = .33;
     [_baseShutterSpeed setTotalTimeInSeconds:1];
     return self;
 }
@@ -37,20 +37,11 @@
 }
 
 -(NSTimeInterval) getMaxShutterLength {
-
-    
-    NSTimeInterval totalTime = [self.baseShutterSpeed totalTimeInSeconds];
-    for(int i = 0; i < (int)(self.numberOfShots / 2); i++) {
-        NSLog(@"-- %f", [self.baseShutterSpeed totalTimeInSeconds] * pow (2, self.evInterval * i));
-        totalTime += [self.baseShutterSpeed totalTimeInSeconds] * pow (2, self.evInterval * i);
-        totalTime += [self.baseShutterSpeed totalTimeInSeconds] * pow (2, -1 * self.evInterval * i);
-
+    NSTimeInterval totalTime = 0.0;
+    NSArray *times = [self getShutterLengths];
+    for(Time *t in times) {
+        totalTime += t.totalTimeInSeconds + shutterGap;
     }
-    
-    totalTime += self.shutterGap * self.numberOfShots;
-
-    NSLog(@"Total time: %f EVInterval %f", totalTime, self.evInterval);
-    [self getShutterLengths];
     return totalTime;
 }
 
@@ -58,12 +49,13 @@
     NSMutableArray * times = [[NSMutableArray alloc] init];
     [times addObject:self.baseShutterSpeed];
     for(int i = 0; i < (int)(self.numberOfShots / 2); i++) {
-        [times addObject:[[Time alloc] initWithTotalTimeInSeconds: [self.baseShutterSpeed totalTimeInSeconds] * pow (2, self.evInterval * i)]];
-        [times addObject:[[Time alloc] initWithTotalTimeInSeconds:[self.baseShutterSpeed totalTimeInSeconds] * pow (2, -1 * self.evInterval * i)]];
+        NSLog(@"initing %f",  [self.baseShutterSpeed totalTimeInSeconds] * pow (2, self.evInterval * i));
+        [times addObject:[[Time alloc] initWithTotalTimeInSeconds: [self.baseShutterSpeed totalTimeInSeconds] * pow (2, self.evInterval * (i+1))]];
+        [times addObject:[[Time alloc] initWithTotalTimeInSeconds:[self.baseShutterSpeed totalTimeInSeconds] * pow (2, -1 * self.evInterval * (i+1))]];
     }
     
     for(int i = 0; i < times.count; i++) {
-        NSLog(@"%f, ", [(Time *)[times objectAtIndex:i] totalTimeInSeconds] );
+        NSLog(@"Time(%i) - %f, ",i , [(Time *)[times objectAtIndex:i] totalTimeInSeconds] );
     }
     return times;
 }

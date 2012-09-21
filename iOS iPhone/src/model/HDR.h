@@ -28,6 +28,7 @@
 
 @property (nonatomic) PickerMode pickerMode;
 
+// time between each shot
 @property (nonatomic) NSTimeInterval shutterGap;
 
 - (NSMutableArray *) getShutterLengths;

@@ -12,6 +12,9 @@
     
     __weak IBOutlet UILabel *time;
     __weak IBOutlet UISlider *timeSlider;
+    __weak IBOutlet UILabel *info;
+    @private
+    float sliderValuePrevious;
 }
 
 @end

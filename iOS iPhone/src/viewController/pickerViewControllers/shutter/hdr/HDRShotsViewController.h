@@ -11,12 +11,10 @@
 @interface HDRShotsViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
     UIPickerView       *picker;
     InfoViewController *infoViewController;
-
 }
 
 @property (strong, nonatomic) IBOutlet UIPickerView *picker;
 
 -(IBAction)textFieldReturn:(id)sender;
-
 
 @end

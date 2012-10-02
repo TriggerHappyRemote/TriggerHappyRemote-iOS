@@ -127,19 +127,6 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "src/model/IntervalData.m"
-         timestampString = "365894699.693546"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "49"
-         endingLineNumber = "49"
-         landmarkName = "+getInstance"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "src/viewController/SingleShotViewController.m"
          timestampString = "366765560.751546"
          startingColumnNumber = "9223372036854775807"
@@ -219,20 +206,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/model/IntervalData.m"
-         timestampString = "365894699.693546"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "44"
-         endingLineNumber = "44"
-         landmarkName = "+getInstance"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "src/model/IntervalData.m"
-         timestampString = "365894699.693546"
+         timestampString = "370372568.798927"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "43"
@@ -245,11 +219,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/model/IntervalData.m"
-         timestampString = "365894699.693546"
+         timestampString = "370372568.798927"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "45"
-         endingLineNumber = "45"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
+         landmarkName = "+getInstance"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/model/IntervalData.m"
+         timestampString = "370372568.798927"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "44"
+         endingLineNumber = "44"
          landmarkName = "+getInstance"
          landmarkType = "5">
       </FileBreakpoint>
@@ -665,6 +652,32 @@
          startingLineNumber = "36"
          endingLineNumber = "36"
          landmarkName = "-init"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/viewController/pickerViewControllers/shutter/hdr/HDREVViewController.m"
+         timestampString = "370373472.316964"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "101"
+         endingLineNumber = "101"
+         landmarkName = "-viewDidUnload"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/viewController/pickerViewControllers/shutter/hdr/HDREVViewController.m"
+         timestampString = "370373472.316964"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "97"
+         endingLineNumber = "97"
+         landmarkName = "-textFieldReturn:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -34,7 +34,7 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Trigger_Happy-iPhoneFamily</string>
 	<key>UIMainStoryboardFile~ipad</key>
-	<string>Trigger_Happy-iPad</string>
+	<string>Trigger_Happy-iPhoneFamily</string>
 	<key>UIMainStoryboardFile~iphone</key>
 	<string>Trigger_Happy-iPhoneFamily</string>
 	<key>UIRequiredDeviceCapabilities</key>

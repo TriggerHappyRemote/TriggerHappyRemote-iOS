@@ -30,8 +30,7 @@
 -(NSString*) getButtonData {
     if(self.bulb) {
         return [self.baseShutterSpeed toStringDownToSeconds];
-    }
-    else {
+    } else {
         return [[NSString alloc] initWithFormat:@"Auto"];
     }
 }
@@ -46,10 +45,9 @@
 }
 
 - (NSMutableArray *) getShutterLengths {
-    NSMutableArray * times = [[NSMutableArray alloc] init];
+    NSMutableArray *times = [NSMutableArray array];
     [times addObject:self.baseShutterSpeed];
     for(int i = 0; i < (int)(self.numberOfShots / 2); i++) {
-        NSLog(@"initing %f",  [self.baseShutterSpeed totalTimeInSeconds] * pow (2, self.evInterval * i));
         [times addObject:[[Time alloc] initWithTotalTimeInSeconds: [self.baseShutterSpeed totalTimeInSeconds] * pow (2, self.evInterval * (i+1))]];
         [times addObject:[[Time alloc] initWithTotalTimeInSeconds:[self.baseShutterSpeed totalTimeInSeconds] * pow (2, -1 * self.evInterval * (i+1))]];
     }
@@ -59,6 +57,5 @@
     }
     return times;
 }
-
 
 @end

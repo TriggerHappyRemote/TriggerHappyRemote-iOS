@@ -6,7 +6,6 @@
 //  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
 @interface HDRViewController : UIViewController {
     UILabel * exposureValueLabel;

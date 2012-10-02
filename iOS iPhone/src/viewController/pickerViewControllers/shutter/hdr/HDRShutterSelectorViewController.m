@@ -44,9 +44,7 @@
 
 -(void) changeMillisecond: (int) millisecond {
     [[[[self.intervalData shutter] hdr] baseShutterSpeed] setMilliseconds:millisecond];
-
 }
-
 
 -(Time *) time {
     return [[[self.intervalData shutter] hdr] baseShutterSpeed];
@@ -105,7 +103,5 @@
 - (NSString *) warningMessage {
     return @"The cumulation of shutter lengths must be shorter than the interval";
 }
-
-
 
 @end

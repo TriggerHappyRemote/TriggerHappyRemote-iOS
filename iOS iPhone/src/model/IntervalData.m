@@ -39,16 +39,10 @@ static IntervalData *_globalInstance = nil;
 
 + (IntervalData *)getInstance {
     static bool initialized = NO;
-    
     if (!initialized) {
         _globalInstance = [[self alloc] init];
         initialized = YES;
-        NSLog(@"init");
     }
-        else {
-            NSLog(@"return object");
-        }
-	
 	return  _globalInstance;
 }
 

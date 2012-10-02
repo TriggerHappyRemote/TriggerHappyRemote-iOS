@@ -14,40 +14,33 @@
 #import "Shutter.h"
 #import "Interval.h"
 
+@interface HDREVViewController()
+@property (nonatomic) int prevRowIndex;
+@end
+
 @implementation HDREVViewController
 
+@synthesize prevRowIndex;
 @synthesize picker;
 
-
-IntervalData *intervalData;
-
-int prevRowIndex;
-
-
-//base 3
-// due to Apple's fail, we can map anything
 const int evValuesThirdsSize = 10;
 const double evModelValues[evValuesThirdsSize] = {.333,.666,1,2,3,4,5,6,7,8};
 NSString * evValuesThirds[evValuesThirdsSize] = {@"1/3",@"2/3",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8"};
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewDidLoad];
-    intervalData = [IntervalData getInstance];
    
-    if([[[intervalData shutter] hdr] evInterval] == .333) {
+    if([IntervalData getInstance].shutter.hdr.evInterval == .333) {
         [picker selectRow:0 inComponent:0 animated:false];
-
     }
-    else if([[[intervalData shutter] hdr] evInterval] == .666) {
+    else if([IntervalData getInstance].shutter.hdr.evInterval == .666) {
         [picker selectRow:1 inComponent:0 animated:false];
-
     }
     else {
-        NSLog(@"Setting -- %i", (int)[[[intervalData shutter] hdr] evInterval]);
-        [picker selectRow:(int)[[[intervalData shutter] hdr] evInterval] + 1 inComponent:0 animated:false];
-
+        [picker selectRow:(int)([IntervalData getInstance].shutter.hdr.evInterval + 1) inComponent:0 animated:false];
     }
-    [[[self navigationController] tabBarController] tabBar].hidden = YES;
+    
+    self.navigationController.tabBarController.tabBar.hidden = YES;
 
     prevRowIndex = 0;
 }
@@ -58,11 +51,9 @@ NSString * evValuesThirds[evValuesThirdsSize] = {@"1/3",@"2/3",@"1",@"2",@"3",@"
     else
         infoViewController = [InfoViewController withLocationForPhone:0 and:277];
     
-    
     infoViewController.text =  @"The exposure between each shot in the bracket";
     infoViewController.type = InfoViewControllerInfo;
     [self.view addSubview:infoViewController.view];
-
 }
 
 
@@ -86,31 +77,28 @@ numberOfRowsInComponent:(NSInteger)component {
 
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    int previousEVInterval = [[[intervalData shutter] hdr] evInterval];
+    int previousEVInterval = [IntervalData getInstance].shutter.hdr.evInterval;
     
-    [[[intervalData shutter] hdr] setEvInterval:evModelValues[row]];
+    [IntervalData getInstance].shutter.hdr.evInterval = evModelValues[row];
     
-    if([[[intervalData shutter] hdr] getMaxShutterLength] >= [[[intervalData interval] time] totalTimeInSeconds]) {
-        [[[intervalData shutter] hdr] setEvInterval:previousEVInterval];
+    if([[IntervalData getInstance].shutter.hdr getMaxShutterLength] >= [IntervalData getInstance].interval.time.totalTimeInSeconds) {
+        [IntervalData getInstance].shutter.hdr.evInterval = previousEVInterval;
         [self.picker selectRow:prevRowIndex inComponent:0 animated:false];
         infoViewController.text = @"The cumulative shutter length of each shot in the bracket must be shorter than the interval";
         infoViewController.type = InfoViewControllerWarning;
     }
     else {
-        infoViewController.text = [[NSString alloc] initWithFormat:@"The exposure between each shot in the bracket will differ by %@ EV", evValuesThirds[row]];
+        prevRowIndex = row;
+        infoViewController.text = [NSString stringWithFormat:@"The exposure between each shot in the bracket will differ by %@ EV", evValuesThirds[row]];
         infoViewController.type = InfoViewControllerInfo;
     }
-
-    
 }
 
--(IBAction)textFieldReturn:(id)sender
-{
+-(IBAction)textFieldReturn:(id)sender {
     [sender resignFirstResponder];
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload {
     infoViewController = nil;
     [super viewDidUnload];
     self.picker = nil;

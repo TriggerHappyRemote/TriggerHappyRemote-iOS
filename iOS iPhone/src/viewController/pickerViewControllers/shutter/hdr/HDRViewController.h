@@ -11,6 +11,7 @@
     UILabel * exposureValueLabel;
     UILabel * numberOfShotsLabel;
     UILabel * shutterLengthLabel;
+    __weak IBOutlet UIImageView *background;
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *exposureValueLabel;

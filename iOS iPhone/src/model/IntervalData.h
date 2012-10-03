@@ -21,4 +21,6 @@
 
 + (IntervalData *)getInstance;
 
+- (void) assertTimingConstraints;
+
 @end

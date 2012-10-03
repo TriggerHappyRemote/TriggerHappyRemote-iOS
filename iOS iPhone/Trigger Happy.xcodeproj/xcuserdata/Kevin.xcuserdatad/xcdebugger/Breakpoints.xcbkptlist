@@ -128,11 +128,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/viewController/SingleShotViewController.m"
-         timestampString = "366765560.751546"
+         timestampString = "370985257.383956"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "50"
-         endingLineNumber = "50"
+         startingLineNumber = "64"
+         endingLineNumber = "64"
          landmarkName = "-viewWillAppear:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -141,11 +141,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/viewController/SingleShotViewController.m"
-         timestampString = "366765560.751546"
+         timestampString = "370985257.383956"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "52"
-         endingLineNumber = "52"
+         startingLineNumber = "66"
+         endingLineNumber = "66"
          landmarkName = "-viewWillAppear:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -388,11 +388,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/viewController/SingleShotViewController.m"
-         timestampString = "366765560.751546"
+         timestampString = "370985257.383956"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "75"
-         endingLineNumber = "75"
+         startingLineNumber = "89"
+         endingLineNumber = "89"
          landmarkName = "-fireTownDown"
          landmarkType = "5">
       </FileBreakpoint>
@@ -401,11 +401,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/viewController/SingleShotViewController.m"
-         timestampString = "366765560.751546"
+         timestampString = "370985257.383956"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "97"
-         endingLineNumber = "97"
+         startingLineNumber = "111"
+         endingLineNumber = "111"
          landmarkName = "-fireTownDown"
          landmarkType = "5">
       </FileBreakpoint>
@@ -607,11 +607,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/viewController/SingleShotViewController.m"
-         timestampString = "367491069.630342"
+         timestampString = "370985257.383956"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "77"
-         endingLineNumber = "77"
+         startingLineNumber = "91"
+         endingLineNumber = "91"
          landmarkName = "-fireTownDown"
          landmarkType = "5">
       </FileBreakpoint>
@@ -620,11 +620,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/viewController/SingleShotViewController.m"
-         timestampString = "367491150.335057"
+         timestampString = "370985257.383956"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "89"
-         endingLineNumber = "89"
+         startingLineNumber = "103"
+         endingLineNumber = "103"
          landmarkName = "-fireTownDown"
          landmarkType = "5">
       </FileBreakpoint>
@@ -678,6 +678,19 @@
          startingLineNumber = "97"
          endingLineNumber = "97"
          landmarkName = "-textFieldReturn:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/viewController/pickerViewControllers/shutter/hdr/HDRViewController.m"
+         timestampString = "370986514.060478"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "37"
+         endingLineNumber = "37"
+         landmarkName = "-viewWillAppear:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

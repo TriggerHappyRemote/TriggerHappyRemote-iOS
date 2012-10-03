@@ -45,7 +45,21 @@ typedef enum  {
 ButtonState state;
 
 -(void) viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:false];
+    [super viewWillAppear:animated];
+    
+    if(IPHONE_4_0) {
+        // stretch the fire button
+        [fireButton setFrame:CGRectMake(fireButton.frame.origin.x,fireButton.frame.origin.y,fireButton.frame.size.width,463)];
+        // move the fire button to the center
+        [fireButtonLabel setFrame:CGRectMake(fireButtonLabel.frame.origin.x,248,fireButtonLabel.frame.size.width,fireButtonLabel.frame.size.height)];
+
+    }
+    
+    if(IPHONE_3_5) {
+        NSLog(@"3.5 inch");
+    }
+    
+    
     canFire = true;
     
     intervalData = [IntervalData getInstance];

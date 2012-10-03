@@ -204,14 +204,8 @@ int hdrShutterIndex;
     
     Time * time;
     if([[intervalData shutter] mode] == HDR_MODE &&
-       hdrShutterIndex < [[[intervalData shutter] hdr] numberOfShots]) {
-        
-        NSLog(@"Shutter index: %i", hdrShutterIndex );
-        NSLog(@"shutters count: %i", [shutterTimes count] );
-
+       hdrShutterIndex < intervalData.shutter.hdr.numberOfShots) {
         time = (Time *)[shutterTimes objectAtIndex:hdrShutterIndex];
-
-        
         shutterTimer = [NSTimer scheduledTimerWithTimeInterval:[time totalTimeInSeconds] + [[[intervalData shutter] hdr] shutterGap]
                                                         target:self
                                                       selector:@selector(startShutter)
@@ -234,8 +228,8 @@ int hdrShutterIndex;
         [[intervalData shutter] setCurrentLength:time];
 
     }
+    
     [cameraController fireCamera:time];
-    NSLog(@"Shutter length: %f", [time totalTimeInSeconds] );
 }
 
 - (void) getNotification {

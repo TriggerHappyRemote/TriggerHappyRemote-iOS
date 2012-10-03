@@ -20,6 +20,12 @@
 
 // base shutter speed
 @property (nonatomic, strong) Time* baseShutterSpeed;
+
+// time between each shot
+@property (nonatomic) NSTimeInterval shutterGap;
+
+
+// TODO: DO I need this?
 @property (nonatomic) bool bulb;
 
 -(NSString*) getButtonData;
@@ -28,9 +34,9 @@
 
 @property (nonatomic) PickerMode pickerMode;
 
-// time between each shot
-@property (nonatomic) NSTimeInterval shutterGap;
 
 - (NSMutableArray *) getShutterLengths;
+
+- (NSTimeInterval) maxTimeBetweenShots;
 
 @end

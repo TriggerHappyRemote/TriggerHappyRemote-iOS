@@ -11,9 +11,15 @@
 
 #define IDIOM    UI_USER_INTERFACE_IDIOM()
 #define IPAD     UIUserInterfaceIdiomPad
+#define IPHONE_3_5 !( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+#define IPHONE_4_0 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 
 #define TEST 1
 #define PRODUCT 0
+
+// The minimum amount of time that defines a numerical comparison operater (<)
+// This is used for time, and this is value is portions of a second
+#define TIMING_THREASHOLD .01
 
 typedef enum  {
     SECONDS = 0,

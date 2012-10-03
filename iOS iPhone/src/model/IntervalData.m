@@ -50,6 +50,11 @@ static IntervalData *_globalInstance = nil;
 	_globalInstance = nil;
 }
 
+- (void) assertTimingConstraints {
+    NSAssert(self.interval.time.totalTimeInSeconds < self.duration.time.totalTimeInSeconds, @"Interval (%f) must be shorter than Duration(%f)", self.interval.time.totalTimeInSeconds, self.duration.time.totalTimeInSeconds);
+    // TODO: finish
+}
+
 
 @end
 

@@ -32,6 +32,11 @@ pos1EVTick, neg1EVTick, centerEVTick;
 IntervalData *intervalData;
 
 -(void) viewWillAppear:(BOOL)animated {
+    if(IPHONE_4_0) {
+        self.view.backgroundColor = [UIColor blackColor];
+        [background setFrame:CGRectMake(background.frame.origin.x, -45, background.frame.size.width, 480)];
+    }
+    
     intervalData = [IntervalData getInstance];
 
     [[[self navigationController] tabBarController] tabBar].hidden = YES;
@@ -129,6 +134,7 @@ IntervalData *intervalData;
     [self setAxis1Label:nil];
     [self setAxis2Label:nil];
     [self setAxis3Label:nil];
+    background = nil;
     [super viewDidUnload];
 }
 @end

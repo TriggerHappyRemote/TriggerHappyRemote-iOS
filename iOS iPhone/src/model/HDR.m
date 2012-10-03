@@ -7,6 +7,8 @@
 //
 
 #import "HDR.h"
+#import "IntervalData.h"
+#import "Interval.h"
 
 @implementation HDR
 
@@ -53,9 +55,15 @@
     }
     
     for(int i = 0; i < times.count; i++) {
-        NSLog(@"Time(%i) - %f, ",i , [(Time *)[times objectAtIndex:i] totalTimeInSeconds] );
+        //NSLog(@"Time(%i) - %f, ",i , [(Time *)[times objectAtIndex:i] totalTimeInSeconds] );
     }
     return times;
+}
+
+- (NSTimeInterval) maxTimeBetweenShots {
+    NSTimeInterval totalTimeShutterIsOpen = [self getMaxShutterLength] - shutterGap * self.numberOfShots;
+    NSTimeInterval leftoverTime = [IntervalData getInstance].interval.time.totalTimeInSeconds - totalTimeShutterIsOpen;
+    return leftoverTime / self.numberOfShots - TIMING_THREASHOLD;
 }
 
 @end

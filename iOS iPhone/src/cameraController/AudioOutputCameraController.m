@@ -109,7 +109,7 @@
 
 #pragma PublicMethods
 - (void) fireCamera: (Time *) time {
-    
+    NSLog(@"Fire camera");
     // Do not play audio is "headphones" (i.e. the Trigger Happy 
     // cable/ unit) are not plugged in because
     // 1) dont want to burden users with uneccessary sounds

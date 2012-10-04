@@ -12,18 +12,22 @@
 		0A3A5490161D0FE4006A0756 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3A548F161D0FE4006A0756 /* CoreGraphics.framework */; };
 		0A3A5496161D0FE4006A0756 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A5494161D0FE4006A0756 /* InfoPlist.strings */; };
 		0A3A5498161D0FE4006A0756 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A5497161D0FE4006A0756 /* main.m */; };
-		0A3A549C161D0FE4006A0756 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A549B161D0FE4006A0756 /* AppDelegate.m */; };
+		0A3A549C161D0FE4006A0756 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A549B161D0FE4006A0756 /* AppDelegate.mm */; };
 		0A3A549E161D0FE4006A0756 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A549D161D0FE4006A0756 /* Default.png */; };
 		0A3A54A0161D0FE4006A0756 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A549F161D0FE4006A0756 /* Default@2x.png */; };
 		0A3A54A2161D0FE4006A0756 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A54A1161D0FE4006A0756 /* Default-568h@2x.png */; };
 		0A3A54A5161D0FE4006A0756 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A54A3161D0FE4006A0756 /* MainStoryboard_iPhone.storyboard */; };
 		0A3A54A8161D0FE4006A0756 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A54A6161D0FE4006A0756 /* MainStoryboard_iPad.storyboard */; };
-		0A3A54AB161D0FE4006A0756 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A54AA161D0FE4006A0756 /* ViewController.m */; };
+		0A3A54AB161D0FE4006A0756 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A54AA161D0FE4006A0756 /* ViewController.mm */; };
 		0A3A54B3161D0FE4006A0756 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3A54B2161D0FE4006A0756 /* SenTestingKit.framework */; };
 		0A3A54B4161D0FE4006A0756 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3A548B161D0FE4006A0756 /* UIKit.framework */; };
 		0A3A54B5161D0FE4006A0756 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3A548D161D0FE4006A0756 /* Foundation.framework */; };
 		0A3A54BD161D0FE4006A0756 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A54BB161D0FE4006A0756 /* InfoPlist.strings */; };
 		0A3A54C0161D0FE4006A0756 /* KevinCoreAudioHelloWordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A54BF161D0FE4006A0756 /* KevinCoreAudioHelloWordTests.m */; };
+		0AE47B08161D1938007B6931 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE47B07161D1938007B6931 /* AudioToolbox.framework */; };
+		0AE47B0E161D19A5007B6931 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AE47B0C161D19A5007B6931 /* CAStreamBasicDescription.cpp */; };
+		0AE47B13161D19F7007B6931 /* AudioController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AE47B12161D19F7007B6931 /* AudioController.mm */; };
+		0AE47B18161D2D71007B6931 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE47B17161D2D71007B6931 /* AudioUnit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,20 +50,29 @@
 		0A3A5497161D0FE4006A0756 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0A3A5499161D0FE4006A0756 /* KevinCoreAudioHelloWord-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KevinCoreAudioHelloWord-Prefix.pch"; sourceTree = "<group>"; };
 		0A3A549A161D0FE4006A0756 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		0A3A549B161D0FE4006A0756 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0A3A549B161D0FE4006A0756 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		0A3A549D161D0FE4006A0756 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0A3A549F161D0FE4006A0756 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0A3A54A1161D0FE4006A0756 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0A3A54A4161D0FE4006A0756 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		0A3A54A7161D0FE4006A0756 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		0A3A54A9161D0FE4006A0756 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0A3A54AA161D0FE4006A0756 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0A3A54AA161D0FE4006A0756 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		0A3A54B1161D0FE4006A0756 /* KevinCoreAudioHelloWordTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KevinCoreAudioHelloWordTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3A54B2161D0FE4006A0756 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		0A3A54BA161D0FE4006A0756 /* KevinCoreAudioHelloWordTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KevinCoreAudioHelloWordTests-Info.plist"; sourceTree = "<group>"; };
 		0A3A54BC161D0FE4006A0756 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A3A54BE161D0FE4006A0756 /* KevinCoreAudioHelloWordTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KevinCoreAudioHelloWordTests.h; sourceTree = "<group>"; };
 		0A3A54BF161D0FE4006A0756 /* KevinCoreAudioHelloWordTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KevinCoreAudioHelloWordTests.m; sourceTree = "<group>"; };
+		0AE47B07161D1938007B6931 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0AE47B0B161D1996007B6931 /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAMath.h; path = ../../../../../../../../Developer/Extras/CoreAudio/PublicUtility/CAMath.h; sourceTree = "<group>"; };
+		0AE47B0C161D19A5007B6931 /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CAStreamBasicDescription.cpp; path = ../../../../../../../../Developer/Extras/CoreAudio/PublicUtility/CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		0AE47B0D161D19A5007B6931 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAStreamBasicDescription.h; path = ../../../../../../../../Developer/Extras/CoreAudio/PublicUtility/CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		0AE47B0F161D19B5007B6931 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAXException.h; path = ../../../../../../../../Developer/Extras/CoreAudio/PublicUtility/CAXException.h; sourceTree = "<group>"; };
+		0AE47B10161D19C5007B6931 /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CADebugMacros.h; path = ../../../../../../../../Developer/Extras/CoreAudio/PublicUtility/CADebugMacros.h; sourceTree = "<group>"; };
+		0AE47B11161D19F7007B6931 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		0AE47B12161D19F7007B6931 /* AudioController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioController.mm; sourceTree = "<group>"; };
+		0AE47B17161D2D71007B6931 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE47B18161D2D71007B6931 /* AudioUnit.framework in Frameworks */,
+				0AE47B08161D1938007B6931 /* AudioToolbox.framework in Frameworks */,
 				0A3A548C161D0FE4006A0756 /* UIKit.framework in Frameworks */,
 				0A3A548E161D0FE4006A0756 /* Foundation.framework in Frameworks */,
 				0A3A5490161D0FE4006A0756 /* CoreGraphics.framework in Frameworks */,
@@ -89,6 +104,8 @@
 		0A3A547C161D0FE4006A0756 = {
 			isa = PBXGroup;
 			children = (
+				0AE47B17161D2D71007B6931 /* AudioUnit.framework */,
+				0AE47B07161D1938007B6931 /* AudioToolbox.framework */,
 				0A3A5491161D0FE4006A0756 /* KevinCoreAudioHelloWord */,
 				0A3A54B8161D0FE4006A0756 /* KevinCoreAudioHelloWordTests */,
 				0A3A548A161D0FE4006A0756 /* Frameworks */,
@@ -119,13 +136,16 @@
 		0A3A5491161D0FE4006A0756 /* KevinCoreAudioHelloWord */ = {
 			isa = PBXGroup;
 			children = (
+				0AE47B0A161D1981007B6931 /* CoreAudio */,
 				0A3A549A161D0FE4006A0756 /* AppDelegate.h */,
-				0A3A549B161D0FE4006A0756 /* AppDelegate.m */,
+				0A3A549B161D0FE4006A0756 /* AppDelegate.mm */,
 				0A3A54A3161D0FE4006A0756 /* MainStoryboard_iPhone.storyboard */,
 				0A3A54A6161D0FE4006A0756 /* MainStoryboard_iPad.storyboard */,
 				0A3A54A9161D0FE4006A0756 /* ViewController.h */,
-				0A3A54AA161D0FE4006A0756 /* ViewController.m */,
+				0A3A54AA161D0FE4006A0756 /* ViewController.mm */,
 				0A3A5492161D0FE4006A0756 /* Supporting Files */,
+				0AE47B11161D19F7007B6931 /* AudioController.h */,
+				0AE47B12161D19F7007B6931 /* AudioController.mm */,
 			);
 			path = KevinCoreAudioHelloWord;
 			sourceTree = "<group>";
@@ -161,6 +181,18 @@
 				0A3A54BB161D0FE4006A0756 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0AE47B0A161D1981007B6931 /* CoreAudio */ = {
+			isa = PBXGroup;
+			children = (
+				0AE47B10161D19C5007B6931 /* CADebugMacros.h */,
+				0AE47B0C161D19A5007B6931 /* CAStreamBasicDescription.cpp */,
+				0AE47B0D161D19A5007B6931 /* CAStreamBasicDescription.h */,
+				0AE47B0B161D1996007B6931 /* CAMath.h */,
+				0AE47B0F161D19B5007B6931 /* CAXException.h */,
+			);
+			name = CoreAudio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +307,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A3A5498161D0FE4006A0756 /* main.m in Sources */,
-				0A3A549C161D0FE4006A0756 /* AppDelegate.m in Sources */,
-				0A3A54AB161D0FE4006A0756 /* ViewController.m in Sources */,
+				0A3A549C161D0FE4006A0756 /* AppDelegate.mm in Sources */,
+				0A3A54AB161D0FE4006A0756 /* ViewController.mm in Sources */,
+				0AE47B13161D19F7007B6931 /* AudioController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A3A54C0161D0FE4006A0756 /* KevinCoreAudioHelloWordTests.m in Sources */,
+				0AE47B0E161D19A5007B6931 /* CAStreamBasicDescription.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +494,7 @@
 				0A3A54C5161D0FE4006A0756 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A3A54C6161D0FE4006A0756 /* Build configuration list for PBXNativeTarget "KevinCoreAudioHelloWordTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +503,7 @@
 				0A3A54C8161D0FE4006A0756 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

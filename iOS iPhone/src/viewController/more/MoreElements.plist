@@ -4,16 +4,6 @@
 <array>
 	<dict>
 		<key>Publisher</key>
-		<string>All about Trigger Happy</string>
-		<key>Name</key>
-		<string>Help</string>
-		<key>Icon</key>
-		<string>infoIcon@2x.png</string>
-		<key>SegueID</key>
-		<string>PushToAboutViewController</string>
-	</dict>
-	<dict>
-		<key>Publisher</key>
 		<string>What is it?</string>
 		<key>Name</key>
 		<string>About Trigger Happy</string>

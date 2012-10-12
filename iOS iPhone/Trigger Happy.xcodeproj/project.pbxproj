@@ -40,6 +40,10 @@
 		0A01663015701054000D4E28 /* lightMeterTick.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A01662E15701054000D4E28 /* lightMeterTick.png */; };
 		0A08C2E715ACEC200075ADFC /* padFireButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A08C2E615ACEC200075ADFC /* padFireButton.png */; };
 		0A0E165E15AFA655003A2D4E /* aboutViewController_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0E165D15AFA655003A2D4E /* aboutViewController_PAD.png */; };
+		0A15444B16289E1D00BFAB5C /* 20kHz_plus_1kHz_1s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0A15444A16289DFE00BFAB5C /* 20kHz_plus_1kHz_1s.caf */; };
+		0A15444E16289EA100BFAB5C /* AudioOutputCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A15444D16289EA100BFAB5C /* AudioOutputCameraController.m */; };
+		0A15444F1628A36600BFAB5C /* OpenALSynthesizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A15444816289D6D00BFAB5C /* OpenALSynthesizer.m */; };
+		0A1544511628A38900BFAB5C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1544501628A38900BFAB5C /* OpenAL.framework */; };
 		0A45535915ADF799002B955E /* intervalometerCountdownViewController_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45535815ADF799002B955E /* intervalometerCountdownViewController_PAD.png */; };
 		0A45535E15ADFDA5002B955E /* Default@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45535A15ADFDA5002B955E /* Default@2x~ipad.png */; };
 		0A45535F15ADFDA5002B955E /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A45535B15ADFDA5002B955E /* Default@2x~iphone.png */; };
@@ -98,7 +102,7 @@
 		0AAB336B156F18F20028F04B /* 20kHz_plus_1kHz_500ms.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB32A6156F18F10028F04B /* 20kHz_plus_1kHz_500ms.wav */; };
 		0AAB336C156F18F20028F04B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB32AA156F18F10028F04B /* AppDelegate.m */; };
 		0AAB336D156F18F20028F04B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB32AB156F18F10028F04B /* main.m */; };
-		0AAB336E156F18F20028F04B /* AudioOutputCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB32AE156F18F10028F04B /* AudioOutputCameraController.m */; };
+		0AAB336E156F18F20028F04B /* LEGACYAudioOutputCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB32AE156F18F10028F04B /* LEGACYAudioOutputCameraController.m */; };
 		0AAB336F156F18F20028F04B /* BluetoothCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB32B0156F18F10028F04B /* BluetoothCameraController.m */; };
 		0AAB3370156F18F20028F04B /* ICameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB32B2156F18F10028F04B /* ICameraController.m */; };
 		0AAB3371156F18F20028F04B /* Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB32B6156F18F10028F04B /* Time.m */; };
@@ -174,6 +178,12 @@
 		0A01662E15701054000D4E28 /* lightMeterTick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightMeterTick.png; sourceTree = "<group>"; };
 		0A08C2E615ACEC200075ADFC /* padFireButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = padFireButton.png; path = pad/padFireButton.png; sourceTree = "<group>"; };
 		0A0E165D15AFA655003A2D4E /* aboutViewController_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aboutViewController_PAD.png; path = pad/aboutViewController_PAD.png; sourceTree = "<group>"; };
+		0A15444716289D6D00BFAB5C /* OpenALSynthesizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OpenALSynthesizer.h; path = synthesizer/OpenALSynthesizer.h; sourceTree = "<group>"; };
+		0A15444816289D6D00BFAB5C /* OpenALSynthesizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = OpenALSynthesizer.m; path = synthesizer/OpenALSynthesizer.m; sourceTree = "<group>"; };
+		0A15444A16289DFE00BFAB5C /* 20kHz_plus_1kHz_1s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 20kHz_plus_1kHz_1s.caf; path = test_caf/20kHz_plus_1kHz_1s.caf; sourceTree = "<group>"; };
+		0A15444C16289EA100BFAB5C /* AudioOutputCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioOutputCameraController.h; sourceTree = "<group>"; };
+		0A15444D16289EA100BFAB5C /* AudioOutputCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioOutputCameraController.m; sourceTree = "<group>"; };
+		0A1544501628A38900BFAB5C /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		0A45535815ADF799002B955E /* intervalometerCountdownViewController_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intervalometerCountdownViewController_PAD.png; path = pad/intervalometerCountdownViewController_PAD.png; sourceTree = "<group>"; };
 		0A45535A15ADFDA5002B955E /* Default@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x~ipad.png"; sourceTree = "<group>"; };
 		0A45535B15ADFDA5002B955E /* Default@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x~iphone.png"; sourceTree = "<group>"; };
@@ -245,8 +255,8 @@
 		0AAB32A9156F18F10028F04B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0AAB32AA156F18F10028F04B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0AAB32AB156F18F10028F04B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0AAB32AD156F18F10028F04B /* AudioOutputCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioOutputCameraController.h; sourceTree = "<group>"; };
-		0AAB32AE156F18F10028F04B /* AudioOutputCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioOutputCameraController.m; sourceTree = "<group>"; };
+		0AAB32AD156F18F10028F04B /* LEGACYAudioOutputCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGACYAudioOutputCameraController.h; sourceTree = "<group>"; };
+		0AAB32AE156F18F10028F04B /* LEGACYAudioOutputCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGACYAudioOutputCameraController.m; sourceTree = "<group>"; };
 		0AAB32AF156F18F10028F04B /* BluetoothCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothCameraController.h; sourceTree = "<group>"; };
 		0AAB32B0156F18F10028F04B /* BluetoothCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothCameraController.m; sourceTree = "<group>"; };
 		0AAB32B1156F18F10028F04B /* ICameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICameraController.h; sourceTree = "<group>"; };
@@ -327,6 +337,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A1544511628A38900BFAB5C /* OpenAL.framework in Frameworks */,
 				0AA89F8B156F0B7F00782F2C /* AVFoundation.framework in Frameworks */,
 				0AA89F8A156F0B7600782F2C /* MediaPlayer.framework in Frameworks */,
 				0AE197E1154B693D00714F55 /* AudioToolbox.framework in Frameworks */,
@@ -493,6 +504,23 @@
 			name = phone;
 			sourceTree = "<group>";
 		};
+		0A15444216289D0100BFAB5C /* synthesizer */ = {
+			isa = PBXGroup;
+			children = (
+				0A15444716289D6D00BFAB5C /* OpenALSynthesizer.h */,
+				0A15444816289D6D00BFAB5C /* OpenALSynthesizer.m */,
+			);
+			name = synthesizer;
+			sourceTree = "<group>";
+		};
+		0A15444916289DF600BFAB5C /* test_caf */ = {
+			isa = PBXGroup;
+			children = (
+				0A15444A16289DFE00BFAB5C /* 20kHz_plus_1kHz_1s.caf */,
+			);
+			name = test_caf;
+			sourceTree = "<group>";
+		};
 		0A45538015AE0C9B002B955E /* phone */ = {
 			isa = PBXGroup;
 			children = (
@@ -516,9 +544,6 @@
 		0A47D32D149F046A008D728A = {
 			isa = PBXGroup;
 			children = (
-				0A4AA83D156718230006E555 /* MediaPlayer.framework */,
-				0AE197E0154B693D00714F55 /* AudioToolbox.framework */,
-				0AE197DE154B68FE00714F55 /* AVFoundation.framework */,
 				0A47D342149F046A008D728A /* Trigger Happy */,
 				0A47D33B149F046A008D728A /* Frameworks */,
 				0A47D339149F046A008D728A /* Products */,
@@ -536,6 +561,10 @@
 		0A47D33B149F046A008D728A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A1544501628A38900BFAB5C /* OpenAL.framework */,
+				0A4AA83D156718230006E555 /* MediaPlayer.framework */,
+				0AE197E0154B693D00714F55 /* AudioToolbox.framework */,
+				0AE197DE154B68FE00714F55 /* AVFoundation.framework */,
 				0AA89F8E156F0BA300782F2C /* MediaPlayer.framework */,
 				0AA89F8F156F0BA300782F2C /* AudioToolbox.framework */,
 				0AA89F8C156F0B9700782F2C /* AVFoundation.framework */,
@@ -617,6 +646,7 @@
 		0AAB3286156F18F10028F04B /* soundCommands */ = {
 			isa = PBXGroup;
 			children = (
+				0A15444916289DF600BFAB5C /* test_caf */,
 				0AAB3296156F18F10028F04B /* production */,
 				0AAB329E156F18F10028F04B /* test */,
 			);
@@ -657,6 +687,7 @@
 			isa = PBXGroup;
 			children = (
 				0AAB32A8156F18F10028F04B /* appDelegate */,
+				0A15444216289D0100BFAB5C /* synthesizer */,
 				0AAB32AC156F18F10028F04B /* cameraController */,
 				0AAB32B3156F18F10028F04B /* common */,
 				0AAB32B7156F18F10028F04B /* model */,
@@ -679,12 +710,14 @@
 		0AAB32AC156F18F10028F04B /* cameraController */ = {
 			isa = PBXGroup;
 			children = (
-				0AAB32AD156F18F10028F04B /* AudioOutputCameraController.h */,
-				0AAB32AE156F18F10028F04B /* AudioOutputCameraController.m */,
+				0AAB32AD156F18F10028F04B /* LEGACYAudioOutputCameraController.h */,
+				0AAB32AE156F18F10028F04B /* LEGACYAudioOutputCameraController.m */,
 				0AAB32AF156F18F10028F04B /* BluetoothCameraController.h */,
 				0AAB32B0156F18F10028F04B /* BluetoothCameraController.m */,
 				0AAB32B1156F18F10028F04B /* ICameraController.h */,
 				0AAB32B2156F18F10028F04B /* ICameraController.m */,
+				0A15444C16289EA100BFAB5C /* AudioOutputCameraController.h */,
+				0A15444D16289EA100BFAB5C /* AudioOutputCameraController.m */,
 			);
 			path = cameraController;
 			sourceTree = "<group>";
@@ -912,6 +945,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A15444B16289E1D00BFAB5C /* 20kHz_plus_1kHz_1s.caf in Resources */,
 				0AAB335D156F18F20028F04B /* 20kHz_033ms.wav in Resources */,
 				0AAB335E156F18F20028F04B /* 20kHz_067ms.wav in Resources */,
 				0AAB335F156F18F20028F04B /* 20kHz_100ms.wav in Resources */,
@@ -1009,9 +1043,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A15444F1628A36600BFAB5C /* OpenALSynthesizer.m in Sources */,
 				0AAB336C156F18F20028F04B /* AppDelegate.m in Sources */,
 				0AAB336D156F18F20028F04B /* main.m in Sources */,
-				0AAB336E156F18F20028F04B /* AudioOutputCameraController.m in Sources */,
+				0AAB336E156F18F20028F04B /* LEGACYAudioOutputCameraController.m in Sources */,
 				0AAB336F156F18F20028F04B /* BluetoothCameraController.m in Sources */,
 				0AAB3370156F18F20028F04B /* ICameraController.m in Sources */,
 				0AAB3371156F18F20028F04B /* Time.m in Sources */,
@@ -1047,6 +1082,7 @@
 				0A860E0115DCA66D003E9288 /* SingleShotScrollingHelpView.m in Sources */,
 				0A860E0B15DCAE03003E9288 /* SingleShotScrollingHelpViewController.m in Sources */,
 				0AEC98EB160C1BCF00192928 /* TimeBetweenShotsViewController.m in Sources */,
+				0A15444E16289EA100BFAB5C /* AudioOutputCameraController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1109,16 +1145,16 @@
 		0A47D377149F046B008D728A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Kevin Harrington (W9929SXGD3)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kevin Harrington (W9929SXGD3)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Heather Harrington (W9929SXGD3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Heather Harrington (W9929SXGD3)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "supportingFiles/Trigger Happy-Prefix.pch";
 				INFOPLIST_FILE = "supportingFiles/Trigger Happy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Trigger Happy";
-				PROVISIONING_PROFILE = "5D86676A-88A4-4AC7-891F-FA3D4BA66847";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5D86676A-88A4-4AC7-891F-FA3D4BA66847";
+				PROVISIONING_PROFILE = "C9DF0D23-9557-4DB5-AC88-C62A98E039DD";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D35AE159-715F-4A51-B22F-F97B0973E052";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1127,16 +1163,16 @@
 		0A47D378149F046B008D728A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Kevin Harrington (W9929SXGD3)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kevin Harrington (W9929SXGD3)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Heather Harrington (W9929SXGD3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Trigger Happy, LLC";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "supportingFiles/Trigger Happy-Prefix.pch";
 				INFOPLIST_FILE = "supportingFiles/Trigger Happy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Trigger Happy";
-				PROVISIONING_PROFILE = "5D86676A-88A4-4AC7-891F-FA3D4BA66847";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5D86676A-88A4-4AC7-891F-FA3D4BA66847";
+				PROVISIONING_PROFILE = "C9DF0D23-9557-4DB5-AC88-C62A98E039DD";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "97341878-A8A4-4964-BB08-2E626A5C635C";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

@@ -46,8 +46,8 @@ const Float64 kGraphSampleRate = 44100.0;
     OSStatus result = AUGraphIsRunning(mGraph, &isRunning);
     // If the graph is running, stop it.
     if (isRunning) {
-        //result = AUGraphStop(mGraph);
-        result = AudioOutputUnitStop(mGraph);
+        result = AUGraphStop(mGraph);
+        //result = AudioOutputUnitStop(mGraph);
 
     }
 }

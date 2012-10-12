@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1624C4162891FC0058ECD6 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE47B17161D2D71007B6931 /* AudioUnit.framework */; };
 		0A3A548C161D0FE4006A0756 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3A548B161D0FE4006A0756 /* UIKit.framework */; };
 		0A3A548E161D0FE4006A0756 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3A548D161D0FE4006A0756 /* Foundation.framework */; };
 		0A3A5490161D0FE4006A0756 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3A548F161D0FE4006A0756 /* CoreGraphics.framework */; };
@@ -27,7 +28,6 @@
 		0AE47B08161D1938007B6931 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE47B07161D1938007B6931 /* AudioToolbox.framework */; };
 		0AE47B0E161D19A5007B6931 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AE47B0C161D19A5007B6931 /* CAStreamBasicDescription.cpp */; };
 		0AE47B13161D19F7007B6931 /* AudioController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AE47B12161D19F7007B6931 /* AudioController.mm */; };
-		0AE47B18161D2D71007B6931 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE47B17161D2D71007B6931 /* AudioUnit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AE47B18161D2D71007B6931 /* AudioUnit.framework in Frameworks */,
+				0A1624C4162891FC0058ECD6 /* AudioUnit.framework in Frameworks */,
 				0AE47B08161D1938007B6931 /* AudioToolbox.framework in Frameworks */,
 				0A3A548C161D0FE4006A0756 /* UIKit.framework in Frameworks */,
 				0A3A548E161D0FE4006A0756 /* Foundation.framework in Frameworks */,

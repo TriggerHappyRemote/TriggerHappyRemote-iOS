@@ -642,7 +642,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="HDRViewController.png" id="JRi-b9-gnK">
                                 <rect key="frame" x="0.0" y="-40" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" patternImage="3D963656-6AF5-417C-ABD3-6F8CE98BCC7D" colorSpace="pattern"/>
+                                <color key="backgroundColor" patternImage="7D41F693-6D29-4A7C-A4D2-9931F4936ADD" colorSpace="pattern"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+" lineBreakMode="tailTruncation" minimumFontSize="10" id="uxI-WB-O8x">
                                 <rect key="frame" x="249" y="20" width="42" height="36"/>
@@ -1280,7 +1280,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
-        <image name="3D963656-6AF5-417C-ABD3-6F8CE98BCC7D" width="320" height="460">
+        <image name="7D41F693-6D29-4A7C-A4D2-9931F4936ADD" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

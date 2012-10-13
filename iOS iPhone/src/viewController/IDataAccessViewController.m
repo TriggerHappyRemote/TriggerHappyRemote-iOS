@@ -84,14 +84,10 @@
 }
 
 - (void) remoteControlReceivedWithEvent: (UIEvent *) receivedEvent {
-    NSLog(@"Recived remote control even");
     if (receivedEvent.type == UIEventTypeRemoteControl) {
-        
         switch (receivedEvent.subtype) {
-                
             case UIEventSubtypeRemoteControlTogglePlayPause:
-                NSLog(@"Play");
-                [cameraController fireButtonDepressed];
+                [cameraController pausePlayRemoteEventRecieved];
                 break;
                 
             case UIEventSubtypeRemoteControlPreviousTrack:

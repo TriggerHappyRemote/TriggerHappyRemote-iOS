@@ -15,9 +15,35 @@
 
 #import "OpenALSynthesizer.h"
 
+@interface AudioOutputCameraController()
+@property (nonatomic) BOOL background;
+@property (nonatomic) BOOL audioPlaying;
+@property (nonatomic) BOOL muteAudio;
+-(void) enteredBackground;
+-(void) enteredForeground;
+@end
+
 @implementation AudioOutputCameraController
 
+@synthesize background, audioPlaying, muteAudio;
+
 -(id) init {
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    
+    // add listener
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(enteredBackground)
+                                                 name: @"didEnterBackground"
+                                               object: nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(enteredForeground)
+                                                 name: @"didEnterForeground"
+                                               object: nil];
+    
+    self.background = NO;
+    self.audioPlaying = NO;
+    self.muteAudio = NO;
     
     // init audio session with c callback block which allows us to get headphone data
     // to detect if headphones are plugged in or not
@@ -26,8 +52,8 @@
     
     // Allow playback even if Ring/Silent switch is on mute for AVAudioPlayer
     UInt32 sessionCategory = kAudioSessionCategory_MediaPlayback;
-    AudioSessionSetProperty (kAudioSessionProperty_AudioCategory,
-                             sizeof(sessionCategory),&sessionCategory);
+    AudioSessionSetProperty (kAudioSessionProperty_AudioCategory, sizeof(sessionCategory),&sessionCategory);
+    
     // init av players
 	NSError *error;
     
@@ -46,12 +72,13 @@
     
     // create an audio player for background proccesssing
     NSURL *url_blank_1 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/blank_test_1s.wav", [[NSBundle mainBundle] resourcePath]]];
-        audioPlayer_blank_1s = [[AVAudioPlayer alloc] initWithContentsOfURL:url_blank_1 error:&error];
+    
+    audioPlayer_blank_1s = [[AVAudioPlayer alloc] initWithContentsOfURL:url_blank_1 error:&error];
     [audioPlayer_blank_1s setVolume:0.0];
     [audioPlayer_blank_1s setDelegate:self];
     
     
-    // enable backround proccessing
+    // enable backround proccessing remote control events
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     [[AVAudioSession sharedInstance] setActive: YES error: nil];
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
@@ -59,8 +86,20 @@
     return self;
 }
 
+
+
 #pragma PrivateMethods
 
+-(void) enteredBackground {
+    synthesizer.hardwareConnected = YES;
+    self.background = YES;
+}
+
+-(void) enteredForeground {
+    if(!self.audioPlaying)
+        synthesizer.hardwareConnected = NO;
+    self.background = NO;
+}
 
 -(void) startArbitraryAudioStream {
     
@@ -73,6 +112,8 @@
 
 #pragma PublicMethods
 - (void) fireCamera: (Time *) time {
+    synthesizer.hardwareConnected = YES;
+    self.audioPlaying = YES;
     [NSTimer scheduledTimerWithTimeInterval:time.totalTimeInSeconds
                                      target:self
                                    selector:@selector(fireButtonDepressed)
@@ -82,11 +123,16 @@
 }
 
 - (void) fireButtonPressed {
+    synthesizer.hardwareConnected = YES;
+    self.audioPlaying = YES;
     [synthesizer playSound:@"20kHz_plus_1kHz_1s" doesLoop:YES];
 }
 
 - (void) fireButtonDepressed {
     [synthesizer pauseSound:@"20kHz_plus_1kHz_1s"];
+    if(!self.background)
+        synthesizer.hardwareConnected = NO;
+    self.audioPlaying = NO;
 }
 
 - (bool)isHardwareConnected {
@@ -131,32 +177,10 @@
     [audioPlayer_blank_1s play];
 }
 
-/* Allows to global control of the player on the iOS device
- I'm not sure if we want this
- 
- //Make sure we can recieve remote control events
- - (BOOL)canBecomeFirstResponder {
- return YES;
- }
- 
- - (void)remoteControlReceivedWithEvent:(UIEvent *)event {
- //if it is a remote control event handle it correctly
- if (event.type == UIEventTypeRemoteControl) {
- if (event.subtype == UIEventSubtypeRemoteControlPlay) {
- NSLog(@"play button pressed");
- //  [self playAudio];
- } else if (event.subtype == UIEventSubtypeRemoteControlPause) {
- NSLog(@"plause button pressed");
- // [self pauseAudio];
- } else if (event.subtype == UIEventSubtypeRemoteControlTogglePlayPause) {
- NSLog(@"toggle");
- //[self togglePlayPause];
- }
- }
- }
- 
- */
+-(void) pausePlayRemoteEventRecieved {
+    self.muteAudio = !self.muteAudio;
+    synthesizer.hardwareConnected = !self.muteAudio;
 
-
+}
 
 @end

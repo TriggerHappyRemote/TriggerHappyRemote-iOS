@@ -21,5 +21,7 @@
 
 - (bool) isHardwareConnected;
 
+-(void) pausePlayRemoteEventRecieved;
+
 
 @end

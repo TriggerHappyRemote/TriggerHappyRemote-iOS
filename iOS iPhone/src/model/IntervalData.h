@@ -6,6 +6,9 @@
 //  Copyright (c) 2012 Trigger Happy, LLC. All rights reserved.
 //
 
+#define CAMERA_CONTROLLER_NEW 1
+#define CAMERA_CONTROLLER_OLD 0
+
 @class ICameraController;
 @class Shutter;
 @class Interval;
@@ -21,6 +24,14 @@
 
 + (IntervalData *)getInstance;
 
+- (void) changeCameraControllerTo:(int)type;
+
+- (int) cameraControllerType;
+
+// TODO use or remove
 - (void) assertTimingConstraints;
+
+
+
 
 @end

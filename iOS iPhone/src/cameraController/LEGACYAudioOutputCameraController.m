@@ -234,6 +234,7 @@
  
 */
 
+-(void) pausePlayRemoteEventRecieved {};
 
 
 @end

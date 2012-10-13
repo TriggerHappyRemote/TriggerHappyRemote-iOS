@@ -107,7 +107,7 @@
 	// Configure the data for the cell.
     NSDictionary *dataItem = [data objectAtIndex:indexPath.row];
     cell.icon = [UIImage imageNamed:[dataItem objectForKey:@"Icon"]];
-    cell.publisher = [dataItem objectForKey:@"Publisher"];
+    cell.publisher = [dataItem objectForKey:@"Details"];
     cell.name = [dataItem objectForKey:@"Name"];
         
     return cell;

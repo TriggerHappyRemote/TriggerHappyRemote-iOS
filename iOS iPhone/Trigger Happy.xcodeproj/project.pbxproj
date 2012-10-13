@@ -141,6 +141,16 @@
 		0AEC98E4160C0D7A00192928 /* timeBetweenShotsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC98E3160C0D7A00192928 /* timeBetweenShotsButton.png */; };
 		0AEC98E8160C0FB400192928 /* mono-lcd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC98E7160C0FB400192928 /* mono-lcd.png */; };
 		0AEC98EB160C1BCF00192928 /* TimeBetweenShotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC98EA160C1BCF00192928 /* TimeBetweenShotsViewController.m */; };
+		0AEF54B61628CE6500DFFE2E /* AdvancedSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF54B51628CE6400DFFE2E /* AdvancedSettingsViewController.m */; };
+		0AEF54B91628CE8700DFFE2E /* SoundSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF54B81628CE8700DFFE2E /* SoundSettingsViewController.m */; };
+		0AEF54BB1628D13200DFFE2E /* settingBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54BA1628D13200DFFE2E /* settingBackground.png */; };
+		0AEF54BE1628D3A500DFFE2E /* settingsCellBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54BC1628D3A500DFFE2E /* settingsCellBottom.png */; };
+		0AEF54BF1628D3A500DFFE2E /* settingsCellTop.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54BD1628D3A500DFFE2E /* settingsCellTop.png */; };
+		0AEF54C11628D5CC00DFFE2E /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54C01628D5CC00DFFE2E /* checkmark.png */; };
+		0AEF54C51628E36600DFFE2E /* helpIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54C21628E36600DFFE2E /* helpIcon.png */; };
+		0AEF54C61628E36600DFFE2E /* settingIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54C31628E36600DFFE2E /* settingIcon.png */; };
+		0AEF54C71628E36600DFFE2E /* settingIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54C41628E36600DFFE2E /* settingIcon@2x.png */; };
+		0AEF54C91628E4B700DFFE2E /* helpIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54C81628E4B700DFFE2E /* helpIcon@2x.png */; };
 		0AEF5C3815AE1D4700F58032 /* HDRViewController_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF5C3715AE1D4700F58032 /* HDRViewController_PAD.png */; };
 /* End PBXBuildFile section */
 
@@ -329,6 +339,18 @@
 		0AEC98E7160C0FB400192928 /* mono-lcd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mono-lcd.png"; sourceTree = "<group>"; };
 		0AEC98E9160C1BCF00192928 /* TimeBetweenShotsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeBetweenShotsViewController.h; sourceTree = "<group>"; };
 		0AEC98EA160C1BCF00192928 /* TimeBetweenShotsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeBetweenShotsViewController.m; sourceTree = "<group>"; };
+		0AEF54B41628CE6400DFFE2E /* AdvancedSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdvancedSettingsViewController.h; path = viewController/more/advancedSettings/AdvancedSettingsViewController.h; sourceTree = "<group>"; };
+		0AEF54B51628CE6400DFFE2E /* AdvancedSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdvancedSettingsViewController.m; path = viewController/more/advancedSettings/AdvancedSettingsViewController.m; sourceTree = "<group>"; };
+		0AEF54B71628CE8700DFFE2E /* SoundSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundSettingsViewController.h; path = viewController/more/advancedSettings/SoundSettingsViewController.h; sourceTree = "<group>"; };
+		0AEF54B81628CE8700DFFE2E /* SoundSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundSettingsViewController.m; path = viewController/more/advancedSettings/SoundSettingsViewController.m; sourceTree = "<group>"; };
+		0AEF54BA1628D13200DFFE2E /* settingBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingBackground.png; sourceTree = "<group>"; };
+		0AEF54BC1628D3A500DFFE2E /* settingsCellBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsCellBottom.png; sourceTree = "<group>"; };
+		0AEF54BD1628D3A500DFFE2E /* settingsCellTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsCellTop.png; sourceTree = "<group>"; };
+		0AEF54C01628D5CC00DFFE2E /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		0AEF54C21628E36600DFFE2E /* helpIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = helpIcon.png; path = more/helpIcon.png; sourceTree = "<group>"; };
+		0AEF54C31628E36600DFFE2E /* settingIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingIcon.png; path = more/settingIcon.png; sourceTree = "<group>"; };
+		0AEF54C41628E36600DFFE2E /* settingIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settingIcon@2x.png"; path = "more/settingIcon@2x.png"; sourceTree = "<group>"; };
+		0AEF54C81628E4B700DFFE2E /* helpIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "helpIcon@2x.png"; path = "more/helpIcon@2x.png"; sourceTree = "<group>"; };
 		0AEF5C3715AE1D4700F58032 /* HDRViewController_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HDRViewController_PAD.png; path = pad/HDRViewController_PAD.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -419,6 +441,7 @@
 		0A01662C15701053000D4E28 /* misc */ = {
 			isa = PBXGroup;
 			children = (
+				0AEF54C01628D5CC00DFFE2E /* checkmark.png */,
 				0AEC98E7160C0FB400192928 /* mono-lcd.png */,
 				0A01662D15701054000D4E28 /* lightMeter0.png */,
 				0A01662E15701054000D4E28 /* lightMeterTick.png */,
@@ -441,6 +464,8 @@
 		0A08C2E415ACEBDB0075ADFC /* phone */ = {
 			isa = PBXGroup;
 			children = (
+				0AEF54BC1628D3A500DFFE2E /* settingsCellBottom.png */,
+				0AEF54BD1628D3A500DFFE2E /* settingsCellTop.png */,
 				0AEC98E3160C0D7A00192928 /* timeBetweenShotsButton.png */,
 				0A01662A15700FC4000D4E28 /* learnMoreButton.png */,
 				0A0165E215700EE2000D4E28 /* baseShutterButton.png */,
@@ -496,6 +521,7 @@
 		0A08C2E915ACFDE70075ADFC /* phone */ = {
 			isa = PBXGroup;
 			children = (
+				0AEF54BA1628D13200DFFE2E /* settingBackground.png */,
 				0A0165FB15700EE2000D4E28 /* aboutViewController.png */,
 				0A0165FC15700EE2000D4E28 /* HDRViewController.png */,
 				0A0165FD15700EE2000D4E28 /* intervalometerCountdownViewController.jpg */,
@@ -604,6 +630,7 @@
 		0A6A4BE515DC852500B61EB3 /* more */ = {
 			isa = PBXGroup;
 			children = (
+				0AEF54B31628CE2B00DFFE2E /* advancedSettings */,
 				0A6A4BF715DC8E3400B61EB3 /* RatingView.h */,
 				0A6A4BF815DC8E3400B61EB3 /* RatingView.m */,
 				0A6A4BFE15DC970000B61EB3 /* IndividualSubviewsBasedApplicationCell.h */,
@@ -621,6 +648,10 @@
 		0A6A4BE915DC85E300B61EB3 /* more */ = {
 			isa = PBXGroup;
 			children = (
+				0AEF54C21628E36600DFFE2E /* helpIcon.png */,
+				0AEF54C81628E4B700DFFE2E /* helpIcon@2x.png */,
+				0AEF54C31628E36600DFFE2E /* settingIcon.png */,
+				0AEF54C41628E36600DFFE2E /* settingIcon@2x.png */,
 				0A6A4BED15DC886900B61EB3 /* DarkBackground.png */,
 				0A6A4BEE15DC886900B61EB3 /* LightBackground.png */,
 			);
@@ -895,6 +926,17 @@
 			name = info;
 			sourceTree = "<group>";
 		};
+		0AEF54B31628CE2B00DFFE2E /* advancedSettings */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF54B41628CE6400DFFE2E /* AdvancedSettingsViewController.h */,
+				0AEF54B51628CE6400DFFE2E /* AdvancedSettingsViewController.m */,
+				0AEF54B71628CE8700DFFE2E /* SoundSettingsViewController.h */,
+				0AEF54B81628CE8700DFFE2E /* SoundSettingsViewController.m */,
+			);
+			name = advancedSettings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1033,6 +1075,14 @@
 				0AEC98E2160C03D900192928 /* Default-568h@2x.png in Resources */,
 				0AEC98E4160C0D7A00192928 /* timeBetweenShotsButton.png in Resources */,
 				0AEC98E8160C0FB400192928 /* mono-lcd.png in Resources */,
+				0AEF54BB1628D13200DFFE2E /* settingBackground.png in Resources */,
+				0AEF54BE1628D3A500DFFE2E /* settingsCellBottom.png in Resources */,
+				0AEF54BF1628D3A500DFFE2E /* settingsCellTop.png in Resources */,
+				0AEF54C11628D5CC00DFFE2E /* checkmark.png in Resources */,
+				0AEF54C51628E36600DFFE2E /* helpIcon.png in Resources */,
+				0AEF54C61628E36600DFFE2E /* settingIcon.png in Resources */,
+				0AEF54C71628E36600DFFE2E /* settingIcon@2x.png in Resources */,
+				0AEF54C91628E4B700DFFE2E /* helpIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1083,6 +1133,8 @@
 				0A860E0B15DCAE03003E9288 /* SingleShotScrollingHelpViewController.m in Sources */,
 				0AEC98EB160C1BCF00192928 /* TimeBetweenShotsViewController.m in Sources */,
 				0A15444E16289EA100BFAB5C /* AudioOutputCameraController.m in Sources */,
+				0AEF54B61628CE6500DFFE2E /* AdvancedSettingsViewController.m in Sources */,
+				0AEF54B91628CE8700DFFE2E /* SoundSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

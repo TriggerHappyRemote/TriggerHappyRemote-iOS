@@ -20,5 +20,6 @@
 
 - (bool) isHardwareConnected {return false;}
 
+-(void) pausePlayRemoteEventRecieved {}
 
 @end

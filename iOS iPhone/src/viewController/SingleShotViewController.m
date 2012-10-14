@@ -17,7 +17,6 @@
 #import "Constants.h"
 #import "helpModalViewContollerViewController.h"
 
-
 @interface SingleShotViewController()
 -(void)enableCanFire;
 @end
@@ -49,9 +48,9 @@ ButtonState state;
     
     if(IPHONE_4_0) {
         // stretch the fire button
-        [fireButton setFrame:CGRectMake(fireButton.frame.origin.x,fireButton.frame.origin.y,fireButton.frame.size.width,463)];
+        [fireButton setFrame:CGRectMake(fireButton.frame.origin.x,fireButton.frame.origin.y,fireButton.frame.size.width,396)];
         // move the fire button to the center
-        [fireButtonLabel setFrame:CGRectMake(fireButtonLabel.frame.origin.x,248,fireButtonLabel.frame.size.width,fireButtonLabel.frame.size.height)];
+        [fireButtonLabel setFrame:CGRectMake(fireButtonLabel.frame.origin.x,273,fireButtonLabel.frame.size.width,fireButtonLabel.frame.size.height)];
 
     }
     
@@ -73,7 +72,9 @@ ButtonState state;
 }
 
 -(void) viewDidLoad {
-    [super viewDidLoad];
+    [super viewDidLoad];    
+    self.tabBarController.delegate = self;
+
     if(IDIOM == IPAD)
         infoViewController = [InfoViewController withLocationForPad:82 and:780];
     else
@@ -104,7 +105,7 @@ ButtonState state;
         }
         else if(state == HOLD_UP) {
             state = HOLD_DOWN;
-            self.fireButtonLabel.text = @"Stop";  
+            self.fireButtonLabel.text = @"Stop";
             useInfoMessage.text = @"Touch to stop sequence";
             [fireButton setHighlighted:false];
             [cameraController fireButtonPressed];
@@ -157,6 +158,10 @@ ButtonState state;
             [pressHoldSegment setSelectedSegmentIndex:0];
         }
     }
+}
+
+-(BOOL) tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
+    return state != PRESS_DOWN && state != HOLD_DOWN;
 }
 
 - (void)viewDidUnload {

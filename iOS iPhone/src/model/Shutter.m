@@ -19,15 +19,18 @@
 @synthesize hdr = _hdr;
 @synthesize pickerMode;
 @synthesize currentLength = _currentLength;
+@synthesize defaultShutterLength;
 
 
 -(id) init {
     _mode = STANDARD;
-    _bulbMode = true;
+    _bulbMode = NO;
     _startLength = [Time new];
     _bramper = [Bramper new];
     _hdr = [HDR new];
     self.pickerMode = SECONDS;
+    self.defaultShutterLength = [Time new];
+    self.defaultShutterLength.totalTimeInSeconds = .3;
     return self;
 }
 
@@ -49,7 +52,10 @@
 
 -(Time*) getMaxTime {
     if(self.mode == STANDARD) { // Standard shutter
-        return self.startLength; 
+        if(self.bulbMode)
+            return self.startLength;
+        else
+            return self.defaultShutterLength;
     }
     else if(self.mode == BRAMP) { // Bramping
         if(self.bramper.startShutterLength.totalTimeInSeconds > 
@@ -67,7 +73,10 @@
 
 - (NSMutableArray *) getShutterLengths {
     if(self.mode == STANDARD) { // Standard shutter
-        return [NSMutableArray arrayWithObject:self.startLength];
+        if(self.bulbMode)
+            return [NSMutableArray arrayWithObject:self.startLength];
+        else
+            return [NSMutableArray arrayWithObject:self.defaultShutterLength];
     }
     else if(self.mode == BRAMP) { // Bramping
         return [NSMutableArray arrayWithObject:[self.bramper startShutterLength]];

@@ -357,10 +357,9 @@ numberOfRowsInComponent:(NSInteger)component {
 
 
 -(IBAction)segmentDidChange {
+    [infoViewController setHidden:segment.selectedSegmentIndex==1];
     [self setPickerVisibility];
     [self registerSegmentChangeToModel];
-    
-    [infoViewController setHidden:segment.selectedSegmentIndex==1];
 }
 
 -(void) setPickerVisibility {

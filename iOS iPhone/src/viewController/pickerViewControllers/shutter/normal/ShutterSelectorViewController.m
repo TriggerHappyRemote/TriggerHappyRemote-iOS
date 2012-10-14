@@ -20,10 +20,22 @@
     if(IDIOM == IPAD)
         infoViewController = [InfoViewController withLocationForPad:82 and:300];
     else
-        infoViewController = [InfoViewController withLocationForPhone:0 and:277];
+        infoViewController = [InfoViewController withLocationForPhone:0 and:295];
     infoViewController.type = InfoViewControllerInfo;
     [infoViewController setText:self.infoMessage];
     [self.view addSubview:infoViewController.view];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if(self.segment.selectedSegmentIndex) { // auto
+        infoViewController.position = CGPointMake(0, 50);
+        infoViewController.hidden = NO;
+        infoViewController.text = @"Put camera in single shot mode, and turn off auto focus";
+    } else { // manual
+        infoViewController.position = CGPointMake(0, 295);
+        infoViewController.text = [self infoMessage];
+    }
 }
 
 -(void) initializeInstructionLabel {
@@ -52,6 +64,16 @@
 }
 
 -(void) registerSegmentChangeToModel {
+    if(self.segment.selectedSegmentIndex) { // auto
+        infoViewController.position = CGPointMake(0, 50);
+        infoViewController.hidden = NO;
+        infoViewController.text = @"Put camera in single shot mode, and turn off auto focus";
+    } else { // manual
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Bulb Mode Required in Manual" message:@"Please put your camera in bulb." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        infoViewController.position = CGPointMake(0, 295);
+        infoViewController.text = [self infoMessage];
+    }
     [[self.intervalData shutter] setBulbMode:[self.segment selectedSegmentIndex] == 0];
 }
 

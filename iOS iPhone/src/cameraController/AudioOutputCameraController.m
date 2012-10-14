@@ -19,13 +19,14 @@
 @property (nonatomic) BOOL background;
 @property (nonatomic) BOOL audioPlaying;
 @property (nonatomic) BOOL muteAudio;
+@property (nonatomic, retain) NSString *audioFile;
 -(void) enteredBackground;
 -(void) enteredForeground;
 @end
 
 @implementation AudioOutputCameraController
 
-@synthesize background, audioPlaying, muteAudio;
+@synthesize background, audioPlaying, muteAudio, audioFile;
 
 -(id) init {
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
@@ -58,16 +59,18 @@
 	NSError *error;
     
     // TODO
-    /*
-#if PRODUCT == 1
-#elif TEST == 1
-#else
+    #if PRODUCT == 1
+        self.audioFile = @"20kHz_1s";
+    #elif TEST == 1
+        self.audioFile = @"20kHz_plus_1kHz_1s";
+    #else
     [NSException raise:@"Invalid constants definded in Constants.h. TEST or PRODUCT must be defined at 1"];
-#endif
-     */
+    #endif
+    
     
     synthesizer = [[OpenALSynthesizer alloc] init];
-    [synthesizer loadFile:@"20kHz_plus_1kHz_1s" doesLoop:true];
+
+    [synthesizer loadFile:self.audioFile doesLoop:YES];
 
     
     // create an audio player for background proccesssing
@@ -119,17 +122,17 @@
                                    selector:@selector(fireButtonDepressed)
                                    userInfo:nil
                                     repeats:NO];
-    [synthesizer playSound:@"20kHz_plus_1kHz_1s" doesLoop:YES];
+    [synthesizer playSound:self.audioFile doesLoop:YES];
 }
 
 - (void) fireButtonPressed {
     synthesizer.hardwareConnected = YES;
     self.audioPlaying = YES;
-    [synthesizer playSound:@"20kHz_plus_1kHz_1s" doesLoop:YES];
+    [synthesizer playSound:self.audioFile doesLoop:YES];
 }
 
 - (void) fireButtonDepressed {
-    [synthesizer pauseSound:@"20kHz_plus_1kHz_1s"];
+    [synthesizer pauseSound:self.audioFile];
     if(!self.background)
         synthesizer.hardwareConnected = NO;
     self.audioPlaying = NO;

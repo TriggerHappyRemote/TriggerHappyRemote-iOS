@@ -79,7 +79,8 @@ numberOfRowsInComponent:(NSInteger)component {
     
     [IntervalData getInstance].shutter.hdr.numberOfShots = shotsOptions[row];
     
-    if([[IntervalData getInstance].shutter.hdr getMaxShutterLength] >= [IntervalData getInstance].interval.time.totalTimeInSeconds) {
+    if([IntervalData getInstance].interval.intervalEnabled &&
+       [[IntervalData getInstance].shutter.hdr getMaxShutterLength] >= [IntervalData getInstance].interval.time.totalTimeInSeconds) {
         [IntervalData getInstance].shutter.hdr.numberOfShots = previousNumberOfShots;
         [self.picker selectRow:prevRowIndex inComponent:0 animated:false];
         infoViewController.text = @"The cumulative shutter length must be shorter than the interval";

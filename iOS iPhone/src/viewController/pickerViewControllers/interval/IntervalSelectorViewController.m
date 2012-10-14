@@ -32,6 +32,11 @@ int secondOffSet;
     [self.view addSubview:infoViewController.view];
 }
 
+-(void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self registerSegmentChangeToModel];
+}
+
 -(void) initializeInstructionLabel {
     //self.instructionLabel.text = @"Interval off";
 }
@@ -54,6 +59,20 @@ int secondOffSet;
 }
 
 -(void) registerSegmentChangeToModel {
+    if(self.segment.selectedSegmentIndex == 0) { // on
+        infoViewController.text = [[NSString alloc] initWithFormat:@"A photo will be taken every %@", [[self time] toStringDescriptive]];
+        if(IDIOM != IPAD) {
+            infoViewController.position = CGPointMake(0, 277);
+        }
+    } else { // off
+        // OVERRRIDING caller in super class:
+        infoViewController.hidden = NO;
+        infoViewController.text = @"Only one photo will be taken";
+        if(IDIOM != IPAD) {
+            infoViewController.position = CGPointMake(0, 50);
+        }
+        
+    }
     [[self.intervalData interval] setIntervalEnabled:[self.segment selectedSegmentIndex] == 0];
 }
 

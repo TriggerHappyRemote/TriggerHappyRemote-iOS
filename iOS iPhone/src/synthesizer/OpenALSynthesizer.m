@@ -111,7 +111,10 @@
 	alGenBuffers(1, &bufferID);
     
 	// jam the audio data into the new buffer
-	alBufferData(bufferID,AL_FORMAT_STEREO16,outData,fileSize,44100);
+	//alBufferData(bufferID,AL_FORMAT_STEREO16,outData,fileSize,44100);
+    // MONO16 and STEREO8 - highest volume output - need scope to know more
+    alBufferData(bufferID,AL_FORMAT_STEREO8,outData,fileSize,44100);
+
     
 	// save the buffer so I can release it later
 	[bufferStorageArray addObject:[NSNumber numberWithUnsignedInteger:bufferID]];

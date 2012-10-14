@@ -16,6 +16,7 @@
 -(IBAction) startButtonPressed;
 
 - (void) setButtonTitles;
+- (IBAction)startButtonPressedSingleShot:(id)sender;
 
 @property (nonatomic, retain) IBOutlet UINavigationItem *navigation;
 

@@ -16,7 +16,7 @@
 
 @implementation InfoViewController
 
-@synthesize type = _type, text, hidden = _hidden;
+@synthesize type = _type, text, hidden = _hidden, position = _position;
 
 -(id) initWithLocationPhone:(float) x and:(float)y {
     warningImage =  [UIImage imageNamed:@"warning.png"];
@@ -52,8 +52,6 @@
     return self;
 }
 
-
-
 +(InfoViewController *) withLocationForPhone:(float) x and:(float)y {
     return [[InfoViewController alloc] initWithLocationPhone:x and:y];
 }
@@ -62,6 +60,10 @@
     return [[InfoViewController alloc] initWithLocationPad:x and:y];
 }
 
+- (void) setPosition:(CGPoint)position {
+    _position = position;
+    self.view.frame = CGRectMake(_position.x, _position.y, self.view.frame.size.width, self.view.frame.size.height);
+}
 
 -(void) setType:(InfoViewControllerType)type {
     _type = type;

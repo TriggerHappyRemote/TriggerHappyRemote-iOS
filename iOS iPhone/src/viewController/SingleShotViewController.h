@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "IDataAccessViewController.h"
 
-@interface SingleShotViewController : IDataAccessViewController
+@interface SingleShotViewController : IDataAccessViewController <UITabBarControllerDelegate>
 
 -(IBAction) fireTownDown;
 

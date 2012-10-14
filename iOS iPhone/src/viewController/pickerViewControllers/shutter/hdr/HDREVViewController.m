@@ -81,7 +81,8 @@ numberOfRowsInComponent:(NSInteger)component {
     
     [IntervalData getInstance].shutter.hdr.evInterval = evModelValues[row];
     
-    if([[IntervalData getInstance].shutter.hdr getMaxShutterLength] >= [IntervalData getInstance].interval.time.totalTimeInSeconds) {
+    if([IntervalData getInstance].interval.intervalEnabled &&
+       [[IntervalData getInstance].shutter.hdr getMaxShutterLength] >= [IntervalData getInstance].interval.time.totalTimeInSeconds) {
         [IntervalData getInstance].shutter.hdr.evInterval = previousEVInterval;
         [self.picker selectRow:prevRowIndex inComponent:0 animated:false];
         infoViewController.text = @"The cumulative shutter length of each shot in the bracket must be shorter than the interval";

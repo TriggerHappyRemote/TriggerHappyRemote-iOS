@@ -50,6 +50,11 @@ NSTimer * headPhoneChecker;
     [self loadButtons];
     [self.navigationController setNavigationBarHidden:NO animated:false]; 
     [self.settings setSelectedSegmentIndex:[[intervalData shutter] mode]];
+    
+    if(settings.numberOfSegments == 2) { // hack to tell if we in the single shot view
+        intervalData.interval.intervalEnabled = NO;
+    }
+    
 }
 
 -(void) loadButtons {
@@ -107,6 +112,11 @@ NSTimer * headPhoneChecker;
     }
 }
 
+- (IBAction)startButtonPressedSingleShot:(id)sender {
+    [IntervalData getInstance].interval.intervalEnabled = NO;
+    [self startButtonPressed];
+}
+
 -(IBAction) startButtonPressed {
     if([cameraController isHardwareConnected]) {
         MPMusicPlayerController *iPod = [MPMusicPlayerController iPodMusicPlayer];
@@ -126,10 +136,25 @@ NSTimer * headPhoneChecker;
     // remember: Standard = 0, hdr = 1, bramping = 2
     [[intervalData shutter] setMode:settings.selectedSegmentIndex];
     
-    // you can't bramp unless there's a finite time in which the intervalometer
-    // will bramp
-    if(settings.selectedSegmentIndex == 2) {
-        [[intervalData duration] setUnlimitedDuration:false];
+    // if in normal mode, set defual mode to auto so users don't get too confused with advanced
+    // settings like manual
+    intervalData.shutter.bulbMode = (settings.selectedSegmentIndex != 0);
+    
+    if(settings.selectedSegmentIndex == 0) {
+        
+    }
+    else if(settings.selectedSegmentIndex == 1) { // duration
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Bulb Mode Required" message:@"Please put your camera in bulb." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+
+    }
+    else { // bramp
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Bulb Mode Required" message:@"Please put your camera in bulb." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+
+        // you can't bramp unless there's a finite time in which the intervalometer
+        // will bramp
+        [[intervalData duration] setUnlimitedDuration:NO];
     }
     [self loadButtons];
     

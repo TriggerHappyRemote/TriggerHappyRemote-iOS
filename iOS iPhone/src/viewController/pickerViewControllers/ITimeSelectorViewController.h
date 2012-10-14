@@ -31,11 +31,6 @@
 
 @property (nonatomic, strong) IBOutlet UISegmentedControl * segment;
 
-//@property (strong, nonatomic) IBOutlet UILabel *instructionLabel;
-
-//@property (retain, nonatomic) IBOutlet UIImageView *warningBackround;
-
-
 // model ref
 @property (strong, nonatomic) IntervalData * intervalData;
 

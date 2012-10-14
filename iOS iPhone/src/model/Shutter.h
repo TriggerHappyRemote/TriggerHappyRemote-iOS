@@ -23,6 +23,8 @@ typedef enum  {
 
 @property (nonatomic) IntervalometerMode mode;
 
+@property (nonatomic, strong) Time *defaultShutterLength;
+
 // standard:
 @property (nonatomic, strong) Time* startLength;
 @property (nonatomic, strong) Time* currentLength;

@@ -29,4 +29,6 @@ typedef enum {
 @property (retain, nonatomic) NSString * text;
 @property (nonatomic) bool hidden;
 
+@property (nonatomic) CGPoint position;
+
 @end

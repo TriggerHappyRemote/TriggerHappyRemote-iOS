@@ -14,7 +14,6 @@
 
 // start an aribarty long signal to the shutter on the camera
 - (void) fireButtonPressed {
-    NSLog(@"big error");
 }
 
 // stop an aribarty long signal to the shutter on the camera

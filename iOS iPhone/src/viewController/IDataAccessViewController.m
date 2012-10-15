@@ -10,6 +10,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "AudioOutputCameraController.h"
 #import "InfoViewController.h"
+#import "HardwareManager.h"
 
 @interface IDataAccessViewController() 
 @end
@@ -18,12 +19,8 @@
 
 @synthesize visible;
 
--(void) viewDidLoad {
-    intervalData = [IntervalData getInstance];
-}
-
 -(void) viewWillAppear:(BOOL)animated {
-    cameraController = intervalData.cameraController;
+    cameraController = [HardwareManager getInstance].cameraController;
     
     [self hardwareCheck];
     
@@ -57,7 +54,6 @@
     }
     else {
         if([cameraController class] == [AudioOutputCameraController class]) {
-            
             infoViewController.text = @"Please plug the Trigger Happy Unit into headphone port.";
         }
         else {
@@ -91,11 +87,9 @@
                 break;
                 
             case UIEventSubtypeRemoteControlPreviousTrack:
-                NSLog(@"Prev");
                 break;
                 
             case UIEventSubtypeRemoteControlNextTrack:
-                NSLog(@"stop");
                 break;
                 
             default:
@@ -110,7 +104,6 @@
 
 
 -(void) viewDidUnload {
-    intervalData = nil;
     cameraController = nil;
     hardwareChecker = nil;
     infoViewController = nil;

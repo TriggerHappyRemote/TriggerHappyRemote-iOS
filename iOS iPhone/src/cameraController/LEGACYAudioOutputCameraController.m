@@ -108,8 +108,7 @@
 
 #pragma PublicMethods
 - (void) fireCamera: (Time *) time {
-    NSLog(@"Fire camera");
-    // Do not play audio is "headphones" (i.e. the Trigger Happy 
+    // Do not play audio is "headphones" (i.e. the Trigger Happy
     // cable/ unit) are not plugged in because
     // 1) dont want to burden users with uneccessary sounds
     // 2) violotes Apple's HIG if it's in silient
@@ -202,37 +201,8 @@
     }
 
 -(void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
-    //NSLog(@"did finish playing");
-
     [audioPlayer_blank_1s play];
-
 }
-
-/* Allows to global control of the player on the iOS device
-   I'm not sure if we want this
-
-//Make sure we can recieve remote control events
-- (BOOL)canBecomeFirstResponder {
-    return YES;
-}
-
-- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
-    //if it is a remote control event handle it correctly
-    if (event.type == UIEventTypeRemoteControl) {
-        if (event.subtype == UIEventSubtypeRemoteControlPlay) {
-            NSLog(@"play button pressed");
-          //  [self playAudio];
-        } else if (event.subtype == UIEventSubtypeRemoteControlPause) {
-            NSLog(@"plause button pressed");
-           // [self pauseAudio];
-        } else if (event.subtype == UIEventSubtypeRemoteControlTogglePlayPause) {
-            NSLog(@"toggle");
-            //[self togglePlayPause];
-        }
-    }
-}
- 
-*/
 
 -(void) pausePlayRemoteEventRecieved {};
 

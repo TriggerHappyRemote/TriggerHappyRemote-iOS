@@ -14,6 +14,14 @@
     __weak IBOutlet UIImageView *checkMark;
     __weak IBOutlet UIButton *newSoundButton;
     __weak IBOutlet UIButton *oldSoundButton;
+    
+    __weak IBOutlet UIButton *normalHardwareDetection;
+    __weak IBOutlet UIButton *noHardwareDetection;
+    __weak IBOutlet UIImageView *checkMarkHardware;
 }
+
+- (IBAction)soundSelectorPressed:(id)sender;
+
+- (IBAction)hardwareDetectionPressed:(id)sender;
 
 @end

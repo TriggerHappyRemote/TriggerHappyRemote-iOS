@@ -23,16 +23,13 @@
 @property (strong, nonatomic) IBOutlet UILabel *label_1;
 @property (strong, nonatomic) IBOutlet UILabel *label_0;
 
-@property (strong, nonatomic) NSMutableArray *subSecondsValues;
+//@property (strong, nonatomic) NSMutableArray *subSecondsValues;
 @property (strong, nonatomic) NSMutableArray *subSecondsValuesNumbers;
 @property (strong, nonatomic) NSMutableArray *secondsValues;
 @property (strong, nonatomic) NSMutableArray *minutesValues;
 @property (strong, nonatomic) NSMutableArray *hoursValues;
 
 @property (nonatomic, strong) IBOutlet UISegmentedControl * segment;
-
-// model ref
-@property (strong, nonatomic) IntervalData * intervalData;
 
 @property (retain, nonatomic) IBOutlet UISegmentedControl *secondSubSecondSegment;
 

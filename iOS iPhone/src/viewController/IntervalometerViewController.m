@@ -29,7 +29,6 @@
 
 @synthesize shutterLabel, intervalLabel, durationLabel, settings;
 
-IntervalData *intervalData;
 NSTimer * headPhoneChecker;
 
 -(void) viewDidLoad {
@@ -40,25 +39,30 @@ NSTimer * headPhoneChecker;
         infoViewController = [InfoViewController withLocationForPhone:0 and:187];
 
     [self.view addSubview:infoViewController.view];
-    intervalData = [IntervalData getInstance];
 }
 
 -(void) viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:false];
-    [[[self navigationController] tabBarController] tabBar].hidden = NO;
-    [navigation setHidesBackButton:true];
-    [self loadButtons];
-    [self.navigationController setNavigationBarHidden:NO animated:false]; 
-    [self.settings setSelectedSegmentIndex:[[intervalData shutter] mode]];
-    
-    if(settings.numberOfSegments == 2) { // hack to tell if we in the single shot view
-        intervalData.interval.intervalEnabled = NO;
+    [super viewWillAppear:animated];
+
+    // hack to tell if we in the single shot view
+    //intervalData.interval.intervalEnabled = settings.numberOfSegments != 2;
+    if(settings.numberOfSegments == 3) { //time lapse
+        [IntervalData switchInstance:YES];
+        //[intervalData constrainForTimeLapse];
+    } else {
+        [IntervalData switchInstance:NO];
+        [IntervalData getInstance].interval.intervalEnabled = NO;
     }
     
+    [[[self navigationController] tabBarController] tabBar].hidden = NO;
+    [navigation setHidesBackButton:YES];
+    [self loadButtons];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+    [self.settings setSelectedSegmentIndex:[[[IntervalData getInstance] shutter] mode]];
 }
 
 -(void) loadButtons {
-    switch ([[intervalData shutter] mode]) {
+    switch ([[[IntervalData getInstance] shutter] mode]) {
         case (HDR_MODE):
             [shutterSetButton setHidden:true];
             [brampingSetButton setHidden:true];
@@ -93,22 +97,22 @@ NSTimer * headPhoneChecker;
 
     
     
-    if([[intervalData interval] intervalEnabled]) {
-        intervalLabel.text = [[intervalData interval] getButtonData];
+    if([[[IntervalData getInstance] interval] intervalEnabled]) {
+        intervalLabel.text = [[[IntervalData getInstance] interval] getButtonData];
     }
     else {
         intervalLabel.text = @"Off"; 
     }
     
-    if([[intervalData shutter] mode] == STANDARD) {
-        shutterLabel.text = [[intervalData shutter] getButtonData];
+    if([[[IntervalData getInstance] shutter] mode] == STANDARD) {
+        shutterLabel.text = [[[IntervalData getInstance] shutter] getButtonData];
     } 
     
-    if([[intervalData duration] unlimitedDuration]) {
+    if([[[IntervalData getInstance] duration] unlimitedDuration]) {
         durationLabel.text = @"Unlimited";
     }
     else {
-        durationLabel.text = [[[intervalData duration] time] toStringDownToMinutes];
+        durationLabel.text = [[[[IntervalData getInstance] duration] time] toStringDownToMinutes];
     }
 }
 
@@ -134,11 +138,11 @@ NSTimer * headPhoneChecker;
 
 -(IBAction) segmentSettingsChanged {    
     // remember: Standard = 0, hdr = 1, bramping = 2
-    [[intervalData shutter] setMode:settings.selectedSegmentIndex];
+    [[[IntervalData getInstance] shutter] setMode:settings.selectedSegmentIndex];
     
     // if in normal mode, set defual mode to auto so users don't get too confused with advanced
     // settings like manual
-    intervalData.shutter.bulbMode = (settings.selectedSegmentIndex != 0);
+    [IntervalData getInstance].shutter.bulbMode = (settings.selectedSegmentIndex != 0);
     
     if(settings.selectedSegmentIndex == 0) {
         
@@ -154,7 +158,7 @@ NSTimer * headPhoneChecker;
 
         // you can't bramp unless there's a finite time in which the intervalometer
         // will bramp
-        [[intervalData duration] setUnlimitedDuration:NO];
+        [[[IntervalData getInstance] duration] setUnlimitedDuration:NO];
     }
     [self loadButtons];
     

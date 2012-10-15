@@ -29,11 +29,11 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     if(self.segment.selectedSegmentIndex) { // auto
-        infoViewController.position = CGPointMake(0, 50);
+        infoViewController.position = CGPointMake(0, 32);
         infoViewController.hidden = NO;
         infoViewController.text = @"Put camera in single shot mode, and turn off auto focus";
     } else { // manual
-        infoViewController.position = CGPointMake(0, 295);
+        infoViewController.position = CGPointMake(0, 282);
         infoViewController.text = [self infoMessage];
     }
 }
@@ -43,42 +43,42 @@
 }
 
 -(void) changeHour: (int) hour {
-    [[[self.intervalData shutter] startLength] setHours:hour];
+    [[[[IntervalData getInstance] shutter] startLength] setHours:hour];
 }
 
 -(void) changeMinute: (int) minute {
-    [[[self.intervalData shutter] startLength] setMinutes:minute];
+    [[[[IntervalData getInstance] shutter] startLength] setMinutes:minute];
     
 }
 
 -(void) changeSecond: (int) second {
-    [[[self.intervalData shutter] startLength] setSeconds:second];
+    [[[[IntervalData getInstance] shutter] startLength] setSeconds:second];
 }
 
 -(void) changeMillisecond:(int)millisecond {
-    [[[self.intervalData shutter] startLength] setMilliseconds:millisecond];
+    [[[[IntervalData getInstance] shutter] startLength] setMilliseconds:millisecond];
 }
 
 -(Time *) time {
-    return [[self.intervalData shutter] startLength];
+    return [[[IntervalData getInstance] shutter] startLength];
 }
 
 -(void) registerSegmentChangeToModel {
     if(self.segment.selectedSegmentIndex) { // auto
-        infoViewController.position = CGPointMake(0, 50);
+        infoViewController.position = CGPointMake(0, 32);
         infoViewController.hidden = NO;
         infoViewController.text = @"Put camera in single shot mode, and turn off auto focus";
     } else { // manual
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Bulb Mode Required in Manual" message:@"Please put your camera in bulb." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
-        infoViewController.position = CGPointMake(0, 295);
+        infoViewController.position = CGPointMake(0, 282);
         infoViewController.text = [self infoMessage];
     }
-    [[self.intervalData shutter] setBulbMode:[self.segment selectedSegmentIndex] == 0];
+    [[[IntervalData getInstance] shutter] setBulbMode:[self.segment selectedSegmentIndex] == 0];
 }
 
 -(int) getSegmentIndex { 
-    if([[self.intervalData shutter] bulbMode]) {
+    if([[[IntervalData getInstance] shutter] bulbMode]) {
         return 0; // bulb
     }
     else {
@@ -87,12 +87,12 @@
 }
 
 -(void) setPickerMode:(PickerMode) state {
-    [[self.intervalData shutter] setPickerMode:state];
+    [[[IntervalData getInstance] shutter] setPickerMode:state];
     
 }
 
 -(PickerMode)getPickerMode {
-    return [[self.intervalData shutter] pickerMode];
+    return [[[IntervalData getInstance] shutter] pickerMode];
 }
 
 - (NSString *) infoMessage {
@@ -100,7 +100,7 @@
 }
 
 - (NSString *) warningMessage {
-    return [[NSString alloc] initWithFormat:@"Shutter must be shorter than the %@ interval", [self.intervalData.interval.time toStringDescriptive]];
+    return [[NSString alloc] initWithFormat:@"Shutter must be shorter than the %@ interval", [[IntervalData getInstance].interval.time toStringDescriptive]];
 }
 
 @end

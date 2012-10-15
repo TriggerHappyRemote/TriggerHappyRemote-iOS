@@ -37,7 +37,6 @@
     self.data = [NSArray arrayWithContentsOfFile:dataPath];
     
     NSDictionary *dataItem = [data objectAtIndex:0];
-    NSLog(@"Image: %@", (NSString *)[dataItem objectForKey:@"Icon"]);
     
 
 	
@@ -93,9 +92,7 @@
     
     if (cell == nil)
     {
-        NSLog(@"Self's class: %@ and cell nibs class: %@", [self class], [self.cellNib class]);
         [self.cellNib instantiateWithOwner:self options:nil];
-        NSLog(@"did get here?");
 		cell = tmpCell;
        
 		self.tmpCell = nil;

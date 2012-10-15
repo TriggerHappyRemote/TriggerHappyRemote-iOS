@@ -19,7 +19,6 @@
 {
     self = [super init];
 
-	NSLog(@"initOpenAl");
 	// Initialization
 	mDevice = alcOpenDevice(NULL); // select the "preferred device"
 	if (mDevice)
@@ -31,8 +30,6 @@
 	}
 	soundDictionary = [[NSMutableDictionary alloc] init];
     bufferDictionary = [[NSMutableDictionary alloc] init];
-
-	NSLog( @"Sound dict has %i sounds", [soundDictionary count]);
     
     return self;
 }
@@ -85,9 +82,7 @@
     self.hardwareConnected = YES;
     
 	// get the full path of the file
-	NSString* fileName = [[NSBundle mainBundle] pathForResource:soundName ofType:@"caf"];
-    NSLog(@"Sound nam:%@", soundName);
-    NSLog(@"\nFile path:%@", fileName);
+	NSString* fileName = [[NSBundle mainBundle] pathForResource:soundName ofType:@"wav"];
     
 	// first, open the file
 	AudioFileID fileID = [self openAudioFile:fileName];
@@ -124,7 +119,6 @@
 	// grab a source ID from openAL
 	alGenSources(1, &sourceID);
     
-	NSLog(@"the id is %i", sourceID);
     
 	// attach the buffer to the source
 	alSourcei(sourceID, AL_BUFFER, bufferID);
@@ -158,7 +152,6 @@
 		NSLog(@"sound doesnt exist!");
 		return;
 	}
-	NSLog(@"%@ is being played!", soundKey);
 	NSUInteger sourceID = [numVal unsignedIntValue];
     if(loops)
         alSourcei(sourceID, AL_LOOPING, AL_TRUE);
@@ -198,7 +191,6 @@
 // pauses a sound by a certain soundKey
 - (void)pauseSound:(NSString*)soundKey
 {
-	NSLog(@"pauseSound");
 	NSNumber * numVal = [soundDictionary objectForKey:soundKey];
 	if (numVal == nil) return;
 	NSUInteger sourceID = [numVal unsignedIntValue];
@@ -208,7 +200,6 @@
 // checks the states of all the sounds, if its playing it pauses it
 -(void) pauseAllSounds
 {
-	NSLog(@"pauseAllSounds");
 	for (NSNumber * sourceNumber in [soundDictionary allValues])
 	{
 		NSUInteger sourceID = [sourceNumber unsignedIntegerValue];
@@ -241,7 +232,6 @@
 // checks the states of all the sounds, if its playing it stops it
 -(void) stopAllSounds
 {
-	NSLog(@"pauseAllSounds");
 	for (NSNumber * sourceNumber in [soundDictionary allValues])
 	{
 		NSUInteger sourceID = [sourceNumber unsignedIntegerValue];

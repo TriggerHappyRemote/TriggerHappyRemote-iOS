@@ -98,11 +98,8 @@
 }
 
 - (NSString *) toStringDownToMilliseconds {
-    NSLog(@"Milliseconds %d", self.milliseconds);
-    NSLog(@"Milliseconds %i", self.milliseconds);
-
     NSString * milliseconds;
-    if(self.milliseconds < 10) {
+    if(self.milliseconds < 100) {
         milliseconds = [[NSString alloc]initWithFormat:@":0%i", self.milliseconds];
     }
     else {

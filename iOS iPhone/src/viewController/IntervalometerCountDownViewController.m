@@ -27,8 +27,6 @@
 @synthesize navigation, shutterSpeed, unlimitedDuration, durationTime, 
 interval, stopButton, intervalProgress, shutterProgress, imageView;
 
-IntervalData *intervalData;
-
 IIntervalometer *intervalometerModel;
 
 bool running;
@@ -46,7 +44,6 @@ bool running;
     
     [self.navigationController setNavigationBarHidden:YES animated:false];    
     
-    intervalData = [IntervalData getInstance];
     
     /*
      
@@ -60,14 +57,14 @@ bool running;
     
     [[[self navigationController] tabBarController] tabBar].hidden = YES;
      
-    [[intervalData shutter] initializeCurrentLength];
+    [[[IntervalData getInstance] shutter] initializeCurrentLength];
 
     [self setLabels];
     running = true;
     [intervalometerModel startIntervalometer];
     
-    if([[intervalData interval] intervalEnabled]) {
-        if([[intervalData duration] unlimitedDuration]) {
+    if([[[IntervalData getInstance] interval] intervalEnabled]) {
+        if([[[IntervalData getInstance] duration] unlimitedDuration]) {
             [unlimitedDuration setHidden:false];
             [durationTime setHidden:true];
             unlimitedDuration.text = @"Unlimited Duration";
@@ -76,7 +73,7 @@ bool running;
             [unlimitedDuration setHidden:true];
             [durationTime setHidden:false];
             
-            durationTime.text = [[[intervalData duration] time] toStringDownToSeconds];
+            durationTime.text = [[[[IntervalData getInstance] duration] time] toStringDownToSeconds];
         }
     }
     else {
@@ -91,11 +88,10 @@ bool running;
 }
 
 -(void) setLabels {
-    NSLog(@"Set labels");
-        
-    if([[intervalData interval] intervalEnabled]) {
+    
+    if([[[IntervalData getInstance] interval] intervalEnabled]) {
         interval.textAlignment = UITextAlignmentRight;
-        interval.text =  [[[intervalData interval] time] toStringDownToSeconds];
+        interval.text =  [[[[IntervalData getInstance] interval] time] toStringDownToSeconds];
     }
     else {
         interval.text = @"Off";
@@ -103,22 +99,19 @@ bool running;
     }
     
     shutterSpeed.textAlignment = UITextAlignmentRight;
-    if([[[intervalData shutter] getMaxTime] totalTimeInSeconds] < 1) {
-        
+    if([[[[IntervalData getInstance] shutter] getMaxTime] totalTimeInSeconds] < 1) {
         shutterSpeed.text = @"Subsecond";
         [shutterProgress setHidden:true];
-        
     }
-    else if([[intervalData shutter] mode] == HDR_MODE) {
+    else if([[[IntervalData getInstance] shutter] mode] == HDR_MODE) {
         shutterSpeed.text = @"HDR";
     }
     else {
-        NSLog(@"Current length: %f " , [[[intervalData shutter] currentLength] totalTimeInSeconds]);
-        if([[[intervalData shutter] currentLength] hours] == 0) {
-            shutterSpeed.text = [[[intervalData shutter] currentLength] toStringDownToMilliseconds];
+        if([[[[IntervalData getInstance] shutter] currentLength] hours] == 0) {
+            shutterSpeed.text = [[[[IntervalData getInstance] shutter] currentLength] toStringDownToMilliseconds];
         }
         else {
-            shutterSpeed.text = [[[intervalData shutter] currentLength] toStringDownToSeconds];
+            shutterSpeed.text = [[[[IntervalData getInstance] shutter] currentLength] toStringDownToSeconds];
         }
     }
 }
@@ -187,7 +180,6 @@ bool running;
         switch (receivedEvent.subtype) {
                 
             case UIEventSubtypeRemoteControlTogglePlayPause:
-                NSLog(@"Play");
                 if(running)
                     [intervalometerModel stopIntervalometer];
                 else
@@ -196,11 +188,9 @@ bool running;
                 break;
                 
             case UIEventSubtypeRemoteControlPreviousTrack:
-                NSLog(@"Prev");
                 break;
                 
             case UIEventSubtypeRemoteControlNextTrack:
-                NSLog(@"stop");
                 break;
             default:
                 break;

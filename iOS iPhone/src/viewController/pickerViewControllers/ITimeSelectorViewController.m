@@ -50,18 +50,15 @@
 @synthesize label_0, label_1, label_2;
 
 @synthesize segment;
-@synthesize intervalData = _intervalData;
 @synthesize secondSubSecondSegment;
 
 @synthesize hoursValues = _hoursValues;
 @synthesize minutesValues = _minutesValues;
-@synthesize subSecondsValues = _subSecondValues;
+//@synthesize subSecondsValues = _subSecondValues;
 @synthesize subSecondsValuesNumbers = _subSecondsValuesNumbers;
 
 
 -(void) viewDidLoad {
-    _intervalData = [IntervalData getInstance];
-    
     [self.segment setSelectedSegmentIndex:[self getSegmentIndex]];
     
     [self setPickerVisibility];
@@ -121,9 +118,9 @@
             label_1.text = @"secs";
         
         if([self time].milliseconds == 0)
-            label_2.text = @"secs";
+            label_2.text = @"ms";
         else
-            label_2.text = @"sec";
+            label_2.text = @"ms";
     }
 }
 
@@ -153,25 +150,10 @@
 }
 
 -(void) loadSubSecondsArray {
-    // need to load subsecond intervals
-    //30' -  15'  -  8'  -  4'  -  2' - 0'
-    
-    self.subSecondsValues = [[NSMutableArray alloc] initWithCapacity:6];
-    self.subSecondsValuesNumbers = [[NSMutableArray alloc] initWithCapacity:6];
-    
-    [self.subSecondsValues addObject:[NSString stringWithFormat:@"0"]];
-    [self.subSecondsValues addObject:[NSString stringWithFormat:@"1/30"]];
-    [self.subSecondsValues addObject:[NSString stringWithFormat:@"1/15"]];
-    [self.subSecondsValues addObject:[NSString stringWithFormat:@"1/8"]];
-    [self.subSecondsValues addObject:[NSString stringWithFormat:@"1/4"]];
-    [self.subSecondsValues addObject:[NSString stringWithFormat:@"1/2"]];
-    
-    [self.subSecondsValuesNumbers addObject:[NSNumber numberWithInt:0]];
-    [self.subSecondsValuesNumbers addObject:[NSNumber numberWithInt:33]];
-    [self.subSecondsValuesNumbers addObject:[NSNumber numberWithInt:67]];
-    [self.subSecondsValuesNumbers addObject:[NSNumber numberWithInt:125]];
-    [self.subSecondsValuesNumbers addObject:[NSNumber numberWithInt:250]];
-    [self.subSecondsValuesNumbers addObject:[NSNumber numberWithInt:500]];
+    self.subSecondsValuesNumbers = [[NSMutableArray alloc] initWithCapacity:20];
+    for(int i = 0; i <= 19; i++) {
+        [self.subSecondsValuesNumbers addObject:[NSString stringWithFormat:@"%i", 50*i]];
+    }
 }
 
 // default time must not be subseconds
@@ -268,7 +250,7 @@ numberOfRowsInComponent:(NSInteger)component {
         default:
             if(self.getPickerMode == SECONDS)
                 return [self.secondsValues count];
-            return [self.subSecondsValues count]; 
+            return [self.subSecondsValuesNumbers count];
     }
 }
 
@@ -287,7 +269,7 @@ numberOfRowsInComponent:(NSInteger)component {
         default:
             if(self.getPickerMode == SECONDS)
                 return [self.secondsValues objectAtIndex:row];
-            return [self.subSecondsValues objectAtIndex:row];
+            return [self.subSecondsValuesNumbers objectAtIndex:row];
     }
 } 
 

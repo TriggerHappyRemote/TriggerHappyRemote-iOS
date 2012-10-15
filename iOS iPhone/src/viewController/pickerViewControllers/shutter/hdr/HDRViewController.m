@@ -29,21 +29,17 @@ UIImageView *imageViewArray[15];
 @synthesize exposureValueLabel, numberOfShotsLabel, shutterLengthLabel,
 pos1EVTick, neg1EVTick, centerEVTick;
 
-IntervalData *intervalData;
-
 -(void) viewWillAppear:(BOOL)animated {
     if(IPHONE_4_0) {
         self.view.backgroundColor = [UIColor blackColor];
         [background setFrame:CGRectMake(background.frame.origin.x, -45, background.frame.size.width, 480)];
     }
     
-    intervalData = [IntervalData getInstance];
-
     [[[self navigationController] tabBarController] tabBar].hidden = YES;
     
-    numberOfShotsLabel.text = [[NSString alloc] initWithFormat:@"%i Shots", [[[intervalData shutter] hdr] numberOfShots]];
+    numberOfShotsLabel.text = [[NSString alloc] initWithFormat:@"%i Shots", [[[[IntervalData getInstance] shutter] hdr] numberOfShots]];
     
-    double EVInterval = [[[intervalData shutter] hdr] evInterval];
+    double EVInterval = [[[[IntervalData getInstance] shutter] hdr] evInterval];
     
     if(EVInterval == .333) {
         exposureValueLabel.text = @"1/3 EV Interval";
@@ -54,11 +50,11 @@ IntervalData *intervalData;
     else {
         exposureValueLabel.text = [[NSString alloc] initWithFormat:@"%i EV Interval", (int)EVInterval];
     }
-    shutterLengthLabel.text = [[NSString alloc] initWithFormat:@"%@ Shutter Length", [[[intervalData shutter] hdr] getButtonData]];
+    shutterLengthLabel.text = [[NSString alloc] initWithFormat:@"%@ Shutter Length", [[[[IntervalData getInstance] shutter] hdr] getButtonData]];
     
     [self loadShotsTickMarks];
     [self setLightMeterAxis];
-    [[[intervalData shutter] hdr] getMaxShutterLength];
+    [[[[IntervalData getInstance] shutter] hdr] getMaxShutterLength];
 }
 
 
@@ -83,7 +79,7 @@ IntervalData *intervalData;
     float xLength;
     float yBase;
     if(IDIOM == IPAD) {
-        ticks = [[[intervalData shutter] hdr] numberOfShots];
+        ticks = [[[[IntervalData getInstance] shutter] hdr] numberOfShots];
         xTick = 20.0f; 
         yTick = 70.0f; 
         xLeft = 115.0f;
@@ -91,7 +87,7 @@ IntervalData *intervalData;
         xLength = xRight - xLeft;
         yBase = 156;
     } else {
-        ticks = [[[intervalData shutter] hdr] numberOfShots];
+        ticks = [[[[IntervalData getInstance] shutter] hdr] numberOfShots];
         xTick = 10.0f; 
         yTick = 39.0f; 
         xLeft = 33.0f;
@@ -122,7 +118,7 @@ IntervalData *intervalData;
 }
 
 -(void) setLightMeterAxis {
-    float totalDynamicRange = ([[[intervalData shutter] hdr] numberOfShots] - 1) * [[[intervalData shutter] hdr] evInterval];
+    float totalDynamicRange = ([[[[IntervalData getInstance] shutter] hdr] numberOfShots] - 1) * [[[[IntervalData getInstance] shutter] hdr] evInterval];
     axis0Label.text = fractionConverter(totalDynamicRange / 2);
     axis1Label.text = fractionConverter(totalDynamicRange / 4);
     axis2Label.text = axis1Label.text;

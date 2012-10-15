@@ -28,32 +28,35 @@
 }
 
 -(void) changeHour: (int) hour {
-    [[[[self.intervalData shutter] bramper] startShutterLength] setHours:hour];
+    [[[[[IntervalData getInstance] shutter] bramper] startShutterLength] setHours:hour];
+    [IntervalData getInstance].shutter.startLength.hours = hour;
 }
 
 -(void) changeMinute: (int) minute {
-    [[[[self.intervalData shutter] bramper] startShutterLength] setMinutes:minute];
-    
+    [[[[[IntervalData getInstance] shutter] bramper] startShutterLength] setMinutes:minute];
+    [IntervalData getInstance].shutter.startLength.minutes = minute;
 }
 
 -(void) changeSecond: (int) second {
-    [[[[self.intervalData shutter] bramper] startShutterLength] setSeconds:second];
+    [[[[[IntervalData getInstance] shutter] bramper] startShutterLength] setSeconds:second];
+    [IntervalData getInstance].shutter.startLength.seconds = second;
 }
 
 -(void) changeMillisecond:(int)millisecond {
-    [[[[self.intervalData shutter] bramper] startShutterLength] setMilliseconds:millisecond];
+    [[[[[IntervalData getInstance] shutter] bramper] startShutterLength] setMilliseconds:millisecond];
+    [IntervalData getInstance].shutter.startLength.milliseconds = millisecond;
 }
 
 -(Time *) time {
-    return [[[self.intervalData shutter] bramper] startShutterLength];
+    return [[[[IntervalData getInstance] shutter] bramper] startShutterLength];
 }
 
 -(void) setPickerMode:(PickerMode)state {
-    [[[self.intervalData shutter] bramper] setPickerModeStart:state];
+    [[[[IntervalData getInstance] shutter] bramper] setPickerModeStart:state];
 }
 
 -(PickerMode)getPickerMode {
-    return [[[self.intervalData shutter] bramper] pickerModeStart];
+    return [[[[IntervalData getInstance] shutter] bramper] pickerModeStart];
 }
 
 - (NSString *) infoMessage {
@@ -61,7 +64,7 @@
 }
 
 - (NSString *) warningMessage {
-    return [[NSString alloc] initWithFormat:@"The start shutter length must be shorter than the interval of %@", [self.intervalData.interval.time toStringDescriptive]];
+    return [[NSString alloc] initWithFormat:@"The start shutter length must be shorter than the interval of %@", [[IntervalData getInstance].interval.time toStringDescriptive]];
 }
 
 @end

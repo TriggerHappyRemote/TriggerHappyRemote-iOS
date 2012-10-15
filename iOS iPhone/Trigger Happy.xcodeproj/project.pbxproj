@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A01660615700EE2000D4E28 /* icon-appstore-512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0165DE15700EE2000D4E28 /* icon-appstore-512x512.png */; };
-		0A01660715700EE2000D4E28 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0165DF15700EE2000D4E28 /* Icon.png */; };
-		0A01660815700EE2000D4E28 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0165E015700EE2000D4E28 /* Icon@2x.png */; };
+		0A01660715700EE2000D4E28 /* Icon~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0165DF15700EE2000D4E28 /* Icon~iphone.png */; };
+		0A01660815700EE2000D4E28 /* Icon@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0165E015700EE2000D4E28 /* Icon@2x~iphone.png */; };
 		0A01660915700EE2000D4E28 /* baseShutterButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0165E215700EE2000D4E28 /* baseShutterButton.png */; };
 		0A01660A15700EE2000D4E28 /* bulbRampingButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0165E315700EE2000D4E28 /* bulbRampingButton.png */; };
 		0A01660B15700EE2000D4E28 /* buyButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0165E415700EE2000D4E28 /* buyButton.png */; };
@@ -81,8 +81,6 @@
 		0A860E0B15DCAE03003E9288 /* SingleShotScrollingHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A860E0A15DCAE03003E9288 /* SingleShotScrollingHelpViewController.m */; };
 		0A860E1A15DF59E9003E9288 /* singleShotScrollingView.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A860E1915DF59E9003E9288 /* singleShotScrollingView.png */; };
 		0A865CBA15D4426100538A36 /* brampingInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A865CB915D4426100538A36 /* brampingInfo.png */; };
-		0AA807A015E7662C00E82F90 /* information-icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8079E15E7662C00E82F90 /* information-icon-small.png */; };
-		0AA807A115E7662C00E82F90 /* information-icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8079F15E7662C00E82F90 /* information-icon-small@2x.png */; };
 		0AA89F8A156F0B7600782F2C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4AA83D156718230006E555 /* MediaPlayer.framework */; };
 		0AA89F8B156F0B7F00782F2C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE197DE154B68FE00714F55 /* AVFoundation.framework */; };
 		0AAB335D156F18F20028F04B /* 20kHz_033ms.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB3297156F18F10028F04B /* 20kHz_033ms.wav */; };
@@ -159,13 +157,21 @@
 		0AEF54E1162B3FEB00DFFE2E /* fireButton2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54DF162B3FEB00DFFE2E /* fireButton2@2x.png */; };
 		0AEF54E4162B400400DFFE2E /* fireButton2@2x~pad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54E2162B400400DFFE2E /* fireButton2@2x~pad.png */; };
 		0AEF54E5162B400400DFFE2E /* fireButton2~pad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54E3162B400400DFFE2E /* fireButton2~pad.png */; };
+		0AEF54E7162B4EAD00DFFE2E /* timeBetweenShotsButton~pad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54E6162B4EAD00DFFE2E /* timeBetweenShotsButton~pad.png */; };
+		0AEF54EA162B5C4E00DFFE2E /* settingIconTab.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54E8162B5C4E00DFFE2E /* settingIconTab.png */; };
+		0AEF54EB162B5C4E00DFFE2E /* settingIconTab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54E9162B5C4E00DFFE2E /* settingIconTab@2x.png */; };
+		0AEF54EE162B5EC500DFFE2E /* settingBackground@2x~pad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54EC162B5EC500DFFE2E /* settingBackground@2x~pad.png */; };
+		0AEF54EF162B5EC500DFFE2E /* settingBackground~pad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54ED162B5EC500DFFE2E /* settingBackground~pad.png */; };
+		0AEF54F2162B86A700DFFE2E /* HardwareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF54F1162B86A700DFFE2E /* HardwareManager.m */; };
+		0AEF54F5162B98D400DFFE2E /* Icon@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54F3162B98D400DFFE2E /* Icon@2x~ipad.png */; };
+		0AEF54F6162B98D400DFFE2E /* Icon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF54F4162B98D400DFFE2E /* Icon~ipad.png */; };
 		0AEF5C3815AE1D4700F58032 /* HDRViewController_PAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF5C3715AE1D4700F58032 /* HDRViewController_PAD.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A0165DE15700EE2000D4E28 /* icon-appstore-512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-appstore-512x512.png"; sourceTree = "<group>"; };
-		0A0165DF15700EE2000D4E28 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		0A0165E015700EE2000D4E28 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		0A0165DF15700EE2000D4E28 /* Icon~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon~iphone.png"; sourceTree = "<group>"; };
+		0A0165E015700EE2000D4E28 /* Icon@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x~iphone.png"; sourceTree = "<group>"; };
 		0A0165E215700EE2000D4E28 /* baseShutterButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseShutterButton.png; sourceTree = "<group>"; };
 		0A0165E315700EE2000D4E28 /* bulbRampingButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulbRampingButton.png; sourceTree = "<group>"; };
 		0A0165E415700EE2000D4E28 /* buyButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buyButton.png; sourceTree = "<group>"; };
@@ -367,6 +373,15 @@
 		0AEF54DF162B3FEB00DFFE2E /* fireButton2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fireButton2@2x.png"; sourceTree = "<group>"; };
 		0AEF54E2162B400400DFFE2E /* fireButton2@2x~pad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fireButton2@2x~pad.png"; path = "pad/fireButton2@2x~pad.png"; sourceTree = "<group>"; };
 		0AEF54E3162B400400DFFE2E /* fireButton2~pad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fireButton2~pad.png"; path = "pad/fireButton2~pad.png"; sourceTree = "<group>"; };
+		0AEF54E6162B4EAD00DFFE2E /* timeBetweenShotsButton~pad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "timeBetweenShotsButton~pad.png"; path = "pad/timeBetweenShotsButton~pad.png"; sourceTree = "<group>"; };
+		0AEF54E8162B5C4E00DFFE2E /* settingIconTab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingIconTab.png; sourceTree = "<group>"; };
+		0AEF54E9162B5C4E00DFFE2E /* settingIconTab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settingIconTab@2x.png"; sourceTree = "<group>"; };
+		0AEF54EC162B5EC500DFFE2E /* settingBackground@2x~pad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settingBackground@2x~pad.png"; path = "pad/settingBackground@2x~pad.png"; sourceTree = "<group>"; };
+		0AEF54ED162B5EC500DFFE2E /* settingBackground~pad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settingBackground~pad.png"; path = "pad/settingBackground~pad.png"; sourceTree = "<group>"; };
+		0AEF54F0162B86A600DFFE2E /* HardwareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardwareManager.h; sourceTree = "<group>"; };
+		0AEF54F1162B86A700DFFE2E /* HardwareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardwareManager.m; sourceTree = "<group>"; };
+		0AEF54F3162B98D400DFFE2E /* Icon@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x~ipad.png"; sourceTree = "<group>"; };
+		0AEF54F4162B98D400DFFE2E /* Icon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon~ipad.png"; sourceTree = "<group>"; };
 		0AEF5C3715AE1D4700F58032 /* HDRViewController_PAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HDRViewController_PAD.png; path = pad/HDRViewController_PAD.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -409,8 +424,10 @@
 			isa = PBXGroup;
 			children = (
 				0A0165DE15700EE2000D4E28 /* icon-appstore-512x512.png */,
-				0A0165DF15700EE2000D4E28 /* Icon.png */,
-				0A0165E015700EE2000D4E28 /* Icon@2x.png */,
+				0AEF54F3162B98D400DFFE2E /* Icon@2x~ipad.png */,
+				0AEF54F4162B98D400DFFE2E /* Icon~ipad.png */,
+				0A0165DF15700EE2000D4E28 /* Icon~iphone.png */,
+				0A0165E015700EE2000D4E28 /* Icon@2x~iphone.png */,
 			);
 			path = appIcons;
 			sourceTree = "<group>";
@@ -427,6 +444,8 @@
 		0A0165F315700EE2000D4E28 /* tabBarIcons */ = {
 			isa = PBXGroup;
 			children = (
+				0AEF54E8162B5C4E00DFFE2E /* settingIconTab.png */,
+				0AEF54E9162B5C4E00DFFE2E /* settingIconTab@2x.png */,
 				0AEF54D0162A09D200DFFE2E /* singleShot.png */,
 				0AEF54D1162A09D200DFFE2E /* singleShot@2x.png */,
 				0A0165F415700EE2000D4E28 /* circle.png */,
@@ -510,6 +529,7 @@
 		0A08C2E515ACEBE90075ADFC /* pad */ = {
 			isa = PBXGroup;
 			children = (
+				0AEF54E6162B4EAD00DFFE2E /* timeBetweenShotsButton~pad.png */,
 				0AEF54E2162B400400DFFE2E /* fireButton2@2x~pad.png */,
 				0AEF54E3162B400400DFFE2E /* fireButton2~pad.png */,
 				0A45536215AE001F002B955E /* baseShutterSpeedButton_PAD.png */,
@@ -533,6 +553,8 @@
 		0A08C2E815ACFDE10075ADFC /* pad */ = {
 			isa = PBXGroup;
 			children = (
+				0AEF54EC162B5EC500DFFE2E /* settingBackground@2x~pad.png */,
+				0AEF54ED162B5EC500DFFE2E /* settingBackground~pad.png */,
 				0AEF5C3715AE1D4700F58032 /* HDRViewController_PAD.png */,
 				0A0E165D15AFA655003A2D4E /* aboutViewController_PAD.png */,
 				0A45537A15AE029C002B955E /* intervalometerViewController_PAD.png */,
@@ -805,6 +827,8 @@
 				0AAB32C3156F18F10028F04B /* IntervalDuration.m */,
 				0AAB32C4156F18F10028F04B /* Shutter.h */,
 				0AAB32C5156F18F10028F04B /* Shutter.m */,
+				0AEF54F0162B86A600DFFE2E /* HardwareManager.h */,
+				0AEF54F1162B86A700DFFE2E /* HardwareManager.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1040,8 +1064,8 @@
 				0AAB337A156F18F20028F04B /* Trigger_Happy-iPhoneFamily.storyboard in Resources */,
 				0AAB338C156F18F20028F04B /* InfoPlist.strings in Resources */,
 				0A01660615700EE2000D4E28 /* icon-appstore-512x512.png in Resources */,
-				0A01660715700EE2000D4E28 /* Icon.png in Resources */,
-				0A01660815700EE2000D4E28 /* Icon@2x.png in Resources */,
+				0A01660715700EE2000D4E28 /* Icon~iphone.png in Resources */,
+				0A01660815700EE2000D4E28 /* Icon@2x~iphone.png in Resources */,
 				0A01660915700EE2000D4E28 /* baseShutterButton.png in Resources */,
 				0A01660A15700EE2000D4E28 /* bulbRampingButton.png in Resources */,
 				0A01660B15700EE2000D4E28 /* buyButton.png in Resources */,
@@ -1064,8 +1088,8 @@
 				0A01661F15700EE2000D4E28 /* timeLapseIcon@2x.png in Resources */,
 				0A01662015700EE2000D4E28 /* aboutViewController.png in Resources */,
 				0A01662115700EE2000D4E28 /* HDRViewController.png in Resources */,
-				0A01662215700EE2000D4E28 /* intervalometerCountdownViewController.jpg in Resources */,
 				0A01662315700EE2000D4E28 /* intervalometerViewController.png in Resources */,
+				0A01662215700EE2000D4E28 /* intervalometerCountdownViewController.jpg in Resources */,
 				0A01662915700EE2000D4E28 /* warning.png in Resources */,
 				0A01662B15700FC4000D4E28 /* learnMoreButton.png in Resources */,
 				0A01662F15701054000D4E28 /* lightMeter0.png in Resources */,
@@ -1103,8 +1127,6 @@
 				0A6A4BFD15DC8FED00B61EB3 /* IndividualSubviewsBasedApplicationCell.xib in Resources */,
 				0A860DFB15DCA471003E9288 /* SingleShotViewControllerInstructions_Phone.xib in Resources */,
 				0A860E1A15DF59E9003E9288 /* singleShotScrollingView.png in Resources */,
-				0AA807A015E7662C00E82F90 /* information-icon-small.png in Resources */,
-				0AA807A115E7662C00E82F90 /* information-icon-small@2x.png in Resources */,
 				0AEC98E2160C03D900192928 /* Default-568h@2x.png in Resources */,
 				0AEC98E4160C0D7A00192928 /* timeBetweenShotsButton.png in Resources */,
 				0AEC98E8160C0FB400192928 /* mono-lcd.png in Resources */,
@@ -1123,6 +1145,13 @@
 				0AEF54E1162B3FEB00DFFE2E /* fireButton2@2x.png in Resources */,
 				0AEF54E4162B400400DFFE2E /* fireButton2@2x~pad.png in Resources */,
 				0AEF54E5162B400400DFFE2E /* fireButton2~pad.png in Resources */,
+				0AEF54E7162B4EAD00DFFE2E /* timeBetweenShotsButton~pad.png in Resources */,
+				0AEF54EA162B5C4E00DFFE2E /* settingIconTab.png in Resources */,
+				0AEF54EB162B5C4E00DFFE2E /* settingIconTab@2x.png in Resources */,
+				0AEF54EE162B5EC500DFFE2E /* settingBackground@2x~pad.png in Resources */,
+				0AEF54EF162B5EC500DFFE2E /* settingBackground~pad.png in Resources */,
+				0AEF54F5162B98D400DFFE2E /* Icon@2x~ipad.png in Resources */,
+				0AEF54F6162B98D400DFFE2E /* Icon~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1175,6 +1204,7 @@
 				0A15444E16289EA100BFAB5C /* AudioOutputCameraController.m in Sources */,
 				0AEF54B61628CE6500DFFE2E /* AdvancedSettingsViewController.m in Sources */,
 				0AEF54B91628CE8700DFFE2E /* SoundSettingsViewController.m in Sources */,
+				0AEF54F2162B86A700DFFE2E /* HardwareManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1187,8 +1217,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Trigger Happy, LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1203,7 +1233,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "97341878-A8A4-4964-BB08-2E626A5C635C";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1216,8 +1246,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Trigger Happy, LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1226,7 +1256,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "97341878-A8A4-4964-BB08-2E626A5C635C";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

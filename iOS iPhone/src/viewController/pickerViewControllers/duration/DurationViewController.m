@@ -21,19 +21,16 @@
 
 bool unlimited;
 
-IntervalData *intervalData;
-
 -(void) viewDidLoad {
     [super viewDidLoad];
-    intervalData = [IntervalData getInstance];
 	[durationPicker setDatePickerMode:UIDatePickerModeCountDownTimer];
 
-    if([[intervalData shutter] mode] == BRAMP) {
+    if([[[IntervalData getInstance] shutter] mode] == BRAMP) {
         [duration setHidden:true];
         
     }
     
-    if([[intervalData duration] unlimitedDuration]) {
+    if([[[IntervalData getInstance] duration] unlimitedDuration]) {
         [duration setSelectedSegmentIndex:0];
         [durationPicker setHidden:true];
         
@@ -48,31 +45,31 @@ IntervalData *intervalData;
         infoViewController = [InfoViewController withLocationForPhone:0 and:277];
         
     infoViewController.hidden = (self.duration.selectedSegmentIndex == 0);
-    infoViewController.text =  [[NSString alloc] initWithFormat:@"The entire time lapse duration is %@", [intervalData.duration.time toStringDescriptive]];
+    infoViewController.text =  [[NSString alloc] initWithFormat:@"The entire time lapse duration is %@", [[IntervalData getInstance].duration.time toStringDescriptive]];
     infoViewController.type = InfoViewControllerInfo;
     [self.view addSubview:infoViewController.view];
     
-    [durationPicker setCountDownDuration:[[[intervalData duration] time]totalTimeInSeconds]];
+    [durationPicker setCountDownDuration:[[[[IntervalData getInstance] duration] time]totalTimeInSeconds]];
 }
 
 -(IBAction) toggleSegmentControl {
     [self changeInDuration];
     [durationPicker setHidden:[self.duration selectedSegmentIndex] == 0];
-    [[intervalData duration] 
+    [[[IntervalData getInstance] duration] 
      setUnlimitedDuration:[self.duration selectedSegmentIndex] == 0];
     infoViewController.hidden = (self.duration.selectedSegmentIndex == 0);
 }
 
 -(IBAction) changeInDuration {
-    if(durationPicker.countDownDuration <= [[[intervalData interval] time] totalTimeInSeconds]) {
-        [durationPicker setCountDownDuration:[[[intervalData interval] time] totalTimeInSeconds]+2];
-        [[[intervalData duration] time] setTotalTimeInSeconds:[[[intervalData interval] time] totalTimeInSeconds]+2];
+    if(durationPicker.countDownDuration <= [[[[IntervalData getInstance] interval] time] totalTimeInSeconds]) {
+        [durationPicker setCountDownDuration:[[[[IntervalData getInstance] interval] time] totalTimeInSeconds]+60];
+        [[[[IntervalData getInstance] duration] time] setTotalTimeInSeconds:[[[[IntervalData getInstance] interval] time] totalTimeInSeconds]+60];
         infoViewController.text =  [[NSString alloc] initWithFormat:@"The entire time lapse duration must be longer than the interval"]; // of %@", [intervalData.interval.time toStringDescriptive]]; 
         infoViewController.type = InfoViewControllerWarning;
     }
     else {
-        intervalData.duration.time.totalTimeInSeconds = durationPicker.countDownDuration;
-        infoViewController.text =  [[NSString alloc] initWithFormat:@"The entire time lapse duration is %@", [intervalData.duration.time toStringDescriptive]]; 
+        [IntervalData getInstance].duration.time.totalTimeInSeconds = durationPicker.countDownDuration;
+        infoViewController.text =  [[NSString alloc] initWithFormat:@"The entire time lapse duration is %@", [[IntervalData getInstance].duration.time toStringDescriptive]]; 
         infoViewController.type = InfoViewControllerInfo;
     }
 }

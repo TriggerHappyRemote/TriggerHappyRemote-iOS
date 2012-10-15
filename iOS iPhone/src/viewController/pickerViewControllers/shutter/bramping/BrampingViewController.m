@@ -15,14 +15,11 @@
 @synthesize endShutterDataLabel;
 @synthesize startShutterDataLabel;
 
-IntervalData * intervalData;
-
 - (void) viewWillAppear:(BOOL)animated {
-    intervalData = [IntervalData getInstance];
     
-    endShutterDataLabel.text = [[[intervalData shutter] bramper] getEndShutterLabelText];
+    endShutterDataLabel.text = [[[[IntervalData getInstance] shutter] bramper] getEndShutterLabelText];
     
-    startShutterDataLabel.text = [[[intervalData shutter] bramper] getStartShutterLabelText];
+    startShutterDataLabel.text = [[[[IntervalData getInstance] shutter] bramper] getStartShutterLabelText];
     
 }
 

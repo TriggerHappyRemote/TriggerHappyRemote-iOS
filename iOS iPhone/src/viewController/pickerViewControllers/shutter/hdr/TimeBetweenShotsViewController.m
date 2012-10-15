@@ -36,16 +36,13 @@
     // enforce interval longer than shutter:
     NSTimeInterval totalShutter = [[IntervalData getInstance].shutter.hdr getMaxShutterLength];
     NSTimeInterval intervalLength = [IntervalData getInstance].interval.time.totalTimeInSeconds;
-    if(totalShutter >= intervalLength) {
-        NSLog(@"Total Shutter:%f Interval Length:%f", totalShutter, intervalLength);
-        
+    if([IntervalData getInstance].interval.intervalEnabled && totalShutter >= intervalLength) {        
         timeSlider.value = ([[IntervalData getInstance].shutter.hdr maxTimeBetweenShots]- MINVAL) / (MAXVAL-MINVAL);
-        NSLog(@"Max time: %f", [[IntervalData getInstance].shutter.hdr maxTimeBetweenShots]);
         
         [self timeValueDidChange:self];
         info.text = @"Increase the interval of the time lapse to increase the time between each shot. To do that, nagivate back to HDR then to Time Lapse and select Interval";
     } else {
-        info.text = @"This is the amount of time between each image in an exposure bracket. This time may need to be increased or decrease depending upon the frames per second of the camera.";
+        info.text = @"This is the amount of time between each image in an exposure bracket. This time may need to be increased or decreased depending upon the frames per second of the camera.";
         sliderValuePrevious = timeSlider.value;
     }
 }

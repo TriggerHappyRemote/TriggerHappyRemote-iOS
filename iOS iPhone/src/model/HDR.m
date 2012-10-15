@@ -54,9 +54,6 @@
         [times addObject:[[Time alloc] initWithTotalTimeInSeconds:[self.baseShutterSpeed totalTimeInSeconds] * pow (2, -1 * self.evInterval * (i+1))]];
     }
     
-    for(int i = 0; i < times.count; i++) {
-        //NSLog(@"Time(%i) - %f, ",i , [(Time *)[times objectAtIndex:i] totalTimeInSeconds] );
-    }
     return times;
 }
 

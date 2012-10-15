@@ -14,6 +14,7 @@
 #import "Shutter.h"
 #import "Interval.h"
 #import "IntervalDuration.h"
+#import "HardwareManager.h"
 
 @interface IIntervalometer()
     @property (nonatomic, strong) Time * remainingTime;
@@ -28,7 +29,6 @@
 @implementation IIntervalometer
 
 @synthesize remainingTime = _remainingTime;
-@synthesize intervalData;
 
 IntervalometerCountDownViewController *intervalometerCountDownViewController;
 
@@ -37,7 +37,6 @@ NSTimer *intervalTimer;
 NSTimer *shuttersTimer;
 NSTimer *shutterTimer;
 
-//IntervalData *intervalData;
 ICameraController * cameraController;
 
 int currentCountDownTimeSeconds;
@@ -55,10 +54,9 @@ int hdrShutterIndex;
 
 
 - (id) init {
-    intervalData = [IntervalData getInstance];
-    cameraController = [intervalData cameraController];
+    cameraController = [HardwareManager getInstance].cameraController;
     _remainingTime = [Time new];  
-    shutterTimes = [[intervalData shutter] getShutterLengths];
+    shutterTimes = [[[IntervalData getInstance] shutter] getShutterLengths];
     hdrShutterIndex = 0;
     return self;
 }
@@ -74,27 +72,27 @@ int hdrShutterIndex;
     interruptIntervalMS = .025;
     millisecondInterval = (int)(1000 * interruptIntervalMS);
     
-    if([[intervalData shutter] mode] == HDR_MODE) {
-        shutterLengthMS = [[[intervalData shutter] getMaxTime] totalTimeInSeconds] * 1000;
+    if([[[IntervalData getInstance] shutter] mode] == HDR_MODE) {
+        shutterLengthMS = [[[[IntervalData getInstance] shutter] getMaxTime] totalTimeInSeconds] * 1000;
     }
     else {
-        shutterLengthMS = [[[intervalData shutter] currentLength] totalTimeInSeconds] * 1000;
+        shutterLengthMS = [[[[IntervalData getInstance] shutter] currentLength] totalTimeInSeconds] * 1000;
     }
     currentShutterTimeMS = shutterLengthMS;
     
     
     
     
-    if([[intervalData shutter] mode] == BRAMP) {
+    if([[[IntervalData getInstance] shutter] mode] == BRAMP) {
         
         // DELTA = stop - start
         // NUM_INTERVALS = DURATION / Interval;
         // ALPHA = DELTA / NO_INTERVALS
         
-        float delta = [[[[intervalData shutter] bramper] endShutterLength] totalTimeInSeconds] - [[[[intervalData shutter] bramper] startShutterLength] totalTimeInSeconds];
+        float delta = [[[[[IntervalData getInstance] shutter] bramper] endShutterLength] totalTimeInSeconds] - [[[[[IntervalData getInstance] shutter] bramper] startShutterLength] totalTimeInSeconds];
         
         
-        float num_intervals = [[[intervalData duration] time] totalTimeInSeconds] / [[[intervalData interval] time] totalTimeInSeconds] - 1;
+        float num_intervals = [[[[IntervalData getInstance] duration] time] totalTimeInSeconds] / [[[[IntervalData getInstance] interval] time] totalTimeInSeconds] - 1;
         brampingAlpha = delta / num_intervals;
 
         
@@ -103,15 +101,15 @@ int hdrShutterIndex;
         brampingAlpha = 0.0;
     }
     
-    [[intervalData shutter] initializeCurrentLength];
-    [[intervalData shutter] currentLength].totalTimeInSeconds -= brampingAlpha;
+    [[[IntervalData getInstance] shutter] initializeCurrentLength];
+    [[[IntervalData getInstance] shutter] currentLength].totalTimeInSeconds -= brampingAlpha;
     
-    currentCountDownTimeMS = [[[intervalData interval] time] totalTimeInSeconds] * 1000;
+    currentCountDownTimeMS = [[[[IntervalData getInstance] interval] time] totalTimeInSeconds] * 1000;
     
-    if(![[intervalData duration] unlimitedDuration] && [[intervalData interval] intervalEnabled]) {
+    if(![[[IntervalData getInstance] duration] unlimitedDuration] && [[[IntervalData getInstance] interval] intervalEnabled]) {
         
-        currentCountDownTimeSeconds = [[[intervalData duration] time] totalTimeInSeconds];
-        [self.remainingTime setTotalTimeInSeconds:[[[intervalData duration] time] totalTimeInSeconds]];
+        currentCountDownTimeSeconds = [[[[IntervalData getInstance] duration] time] totalTimeInSeconds];
+        [self.remainingTime setTotalTimeInSeconds:[[[[IntervalData getInstance] duration] time] totalTimeInSeconds]];
         
         durationTimer = [NSTimer scheduledTimerWithTimeInterval:1
                                                          target:self
@@ -120,7 +118,7 @@ int hdrShutterIndex;
                                                         repeats:YES];
     }
     
-    if([[intervalData interval] intervalEnabled]) {
+    if([[[IntervalData getInstance] interval] intervalEnabled]) {
         // interval timer is constant
         intervalTimer = [NSTimer scheduledTimerWithTimeInterval:interruptIntervalMS
                                                      target:self
@@ -156,13 +154,13 @@ int hdrShutterIndex;
     
     // if we hit an interval
     if(currentCountDownTimeMS <= 0) {
-        currentCountDownTimeMS = [[[intervalData interval] time] totalTimeInSeconds] * 1000;
+        currentCountDownTimeMS = [[[[IntervalData getInstance] interval] time] totalTimeInSeconds] * 1000;
 
         [self intervalometerIntervalInterrupt];
     }
     
     // not matter what we always update the slider to indicate the slider progress
-    float progress = 1.0f - (currentCountDownTimeMS / ([[[intervalData interval] time] totalTimeInSeconds] * 1000));
+    float progress = 1.0f - (currentCountDownTimeMS / ([[[[IntervalData getInstance] interval] time] totalTimeInSeconds] * 1000));
     [intervalometerCountDownViewController notifyOfInterruptToUpdateIntervalProgress:progress];
 }
 
@@ -203,10 +201,10 @@ int hdrShutterIndex;
 - (void) startShutter {
     
     Time * time;
-    if([[intervalData shutter] mode] == HDR_MODE &&
-       hdrShutterIndex < intervalData.shutter.hdr.numberOfShots) {
+    if([[[IntervalData getInstance] shutter] mode] == HDR_MODE &&
+       hdrShutterIndex < [IntervalData getInstance].shutter.hdr.numberOfShots) {
         time = (Time *)[shutterTimes objectAtIndex:hdrShutterIndex];
-        shutterTimer = [NSTimer scheduledTimerWithTimeInterval:[time totalTimeInSeconds] + [[[intervalData shutter] hdr] shutterGap]
+        shutterTimer = [NSTimer scheduledTimerWithTimeInterval:[time totalTimeInSeconds] + [[[[IntervalData getInstance] shutter] hdr] shutterGap]
                                                         target:self
                                                       selector:@selector(startShutter)
                                                       userInfo:nil
@@ -214,7 +212,7 @@ int hdrShutterIndex;
 
         hdrShutterIndex++;
     }
-    else if([[intervalData shutter] mode] != HDR_MODE) {
+    else if([[[IntervalData getInstance] shutter] mode] != HDR_MODE) {
         time = (Time *)[shutterTimes objectAtIndex:0];
     }
     else {
@@ -222,10 +220,10 @@ int hdrShutterIndex;
         return;
     }
     
-    if([[intervalData shutter] mode] == BRAMP) {
-        NSTimeInterval newTime = [[[intervalData shutter] currentLength] totalTimeInSeconds] + brampingAlpha;    
+    if([[[IntervalData getInstance] shutter] mode] == BRAMP) {
+        NSTimeInterval newTime = [[[[IntervalData getInstance] shutter] currentLength] totalTimeInSeconds] + brampingAlpha;    
         time = [[Time new] initWithTotalTimeInSeconds:newTime];
-        [[intervalData shutter] setCurrentLength:time];
+        [[[IntervalData getInstance] shutter] setCurrentLength:time];
 
     }
     
@@ -233,7 +231,7 @@ int hdrShutterIndex;
 }
 
 - (void) getNotification {
-    currentCountDownTimeSeconds = (int)[intervalData duration];
+    currentCountDownTimeSeconds = (int)[[IntervalData getInstance] duration];
     [self intervalometerDurationInterrupt];
 }
 
@@ -253,6 +251,5 @@ int hdrShutterIndex;
     [cameraController fireButtonDepressed];
     [intervalometerCountDownViewController notifyOfDurationEnd];
 }
-
 
 @end

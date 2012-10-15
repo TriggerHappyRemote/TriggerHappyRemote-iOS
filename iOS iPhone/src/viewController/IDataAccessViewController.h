@@ -14,7 +14,6 @@
 @interface IDataAccessViewController : UIViewController {    
     InfoViewController * infoViewController;
     NSTimer * hardwareChecker;
-    IntervalData * intervalData;
     ICameraController * cameraController;
 }
 

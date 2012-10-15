@@ -21,8 +21,8 @@
 }
 
 -(void) boundsCheck:(NSInteger)row inComponent:(NSInteger)component withPreviousLength:(Time *)time {
-    Time * max = [[self.intervalData interval] time];
-    if([[self.intervalData interval] intervalEnabled] && [self.time totalTimeInSeconds] >= [max totalTimeInSeconds]) {
+    Time * max = [[[IntervalData getInstance] interval] time];
+    if([[[IntervalData getInstance] interval] intervalEnabled] && [self.time totalTimeInSeconds] >= [max totalTimeInSeconds]) {
         
         Time * newMax = [Time new];
         [newMax setTotalTimeInSeconds:[max totalTimeInSeconds] - 1];

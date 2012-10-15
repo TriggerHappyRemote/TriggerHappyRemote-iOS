@@ -54,14 +54,7 @@ ButtonState state;
 
     }
     
-    if(IPHONE_3_5) {
-        NSLog(@"3.5 inch");
-    }
-    
-    
     canFire = true;
-    
-    intervalData = [IntervalData getInstance];
     
     useInfoMessage.textAlignment = UITextAlignmentCenter;
 
@@ -77,6 +70,8 @@ ButtonState state;
 
     if(IDIOM == IPAD)
         infoViewController = [InfoViewController withLocationForPad:82 and:780];
+    else if(IPHONE_4_0)
+        infoViewController = [InfoViewController withLocationForPhone:0 and:408];
     else
         infoViewController = [InfoViewController withLocationForPhone:0 and:323];
     [self.view addSubview:infoViewController.view];

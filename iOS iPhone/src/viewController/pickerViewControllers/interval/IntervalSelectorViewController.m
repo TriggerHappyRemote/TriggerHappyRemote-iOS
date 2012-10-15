@@ -42,20 +42,20 @@ int secondOffSet;
 }
 
 -(void) changeHour: (int) hour {
-    [[[self.intervalData interval] time] setHours:hour+hourOffSet];
+    [[[[IntervalData getInstance] interval] time] setHours:hour+hourOffSet];
 }
 
 -(void) changeMinute: (int) minute {
-    [[[self.intervalData interval] time] setMinutes:minute+minuteOffSet];
+    [[[[IntervalData getInstance] interval] time] setMinutes:minute+minuteOffSet];
 
 }
 
 -(void) changeSecond: (int) second {
-    [[[self.intervalData interval] time] setSeconds:second+secondOffSet];
+    [[[[IntervalData getInstance] interval] time] setSeconds:second+secondOffSet];
 }
 
 -(Time *) time {
-    return [[self.intervalData interval] time];
+    return [[[IntervalData getInstance] interval] time];
 }
 
 -(void) registerSegmentChangeToModel {
@@ -73,11 +73,11 @@ int secondOffSet;
         }
         
     }
-    [[self.intervalData interval] setIntervalEnabled:[self.segment selectedSegmentIndex] == 0];
+    [[[IntervalData getInstance] interval] setIntervalEnabled:[self.segment selectedSegmentIndex] == 0];
 }
 
 -(int) getSegmentIndex { 
-    if([[self.intervalData interval] intervalEnabled]) {
+    if([[[IntervalData getInstance] interval] intervalEnabled]) {
         return 0; // on
     }
     else {
@@ -86,11 +86,11 @@ int secondOffSet;
 }
 
 -(void) setPickerMode:(PickerMode)state {
-    [[self.intervalData interval] setPickerMode:state];
+    [[[IntervalData getInstance] interval] setPickerMode:state];
 }
 
 -(PickerMode)getPickerMode {
-    return [[self.intervalData interval] pickerMode];
+    return [[[IntervalData getInstance] interval] pickerMode];
 }
 
 -(void) loadHoursArray {
@@ -104,9 +104,9 @@ int secondOffSet;
 /* Upper then lower called by super class */
 -(void) boundsCheck:(NSInteger)row inComponent:(NSInteger)component withPreviousLength:(Time *)time {
     
-    Time * max = [[self.intervalData duration] time];
+    Time * max = [[[IntervalData getInstance] duration] time];
     
-    if(![[self.intervalData duration] unlimitedDuration] && [[self time] totalTimeInSeconds] >= [max totalTimeInSeconds]) {
+    if(![[[IntervalData getInstance] duration] unlimitedDuration] && [[self time] totalTimeInSeconds] >= [max totalTimeInSeconds]) {
         // upper bounds off
         Time * newMax = [Time new];
         [newMax setTotalTimeInSeconds:[max totalTimeInSeconds] - 1];
@@ -117,13 +117,13 @@ int secondOffSet;
         [self changeMinute:[newMax minutes]];
         [self changeSecond:[newMax seconds]];
         
-        [infoViewController setText:[[NSString alloc] initWithFormat:@"Interval must be shorter than the duration of %@", [[[self.intervalData duration] time] toStringDescriptive]]];
+        [infoViewController setText:[[NSString alloc] initWithFormat:@"Interval must be shorter than the duration of %@", [[[[IntervalData getInstance] duration] time] toStringDescriptive]]];
         [infoViewController setType:InfoViewControllerWarning];
     }
-    else if([[self time] totalTimeInSeconds] <= [[[self.intervalData shutter] getMaxTime] totalTimeInSeconds]) {
+    else if([[self time] totalTimeInSeconds] <= [[[[IntervalData getInstance] shutter] getMaxTime] totalTimeInSeconds]) {
         // lower bounds off
         Time * newMax = [Time new];
-        [newMax setTotalTimeInSeconds:[[[self.intervalData shutter] getMaxTime] totalTimeInSeconds] + 1];
+        [newMax setTotalTimeInSeconds:[[[[IntervalData getInstance] shutter] getMaxTime] totalTimeInSeconds] + 1];
         [self.picker selectRow:[newMax hours] inComponent:0 animated:false];
         [self.picker selectRow:[newMax minutes] inComponent:1 animated:false];
         [self.picker selectRow:[newMax seconds] inComponent:2 animated:false];
@@ -131,7 +131,7 @@ int secondOffSet;
         [self changeMinute:[newMax minutes]];
         [self changeSecond:[newMax seconds]];
 
-        [infoViewController setText:[[NSString alloc] initWithFormat:@"Interval must be longer than the shutter of %@", [[[self.intervalData shutter] getMaxTime] toStringDescriptive]]];
+        [infoViewController setText:[[NSString alloc] initWithFormat:@"Interval must be longer than the shutter of %@", [[[[IntervalData getInstance] shutter] getMaxTime] toStringDescriptive]]];
         [infoViewController setType:InfoViewControllerWarning];
     }
     else {

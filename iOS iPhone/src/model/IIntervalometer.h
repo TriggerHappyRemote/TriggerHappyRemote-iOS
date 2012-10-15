@@ -24,7 +24,4 @@
 // method the view can call to reviece a call back updating the view
 - (void) getNotification;
 
-@property (nonatomic, strong) IntervalData * intervalData;
-
-
 @end
